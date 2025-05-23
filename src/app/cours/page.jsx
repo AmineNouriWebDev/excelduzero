@@ -1,7 +1,7 @@
 export default function CoursPage() {
   return (
     <main style={{ padding: "2rem" }}>
-      <h1>Bienvenue sur la page Cours</h1>
+      <h1>Bienvenue sur la page Cours amine m3allem</h1>
       <p>Voici une vidéo d’apprentissage Excel :</p>
       <iframe
         width="560"
