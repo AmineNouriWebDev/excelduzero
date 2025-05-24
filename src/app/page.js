@@ -11,7 +11,7 @@ import {
   faCheck,
   faChartBar,
   faInfinity,
-  faCertificate,
+  faRobot,
   faHeadset,
   faStar,
   faVideo,
@@ -271,7 +271,7 @@ export default function HomePage() {
       </section>
 
       {/* Premium CTA Section */}
-      <section id="premium"className="py-20 gradient-premium relative overflow-hidden">
+      <section id="premium" className="py-20 gradient-premium relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -281,11 +281,11 @@ export default function HomePage() {
                 🚀 Passez à l&apos;expérience <span className="bg-gradient-to-r from-yellow-300 to-green-400 bg-clip-text text-transparent">Premium</span>
               </h3>
               <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 text-green-100">
-                Débloquez tout le potentiel d&apos;ExcelDuZero : accès illimité, certificats officiels, support prioritaire et bien plus !
+                Débloquez tout le potentiel d&apos;ExcelDuZero : accès illimité, assistant AI pour vous aider, support prioritaire et bien plus !
               </p>
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-green-400 to-green-600 text-white px-10 py-4 rounded-2xl text-xl font-bold hover:from-green-500 hover:to-green-700 transition shadow-2xl card-hover">
                 <FontAwesomeIcon icon={faStar} className="mr-2" />
-                Devenir Premium - 19€/mois
+                Accès Premium - 30 DT à vie
               </button>
             </div>
             {/* Bloc droit : avantages */}
@@ -301,11 +301,11 @@ export default function HomePage() {
               </div>
               <div className="flex items-center bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
                 <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 mr-5">
-                  <FontAwesomeIcon icon={faCertificate} className="text-3xl text-white" />
+                  <FontAwesomeIcon icon={faRobot} className="text-3xl text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-1 text-white">Certificats officiels</h4>
-                  <p className="text-green-100 text-base">Valorisez vos compétences auprès des employeurs</p>
+                  <h4 className="text-xl font-bold mb-1 text-white">Assistant AI</h4>
+                  <p className="text-green-100 text-base">Un assistant intelligent pour répondre à toutes vos questions Excel</p>
                 </div>
               </div>
               <div className="flex items-center bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
