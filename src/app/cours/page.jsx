@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function CoursPage() {
   return (
     <main style={{ padding: "2rem" }}>
@@ -10,6 +11,7 @@ export default function CoursPage() {
         title="Vidéo Excel"
         frameBorder="0"
         allowFullScreen></iframe>
+      <Link href="/cours/quizz">Quizz</Link>
     </main>
   );
 }
