@@ -70,12 +70,12 @@ export default function HomePage() {
       <header className="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-0">
               <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">E</span>
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
-                ExcelMaster
+                xelDuZero
               </h1>
             </div>
 
@@ -245,11 +245,11 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
-              Une méthode d'apprentissage révolutionnaire
+              Une méthode d&apos;apprentissage révolutionnaire
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Combinez vidéos HD, exercices pratiques et quiz interactifs pour
-              une maîtrise complète d'Excel
+              une maîtrise complète d&apos;Excel
             </p>
           </div>
 
@@ -275,8 +275,8 @@ export default function HomePage() {
                 Quiz Intelligents
               </h4>
               <p className="text-gray-600 leading-relaxed">
-                Testez vos connaissances avec des quiz adaptatifs qui s'ajustent
-                à votre progression
+                Testez vos connaissances avec des quiz adaptatifs qui
+                s&apos;ajustent à votre progression
               </p>
             </div>
 
@@ -438,7 +438,7 @@ export default function HomePage() {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <a href="#" className="hover:text-green-400 transition">
-                    Centre d'aide
+                    Centre d&apos;aide
                   </a>
                 </li>
                 <li>
