@@ -1,9 +1,31 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabaseClient";
+
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const { data } = await supabase.auth.getUser();
+      setUser(data.user);
+    };
+    getUser();
+    // Rafraîchit l'état utilisateur lors des changements d'auth
+    const { data: listener } = supabase.auth.onAuthStateChange(() => getUser());
+    return () => { listener?.subscription.unsubscribe(); };
+  }, []);
+
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    // Redirige immédiatement, le header sera réinitialisé au prochain rendu
+    window.location.href = "/";
+  }
+
   return (
     <header className="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
       <nav className="container mx-auto px-6 py-4">
@@ -44,13 +66,30 @@ export default function Header() {
             </div>
           )}
 
-          <div className="flex space-x-4">
-            <button className="text-green-600 hover:text-green-800 font-medium transition">
-              <Link href="/login"> Connexion </Link>
-            </button>
-            <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-xl hover:from-green-600 hover:to-green-700 transition shadow-lg">
-              <Link href="/register">Inscription </Link>
-            </button>
+          <div className="flex items-center gap-4">
+            {user ? (
+              <button
+                onClick={handleLogout}
+                className="px-5 py-2 bg-gradient-to-r from-red-400 to-red-600 text-white rounded-xl font-bold shadow hover:from-red-500 hover:to-red-700 transition"
+              >
+                Déconnexion
+              </button>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  className="font-semibold text-green-700 hover:underline"
+                >
+                  Connexion
+                </Link>
+                <Link
+                  href="/register"
+                  className="font-semibold text-green-700 hover:underline"
+                >
+                  Inscription
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </nav>
