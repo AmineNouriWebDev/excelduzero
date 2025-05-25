@@ -7,11 +7,11 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center space-x-0 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">E</span>
               </div>
-              <h1 className="text-2xl font-bold">ExcelMaster</h1>
+              <h1 className="text-2xl font-bold">xcelDuZero</h1>
             </div>
             <p className="text-gray-400">
               La plateforme n°1 pour maîtriser Excel rapidement et efficacement.
