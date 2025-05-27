@@ -1,114 +1,33 @@
 "use client";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSeedling,
+  faLeaf,
+  faTree,
+  faCrown,
+  faClipboardCheck,
+  faPlay,
+  faCheck,
+  faChartBar,
+  faInfinity,
+  faRobot,
+  faHeadset,
+  faStar,
+  faVideo,
+  faGamepad,
+  faHandsHelping,
+} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="bg-gray-50 text-gray-800 min-h-screen">
-      {/* Styles personnalisés */}
-      <style jsx global>{`
-        .gradient-hero {
-          background: linear-gradient(
-            135deg,
-            #10b981 0%,
-            #059669 25%,
-            #047857 50%,
-            #065f46 100%
-          );
-        }
-        .gradient-card {
-          background: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 100%);
-        }
-        .gradient-premium {
-          background: linear-gradient(
-            135deg,
-            #10b981 0%,
-            #34d399 50%,
-            #6ee7b7 100%
-          );
-        }
-        .card-hover {
-          transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
-        }
-        .pulse-green {
-          animation: pulse-green 2s infinite;
-        }
-        @keyframes pulse-green {
-          0%,
-          100% {
-            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-          }
-          50% {
-            box-shadow: 0 0 0 20px rgba(16, 185, 129, 0);
-          }
-        }
-        .excel-glow {
-          box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
-        }
-        .floating {
-          animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-          0% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-        }
-      `}</style>
-
-      {/* Header */}
-      <header className="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
-        <nav className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-0">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">E</span>
-              </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
-                xelDuZero
-              </h1>
-            </div>
-
-            <div className="hidden md:flex space-x-8">
-              <a
-                href="#features"
-                className="text-gray-600 hover:text-green-600 transition font-medium">
-                Fonctionnalités
-              </a>
-              <a
-                href="#levels"
-                className="text-gray-600 hover:text-green-600 transition font-medium">
-                Niveaux
-              </a>
-              <a
-                href="#pricing"
-                className="text-gray-600 hover:text-green-600 transition font-medium">
-                Tarifs
-              </a>
-            </div>
-
-            <div className="flex space-x-4">
-              <button className="text-green-600 hover:text-green-800 font-medium transition">
-                Connexion
-              </button>
-              <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-xl hover:from-green-600 hover:to-green-700 transition shadow-lg">
-                Inscription
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
-
+      <Header />
       {/* Hero Section */}
       <section className="gradient-hero pt-24 pb-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
@@ -144,12 +63,14 @@ export default function HomePage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-10 py-5 rounded-2xl text-xl font-bold hover:from-yellow-300 hover:to-yellow-400 transition card-hover pulse-green excel-glow">
-                <i className="fas fa-clipboard-check mr-3"></i>
-                Évaluez votre niveau GRATUITEMENT
-              </button>
+              
+                <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-10 py-5 rounded-2xl text-xl font-bold hover:from-yellow-300 hover:to-yellow-400 transition card-hover pulse-green excel-glow">
+                  <FontAwesomeIcon icon={faClipboardCheck} className="mr-3" />
+                  <Link href="/pages/test-niveau-excel">Évaluez votre niveau GRATUITEMENT</Link>
+                </button>
+             
               <button className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-10 py-5 rounded-2xl text-xl font-bold hover:bg-white/30 transition card-hover">
-                <i className="fas fa-play mr-3"></i>
+                <FontAwesomeIcon icon={faPlay} className="mr-3" />
                 Voir la démo
               </button>
             </div>
@@ -203,7 +124,7 @@ export default function HomePage() {
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <i className="fas fa-check text-white text-sm"></i>
+                      <FontAwesomeIcon icon={faCheck} className="text-white text-sm" />
                     </div>
                     <span className="text-gray-700">
                       Évaluation en 10 minutes
@@ -211,13 +132,13 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <i className="fas fa-check text-white text-sm"></i>
+                      <FontAwesomeIcon icon={faCheck} className="text-white text-sm" />
                     </div>
                     <span className="text-gray-700">Questions adaptatives</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <i className="fas fa-check text-white text-sm"></i>
+                      <FontAwesomeIcon icon={faCheck} className="text-white text-sm" />
                     </div>
                     <span className="text-gray-700">Parcours personnalisé</span>
                   </div>
@@ -228,7 +149,7 @@ export default function HomePage() {
               </div>
               <div className="text-center">
                 <div className="inline-block p-8 bg-white rounded-3xl shadow-lg">
-                  <i className="fas fa-chart-bar text-6xl text-green-500 mb-4"></i>
+                  <FontAwesomeIcon icon={faChartBar} className="text-6xl text-green-500 mb-4" />
                   <div className="text-2xl font-bold text-gray-800">
                     100% Gratuit
                   </div>
@@ -256,7 +177,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8 gradient-card rounded-3xl shadow-lg card-hover">
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="fas fa-video text-3xl text-white"></i>
+                <FontAwesomeIcon icon={faVideo} className="text-3xl text-white" />
               </div>
               <h4 className="text-2xl font-bold text-green-800 mb-4">
                 Vidéos HD Interactives
@@ -269,7 +190,7 @@ export default function HomePage() {
 
             <div className="text-center p-8 gradient-card rounded-3xl shadow-lg card-hover">
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="fas fa-gamepad text-3xl text-white"></i>
+                <FontAwesomeIcon icon={faGamepad} className="text-3xl text-white" />
               </div>
               <h4 className="text-2xl font-bold text-green-800 mb-4">
                 Quiz Intelligents
@@ -282,7 +203,7 @@ export default function HomePage() {
 
             <div className="text-center p-8 gradient-card rounded-3xl shadow-lg card-hover">
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="fas fa-hands-helping text-3xl text-white"></i>
+                <FontAwesomeIcon icon={faHandsHelping} className="text-3xl text-white" />
               </div>
               <h4 className="text-2xl font-bold text-green-800 mb-4">
                 Exercices Pratiques
@@ -311,25 +232,25 @@ export default function HomePage() {
             {[
               {
                 level: "Débutant",
-                icon: "fa-seedling",
+                icon: faSeedling,
                 color: "from-green-300 to-green-400",
                 lessons: "25 leçons",
               },
               {
                 level: "Intermédiaire",
-                icon: "fa-leaf",
+                icon: faLeaf,
                 color: "from-green-400 to-green-500",
                 lessons: "35 leçons",
               },
               {
                 level: "Avancé",
-                icon: "fa-tree",
+                icon: faTree,
                 color: "from-green-500 to-green-600",
                 lessons: "40 leçons",
               },
               {
                 level: "Expert",
-                icon: "fa-crown",
+                icon: faCrown,
                 color: "from-green-600 to-green-700",
                 lessons: "30 leçons",
               },
@@ -339,7 +260,7 @@ export default function HomePage() {
                 className="text-center p-6 bg-white rounded-2xl shadow-lg card-hover">
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <i className={`fas ${item.icon} text-2xl text-white`}></i>
+                  <FontAwesomeIcon icon={item.icon} className="text-2xl text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-green-800 mb-2">
                   {item.level}
@@ -352,135 +273,58 @@ export default function HomePage() {
       </section>
 
       {/* Premium CTA Section */}
-      <section className="py-20 gradient-premium relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
+      <section id="premium" className="py-20 gradient-premium relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center text-white">
-            <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              🚀 Devenez Premium et accélérez votre apprentissage !
-            </h3>
-            <p className="text-xl mb-12 max-w-3xl mx-auto text-green-100">
-              Accès illimité à tous les contenus, certificats officiels et
-              support prioritaire
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl">
-                <i className="fas fa-infinity text-4xl mb-4"></i>
-                <h4 className="text-xl font-bold mb-2">Accès illimité</h4>
-                <p className="text-green-100">Tous les cours et exercices</p>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Bloc gauche : texte */}
+            <div className="flex-1 text-white text-center lg:text-left">
+              <h3 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-xl">
+                🚀 Passez à l&apos;expérience <span className="bg-gradient-to-r from-yellow-300 to-green-400 bg-clip-text text-transparent">Premium</span>
+              </h3>
+              <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 text-green-100">
+                Débloquez tout le potentiel d&apos;ExcelDuZero : accès illimité, assistant AI pour vous aider, support prioritaire et bien plus !
+              </p>
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-green-400 to-green-600 text-white px-10 py-4 rounded-2xl text-xl font-bold hover:from-green-500 hover:to-green-700 transition shadow-2xl card-hover">
+                <FontAwesomeIcon icon={faStar} className="mr-2" />
+                Accès Premium - 30 DT à vie
+              </button>
+            </div>
+            {/* Bloc droit : avantages */}
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+              <div className="flex items-center bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-green-600 mr-5">
+                  <FontAwesomeIcon icon={faInfinity} className="text-3xl text-white" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-1 text-white">Accès illimité</h4>
+                  <p className="text-green-100 text-base">Tous les cours, exercices et quiz sans restriction</p>
+                </div>
               </div>
-              <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl">
-                <i className="fas fa-certificate text-4xl mb-4"></i>
-                <h4 className="text-xl font-bold mb-2">Certificats</h4>
-                <p className="text-green-100">Reconnus par les entreprises</p>
+              <div className="flex items-center bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 mr-5">
+                  <FontAwesomeIcon icon={faRobot} className="text-3xl text-white" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-1 text-white">Assistant AI</h4>
+                  <p className="text-green-100 text-base">Un assistant intelligent pour répondre à toutes vos questions Excel</p>
+                </div>
               </div>
-              <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl">
-                <i className="fas fa-headset text-4xl mb-4"></i>
-                <h4 className="text-xl font-bold mb-2">Support 24/7</h4>
-                <p className="text-green-100">Aide personnalisée</p>
+              <div className="flex items-center bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-green-700 mr-5">
+                  <FontAwesomeIcon icon={faHeadset} className="text-3xl text-white" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-1 text-white">Support 24/7</h4>
+                  <p className="text-green-100 text-base">Aide personnalisée et prioritaire</p>
+                </div>
               </div>
             </div>
-
-            <button className="bg-white text-green-600 px-12 py-6 rounded-2xl text-2xl font-bold hover:bg-gray-100 transition shadow-2xl card-hover">
-              <i className="fas fa-star mr-3"></i>
-              Devenir Premium - 19€/mois
-            </button>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">E</span>
-                </div>
-                <h1 className="text-2xl font-bold">ExcelMaster</h1>
-              </div>
-              <p className="text-gray-400">
-                La plateforme n°1 pour maîtriser Excel rapidement et
-                efficacement.
-              </p>
-            </div>
-
-            <div>
-              <h5 className="text-lg font-bold mb-4">Cours</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-green-400 transition">
-                    Débutant
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-green-400 transition">
-                    Intermédiaire
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-green-400 transition">
-                    Avancé
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-green-400 transition">
-                    Expert
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="text-lg font-bold mb-4">Support</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-green-400 transition">
-                    Centre d&apos;aide
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-green-400 transition">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-green-400 transition">
-                    FAQ
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="text-lg font-bold mb-4">Suivez-nous</h5>
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ExcelMaster. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

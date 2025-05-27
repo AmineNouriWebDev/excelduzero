@@ -15,7 +15,70 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles personnalisés */
+@layer components {
+  .gradient-hero {
+    background: linear-gradient(135deg,
+        #10b981 0%,
+        #059669 25%,
+        #047857 50%,
+        #065f46 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 100%);
+  }
+
+  /* Ajoutez ici tous vos autres styles */
+}
+
+/* Animations */
+@keyframes pulse-green {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+}
+
+.pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+.excel-glow {
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
 }
