@@ -143,9 +143,10 @@ export default function HomePage() {
                     <span className="text-gray-700">Parcours personnalisé</span>
                   </div>
                 </div>
-                <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:from-green-600 hover:to-green-700 transition shadow-lg card-hover">
+                <Link href="/pages/test-niveau-excel" className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:from-green-600 hover:to-green-700 transition shadow-lg card-hover inline-flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                   Commencer le test gratuit
-                </button>
+                </Link>
               </div>
               <div className="text-center">
                 <div className="inline-block p-8 bg-white rounded-3xl shadow-lg">
