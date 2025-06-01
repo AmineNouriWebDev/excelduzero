@@ -74,13 +74,13 @@ export default function Header() {
             ) : (
               <>
                 <Link
-                  href="/login"
+                  href="/auth/login"
                   className="font-semibold text-green-700 hover:underline"
                 >
                   Connexion
                 </Link>
                 <Link
-                  href="/register"
+                  href="/auth/register"
                   className="font-semibold text-green-700 hover:underline"
                 >
                   Inscription

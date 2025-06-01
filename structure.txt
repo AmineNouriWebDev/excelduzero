@@ -1,0 +1,325 @@
+src/
+├── app/
+│   ├── globals.css
+│   ├── layout.js
+│   ├── page.js
+│   ├── favicon.ico
+│   │
+│   ├── auth/
+│   │   ├── login/
+│   │   │   └── page.jsx
+│   │   ├── register/
+│   │   │   └── page.jsx
+│   │   └── profile/
+│   │       └── page.jsx
+│   │
+│   ├── cours/
+│   │   ├── page.jsx                    # Liste des niveaux
+│   │   ├── [niveau]/
+│   │   │   ├── page.jsx               # Liste des leçons du niveau
+│   │   │   └── [lecon]/
+│   │   │       ├── page.jsx           # Contenu de la leçon
+│   │   │       └── quiz/
+│   │   │           └── page.jsx       # Quiz de la leçon
+│   │   └── layout.jsx                 # Layout des cours avec navigation
+│   │
+│   ├── quiz/
+│   │   ├── [niveau]/
+│   │   │   └── [lecon]/
+│   │   │       ├── page.jsx           # Interface quiz
+│   │   │       └── resultats/
+│   │   │           └── page.jsx       # Résultats quiz
+│   │   └── historique/
+│   │       └── page.jsx               # Historique des quiz
+│   │
+│   ├── videos/
+│   │   ├── page.jsx                   # Galerie vidéos (Premium)
+│   │   └── [id]/
+│   │       └── page.jsx               # Lecteur vidéo
+│   │
+│   ├── dashboard/
+│   │   ├── page.jsx                   # Tableau de bord utilisateur
+│   │   ├── progression/
+│   │   │   └── page.jsx               # Suivi progression
+│   │   └── statistiques/
+│   │       └── page.jsx               # Stats détaillées
+│   │
+│   ├── premium/
+│   │   ├── page.jsx                   # Page d'abonnement
+│   │   └── success/
+│   │       └── page.jsx               # Confirmation paiement
+│   │
+│   └── api/
+│       ├── auth/
+│       │   ├── login/
+│       │   │   └── route.js
+│       │   ├── register/
+│       │   │   └── route.js
+│       │   └── logout/
+│       │       └── route.js
+│       ├── cours/
+│       │   ├── [niveau]/
+│       │   │   └── route.js           # API cours par niveau
+│       │   └── progression/
+│       │       └── route.js           # Sauvegarder progression
+│       ├── quiz/
+│       │   ├── [id]/
+│       │   │   └── route.js           # Récupérer quiz
+│       │   └── submit/
+│       │       └── route.js           # Soumettre réponses
+│       └── premium/
+│           ├── check/
+│           │   └── route.js           # Vérifier statut premium
+│           └── upgrade/
+│               └── route.js           # Gérer upgrade
+│
+├── components/
+│   ├── layout/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Sidebar.jsx
+│   │   └── Navigation.jsx
+│   │
+│   ├── ui/
+│   │   ├── Button.jsx
+│   │   ├── Card.jsx
+│   │   ├── Modal.jsx
+│   │   ├── ProgressBar.jsx
+│   │   ├── Badge.jsx
+│   │   └── LoadingSpinner.jsx
+│   │
+│   ├── cours/
+│   │   ├── LessonCard.jsx
+│   │   ├── LessonContent.jsx
+│   │   ├── LessonNavigation.jsx
+│   │   ├── CourseProgress.jsx
+│   │   └── LevelSelector.jsx
+│   │
+│   ├── quiz/
+│   │   ├── QuestionCard.jsx
+│   │   ├── QuizTimer.jsx
+│   │   ├── QuizResults.jsx
+│   │   ├── QuizProgress.jsx
+│   │   └── AnswerFeedback.jsx
+│   │
+│   ├── premium/
+│   │   ├── PremiumBadge.jsx
+│   │   ├── UpgradePrompt.jsx
+│   │   ├── FeatureComparison.jsx
+│   │   └── PaymentForm.jsx
+│   │
+│   └── common/
+│       ├── ProtectedRoute.jsx
+│       ├── PremiumGate.jsx
+│       └── SearchBar.jsx
+│
+├── data/
+│   ├── cours/
+│   │   ├── debutant/
+│   │   │   ├── lecon-01.json
+│   │   │   ├── lecon-02.json
+│   │   │   └── ... (25 leçons)
+│   │   ├── intermediaire/
+│   │   │   ├── lecon-01.json
+│   │   │   └── ... (35 leçons)
+│   │   ├── avance/
+│   │   │   ├── lecon-01.json
+│   │   │   └── ... (40 leçons)
+│   │   └── expert/
+│   │       ├── lecon-01.json
+│   │       └── ... (30 leçons)
+│   │
+│   ├── quiz/
+│   │   ├── debutant/
+│   │   │   ├── quiz-01.json
+│   │   │   └── ... (25 quiz)
+│   │   ├── intermediaire/
+│   │   │   └── ... (35 quiz)
+│   │   ├── avance/
+│   │   │   └── ... (40 quiz)
+│   │   └── expert/
+│   │       └── ... (30 quiz)
+│   │
+│   └── videos/
+│       ├── debutant/
+│       ├── intermediaire/
+│       ├── avance/
+│       └── expert/
+│
+├── hooks/
+│   ├── useAuth.js
+│   ├── usePremium.js
+│   ├── useProgress.js
+│   ├── useQuiz.js
+│   └── useLocalStorage.js
+│
+├── lib/
+│   ├── supabaseClient.js
+│   ├── auth.js
+│   ├── premium.js
+│   ├── progress.js
+│   └── utils.js
+│
+├── styles/
+│   ├── globals.css
+│   ├── components.css
+│   └── themes.css
+│
+└── utils/
+    ├── constants.js
+    ├── validators.js
+    └── formatters.js
+🎯 Fonctionnalités Principales
+1. Système d'Authentification
+
+Inscription/Connexion avec Supabase
+Profil utilisateur
+Gestion des sessions
+Réinitialisation mot de passe
+
+2. Gestion des Cours
+
+4 niveaux hiérarchiques
+Navigation progressive
+Marquage des leçons complétées
+Système de prérequis
+
+3. Système de Quiz
+
+Quiz à la fin de chaque leçon
+Différents types de questions (QCM, Vrai/Faux, Glisser-déposer)
+Timer optionnel
+Système de scoring
+Historique des tentatives
+
+4. Gestion Premium
+
+Vérification du statut premium
+Restrictions d'accès (niveaux 3-4, quiz, vidéos)
+Interface d'upgrade
+Intégration paiement (Stripe/PayPal)
+
+5. Suivi de Progression
+
+Dashboard personnalisé
+Statistiques détaillées
+Badges et achievements
+Graphiques de progression
+
+📋 Structure des Données
+Cours (JSON)
+json{
+  "id": "debutant-01",
+  "titre": "Introduction à Excel",
+  "niveau": "debutant",
+  "ordre": 1,
+  "duree": "15 min",
+  "description": "Découvrir l'interface Excel",
+  "objectifs": ["Naviguer dans Excel", "Créer un classeur"],
+  "contenu": {
+    "sections": [
+      {
+        "titre": "Interface Excel",
+        "contenu": "...",
+        "images": ["screenshot1.png"],
+        "videos": ["demo1.mp4"]
+      }
+    ]
+  },
+  "prerequis": [],
+  "ressources": ["fichier-exemple.xlsx"],
+  "premium": false
+}
+Quiz (JSON)
+json{
+  "id": "quiz-debutant-01",
+  "lecon_id": "debutant-01",
+  "titre": "Quiz - Introduction à Excel",
+  "duree": 300,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "qcm",
+      "question": "Quelle est l'extension par défaut d'Excel ?",
+      "options": [".xlsx", ".doc", ".pdf", ".txt"],
+      "reponse_correcte": 0,
+      "explication": "L'extension .xlsx est le format par défaut depuis Excel 2007"
+    }
+  ],
+  "note_passage": 70,
+  "premium": true
+}
+🚀 Phases de Développement
+Phase 1 : Foundation (Semaine 1-2)
+
+Configuration Next.js + Supabase
+Authentification basique
+Structure des composants UI
+Pages statiques principales
+
+Phase 2 : Contenu (Semaine 3-4)
+
+Système de cours et leçons
+Navigation entre leçons
+Affichage du contenu
+Progression basique
+
+Phase 3 : Quiz (Semaine 5-6)
+
+Système de quiz complet
+Différents types de questions
+Scoring et résultats
+Historique
+
+Phase 4 : Premium (Semaine 7-8)
+
+Gestion des abonnements
+Restrictions d'accès
+Intégration paiement
+Dashboard premium
+
+Phase 5 : Optimisation (Semaine 9-10)
+
+Performance et SEO
+Tests utilisateur
+Corrections bugs
+Déploiement
+
+💡 Fonctionnalités Avancées
+Gamification
+
+Système de points XP
+Badges d'accomplissement
+Classements
+Streaks d'apprentissage
+
+Interactivité
+
+Simulateur Excel intégré
+Exercices pratiques
+Correction automatique
+Feedback en temps réel
+
+Social Learning
+
+Forum de discussion
+Partage de projets
+Mentorat
+Groupes d'étude
+
+Analytics
+
+Temps passé par leçon
+Difficultés identifiées
+Recommandations personnalisées
+Rapports de progression
+
+🛠️ Technologies Recommandées
+
+Frontend : Next.js, React, Tailwind CSS
+Backend : Supabase (Auth + Database)
+Paiement : Stripe
+Vidéos : Cloudinary ou AWS S3
+Analytics : Google Analytics
+Déploiement : Vercel
+Tests : Jest + React Testing Library

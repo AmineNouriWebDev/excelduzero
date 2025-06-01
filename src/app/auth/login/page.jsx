@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "../../lib/supabaseClient";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import { supabase } from "../../../lib/supabaseClient";
+import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
 
 export default function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -28,9 +28,7 @@ export default function LoginPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen text-gray-800">
-      {/* Header */}
       <Header />
-      {/* Login Card */}
       <div className="flex items-center justify-center min-h-screen pt-24 pb-10">
         <div className="gradient-card rounded-3xl shadow-2xl p-10 w-full max-w-md">
           <h2 className="text-3xl font-bold text-green-800 mb-6 text-center">
@@ -82,7 +80,7 @@ export default function LoginPage() {
           </form>
           <div className="text-center mt-6 text-gray-700">
             Pas encore inscrit ?
-            <Link href="/register" className="inline-block ml-2">
+            <Link href="/auth/register" className="inline-block ml-2">
               <button className="px-4 py-2 bg-white text-green-600 rounded-xl border border-green-200 hover:bg-green-50 transition font-semibold shadow">
                 Créer un compte
               </button>
