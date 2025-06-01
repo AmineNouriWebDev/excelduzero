@@ -1,0 +1,9 @@
+/* Thèmes personnalisés (exemple) */
+:root {
+  --color-primary: #10b981;
+  --color-secondary: #f59e42;
+}
+[data-theme="dark"] {
+  --color-primary: #059669;
+  --color-secondary: #fbbf24;
+}

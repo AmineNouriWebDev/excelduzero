@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from "react";
 import Header from "../../../components/Header";
@@ -341,6 +340,35 @@ export default function TestNiveauExcel() {
 										>Niveau {niveau.label}</div>
 									);
 								})()}
+							</div>
+							{/* Affichage des réponses détaillées */}
+							<div className="text-left mt-8 mb-8">
+								<h3 className="text-xl font-bold mb-4 text-green-700 text-center">Correction du quiz</h3>
+								<ul className="space-y-6">
+									{questions.map((q, idx) => {
+										const userAnswer = answers[idx];
+										const isCorrect = userAnswer === q.answer;
+										return (
+											<li key={idx} className="p-4 rounded-xl shadow bg-gray-50">
+												<div className="font-semibold mb-2 flex items-center gap-2">
+													<span className="text-lg">{idx + 1}.</span>
+													<span>{q.question}</span>
+												</div>
+												<div className="flex items-center gap-2">
+													{isCorrect ? (
+														<span className="text-green-600 font-bold flex items-center gap-1">✅ Votre réponse : {q.options[userAnswer]}</span>
+													) : (
+														<>
+															<span className="text-red-600 font-bold flex items-center gap-1">❌ Votre réponse : {userAnswer !== null ? q.options[userAnswer] : <span className='italic text-gray-400'>(Aucune réponse)</span>}</span>
+															<span className="text-green-600 font-bold flex items-center gap-1">✅ Bonne réponse : {q.options[q.answer]}</span>
+														</>
+													)
+												}
+											</div>
+										</li>
+									);
+									})}
+								</ul>
 							</div>
 							<div className="flex flex-col items-center gap-4">
 								<button
