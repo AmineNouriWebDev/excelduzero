@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import "../styles/components.css";
 import "../styles/themes.css";
@@ -14,6 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
 export const metadata = {
   title: "ExcelDuZero",
   description: "L'excel pour tous",
@@ -22,8 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
+      <head>
+        {/* Import Google Fonts Inter via next/font/google (App Router) */}
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ProtectedRoute>{children}</ProtectedRoute>
       </body>
     </html>

@@ -3,11 +3,13 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [user, setUser] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     const getUser = async () => {
@@ -63,9 +65,11 @@ export default function Header() {
           <div className="flex items-center gap-4">
             {user ? (
               <button
-                onClick={async () => {
+                onClick={async (e) => {
+                  e.preventDefault();
                   await supabase.auth.signOut();
-                  window.location.href = "/";
+                  setUser(null);
+                  window.location.assign("/");
                 }}
                 className="px-5 py-2 bg-gradient-to-r from-red-400 to-red-600 text-white rounded-xl font-bold shadow hover:from-red-500 hover:to-red-700 transition"
               >

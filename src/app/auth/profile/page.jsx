@@ -1,9 +1,187 @@
 "use client";
 import { useState, useEffect } from "react";
 import { supabase } from "../../../lib/supabaseClient";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 
+const LANGUES_LIST = [
+  "Français", "Anglais", "Espagnol", "Allemand", "Italien", "Arabe", "Chinois", "Russe", "Portugais", "Japonais", "Néerlandais", "Turc", "Polonais", "Autre..."
+];
+const NIVEAUX_LIST = [
+  "Débutant", "Intermédiaire", "Avancé", "Courant", "Bilingue", "Langue maternelle"
+];
+// Liste des pays et codes
+const COUNTRY_CODES = [
+    { code: "+216", label: "Tunisie" },
+    { code: "+33", label: "France" },
+    { code: "+32", label: "Belgique" },
+    { code: "+41", label: "Suisse" },
+    { code: "+212", label: "Maroc" },
+    { code: "+213", label: "Algérie" },
+    { code: "+1", label: "Canada" },
+    { code: "+44", label: "Royaume-Uni" },
+    { code: "+49", label: "Allemagne" },
+    { code: "+34", label: "Espagne" },
+    { code: "+39", label: "Italie" },
+    { code: "+351", label: "Portugal" },
+    { code: "+90", label: "Turquie" },
+    { code: "+1", label: "États-Unis (US)" },
+    { code: "+86", label: "Chine" },
+    { code: "+81", label: "Japon" },
+    { code: "+7", label: "Russie" },
+    { code: "+20", label: "Égypte" },
+    { code: "+966", label: "Arabie Saoudite" },
+    { code: "+93", label: "Afghanistan" },
+    { code: "+355", label: "Albanie" },
+    { code: "+244", label: "Angola" },
+    { code: "+54", label: "Argentine" },
+    { code: "+374", label: "Arménie" },
+    { code: "+61", label: "Australie" },
+    { code: "+43", label: "Autriche" },
+    { code: "+994", label: "Azerbaïdjan" },
+    { code: "+973", label: "Bahreïn" },
+    { code: "+880", label: "Bangladesh" },
+    { code: "+375", label: "Bélarus" },
+    { code: "+501", label: "Belize" },
+    { code: "+229", label: "Bénin" },
+    { code: "+975", label: "Bhoutan" },
+    { code: "+591", label: "Bolivie" },
+    { code: "+387", label: "Bosnie-Herzégovine" },
+    { code: "+267", label: "Botswana" },
+    { code: "+55", label: "Brésil" },
+    { code: "+673", label: "Brunei" },
+    { code: "+359", label: "Bulgarie" },
+    { code: "+226", label: "Burkina Faso" },
+    { code: "+257", label: "Burundi" },
+    { code: "+238", label: "Cap-Vert" },
+    { code: "+237", label: "Cameroun" },
+    { code: "+235", label: "Tchad" },
+    { code: "+56", label: "Chili" },
+    { code: "+57", label: "Colombie" },
+    { code: "+269", label: "Comores" },
+    { code: "+242", label: "Congo" },
+    { code: "+243", label: "Congo (RDC)" },
+    { code: "+506", label: "Costa Rica" },
+    { code: "+225", label: "Côte d'Ivoire" },
+    { code: "+385", label: "Croatie" },
+    { code: "+53", label: "Cuba" },
+    { code: "+45", label: "Danemark" },
+    { code: "+253", label: "Djibouti" },
+    { code: "+593", label: "Équateur" },
+    { code: "+503", label: "Salvador" },
+    { code: "+240", label: "Guinée équatoriale" },
+    { code: "+291", label: "Érythrée" },
+    { code: "+372", label: "Estonie" },
+    { code: "+268", label: "Eswatini" },
+    { code: "+251", label: "Éthiopie" },
+    { code: "+679", label: "Fidji" },
+    { code: "+358", label: "Finlande" },
+    { code: "+220", label: "Gambie" },
+    { code: "+995", label: "Géorgie" },
+    { code: "+233", label: "Ghana" },
+    { code: "+30", label: "Grèce" },
+    { code: "+502", label: "Guatemala" },
+    { code: "+224", label: "Guinée" },
+    { code: "+245", label: "Guinée-Bissau" },
+    { code: "+592", label: "Guyana" },
+    { code: "+509", label: "Haïti" },
+    { code: "+504", label: "Honduras" },
+    { code: "+36", label: "Hongrie" },
+    { code: "+91", label: "Inde" },
+    { code: "+62", label: "Indonésie" },
+    { code: "+964", label: "Irak" },
+    { code: "+98", label: "Iran" },
+    { code: "+353", label: "Irlande" },
+    { code: "+354", label: "Islande" },
+    { code: "+972", label: "Israël" },
+    { code: "+962", label: "Jordanie" },
+    { code: "+7", label: "Kazakhstan" },
+    { code: "+254", label: "Kenya" },
+    { code: "+996", label: "Kirghizistan" },
+    { code: "+856", label: "Laos" },
+    { code: "+266", label: "Lesotho" },
+    { code: "+231", label: "Liberia" },
+    { code: "+218", label: "Libye" },
+    { code: "+423", label: "Liechtenstein" },
+    { code: "+370", label: "Lituanie" },
+    { code: "+352", label: "Luxembourg" },
+    { code: "+261", label: "Madagascar" },
+    { code: "+265", label: "Malawi" },
+    { code: "+60", label: "Malaisie" },
+    { code: "+960", label: "Maldives" },
+    { code: "+223", label: "Mali" },
+    { code: "+356", label: "Malte" },
+    { code: "+222", label: "Mauritanie" },
+    { code: "+230", label: "Maurice" },
+    { code: "+52", label: "Mexique" },
+    { code: "+373", label: "Moldavie" },
+    { code: "+377", label: "Monaco" },
+    { code: "+976", label: "Mongolie" },
+    { code: "+382", label: "Monténégro" },
+    { code: "+258", label: "Mozambique" },
+    { code: "+95", label: "Myanmar" },
+    { code: "+264", label: "Namibie" },
+    { code: "+674", label: "Nauru" },
+    { code: "+977", label: "Népal" },
+    { code: "+31", label: "Pays-Bas" },
+    { code: "+505", label: "Nicaragua" },
+    { code: "+227", label: "Niger" },
+    { code: "+234", label: "Nigeria" },
+    { code: "+47", label: "Norvège" },
+    { code: "+64", label: "Nouvelle-Zélande" },
+    { code: "+968", label: "Oman" },
+    { code: "+92", label: "Pakistan" },
+    { code: "+680", label: "Palaos" },
+    { code: "+507", label: "Panama" },
+    { code: "+675", label: "Papouasie-Nouvelle-Guinée" },
+    { code: "+595", label: "Paraguay" },
+    { code: "+51", label: "Pérou" },
+    { code: "+63", label: "Philippines" },
+    { code: "+48", label: "Pologne" },
+    { code: "+850", label: "Corée du Nord" },
+    { code: "+40", label: "Roumanie" },
+    { code: "+250", label: "Rwanda" },
+    { code: "+685", label: "Samoa" },
+    { code: "+378", label: "Saint-Marin" },
+    { code: "+239", label: "Sao Tomé-et-Principe" },
+    { code: "+221", label: "Sénégal" },
+    { code: "+381", label: "Serbie" },
+    { code: "+248", label: "Seychelles" },
+    { code: "+232", label: "Sierra Leone" },
+    { code: "+65", label: "Singapour" },
+    { code: "+421", label: "Slovaquie" },
+    { code: "+386", label: "Slovénie" },
+    { code: "+252", label: "Somalie" },
+    { code: "+27", label: "Afrique du Sud" },
+    { code: "+82", label: "Corée du Sud" },
+    { code: "+211", label: "Soudan du Sud" },
+    { code: "+94", label: "Sri Lanka" },
+    { code: "+249", label: "Soudan" },
+    { code: "+597", label: "Suriname" },
+    { code: "+46", label: "Suède" },
+    { code: "+963", label: "Syrie" },
+    { code: "+992", label: "Tadjikistan" },
+    { code: "+886", label: "Taïwan" },
+    { code: "+255", label: "Tanzanie" },
+    { code: "+66", label: "Thaïlande" },
+    { code: "+228", label: "Togo" },
+    { code: "+676", label: "Tonga" },
+    { code: "+1 868", label: "Trinité-et-Tobago" },
+    { code: "+993", label: "Turkménistan" },
+    { code: "+256", label: "Ouganda" },
+    { code: "+380", label: "Ukraine" },
+    { code: "+598", label: "Uruguay" },
+    { code: "+998", label: "Ouzbékistan" },
+    { code: "+678", label: "Vanuatu" },
+    { code: "+58", label: "Venezuela" },
+    { code: "+84", label: "Viêt Nam" },
+    { code: "+967", label: "Yémen" },
+    { code: "+260", label: "Zambie" },
+    { code: "+263", label: "Zimbabwe" },
+    { code: "", label: "Autre..." }
+  ];
 export default function ProfilePage() {
   // États pour chaque section du profil
   const [form, setForm] = useState({
@@ -29,6 +207,17 @@ export default function ProfilePage() {
   const [confirm, setConfirm] = useState("");
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
+  const [countryCode, setCountryCode] = useState("+216");
+  const [phoneHelp, setPhoneHelp] = useState("");
+
+  // Met à jour le message d'aide selon le pays
+  useEffect(() => {
+    if (countryCode === "+216") {
+      setPhoneHelp("Pour la Tunisie, 8 chiffres requis (ex: 20456613)");
+    } else {
+      setPhoneHelp("6 à 15 chiffres selon le pays");
+    }
+  }, [countryCode]);
 
   useEffect(() => {
     async function fetchProfile() {
@@ -91,6 +280,38 @@ export default function ProfilePage() {
     fetchProfile();
   }, []);
 
+  useEffect(() => {
+    // Détection automatique du pays via l'API ipinfo.io (optionnel)
+    fetch("https://ipinfo.io/json?token=demo")
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.country) {
+          const found = COUNTRY_CODES.find(c =>
+            (data.country === "TN" && c.code === "+216") ||
+            (data.country === "FR" && c.code === "+33") ||
+            (data.country === "BE" && c.code === "+32") ||
+            (data.country === "CH" && c.code === "+41") ||
+            (data.country === "MA" && c.code === "+212") ||
+            (data.country === "DZ" && c.code === "+213") ||
+            (data.country === "CA" && c.code === "+1") ||
+            (data.country === "GB" && c.code === "+44") ||
+            (data.country === "DE" && c.code === "+49") ||
+            (data.country === "ES" && c.code === "+34") ||
+            (data.country === "IT" && c.code === "+39") ||
+            (data.country === "PT" && c.code === "+351") ||
+            (data.country === "TR" && c.code === "+90") ||
+            (data.country === "US" && c.code === "+1") ||
+            (data.country === "CN" && c.code === "+86") ||
+            (data.country === "JP" && c.code === "+81") ||
+            (data.country === "RU" && c.code === "+7") ||
+            (data.country === "EG" && c.code === "+20") ||
+            (data.country === "SA" && c.code === "+966")
+          );
+          if (found) setCountryCode(found.code);
+        }
+      });
+  }, []);
+
   function handleChange(e) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   }
@@ -114,19 +335,33 @@ export default function ProfilePage() {
     e.preventDefault();
     setLoading(true);
     setMessage("");
+    // Validation téléphone
+    if (countryCode === "+216" && form.phone.length !== 8) {
+      setMessage("Veuillez entrer un numéro tunisien de 8 chiffres.");
+      toast.error("Veuillez entrer un numéro tunisien de 8 chiffres.");
+      setLoading(false);
+      return;
+    }
+    if (countryCode !== "+216" && (form.phone.length < 6 || form.phone.length > 15)) {
+      setMessage("Veuillez entrer un numéro valide (6 à 15 chiffres).");
+      toast.error("Veuillez entrer un numéro valide (6 à 15 chiffres).");
+      setLoading(false);
+      return;
+    }
     const {
       data: { user },
       error: userError,
     } = await supabase.auth.getUser();
     if (userError || !user) {
       setMessage("Utilisateur non authentifié.");
+      toast.error("Utilisateur non authentifié.");
       setLoading(false);
       return;
     }
     // Mise à jour du profil dans la table 'profiles'
     const updates = {
       name: form.name,
-      phone: form.phone,
+      phone: countryCode + form.phone,
       address: form.address,
       job: form.job,
       company: form.company,
@@ -144,12 +379,14 @@ export default function ProfilePage() {
     const { error: updateError } = await supabase
       .from("profiles")
       .update(updates)
-      .eq("id", user.id);
+      .eq("id", user.id)
+      .select();
     // Mise à jour du mot de passe si renseigné
     let passwordError = null;
     if (password) {
       if (password !== confirm) {
         setMessage("Les mots de passe ne correspondent pas.");
+        toast.error("Les mots de passe ne correspondent pas.");
         setLoading(false);
         return;
       }
@@ -158,8 +395,35 @@ export default function ProfilePage() {
     }
     if (updateError || passwordError) {
       setMessage("Erreur lors de la mise à jour du profil.");
+      toast.error("Erreur lors de la mise à jour du profil.");
     } else {
       setMessage("Profil mis à jour avec succès !");
+      toast.success("Profil mis à jour avec succès !");
+      // Rafraîchir les données du formulaire après update
+      const { data: refreshed, error: fetchError } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+      if (!fetchError && refreshed) {
+        setForm({
+          name: refreshed.name || "",
+          email: user.email || "",
+          phone: refreshed.phone || "",
+          address: refreshed.address || "",
+          job: refreshed.job || "",
+          company: refreshed.company || "",
+          bio: refreshed.bio || "",
+          objective: refreshed.objective || "",
+          languages: refreshed.languages || [{ langue: "Français", niveau: "Courant" }],
+          skills: refreshed.skills || "",
+          interests: refreshed.interests || "",
+          linkedin: refreshed.linkedin || "",
+          github: refreshed.github || "",
+          website: refreshed.website || "",
+          cv: refreshed.cv || "",
+        });
+      }
     }
     setLoading(false);
   }
@@ -203,14 +467,24 @@ export default function ProfilePage() {
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div>
                   <label className="block text-gray-700 font-semibold mb-1">Nouveau mot de passe</label>
-                  <input
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    type={showPassword ? "text" : "password"}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 pr-12"
-                    placeholder="Nouveau mot de passe"
-                  />
+                  <div className="relative">
+                    <input
+                      name="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      type={showPassword ? "text" : "password"}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 pr-12"
+                      placeholder="Nouveau mot de passe"
+                    />
+                    <button
+                      type="button"
+                      tabIndex={-1}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-green-700 font-semibold focus:outline-none"
+                      onClick={() => setShowPassword((v) => !v)}
+                    >
+                      {showPassword ? "Masquer" : "Afficher"}
+                    </button>
+                  </div>
                 </div>
                 <div>
                   <label className="block text-gray-700 font-semibold mb-1">Confirmation</label>
@@ -223,14 +497,7 @@ export default function ProfilePage() {
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 pr-12"
                       placeholder="Confirmez le mot de passe"
                     />
-                    <button
-                      type="button"
-                      tabIndex={-1}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-green-700 font-semibold focus:outline-none"
-                      onClick={() => setShowPassword((v) => !v)}
-                    >
-                      {showPassword ? "Masquer" : "Afficher"}
-                    </button>
+                    {/* Pas de bouton ici, il est sur le champ mot de passe */}
                   </div>
                 </div>
               </div>
@@ -251,13 +518,33 @@ export default function ProfilePage() {
                 </div>
                 <div>
                   <label className="block text-gray-700 font-semibold mb-1">Téléphone</label>
-                  <input
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400"
-                    placeholder="Votre téléphone"
-                  />
+                  <div className="flex gap-2">
+                    <select
+                      value={countryCode}
+                      onChange={e => setCountryCode(e.target.value)}
+                      className="px-2 py-2 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400 bg-white min-w-[90px]"
+                    >
+                      {COUNTRY_CODES.map((c, idx) => (
+                        <option key={c.code + '-' + idx} value={c.code}>{c.label} {c.code}</option>
+                      ))}
+                    </select>
+                    <input
+                      name="phone"
+                      value={form.phone}
+                      onChange={e => {
+                        // Autorise uniquement les chiffres
+                        let val = e.target.value.replace(/\D/g, "");
+                        setForm(f => ({ ...f, phone: val }));
+                      }}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400"
+                      placeholder="Votre téléphone"
+                      type="tel"
+                      inputMode="tel"
+                      pattern={countryCode === "+216" ? "\\d{8}" : "\\d{6,15}"}
+                      required
+                    />
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">{phoneHelp}</div>
                 </div>
               </div>
             </div>
@@ -314,18 +601,26 @@ export default function ProfilePage() {
               <div className="space-y-2">
                 {form.languages.map((l, idx) => (
                   <div key={idx} className="flex gap-2 items-center">
-                    <input
+                    <select
                       value={l.langue}
-                      onChange={(e) => handleLangueChange(idx, "langue", e.target.value)}
+                      onChange={e => handleLangueChange(idx, "langue", e.target.value)}
                       className="px-3 py-2 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400"
-                      placeholder="Langue"
-                    />
-                    <input
+                    >
+                      <option value="">Langue</option>
+                      {LANGUES_LIST.map(lang => (
+                        <option key={lang} value={lang}>{lang}</option>
+                      ))}
+                    </select>
+                    <select
                       value={l.niveau}
-                      onChange={(e) => handleLangueChange(idx, "niveau", e.target.value)}
+                      onChange={e => handleLangueChange(idx, "niveau", e.target.value)}
                       className="px-3 py-2 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-400"
-                      placeholder="Niveau (ex: courant, débutant...)"
-                    />
+                    >
+                      <option value="">Niveau</option>
+                      {NIVEAUX_LIST.map(niv => (
+                        <option key={niv} value={niv}>{niv}</option>
+                      ))}
+                    </select>
                     {form.languages.length > 1 && (
                       <button
                         type="button"
@@ -416,6 +711,7 @@ export default function ProfilePage() {
         </div>
       </div>
       <Footer />
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 }
