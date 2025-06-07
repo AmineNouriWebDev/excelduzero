@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
+import Image from "next/image";
 
 const LANGUES_LIST = [
   "Français", "Anglais", "Espagnol", "Allemand", "Italien", "Arabe", "Chinois", "Russe", "Portugais", "Japonais", "Néerlandais", "Turc", "Polonais", "Autre..."
@@ -209,6 +210,8 @@ export default function ProfilePage() {
   const [message, setMessage] = useState("");
   const [countryCode, setCountryCode] = useState("+216");
   const [phoneHelp, setPhoneHelp] = useState("");
+  const [avatarUrl, setAvatarUrl] = useState("");
+  const [uploading, setUploading] = useState(false);
 
   // Met à jour le message d'aide selon le pays
   useEffect(() => {
@@ -275,6 +278,7 @@ export default function ProfilePage() {
         website: data.website || "",
         cv: data.cv || "",
       });
+      setAvatarUrl(data.avatar_url || "");
       setLoading(false);
     }
     fetchProfile();
@@ -428,6 +432,28 @@ export default function ProfilePage() {
     setLoading(false);
   }
 
+  // Fonction d'upload avatar
+  async function handleAvatarChange(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploading(true);
+    const fileExt = file.name.split('.').pop();
+    const filePath = `avatars/${form.email.replace(/[^a-zA-Z0-9]/g, '')}.${fileExt}`;
+    let { error: uploadError } = await supabase.storage.from('avatars').upload(filePath, file, { upsert: true });
+    if (uploadError) {
+      setMessage("Erreur lors de l'upload de l'avatar");
+      setUploading(false);
+      return;
+    }
+    const { data } = supabase.storage.from('avatars').getPublicUrl(filePath);
+    const avatar_url = data.publicUrl;
+    // Met à jour le profil utilisateur (table 'profiles')
+    await supabase.from('profiles').update({ avatar_url }).eq('email', form.email);
+    setAvatarUrl(avatar_url);
+    setMessage("Avatar mis à jour !");
+    setUploading(false);
+  }
+
   return (
     <div className="bg-gray-50 min-h-screen text-gray-800">
       <Header />
@@ -438,6 +464,23 @@ export default function ProfilePage() {
             <div className={`mb-4 text-center font-semibold ${message.includes("succès") ? "text-green-600" : "text-red-600"}`}>{message}</div>
           )}
           <form className="space-y-8" onSubmit={handleSubmit}>
+            {/* Avatar */}
+            <div className="flex flex-col items-center mb-6">
+              <div className="relative w-24 h-24 mb-2">
+                {avatarUrl ? (
+                  <Image src={avatarUrl} alt="avatar" width={96} height={96} className="rounded-full object-cover w-24 h-24 border-4 border-green-300 shadow" />
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center text-4xl text-green-700 font-bold border-4 border-green-200">
+                    {form.name ? form.name[0].toUpperCase() : <span>?</span>}
+                  </div>
+                )}
+                {uploading && <div className="absolute inset-0 bg-white/70 flex items-center justify-center rounded-full"><span className="text-green-700 font-bold">...</span></div>}
+              </div>
+              <label className="px-4 py-2 bg-green-100 text-green-700 rounded-xl font-semibold hover:bg-green-200 transition cursor-pointer">
+                <input type="file" accept="image/*" className="hidden" onChange={handleAvatarChange} disabled={uploading} />
+                {uploading ? "Chargement..." : "Changer l'avatar"}
+              </label>
+            </div>
             {/* Informations personnelles */}
             <div>
               <h3 className="text-xl font-bold text-green-700 mb-4">Informations personnelles</h3>
