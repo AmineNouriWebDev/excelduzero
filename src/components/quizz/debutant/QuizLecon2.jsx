@@ -3,14 +3,48 @@
 import { useState } from "react";
 
 const questions = [
-  // Exemple de question, à adapter
   {
-    question: "Qu'est-ce qu'une cellule dans Excel ?",
+    question: "Quel raccourci permet d'atteindre la cellule A1?",
     options: [
-      "Un graphique",
-      "Une intersection de ligne et de colonne",
-      "Un onglet",
-      "Une formule"
+      "Ctrl+Fin",
+      "Ctrl+Accueil",
+      "Alt+A"
+    ],
+    answer: 1
+  },
+  {
+    question: "Comment saisir un nombre comme texte?",
+    options: [
+      "Utiliser la mise en forme",
+      "Ajouter une apostrophe avant",
+      "Mettre entre guillemets"
+    ],
+    answer: 1
+  },
+  {
+    question: "Quelle touche annule une saisie en cours?",
+    options: [
+      "Suppr",
+      "Échap",
+      "F1"
+    ],
+    answer: 1
+  },
+  {
+    question: "Comment lancer la vérification orthographique?",
+    options: [
+      "Ctrl+O",
+      "F7",
+      "Alt+V"
+    ],
+    answer: 1
+  },
+  {
+    question: "Que fait Ctrl+Entrée?",
+    options: [
+      "Annule la saisie",
+      "Valide dans toutes les cellules sélectionnées",
+      "Ouvre un nouveau classeur"
     ],
     answer: 1
   }
