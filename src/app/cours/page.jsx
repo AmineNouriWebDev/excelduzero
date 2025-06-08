@@ -40,7 +40,9 @@ export default function Page() {
       <Header />
       <main className="flex-1 pt-28 pb-16 px-0 max-w-none w-full flex flex-col md:flex-row">
         {/* Sidebar progression à gauche si progression */}
-        <ProgressSidebar user={user} />
+        <div className="w-full md:w-auto">
+          <ProgressSidebar user={user} />
+        </div>
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-6 text-center">
             Cours Excel

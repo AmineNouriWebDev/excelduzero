@@ -4,6 +4,8 @@ import Footer from "../../../components/Footer";
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from '../../../hooks/useAuth';
 import { supabase } from '../../../lib/supabaseClient';
+import { Menu } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 const LEÇONS = [
   "Découverte de l'interface Excel",
@@ -48,7 +50,11 @@ const statusIcons = {
 };
 
 export default function CoursDebutant() {
-  const [active, setActive] = useState(0);
+  const searchParams = useSearchParams();
+  const leconParam = parseInt(searchParams.get("lecon"), 10);
+  const [active, setActive] = useState(
+    !isNaN(leconParam) && leconParam > 0 && leconParam <= LEÇONS.length ? leconParam - 1 : 0
+  );
   const [mobileOpen, setMobileOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarWidth, setSidebarWidth] = useState(256);
@@ -56,6 +62,7 @@ export default function CoursDebutant() {
   const [isResizing, setIsResizing] = useState(false);
   const user = useAuth();
   const [lessonStatus, setLessonStatus] = useState(defaultStatus);
+  const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 
   // Synchronisation avec Supabase uniquement (plus de localStorage)
   useEffect(() => {
@@ -126,7 +133,19 @@ export default function CoursDebutant() {
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col text-gray-800">
       <Header />
-      <main className="flex-1 pt-28 pb-16 w-full flex gap-0 md:gap-6 max-w-none px-0 sm:px-0 md:px-0 mx-0 items-start">
+      {/* Bouton menu mobile/tablette pour ouvrir le sommaire (au-dessus du contenu) */}
+      <div className="md:hidden w-full px-4 pt-4 pb-2 flex items-center z-40 sticky top-16 bg-gray-50" style={{boxShadow: '0 2px 8px -4px rgba(0,0,0,0.04)'}}>
+        <button
+          className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-xl font-bold shadow hover:bg-green-700 transition text-base"
+          onClick={() => setShowMobileSidebar((v) => !v)}
+          aria-label="Afficher le sommaire"
+          type="button"
+        >
+          <span className="inline-flex"><Menu size={24} /></span>
+          <span>Sommaire</span>
+        </button>
+      </div>
+      <main className="flex-1 pt-24 pb-16 w-full flex gap-0 md:gap-6 max-w-none px-0 sm:px-0 md:px-0 mx-0 items-start">
         {/* Sidebar Sommaire Desktop (redimensionnable avec poignée visible) */}
         <aside
           ref={sidebarRef}
@@ -212,15 +231,43 @@ export default function CoursDebutant() {
             </ol>
           )}
         </aside>
-        {/* Sommaire Mobile */}
-        <div className="md:hidden w-full mb-4 px-2">
-          {/* ...existing code for sommaire mobile... */}
-        </div>
+        {/* Sidebar mobile/tablette drawer */}
+        {showMobileSidebar && (
+          <div className="fixed inset-0 z-50 flex md:hidden">
+            <div className="bg-black/40 flex-1" onClick={() => setShowMobileSidebar(false)} />
+            <aside className="w-72 max-w-[90vw] bg-white h-full shadow-2xl p-4 overflow-y-auto animate-fade-in-right">
+              <button
+                className="mb-4 px-3 py-1 rounded bg-gray-100 text-gray-600 font-bold hover:bg-gray-200"
+                onClick={() => setShowMobileSidebar(false)}
+                aria-label="Fermer le sommaire"
+              >
+                Fermer
+              </button>
+              <h2 className="text-lg font-bold text-green-700 mb-4 text-center">Sommaire</h2>
+              <ol className="space-y-1">
+                {LEÇONS.map((titre, i) => (
+                  <li key={i}>
+                    <button
+                      className={`w-full flex items-center text-left px-3 py-2 rounded-lg transition font-medium ${active === i ? "bg-green-100 text-green-800 font-bold" : "hover:bg-gray-100 text-gray-700"}`}
+                      onClick={() => {
+                        setActive(i);
+                        setShowMobileSidebar(false);
+                      }}
+                    >
+                      <span className="mr-2">{statusIcons[lessonStatus[i]]}</span>
+                      <span className="mr-2 text-xs text-gray-400">{i + 1}.</span> {titre}
+                    </button>
+                  </li>
+                ))}
+              </ol>
+            </aside>
+          </div>
+        )}
         {/* Contenu de la leçon */}
-        <section className="flex-1 bg-white rounded-2xl shadow p-6 min-h-[400px] md:mr-2">
+        <section className="flex-1 bg-white rounded-2xl shadow p-4 sm:p-6 min-h-[400px] md:mr-2 overflow-x-auto max-w-full">
           <div className="mb-4 text-sm text-gray-500">Leçon {active + 1} / 25</div>
-          <h2 className="text-2xl font-bold text-green-700 mb-4">{LEÇONS[active]}</h2>
-          <div className="text-gray-700">
+          <h2 className="text-2xl font-bold text-green-700 mb-4 break-words">{LEÇONS[active]}</h2>
+          <div className="text-gray-700 w-full max-w-full overflow-x-auto">
             {(() => {
               const Lecon = getLeconComponent(level, active);
               const Quiz = getQuizComponent(level, active);
@@ -232,10 +279,10 @@ export default function CoursDebutant() {
               };
               // Si la leçon est validée, on n'affiche plus le quiz
               if (lessonStatus[active] === 'success') {
-                return Lecon ? <Lecon /> : <p>Contenu à venir pour cette leçon.</p>;
+                return Lecon ? <div className="prose max-w-full w-full overflow-x-auto"> <Lecon /> </div> : <p>Contenu à venir pour cette leçon.</p>;
               }
               return <>
-                {Lecon ? <Lecon onResult={handleResult} /> : <p>Contenu à venir pour cette leçon.</p>}
+                {Lecon ? <div className="prose max-w-full w-full overflow-x-auto"> <Lecon onResult={handleResult} /> </div> : <p>Contenu à venir pour cette leçon.</p>}
                 {/* Pour compatibilité avec les leçons qui n'incluent pas le quiz */}
                 {!Lecon && Quiz && <Quiz onResult={handleResult} />}
               </>;

@@ -4,6 +4,7 @@ import "./globals.css";
 import "../styles/components.css";
 import "../styles/themes.css";
 import ProtectedRoute from "../components/common/ProtectedRoute";
+import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ProtectedRoute>{children}</ProtectedRoute>
+        <ScrollToTopButton />
       </body>
     </html>
   );

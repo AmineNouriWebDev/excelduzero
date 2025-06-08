@@ -73,6 +73,62 @@ export default function Header() {
     setUploading(false);
   }
 
+  // Handler pour rejoindre le dernier niveau de cours (progression réelle Supabase)
+  async function handleJoinCourses(e) {
+    e.preventDefault();
+    let userId = user?.id;
+    let lastLevel = null;
+    let lessonIdx = 0;
+    if (userId) {
+      const { data, error } = await supabase
+        .from("progress")
+        .select("level, status")
+        .eq("user_id", userId);
+      if (data && Array.isArray(data) && data.length > 0) {
+        // Ordre des niveaux
+        const order = ["debutant", "intermediaire", "avance", "expert"];
+        // On trie pour prendre le niveau le plus avancé avec au moins une leçon validée
+        let best = null;
+        let bestIdx = -1;
+        let bestStatus = [];
+        data.forEach(row => {
+          const count = Array.isArray(row.status) ? row.status.filter(s => s === 'success').length : 0;
+          const idx = order.indexOf(row.level);
+          if (count > 0 && idx > bestIdx) {
+            best = row.level;
+            bestIdx = idx;
+            bestStatus = row.status;
+          }
+        });
+        // Si aucune leçon validée, on prend le niveau le plus avancé où il y a une progression (même partielle)
+        if (!best) {
+          data.forEach(row => {
+            const idx = order.indexOf(row.level);
+            if (Array.isArray(row.status) && row.status.some(s => s !== 'not_started') && idx > bestIdx) {
+              best = row.level;
+              bestIdx = idx;
+              bestStatus = row.status;
+            }
+          });
+        }
+        if (best) {
+          lastLevel = best;
+          // Cherche la première leçon non validée, sinon la dernière
+          if (Array.isArray(bestStatus)) {
+            lessonIdx = bestStatus.findIndex(s => s !== 'success');
+            if (lessonIdx === -1) lessonIdx = bestStatus.length - 1;
+          }
+        }
+      }
+    }
+    // Redirection
+    if (lastLevel && ["debutant","intermediaire","avance","expert"].includes(lastLevel)) {
+      router.push(`/cours/${lastLevel}?lecon=${lessonIdx+1}`);
+    } else {
+      router.push("/cours");
+    }
+  }
+
   return (
     <header className="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
       <nav className="container mx-auto px-3 sm:px-6 py-3 sm:py-4">
@@ -184,19 +240,19 @@ export default function Header() {
                       window.location.assign("/");
                     }
                   }}
-                  className="px-5 py-2 bg-gradient-to-r from-red-400 to-red-600 text-white rounded-xl font-bold shadow hover:from-red-500 hover:to-red-700 transition"
+                  className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-gradient-to-r from-red-400 to-red-600 text-white rounded-xl font-bold shadow hover:from-red-500 hover:to-red-700 transition"
                 >
                   Quitter le cours
                 </button>
               )}
               {/* Le bouton "Rejoindre les cours" n'est pas affiché sur les pages de cours */}
               {!(pathname.startsWith("/cours")) && (
-                <Link
-                  href="/cours"
-                  className="px-5 py-2 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-xl font-bold shadow hover:from-green-500 hover:to-green-700 transition"
+                <button
+                  onClick={handleJoinCourses}
+                  className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-gradient-to-r from-green-400 to-green-600 text-white rounded-xl font-bold shadow hover:from-green-500 hover:to-green-700 transition"
                 >
                   Rejoindre les cours
-                </Link>
+                </button>
               )}
               {/* Avatar + menu déroulant */}
               <div className="relative user-menu">

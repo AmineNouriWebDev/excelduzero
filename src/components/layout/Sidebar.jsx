@@ -1,7 +1,7 @@
 // Composant Sidebar pour la navigation principale
 export default function Sidebar() {
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 h-full p-6 hidden md:block">
+    <aside className="w-64 bg-white border-r border-gray-200 h-full p-6 hidden md:block lg:sticky lg:top-28">
       {/* À compléter selon la navigation */}
       <div className="font-bold text-lg mb-4">Navigation</div>
       <nav>
