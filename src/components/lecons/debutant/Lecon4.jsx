@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
 import QuizLecon4 from "../../quizz/debutant/QuizLecon4";
+import PremiumGate from "../../common/PremiumGate";
+import PremiumVideo from "../../ui/PremiumVideo";
 import { 
     BookOpen, 
     Palette, 
@@ -753,13 +755,8 @@ import {
               Vidéo de correction des exercices
             </h2>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 flex flex-col items-center justify-center min-h-[200px]">
-              {/* Remplacez la balise ci-dessous par votre composant vidéo ou iframe YouTube */}
-              <div className="w-full flex items-center justify-center min-h-[180px] text-gray-400 italic">
-              <video width="640" height="360" controls className="w-full rounded-lg">
-                  <source src="/cours/debutant/lecon4/correction_mise_en_forme_calendrier.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la balise vidéo.
-                </video>
-              </div>
+              {/* Accès premium à la vidéo de correction */}
+              <PremiumVideo url="/cours/debutant/lecon4/correction_mise_en_forme_calendrier.mp4" title="Correction vidéo des exercices" />
             </div>
           </section>
   

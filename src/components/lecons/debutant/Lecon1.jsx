@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
 import QuizLecon1 from "../../quizz/debutant/QuizLecon1";
+import PremiumVideo from "../../ui/PremiumVideo";
 import { FileSpreadsheet, Monitor, Grid3X3, Calculator, BarChart3, Database, Settings, Eye, ArrowRight, ArrowDown, Plus, MousePointer2, Layout, Palette, Copy, Move, Trash2, ZoomIn, Maximize } from "lucide-react";
 
 // Leçon 1 du niveau débutant : Découverte de l'interface Excel
@@ -789,12 +790,8 @@ export default function Lecon1({ onResult }) {
         <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 mb-6">
           <strong>Correction vidéo :</strong> Retrouvez la correction détaillée de cet exercice en vidéo ci-dessous !
         </div>
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col items-center">
-          <video width="640" height="360" controls className="w-full max-w-2xl rounded-lg shadow">
-            <source src="/cours/debutant/lecon1/correction_exercice1.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas la balise vidéo.
-          </video>
-        </div>
+        {/* Accès premium à la vidéo de correction */}
+        <PremiumVideo url="/cours/debutant/lecon1/correction_exercice1.mp4" title="Correction vidéo de l'exercice" />
       </section>
 
       <div className="mt-12">

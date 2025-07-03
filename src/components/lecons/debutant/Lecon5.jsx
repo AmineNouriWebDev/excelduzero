@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
 import QuizLecon5 from "../../quizz/debutant/QuizLecon5";
+import PremiumVideo from "../../ui/PremiumVideo";
 
 import { 
     Calculator, Info, AlertTriangle, Type, Eye, GitBranch, 
@@ -600,12 +601,8 @@ import {
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <div className="aspect-w-16 aspect-h-9">
-                <video width="640" height="360" controls className="w-full rounded-lg">
-                  <source src="/cours/debutant/lecon5/exemple.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la balise vidéo.
-                </video>
-              </div>
+              {/* Accès premium à la vidéo de correction */}
+              <PremiumVideo url="/cours/debutant/lecon5/exemple.mp4" title="Correction vidéo de l'exemple pratique" />
             </div>
           </div>
             <div className="mt-12">
