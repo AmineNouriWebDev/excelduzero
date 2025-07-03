@@ -2,7 +2,8 @@
 import { usePremium } from "../../hooks/usePremium";
 
 export default function PremiumGate({ children, fallback = null }) {
-  const isPremium = usePremium();
-  if (!isPremium) return fallback;
+  const { premium, loading } = usePremium();
+  if (loading) return null; // Ou un loader visuel si souhaité
+  if (!premium) return fallback;
   return children;
 }
