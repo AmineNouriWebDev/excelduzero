@@ -15,6 +15,7 @@ export default function Header() {
   const [userMenuOpen, setUserMenuOpen] = useState(false); // menu connexion mobile
   const [uploading, setUploading] = useState(false);
   const [profile, setProfile] = useState(null);
+  const [isSigningOut, setIsSigningOut] = useState(false); // État pour la déconnexion
   const router = useRouter();
 
   useEffect(() => {
@@ -34,17 +35,34 @@ export default function Header() {
       }
     };
     getUser();
+    
     // Rafraîchit l'état utilisateur lors des changements d'auth
-    const { data: listener } = supabase.auth.onAuthStateChange(() => getUser());
+    const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_OUT') {
+        setUser(null);
+        setProfile(null);
+        setMenuOpen(false);
+        // Redirection immédiate vers l'accueil après déconnexion
+        if (pathname !== '/') {
+          router.push('/');
+        }
+      } else if (event === 'SIGNED_IN' && session) {
+        getUser();
+      }
+    });
+    
     return () => { listener?.subscription.unsubscribe(); };
-  }, []);
+  }, [pathname, router]);
 
   // Ferme le menu si clic en dehors
   useEffect(() => {
     if (!menuOpen && !userMenuOpen) return;
     const handleClick = (e) => {
-      if (!e.target.closest('.user-menu') && userMenuOpen) setUserMenuOpen(false);
-      if (!e.target.closest('.hamburger-menu') && menuOpen) setMenuOpen(false);
+      // Ne ferme PAS le menu si le clic est dans le menu déroulant (user-menu)
+      const userMenu = document.querySelector('.user-menu');
+      if (userMenu && userMenu.contains(e.target)) return;
+      if (userMenuOpen) setUserMenuOpen(false);
+      if (menuOpen) setMenuOpen(false);
     };
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
@@ -72,6 +90,37 @@ export default function Header() {
     setUser(u => ({ ...u, user_metadata: { ...u.user_metadata, avatar_url } }));
     setUploading(false);
   }
+
+  // Fonction de déconnexion améliorée
+  const handleSignOut = async () => {
+    if (isSigningOut) return; // Empêche les clics multiples
+    
+    setIsSigningOut(true);
+    setMenuOpen(false);
+    
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) {
+        console.error('Erreur lors de la déconnexion:', error);
+        alert('Erreur lors de la déconnexion');
+      } else {
+        // Nettoyage immédiat de l'état local
+        setUser(null);
+        setProfile(null);
+        
+        // Redirection vers l'accueil
+        router.push('/');
+        
+        // Alternative si router.push ne fonctionne pas
+        // window.location.replace('/');
+      }
+    } catch (error) {
+      console.error('Erreur lors de la déconnexion:', error);
+      alert('Erreur lors de la déconnexion');
+    } finally {
+      setIsSigningOut(false);
+    }
+  };
 
   // Handler pour rejoindre le dernier niveau de cours (progression réelle Supabase)
   async function handleJoinCourses(e) {
@@ -237,7 +286,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     if (confirm("Voulez-vous vraiment quitter le cours ? Vous serez redirigé vers l'accueil.")) {
-                      window.location.assign("/");
+                      router.push("/");
                     }
                   }}
                   className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-gradient-to-r from-red-400 to-red-600 text-white rounded-xl font-bold shadow hover:from-red-500 hover:to-red-700 transition"
@@ -257,7 +306,9 @@ export default function Header() {
               {/* Avatar + menu déroulant */}
               <div className="relative user-menu">
                 <button
-                  onClick={() => setMenuOpen((v) => !v)}
+                  onClick={() => {
+                    setMenuOpen((v) => !v);
+                  }}
                   className={`w-10 h-10 rounded-full flex items-center justify-center border-2 border-green-500 bg-white shadow hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-green-400 ${menuOpen ? 'ring-2 ring-green-400' : ''}`}
                   aria-label="Menu utilisateur"
                 >
@@ -272,7 +323,7 @@ export default function Header() {
                   )}
                 </button>
                 {menuOpen && (
-                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 z-50 animate-fade-in">
+                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 z-50 animate-fade-in user-menu">
                     <Link
                       href="/auth/profile"
                       className="flex items-center gap-2 px-4 py-3 hover:bg-green-50 text-gray-800 font-medium"
@@ -282,22 +333,21 @@ export default function Header() {
                       Mon profil
                     </Link>
                     <label className="flex items-center gap-2 px-4 py-3 hover:bg-green-50 text-gray-800 font-medium cursor-pointer">
-                      <input type="file" accept="image/*" className="hidden" onChange={handleAvatarChange} disabled={uploading} />
+                      <input type="file" accept="image/*" className="hidden" onChange={async (e) => {
+                        await handleAvatarChange(e);
+                        setMenuOpen(false);
+                      }} disabled={uploading} />
                       <span className="w-5 h-5 inline-block"><svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-5 h-5 text-green-500"><path strokeLinecap="round" strokeLinejoin="round" d="M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 10l-4 4-2-2"/></svg></span>
                       {uploading ? "Chargement..." : "Changer l'avatar"}
                     </label>
                     <div className="border-t border-gray-100" />
                     <button
-                      onClick={async (e) => {
-                        e.preventDefault();
-                        await supabase.auth.signOut();
-                        setUser(null);
-                        window.location.assign("/");
-                      }}
-                      className="flex items-center gap-2 w-full text-left px-4 py-3 hover:bg-red-50 text-red-600 font-medium rounded-b-xl"
+                      onClick={handleSignOut}
+                      disabled={isSigningOut}
+                      className="flex items-center gap-2 w-full text-left px-4 py-3 hover:bg-red-50 text-red-600 font-medium rounded-b-xl disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <ArrowRightOnRectangleIcon className="w-5 h-5 text-red-500" />
-                      Déconnexion
+                      {isSigningOut ? "Déconnexion..." : "Déconnexion"}
                     </button>
                   </div>
                 )}
