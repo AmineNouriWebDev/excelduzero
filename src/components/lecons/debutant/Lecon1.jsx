@@ -719,6 +719,84 @@ export default function Lecon1({ onResult }) {
         </div>
       </section>
 
+      {/* Étapes pour bien débuter avec Excel */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-semibold text-green-700 mb-6 flex items-center gap-2">
+          <FileSpreadsheet className="text-green-600" />
+          Bien démarrer avec Excel
+        </h2>
+        {/* 1. Lancement d’Excel et création d’un nouveau classeur */}
+        <div className="mb-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+          <h3 className="text-2xl font-bold text-green-800 mb-2">1. Lancer Excel et créer un classeur</h3>
+          <ul className="list-disc pl-6 text-gray-700 space-y-2">
+            <li>Ouvrez Excel depuis le menu Démarrer ou le raccourci sur le bureau.</li>
+            <li>À l’ouverture, cliquez sur <strong>« Nouveau classeur »</strong> pour démarrer un document vierge.</li>
+            <li>Vous pouvez aussi choisir un modèle prédéfini pour des besoins spécifiques.</li>
+          </ul>
+        </div>
+        {/* 2. Enregistrement et ouverture d’un fichier */}
+        <div className="mb-8 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+          <h3 className="text-2xl font-bold text-blue-800 mb-2">2. Enregistrer et ouvrir un fichier</h3>
+          <ul className="list-disc pl-6 text-gray-700 space-y-2">
+            <li>Pour enregistrer : cliquez sur <strong>Fichier {'>'} Enregistrer sous</strong>, choisissez l’emplacement et le nom du fichier.</li>
+            <li>Formats principaux : <strong>.xlsx</strong> (standard), <strong>.xls</strong> (ancien), <strong>.csv</strong> (texte, séparateur virgule).</li>
+            <li>Pour ouvrir un fichier existant : <strong>Fichier {'>'} Ouvrir</strong>, puis sélectionnez le document voulu.</li>
+            <li>Pensez à enregistrer régulièrement votre travail (Ctrl+S).</li>
+          </ul>
+        </div>
+        {/* 3. Présentation des éléments clés de l’interface */}
+        <div className="mb-8 bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
+          <h3 className="text-2xl font-bold text-yellow-800 mb-2">3. Les éléments clés de l’interface Excel</h3>
+          <ul className="list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Barre de menus</strong> : accès aux commandes principales (Fichier, Accueil, Insertion, Mise en page, Formules, etc.).</li>
+            <li><strong>Onglets du ruban</strong> : chaque onglet affiche des outils spécifiques (mise en forme, formules, données…).</li>
+            <li><strong>Cellules</strong> : zones de saisie identifiées par une lettre (colonne) et un chiffre (ligne), ex : B3.</li>
+            <li><strong>Barre de formule</strong> : affiche et permet d’éditer le contenu de la cellule active, notamment les formules.</li>
+            <li><strong>Barre d’état</strong> : en bas, affiche des infos utiles (somme, moyenne, mode d’affichage…)</li>
+            <li><strong>Onglets de feuilles</strong> : en bas, pour naviguer entre plusieurs feuilles du même classeur.</li>
+          </ul>
+        </div>
+        {/* 4. Autres bases utiles */}
+        <div className="mb-8 bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+          <h3 className="text-2xl font-bold text-purple-800 mb-2">4. Autres bases à connaître</h3>
+          <ul className="list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Fermer un classeur</strong> : Fichier {'>'} Fermer ou Ctrl+W.</li>
+            <li><strong>Créer une nouvelle feuille</strong> : cliquez sur l’icône + en bas à gauche.</li>
+            <li><strong>Accéder à l’aide</strong> : touche F1 ou menu Aide.</li>
+            <li><strong>Annuler une action</strong> : Ctrl+Z, <strong>Rétablir</strong> : Ctrl+Y.</li>
+            <li><strong>Zoom</strong> : curseur en bas à droite ou Ctrl+molette souris.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Exercice pratique de synthèse */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-pink-700 mb-4 flex items-center gap-2">
+          <FileSpreadsheet className="text-pink-600" />
+          Exercice pratique : Premiers pas sur Excel
+        </h2>
+        <div className="bg-pink-50 p-6 rounded-lg border-l-4 border-pink-400 mb-4">
+          <ol className="list-decimal pl-6 text-gray-700 space-y-2">
+            <li>Lancez Excel et créez un nouveau classeur vierge.</li>
+            <li>Enregistrez le classeur sous le nom <strong>"Découverte.xlsx"</strong> sur votre bureau.</li>
+            <li>Dans la première feuille, saisissez en A1 : <strong>"Nom"</strong> et en B1 : <strong>"Âge"</strong>.</li>
+            <li>Ajoutez au moins 3 lignes de données fictives sous ces en-têtes.</li>
+            <li>Coloriez l’onglet de la feuille en bleu.</li>
+            <li>Ajoutez une nouvelle feuille et nommez-la <strong>"Calculs"</strong>.</li>
+            <li>Essayez de naviguer entre les feuilles, puis fermez et rouvrez le fichier.</li>
+          </ol>
+        </div>
+        <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 mb-6">
+          <strong>Correction vidéo :</strong> Retrouvez la correction détaillée de cet exercice en vidéo ci-dessous !
+        </div>
+        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col items-center">
+          <video width="640" height="360" controls className="w-full max-w-2xl rounded-lg shadow">
+            <source src="/cours/debutant/lecon1/correction_exercice1.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la balise vidéo.
+          </video>
+        </div>
+      </section>
+
       <div className="mt-12">
         <QuizLecon1 onResult={onResult} />
       </div>

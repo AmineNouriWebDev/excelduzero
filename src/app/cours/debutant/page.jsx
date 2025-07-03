@@ -8,31 +8,51 @@ import { Menu } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
 const LEÇONS = [
-  "Découverte de l'interface Excel",
+  // Découverte & navigation
+  "Introduction et découverte de l’interface Excel",
+  "Navigation et gestion des feuilles",
+  "Raccourcis clavier essentiels",
+
+  // Saisie & gestion basique des données
   "Saisie de données : cellules, lignes et colonnes",
-  "Série de données",
-  "Mise en forme et dimensions",
+  "Séries de données (remplissage automatique)",
+  "Recherche/Remplacement",
+
+  // Mise en forme & présentation
+  "Mise en forme et dimensions (largeur, hauteur)",
+  "Gestion des bordures, couleurs et alignement",
+  "Fusion de cellules, en-têtes & pieds de page",
+  "Insertion d’images et de formes",
+
+  // Impression & partage
+  "Mise en page et aperçu avant impression",
+  "Gestion des zones d’impression",
+
+  // Formules & fonctions de base
   "Formules simples (+ - * /)",
-  "Utilisation de la fonction SOMME",
-  "Utilisation de la fonction MOYENNE",
-  "Mise en forme conditionnelle basique",
-  "Tri et filtrage de données simples",
-  "Création de graphiques simples (histogrammes, camemberts)",
-  "Impression et mise en page basique",
-  "Gestion des bordures et couleurs",
+  "Somme, Moyenne, Min et Max",
   "Utilisation des pourcentages",
-  "Fonctions MIN et MAX",
-  "Références relatives vs absolues ($)",
-  "Insertion d'images et formes",
+  "Références relatives vs absolues (style, lignes alternées)",
+
+  // Tri, filtrage & tableaux
+  "Tri et filtrage de données simples",
+  "Tableaux basiques (style, lignes alternées)",
+
+  // Visualisation de données
+  "Graphiques simples (histogrammes, camemberts)",
+  "Création de calendriers simples",
+
+  // Validation & protection
   "Validation de données basique (listes déroulantes)",
   "Protection de feuille et de classeur",
-  "Utilisation des commentaires",
-  "Recherche/remplacement de données",
-  "Gestion des en-têtes et pieds de page",
-  "Fusion de cellules et alignement",
-  "Création de calendriers simples",
-  "Tableaux basiques avec mise en forme",
-  "Raccourcis clavier essentiels"
+
+  // Commentaires & astuces
+  "Utilisation des commentaires (note rapide vs discussion)",
+  "Astuces de productivité (autofill, poignée de recopie…)",
+  "Gestion des doublons simples (mise en forme conditionnelle basique)",
+
+  // BONUS
+  "Raccourcis clavier Excel (avancé)"
 ];
 
 // Statut possible pour chaque leçon : 'not_started', 'success', 'failed'
