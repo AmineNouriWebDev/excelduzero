@@ -108,7 +108,6 @@ export default function QuizLecon1({ onResult }) {
 								: "border-gray-200 bg-white hover:bg-gray-100"
 						}`}
 						onClick={() => handleSelect(idx)}
-						disabled={selected !== null}
 					>
 						{opt}
 					</button>
