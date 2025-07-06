@@ -1,4 +1,4 @@
-// Composant Quiz pour la leçon 5 du niveau débutant
+// Composant Quiz pour la leçon 13 du niveau débutant
 // Questions sur les formules, opérateurs et références Excel
 import { useState } from "react";
 
@@ -55,6 +55,8 @@ export default function QuizLecon13({ onResult }) {
 	const [score, setScore] = useState(0);
 	const [done, setDone] = useState(false);
 	const [selected, setSelected] = useState(null);
+	const [userAnswers, setUserAnswers] = useState([]); // Stocker les réponses de l'utilisateur
+	const [showResults, setShowResults] = useState(false); // Afficher les résultats détaillés
 
 	function handleSelect(idx) {
 		setSelected(idx);
@@ -62,10 +64,21 @@ export default function QuizLecon13({ onResult }) {
 
 	function handleNext() {
 		let newScore = score;
-		if (selected === questions[step].answer) {
+		const isCorrect = selected === questions[step].answer;
+		
+		// Enregistrer la réponse de l'utilisateur
+		const newUserAnswers = [...userAnswers, {
+			questionIndex: step,
+			selectedAnswer: selected,
+			isCorrect: isCorrect
+		}];
+		setUserAnswers(newUserAnswers);
+
+		if (isCorrect) {
 			newScore = score + 1;
 			setScore(newScore);
 		}
+
 		if (step + 1 < questions.length) {
 			setStep(step + 1);
 			setSelected(null);
@@ -74,6 +87,10 @@ export default function QuizLecon13({ onResult }) {
 			const status = (newScore >= 3) ? "success" : "failed";
 			onResult?.(status);
 		}
+	}
+
+	function toggleResults() {
+		setShowResults(!showResults);
 	}
 
 	if (done) {
@@ -103,20 +120,103 @@ export default function QuizLecon13({ onResult }) {
 						? "Bravo, vous avez validé la leçon !"
 						: "Il faut au moins 3 bonnes réponses. Révisez la leçon et réessayez !"}
 				</div>
+
+				{/* Bouton pour afficher/masquer les résultats détaillés */}
+				<button
+					className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition-colors"
+					onClick={toggleResults}
+				>
+					{showResults ? "Masquer les réponses" : "Voir les réponses"}
+				</button>
+
+				{/* Affichage des résultats détaillés */}
+				{showResults && (
+					<div className="mt-6 text-left">
+						<h3 className="text-lg font-bold mb-4 text-gray-800 text-center">Détail des réponses</h3>
+						<div className="space-y-4">
+							{questions.map((q, qIndex) => {
+								const userAnswer = userAnswers.find(ua => ua.questionIndex === qIndex);
+								const isCorrect = userAnswer?.isCorrect;
+								
+								return (
+									<div key={qIndex} className="bg-white rounded-lg p-4 border border-gray-200">
+										<div className="font-medium text-gray-800 mb-3">
+											<span className="text-blue-600">Question {qIndex + 1}:</span> {q.question}
+										</div>
+										
+										<div className="space-y-2">
+											{q.options.map((option, optIndex) => {
+												const isUserSelected = userAnswer?.selectedAnswer === optIndex;
+												const isCorrectAnswer = optIndex === q.answer;
+												
+												let optionClass = "px-3 py-2 rounded-lg border-2 ";
+												
+												if (isCorrectAnswer) {
+													optionClass += "bg-green-100 border-green-400 text-green-800";
+												} else if (isUserSelected && !isCorrectAnswer) {
+													optionClass += "bg-red-100 border-red-400 text-red-800";
+												} else {
+													optionClass += "bg-gray-50 border-gray-200 text-gray-600";
+												}
+												
+												return (
+													<div key={optIndex} className={optionClass}>
+														<div className="flex items-center gap-3">
+															<span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-semibold ${
+																isCorrectAnswer
+																	? "bg-green-500 border-green-500 text-white"
+																	: isUserSelected && !isCorrectAnswer
+																	? "bg-red-500 border-red-500 text-white"
+																	: "border-gray-300 text-gray-500"
+															}`}>
+																{String.fromCharCode(65 + optIndex)}
+															</span>
+															<span className="flex-1">{option}</span>
+															{isCorrectAnswer && (
+																<svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+																</svg>
+															)}
+															{isUserSelected && !isCorrectAnswer && (
+																<svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+																</svg>
+															)}
+														</div>
+													</div>
+												);
+											})}
+										</div>
+										
+										<div className="mt-3 text-sm">
+											{isCorrect ? (
+												<span className="text-green-600 font-medium">✓ Réponse correcte</span>
+											) : (
+												<span className="text-red-600 font-medium">✗ Réponse incorrecte</span>
+											)}
+										</div>
+									</div>
+								);
+							})}
+						</div>
+					</div>
+				)}
+
 				{!isSuccess && (
 					<button
-						className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg font-bold hover:bg-red-700"
+						className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg font-bold hover:bg-red-700 transition-colors"
 						onClick={() => {
 							setStep(0);
 							setScore(0);
 							setDone(false);
 							setSelected(null);
+							setUserAnswers([]);
+							setShowResults(false);
 						}}
 					>
 						Refaire le quiz
 					</button>
 				)}
-		
 			</div>
 		);
 	}

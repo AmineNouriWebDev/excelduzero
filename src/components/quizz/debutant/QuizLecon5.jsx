@@ -1,4 +1,4 @@
-// Composant Quiz pour la leçon 3 du niveau débutant
+// Composant Quiz pour la leçon 5 du niveau débutant avec affichage des réponses
 // Questions sur les séries de données Excel
 import { useState } from "react";
 
@@ -55,12 +55,12 @@ const questions = [
 	},
 ];
 
-// Correction du calcul du score pour éviter de dépasser le nombre de questions
 export default function QuizLecon5({ onResult }) {
 	const [step, setStep] = useState(0);
 	const [score, setScore] = useState(0);
 	const [done, setDone] = useState(false);
 	const [selected, setSelected] = useState(null);
+	const [userAnswers, setUserAnswers] = useState([]); // Pour stocker les réponses de l'utilisateur
 
 	function handleSelect(idx) {
 		setSelected(idx);
@@ -68,10 +68,21 @@ export default function QuizLecon5({ onResult }) {
 
 	function handleNext() {
 		let newScore = score;
-		if (selected === questions[step].answer) {
+		const isCorrect = selected === questions[step].answer;
+		
+		// Enregistrer la réponse de l'utilisateur
+		const newUserAnswers = [...userAnswers, {
+			questionIndex: step,
+			selectedAnswer: selected,
+			isCorrect: isCorrect
+		}];
+		setUserAnswers(newUserAnswers);
+
+		if (isCorrect) {
 			newScore = score + 1;
 			setScore(newScore);
 		}
+
 		if (step + 1 < questions.length) {
 			setStep(step + 1);
 			setSelected(null);
@@ -82,75 +93,148 @@ export default function QuizLecon5({ onResult }) {
 		}
 	}
 
+	function resetQuiz() {
+		setStep(0);
+		setScore(0);
+		setDone(false);
+		setSelected(null);
+		setUserAnswers([]);
+	}
+
 	if (done) {
 		const isSuccess = score >= 3;
+		const incorrectAnswers = userAnswers.filter(answer => !answer.isCorrect);
+
 		return (
-			<div
-				className={`mt-8 p-4 rounded-xl border text-center ${
-					isSuccess
-						? "bg-green-50 border-green-200 text-green-800"
-						: "bg-red-50 border-red-200 text-red-800"
-				}`}
-			>
-				<div className="text-lg font-bold mb-2 flex items-center justify-center gap-2">
-					{isSuccess ? (
-						<>
-							<svg
-								className="w-6 h-6 text-green-600"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth={2}
-									d="M5 13l4 4L19 7"
-								/>
-							</svg>
-							Quiz réussi ! Leçon validée
-						</>
-					) : (
-						<>
-							<svg
-								className="w-6 h-6 text-red-600"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth={2}
-									d="M6 18L18 6M6 6l12 12"
-								/>
-							</svg>
-							Quiz échoué
-						</>
-					)}
+			<div className="mt-8 space-y-6">
+				{/* Résultat principal */}
+				<div
+					className={`p-4 rounded-xl border text-center ${
+						isSuccess
+							? "bg-green-50 border-green-200 text-green-800"
+							: "bg-red-50 border-red-200 text-red-800"
+					}`}
+				>
+					<div className="text-lg font-bold mb-2 flex items-center justify-center gap-2">
+						{isSuccess ? (
+							<>
+								<svg
+									className="w-6 h-6 text-green-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+								Quiz réussi ! Leçon validée
+							</>
+						) : (
+							<>
+								<svg
+									className="w-6 h-6 text-red-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								</svg>
+								Quiz échoué
+							</>
+						)}
+					</div>
+					<div>
+						Votre score : {score} / {questions.length}
+					</div>
+					<div className="mt-2">
+						{isSuccess
+							? "Bravo, vous avez validé la leçon !"
+							: "Il faut au moins 3 bonnes réponses. Révisez la leçon et réessayez !"}
+					</div>
 				</div>
-				<div>
-					Votre score : {score} / {questions.length}
-				</div>
-				<div className="mt-2">
-					{isSuccess
-						? "Bravo, vous avez validé la leçon !"
-						: "Il faut au moins 3 bonnes réponses. Révisez la leçon et réessayez !"}
-				</div>
-				{!isSuccess && (
-					<button
-						className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg font-bold hover:bg-red-700"
-						onClick={() => {
-							setStep(0);
-							setScore(0);
-							setDone(false);
-							setSelected(null);
-						}}
-					>
-						Refaire le quiz
-					</button>
+
+				{/* Affichage des réponses incorrectes */}
+				{incorrectAnswers.length > 0 && (
+					<div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
+						<div className="font-bold mb-4 text-gray-800">
+							Révision des réponses :
+						</div>
+						<div className="space-y-4">
+							{incorrectAnswers.map((userAnswer, idx) => {
+								const question = questions[userAnswer.questionIndex];
+								return (
+									<div key={idx} className="border border-gray-200 rounded-lg p-4 bg-white">
+										<div className="font-medium mb-3 text-gray-700">
+											{question.question}
+										</div>
+										<div className="space-y-2">
+											{question.options.map((option, optIdx) => {
+												const isUserAnswer = optIdx === userAnswer.selectedAnswer;
+												const isCorrectAnswer = optIdx === question.answer;
+												
+												let className = "px-3 py-2 rounded-md text-sm flex items-center gap-2 ";
+												
+												if (isCorrectAnswer) {
+													className += "bg-green-100 text-green-800 border border-green-300";
+												} else if (isUserAnswer) {
+													className += "bg-red-100 text-red-800 border border-red-300";
+												} else {
+													className += "bg-gray-50 text-gray-600 border border-gray-200";
+												}
+
+												return (
+													<div key={optIdx} className={className}>
+														<span
+															className={`w-5 h-5 rounded-full border flex items-center justify-center text-xs font-semibold ${
+																isCorrectAnswer
+																	? "bg-green-500 border-green-500 text-white"
+																	: isUserAnswer
+																	? "bg-red-500 border-red-500 text-white"
+																	: "border-gray-300 text-gray-500"
+															}`}
+														>
+															{String.fromCharCode(65 + optIdx)}
+														</span>
+														<div className="flex items-center justify-between flex-1">
+															<span>{option}</span>
+															{isCorrectAnswer && (
+																<span className="text-green-600 font-bold">✓ Bonne réponse</span>
+															)}
+															{isUserAnswer && !isCorrectAnswer && (
+																<span className="text-red-600 font-bold">✗ Votre réponse</span>
+															)}
+														</div>
+													</div>
+												);
+											})}
+										</div>
+									</div>
+								);
+							})}
+						</div>
+					</div>
 				)}
-		
+
+				{/* Bouton pour refaire le quiz */}
+				{!isSuccess && (
+					<div className="text-center">
+						<button
+							className="px-6 py-3 bg-red-600 text-white rounded-lg font-bold hover:bg-red-700 transition"
+							onClick={resetQuiz}
+						>
+							Refaire le quiz
+						</button>
+					</div>
+				)}
 			</div>
 		);
 	}
