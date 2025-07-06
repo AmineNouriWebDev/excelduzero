@@ -1,55 +1,44 @@
-// Composant Quiz pour la leçon 4 du niveau débutant
-// Questions sur la mise en forme et les dimensions Excel
+// Composant Quiz pour la leçon 2 du niveau débutant
+// À compléter avec les questions spécifiques à la leçon
 import { useState } from "react";
 
 const questions = [
 	{
-		question: "Quel onglet contient les outils de mise en forme comme la police, l'alignement ou les bordures ?",
-		options: [
-			"Onglet Insertion",
-			"Onglet Accueil",
-			"Onglet Mise en page"
-		],
-		answer: 1
+		question: "Quel raccourci permet d'atteindre la cellule A1?",
+		options: ["Ctrl+Fin", "Ctrl+Accueil", "Alt+A"],
+		answer: 1,
 	},
 	{
-		question: "Comment appliquez-vous un format monétaire à une cellule dans Excel ?",
+		question: "Comment saisir un nombre comme texte?",
 		options: [
-			"Via le groupe 'Nombre' de l'onglet Accueil",
-			"Via le menu contextuel 'Format de cellule'",
-			"Les deux réponses sont correctes"
+			"Utiliser la mise en forme",
+			"Ajouter une apostrophe avant",
+			"Mettre entre guillemets",
 		],
-		answer: 2
+		answer: 1,
 	},
 	{
-		question: "Pour ajuster automatiquement la largeur d'une colonne au contenu, que faites-vous ?",
-		options: [
-			"Double-clic sur la bordure de la colonne",
-			"Clic droit > Largeur de colonne",
-			"Utiliser l'option 'Ajuster la largeur de colonne' dans le ruban"
-		],
-		answer: 0
+		question: "Quelle touche annule une saisie en cours?",
+		options: ["Suppr", "Échap", "F1"],
+		answer: 1,
 	},
 	{
-		question: "Quel outil permet de reproduire la mise en forme d'une cellule sur une autre ?",
-		options: [
-			"Le pinceau de reproduction",
-			"La commande Collage spécial > Formats",
-			"Les deux réponses sont correctes"
-		],
-		answer: 2
+		question: "Comment lancer la vérification orthographique?",
+		options: ["Ctrl+O", "F7", "Alt+V"],
+		answer: 1,
 	},
 	{
-		question: "Où trouve-t-on les thèmes prédéfinis dans Excel ?",
+		question: "Que fait Ctrl+Entrée?",
 		options: [
-			"Onglet Accueil > Groupe Styles",
-			"Onglet Mise en page > Groupe Thèmes",
-			"Onglet Fichier > Options > Thèmes"
+			"Annule la saisie",
+			"Valide dans toutes les cellules sélectionnées",
+			"Ouvre un nouveau classeur",
 		],
-		answer: 1
-	}
+		answer: 1,
+	},
 ];
 
+// Correction du calcul du score pour éviter de dépasser le nombre de questions
 export default function QuizLecon4({ onResult }) {
 	const [step, setStep] = useState(0);
 	const [score, setScore] = useState(0);
@@ -71,37 +60,29 @@ export default function QuizLecon4({ onResult }) {
 			setSelected(null);
 		} else {
 			setDone(true);
-			const status = (newScore >= 3) ? "success" : "failed";
+			const status = newScore >= 1 ? "success" : "failed";
 			onResult?.(status);
 		}
 	}
 
 	if (done) {
-		const isSuccess = score >= 3;
+		const isSuccess = score >= 1;
 		return (
-			<div className={`mt-8 p-4 rounded-xl border text-center ${isSuccess ? "bg-green-50 border-green-200 text-green-800" : "bg-red-50 border-red-200 text-red-800"}`}>
-				<div className="text-lg font-bold mb-2 flex items-center justify-center gap-2">
-					{isSuccess ? (
-						<>
-							<svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-							</svg>
-							Quiz réussi ! Leçon validée
-						</>
-					) : (
-						<>
-							<svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-							</svg>
-							Quiz échoué
-						</>
-					)}
+			<div
+				className={`mt-8 p-4 rounded-xl border text-center ${
+					isSuccess
+						? "bg-green-50 border-green-200 text-green-800"
+						: "bg-red-50 border-red-200 text-red-800"
+				}`}
+			>
+				<div className="text-lg font-bold mb-2">Quiz terminé !</div>
+				<div>
+					Votre score : {score} / {questions.length}
 				</div>
-				<div>Votre score : {score} / {questions.length}</div>
 				<div className="mt-2">
 					{isSuccess
 						? "Bravo, vous avez validé la leçon !"
-						: "Il faut au moins 3 bonnes réponses. Révisez la leçon et réessayez !"}
+						: "Vous pouvez réessayer pour progresser."}
 				</div>
 				{!isSuccess && (
 					<button
@@ -116,76 +97,41 @@ export default function QuizLecon4({ onResult }) {
 						Refaire le quiz
 					</button>
 				)}
-		
 			</div>
 		);
 	}
 
 	return (
-		<div className="mt-8 p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200">
-			<div className="flex items-center gap-3 mb-4">
-				<svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-				</svg>
-				<div className="font-bold text-blue-800">Quiz : Mise en forme et dimensions</div>
+		<div className="mt-8 p-4 rounded-xl bg-gray-50 border border-gray-200">
+			<div className="font-bold mb-2">
+				Quiz : testez vos connaissances
 			</div>
-
-			<div className="mb-4 text-sm text-blue-600">
-				Question {step + 1} sur {questions.length}
-			</div>
-
-			<div className="bg-white rounded-lg p-4 mb-4 border border-blue-100">
-				<div className="font-medium text-gray-800 mb-4">{questions[step].question}</div>
-
-				<div className="space-y-3">
-					{questions[step].options.map((opt, idx) => (
-						<button
-							key={idx}
-							className={`block w-full text-left px-4 py-3 rounded-lg border-2 transition-all duration-200 focus:outline-none ${
-								selected === idx
-									? "bg-blue-100 border-blue-400 text-blue-800 shadow-md"
-									: "bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300"
-							}`}
-							onClick={() => handleSelect(idx)}
-						>
-							<div className="flex items-center gap-3">
-								<span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-semibold ${
-									selected === idx
-										? "bg-blue-500 border-blue-500 text-white"
-										: "border-gray-300 text-gray-500"
-								}`}>
-									{String.fromCharCode(65 + idx)}
-								</span>
-								<span>{opt}</span>
-							</div>
-						</button>
-					))}
-				</div>
-			</div>
-
-			{selected !== null && (
-				<div className="flex justify-center">
+			<div className="mb-2">{questions[step].question}</div>
+			<div className="space-y-2">
+				{questions[step].options.map((opt, idx) => (
 					<button
-						className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md"
-						onClick={handleNext}
+						key={idx}
+						className={`block w-full text-left px-4 py-2 rounded-lg border transition focus:outline-none ${
+							selected === idx
+								? "bg-green-100 border-green-400"
+								: "bg-white border-gray-200 hover:bg-gray-100"
+						}`}
+						onClick={() => handleSelect(idx)}
 					>
-						{step + 1 < questions.length ? "Question suivante" : "Voir le résultat"}
+						{opt}
 					</button>
-				</div>
-			)}
-
-			<div className="mt-4 bg-blue-100 rounded-lg p-3">
-				<div className="flex justify-between items-center">
-					<span className="text-sm text-blue-700">Progression</span>
-					<span className="text-sm font-medium text-blue-800">{Math.round(((step + 1) / questions.length) * 100)}%</span>
-				</div>
-				<div className="mt-2 w-full bg-blue-200 rounded-full h-2">
-					<div
-						className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-						style={{ width: `${((step + 1) / questions.length) * 100}%` }}
-					></div>
-				</div>
+				))}
 			</div>
+			{selected !== null && (
+				<button
+					className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg font-bold hover:bg-green-700"
+					onClick={handleNext}
+				>
+					{step + 1 < questions.length
+						? "Question suivante"
+						: "Voir le résultat"}
+				</button>
+			)}
 		</div>
 	);
 }

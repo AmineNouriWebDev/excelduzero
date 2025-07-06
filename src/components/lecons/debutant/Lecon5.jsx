@@ -1,614 +1,592 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
 import QuizLecon5 from "../../quizz/debutant/QuizLecon5";
-import PremiumVideo from "../../ui/PremiumVideo";
-
 import { 
-    Calculator, Info, AlertTriangle, Type, Eye, GitBranch, 
-     Plus, Calendar, Database, 
-    MousePointer, ArrowRight, ArrowDown, Lock, ToggleLeft, 
-    Lightbulb, CheckCircle, Link, Key, Keyboard 
-  } from 'lucide-react';
-  
-  export default function Lecon5({ onResult }) {
-    return (
-        <div className="max-w-4xl mx-auto p-6 bg-white">
-          {/* En-tête principal */}
-          <div className="mb-8 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-              <Calculator className="w-8 h-8 text-green-600" />
-            </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Les Formules Excel</h1>
-            <p className="text-lg text-gray-600">
-              Maîtrisez les formules et fonctions essentielles d'Excel
-            </p>
-          </div>
-      
-          {/* Introduction */}
-          <div className="mb-8 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-400">
-            <div className="flex items-start space-x-3">
-              <Info className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-              <p className="text-gray-700">
-                Sur le ruban, l'onglet « Formules » regroupe les commandes spécifiques aux formules.
-              </p>
-            </div>
-          </div>
-      
-          {/* Règle fondamentale */}
-          <div className="mb-8">
-            <div className="flex items-center space-x-3 mb-4">
-              <AlertTriangle className="w-6 h-6 text-orange-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
-                Règle fondamentale : Le signe égal =
-              </h2>
-            </div>
-            
-            <div className="bg-orange-50 p-6 rounded-lg mb-4">
-              <p className="text-gray-700 mb-4">
-                <strong className="text-orange-700">Toute formule doit commencer par le signe égal =</strong>
-              </p>
-              <p className="text-gray-700 mb-4">
-                Le signe égal indique qu'un résultat doit être donné, contrairement à une saisie simple, sans résultat attendu.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-4 mt-4">
-                <div className="bg-white p-4 rounded border-l-4 border-red-400">
-                  <p className="text-sm font-medium text-red-700 mb-2">❌ Incorrect</p>
-                  <code className="text-red-600">5 + 2</code>
-                  <p className="text-xs text-gray-600 mt-1">Affiche : 5 + 2</p>
-                </div>
-                <div className="bg-white p-4 rounded border-l-4 border-green-400">
-                  <p className="text-sm font-medium text-green-700 mb-2">✅ Correct</p>
-                  <code className="text-green-600">=5 + 2</code>
-                  <p className="text-xs text-gray-600 mt-1">Affiche : 7</p>
-                </div>
-              </div>
-            </div>
-      
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <div className="flex items-start space-x-2">
-                <Lightbulb className="w-5 h-5 text-yellow-500 mt-0.5" />
-                <div>
-                  <p className="text-sm font-medium text-gray-700">Astuce</p>
-                  <p className="text-sm text-gray-600">
-                    Le pavé numérique ne contient pas de signe égal. Remplacez-le par le signe + ou - si la formule débute par un nombre négatif.
-                  </p>
-                </div>
-              </div>
-            </div>
-      
-            <ImageZoomable 
-              src="/cours/debutant/lecon5/addition.gif" 
-              alt="Exemple de formule d'addition Excel" 
-              style={{ maxHeight: 300 }}
-              className="mt-4 rounded-lg shadow-sm"
-            />
-          </div>
-      
-          {/* Casse */}
-          <div className="mb-8">
-            <div className="flex items-center space-x-3 mb-4">
-              <Type className="w-6 h-6 text-purple-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
-                Sensibilité à la casse
-              </h2>
-            </div>
-            <div className="bg-purple-50 p-4 rounded-lg">
-              <p className="text-gray-700">
-                Excel ne distingue pas la casse (majuscule ou minuscule). Vous pouvez donc écrire une référence de colonne, un nom de fonction ou un nom attribué en minuscules pour être plus rapide.
-              </p>
-            </div>
-          </div>
-      
-          {/* Affichage */}
-          <div className="mb-8">
-            <div className="flex items-center space-x-3 mb-4">
-              <Eye className="w-6 h-6 text-indigo-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
-                Affichage des formules
-              </h2>
-            </div>
-            
-            <div className="space-y-4">
-              <p className="text-gray-700">
-                Après validation (Entrée ou clic dans une autre cellule), le résultat apparaît dans la cellule. La formule reste visible dans la barre de formule.
-              </p>
-              
-              <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-indigo-900 mb-3">Pour afficher toutes les formules :</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                    <span className="text-gray-700">Groupe « Formules » → bouton « Afficher les formules »</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                    <span className="text-gray-700">Raccourci : <kbd className="px-2 py-1 bg-white rounded border text-sm">Ctrl + "</kbd></span>
-                  </div>
-                </div>
-              </div>
-      
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="flex items-start space-x-2">
-                  <Lightbulb className="w-5 h-5 text-yellow-500 mt-0.5" />
-                  <div>
-                    <p className="text-sm font-medium text-gray-700">Formules longues</p>
-                    <p className="text-sm text-gray-600">
-                      Pour une meilleure lisibilité, insérez des sauts de ligne : <kbd className="px-2 py-1 bg-white rounded border text-xs">Alt + Entrée</kbd>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          {/* Indépendance/Dépendance */}
-          <div className="mb-8">
-            <div className="flex items-center space-x-3 mb-4">
-              <GitBranch className="w-6 h-6 text-emerald-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
-                Formules indépendantes et dépendantes
-              </h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
-                <h4 className="font-semibold text-emerald-800 mb-3 flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  Formule indépendante
-                </h4>
-                <p className="text-gray-700 mb-3">N'utilise pas la valeur d'autres cellules</p>
-                <div className="bg-white p-3 rounded border">
-                  <code className="text-emerald-700">=8 * 5 - 6</code>
-                </div>
-              </div>
-              
-              <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
-                <h4 className="font-semibold text-blue-800 mb-3 flex items-center">
-                  <Link className="w-5 h-5 mr-2" />
-                  Formule dépendante
-                </h4>
-                <p className="text-gray-700 mb-3">Utilise la valeur d'autres cellules</p>
-                <div className="bg-white p-3 rounded border">
-                  <code className="text-blue-700">=A3 + B1</code>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          {/* Les fonctions */}
-          <div className="mb-8">
-            <div className="flex items-center space-x-3 mb-6">
-              <Plus className="w-6 h-6 text-violet-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
-                Les fonctions
-              </h2>
-            </div>
-            
-            <p className="text-gray-700 mb-6">
-              Une formule peut utiliser une ou plusieurs fonctions, relatives à divers domaines.
-            </p>
-      
-            <div className="grid gap-6">
-              {/* Fonction SOMME */}
-              <div className="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border border-red-200">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Plus className="w-5 h-5 text-red-600" />
-                  <h4 className="font-semibold text-red-800">Mathématiques - Fonction SOMME</h4>
-                </div>
-                <div className="bg-white p-4 rounded border-l-4 border-red-400">
-                  <code className="text-red-700">=SOMME(C5:Z18)</code>
-                  <p className="text-sm text-gray-600 mt-2">
-                    Renvoie la somme des valeurs de la plage C5:Z18 (évite d'écrire =C5+C6+...+Z18)
-                  </p>
-                </div>
-              </div>
-      
-              {/* Fonction NBCAR */}
-              <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Type className="w-5 h-5 text-orange-600" />
-                  <h4 className="font-semibold text-orange-800">Texte - Fonction NBCAR</h4>
-                </div>
-                <div className="bg-white p-4 rounded border-l-4 border-orange-400">
-                  <code className="text-orange-700">=NBCAR(A27)</code>
-                  <p className="text-sm text-gray-600 mt-2">
-                    Renvoie le nombre de caractères du texte dans la cellule A27
-                  </p>
-                </div>
-              </div>
-      
-              {/* Fonction AUJOURDHUI */}
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Calendar className="w-5 h-5 text-blue-600" />
-                  <h4 className="font-semibold text-blue-800">Date - Fonction AUJOURDHUI</h4>
-                </div>
-                <div className="bg-white p-4 rounded border-l-4 border-blue-400">
-                  <code className="text-blue-700">=AUJOURDHUI()-2</code>
-                  <p className="text-sm text-gray-600 mt-2">
-                    Renvoie la date d'avant-hier
-                  </p>
-                </div>
-              </div>
-      
-              {/* Fonction ESTVIDE */}
-              <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Database className="w-5 h-5 text-purple-600" />
-                  <h4 className="font-semibold text-purple-800">Information - Fonction ESTVIDE</h4>
-                </div>
-                <div className="bg-white p-4 rounded border-l-4 border-purple-400">
-                  <code className="text-purple-700">=ESTVIDE(E10)</code>
-                  <p className="text-sm text-gray-600 mt-2">
-                    Renvoie VRAI si E10 est vide, sinon FAUX
-                  </p>
-                </div>
-              </div>
-            </div>
-      
-            <ImageZoomable 
-              src="/cours/debutant/lecon5/fonctions_simples.gif" 
-              alt="Exemples de fonctions simples Excel" 
-              style={{ maxHeight: 300 }}
-              className="mt-6 rounded-lg shadow-sm"
-            />
-          </div>
-      
-          {/* Section 1: Opérateurs */}
-          <div className="mb-12">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="flex items-center justify-center w-8 h-8 bg-indigo-100 rounded-full">
-                <span className="text-indigo-600 font-bold">1</span>
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">OPÉRATEURS</h2>
-            </div>
-      
-            {/* Opérateurs de calcul */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <Calculator className="w-6 h-6 text-indigo-500" />
-                <h3 className="text-xl font-semibold text-gray-900">Opérateurs de calcul</h3>
-              </div>
-              
-              <p className="text-gray-700 mb-6">
-                Pour élaborer une formule de calcul, on se sert d'opérateurs par ordre de priorité :
-              </p>
-      
-              <div className="bg-indigo-50 p-6 rounded-lg mb-6">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4 p-3 bg-white rounded border-l-4 border-red-400">
-                    <span className="font-bold text-red-600">1.</span>
-                    <div>
-                      <span className="font-semibold">Puissance</span>
-                      <code className="ml-3 px-2 py-1 bg-gray-100 rounded">^</code>
-                      <span className="text-sm text-gray-600 ml-2">(Alt Gr + 9)</span>
-                      <div className="text-sm text-gray-600 mt-1">Exemple : <code>=3^2</code></div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4 p-3 bg-white rounded border-l-4 border-orange-400">
-                    <span className="font-bold text-orange-600">2.</span>
-                    <div>
-                      <span className="font-semibold">Multiplication et Division</span>
-                      <code className="ml-3 px-2 py-1 bg-gray-100 rounded">*</code>
-                      <code className="ml-2 px-2 py-1 bg-gray-100 rounded">/</code>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4 p-3 bg-white rounded border-l-4 border-green-400">
-                    <span className="font-bold text-green-600">3.</span>
-                    <div>
-                      <span className="font-semibold">Addition et Soustraction</span>
-                      <code className="ml-3 px-2 py-1 bg-gray-100 rounded">+</code>
-                      <code className="ml-2 px-2 py-1 bg-gray-100 rounded">-</code>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                <div className="flex items-start space-x-3">
-                  <Lightbulb className="w-5 h-5 text-yellow-600 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-yellow-800 mb-2">Exemple de calcul</h4>
-                    <div className="bg-white p-4 rounded border">
-                      <p className="mb-2"><code className="text-blue-600">=3^2*4+1</code></p>
-                      <p className="text-sm text-gray-600">
-                        Résultat : <strong>37</strong> (3² = 9, puis 9×4 = 36, puis 36+1 = 37)
-                      </p>
-                    </div>
-                    <p className="text-sm text-gray-700 mt-3">
-                      Utilisez des parenthèses pour préciser la priorité : <code>=((3^2)*4)+1</code>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            {/* Opérateur alphanumérique */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <Type className="w-6 h-6 text-green-500" />
-                <h3 className="text-xl font-semibold text-gray-900">Opérateur alphanumérique</h3>
-              </div>
-              
-              <div className="bg-green-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-4">
-                  L'esperluette <code className="px-2 py-1 bg-white rounded border font-bold">&</code> est l'opérateur permettant de concaténer (lier) des chaînes de caractères.
-                </p>
-                
-                <div className="bg-white p-4 rounded border-l-4 border-green-400">
-                  <h4 className="font-semibold text-green-800 mb-2">Exemple pratique :</h4>
-                  <div className="space-y-2 text-sm">
-                    <p>• A1 : <code>Julien</code></p>
-                    <p>• B1 : <code>New York</code></p>
-                    <p>• C1 : <code>=A1&" habite à "&B1</code></p>
-                    <p className="font-semibold text-green-700">Résultat : Julien habite à New York</p>
-                  </div>
-                </div>
-              </div>
-      
-              <ImageZoomable 
-                src="/cours/debutant/lecon5/operateurs_excel.gif" 
-                alt="Exemple d'opérateur alphanumérique" 
-                style={{ maxHeight: 300 }}
-                className="mt-4 rounded-lg shadow-sm"
-              />
-            </div>
-          </div>
-      
-          {/* Section 2: Références */}
-          <div className="mb-12">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full">
-                <span className="text-blue-600 font-bold">2</span>
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">RÉFÉRENCES RELATIVES OU ABSOLUES</h2>
-            </div>
-      
-            <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <p className="text-gray-700 mb-4">
-                Dans une formule, on peut désigner une cellule soit par sa référence ColonneLigne (ex: <code>=6*J43</code>), soit par son nom (ex: <code>=6*quantité</code>).
-              </p>
-              <p className="text-gray-700">
-                Quand on saisit sa référence, le contour de la cellule change de couleur et s'entoure de quatre poignées.
-              </p>
-            </div>
-      
-            {/* Insertion de référence */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <MousePointer className="w-6 h-6 text-purple-500" />
-                <h3 className="text-xl font-semibold text-gray-900">Insertion d'une référence</h3>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <Keyboard className="w-5 h-5 text-purple-600" />
-                    <h4 className="font-semibold text-purple-800">Méthode 1 : Clavier</h4>
-                  </div>
-                  <p className="text-gray-700">Taper la lettre de colonne suivie du numéro de ligne</p>
-                </div>
-                
-                <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <MousePointer className="w-5 h-5 text-purple-600" />
-                    <h4 className="font-semibold text-purple-800">Méthode 2 : Souris</h4>
-                  </div>
-                  <p className="text-gray-700">Sélectionner avec la souris (particulièrement utile pour les plages)</p>
-                </div>
-              </div>
-            </div>
-      
-            {/* Références relatives */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <ArrowRight className="w-6 h-6 text-green-500" />
-                <h3 className="text-xl font-semibold text-gray-900">Référence relative</h3>
-              </div>
-              
-              <div className="bg-green-50 p-6 rounded-lg mb-4">
-                <p className="text-gray-700 mb-4">
-                  Une formule avec référence relative mémorise la <strong>position</strong> de la cellule par rapport à celle contenant la formule.
-                </p>
-                
-                <div className="bg-white p-4 rounded border-l-4 border-green-400">
-                  <h4 className="font-semibold text-green-800 mb-2">Exemple :</h4>
-                  <div className="space-y-2 text-sm">
-                    <p>• Dans C5, saisir <code>=A4</code></p>
-                    <p>• Excel mémorise : "2 colonnes avant, 1 ligne au-dessus"</p>
-                    <p>• Si on copie C5 vers D8, le résultat sera celui de B7</p>
-                  </div>
-                </div>
-              </div>
-      
-              <ImageZoomable 
-                src="/cours/debutant/lecon5/reference_relative.gif" 
-                alt="Exemple de références relatives Excel" 
-                style={{ maxHeight: 300 }}
-                className="mb-6 rounded-lg shadow-sm"
-              />
-      
-              {/* Recopie verticale */}
-              <div className="mb-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <ArrowDown className="w-5 h-5 text-blue-500" />
-                  <h4 className="text-lg font-semibold text-gray-900">Recopie verticale</h4>
-                </div>
-                
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <ol className="space-y-3 text-gray-700">
-                    <li className="flex items-start space-x-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-blue-200 text-blue-800 rounded-full flex items-center justify-center text-sm font-semibold">1</span>
-                      <span>Sélectionner la première cellule</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-blue-200 text-blue-800 rounded-full flex items-center justify-center text-sm font-semibold">2</span>
-                      <span>Cliquer-glisser sur la poignée (petit carré noir en bas à droite)</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-blue-200 text-blue-800 rounded-full flex items-center justify-center text-sm font-semibold">3</span>
-                      <span>Double-cliquer sur la poignée pour une recopie automatique jusqu'à la dernière ligne de données</span>
-                    </li>
-                  </ol>
-                </div>
-      
-                <ImageZoomable 
-                  src="/cours/debutant/lecon5/recopie_verticale.gif" 
-                  alt="Recopie verticale Excel" 
-                  style={{ maxHeight: 300 }}
-                  className="mt-4 rounded-lg shadow-sm"
-                />
-              </div>
-      
-              {/* Recopie horizontale */}
-              <div className="mb-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <ArrowRight className="w-5 h-5 text-orange-500" />
-                  <h4 className="text-lg font-semibold text-gray-900">Recopie horizontale</h4>
-                </div>
-                
-                <div className="bg-orange-50 p-6 rounded-lg">
-                  <p className="text-gray-700 mb-4">
-                    La méthode de recopie s'applique également horizontalement.
-                  </p>
-                  <div className="bg-white p-4 rounded border-l-4 border-orange-400">
-                    <h4 className="font-semibold text-orange-800 mb-2">Exemple :</h4>
-                    <div className="space-y-2 text-sm">
-                      <p>• Saisir des nombres dans A8:C10</p>
-                      <p>• Dans A11 : <code>=A8+A9+A10</code></p>
-                      <p>• Étendre la formule jusqu'en C11</p>
-                      <p>• Chaque cellule affiche la somme des trois cellules au-dessus</p>
-                    </div>
-                  </div>
-                </div>
-      
-                <ImageZoomable 
-                  src="/cours/debutant/lecon5/recopie_horizontale.gif" 
-                  alt="Recopie horizontale Excel" 
-                  style={{ maxHeight: 300 }}
-                  className="mt-4 rounded-lg shadow-sm"
-                />
-              </div>
-            </div>
-      
-            {/* Références absolues */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <Lock className="w-6 h-6 text-red-500" />
-                <h3 className="text-xl font-semibold text-gray-900">Référence absolue</h3>
-              </div>
-              
-              <div className="bg-red-50 p-6 rounded-lg mb-4">
-                <p className="text-gray-700 mb-4">
-                  Pour une référence absolue, utilisez le format <code className="font-bold">$colonne$ligne</code>. 
-                  Le symbole $ fige la colonne ou la ligne qui suit.
-                </p>
-                
-                <div className="bg-white p-4 rounded border-l-4 border-red-400">
-                  <h4 className="font-semibold text-red-800 mb-2">Exemple :</h4>
-                  <p className="text-sm text-gray-700">
-                    <code>=$E$1</code> reste toujours <code>=$E$1</code> même après recopie
-                  </p>
-                </div>
-              </div>
-      
-              <ImageZoomable 
-                src="/cours/debutant/lecon5/reference_absolue.png" 
-                alt="Exemple de référence absolue Excel" 
-                style={{ maxHeight: 300 }}
-                className="mb-4 rounded-lg shadow-sm"
-              />
-      
-              <ImageZoomable 
-                src="/cours/debutant/lecon5/reference_absolue.gif" 
-                alt="Démonstration référence absolue Excel" 
-                style={{ maxHeight: 300 }}
-                className="rounded-lg shadow-sm"
-              />
-            </div>
-      
-            {/* Références mixtes */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <ToggleLeft className="w-6 h-6 text-purple-500" />
-                <h3 className="text-xl font-semibold text-gray-900">Référence mixte</h3>
-              </div>
-              
-              <div className="bg-purple-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-4">
-                  Vous pouvez figer seulement la colonne ou seulement la ligne :
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-white p-4 rounded border-l-4 border-purple-400">
-                    <code className="text-purple-700">$A8</code>
-                    <p className="text-sm text-gray-600 mt-1">Colonne fixe, ligne relative</p>
-                  </div>
-                  <div className="bg-white p-4 rounded border-l-4 border-purple-400">
-                    <code className="text-purple-700">A$8</code>
-                    <p className="text-sm text-gray-600 mt-1">Ligne fixe, colonne relative</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            {/* Touche F4 */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <Key className="w-6 h-6 text-blue-500" />
-                <h3 className="text-xl font-semibold text-gray-900">Utilisation de la touche F4</h3>
-              </div>
-              
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-4">
-                  Pour passer d'un type de référence à un autre, utilisez la touche <kbd className="px-2 py-1 bg-white rounded border font-mono text-sm">F4</kbd>.
-                </p>
-                <div className="bg-white p-4 rounded border-l-4 border-blue-400">
-                  <h4 className="font-semibold text-blue-800 mb-2">Exemple :</h4>
-                  <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
-                    <li>Saisissez <code>=A4</code> dans une cellule</li>
-                    <li>Appuyez sur <kbd className="px-2 py-1 bg-white rounded border font-mono text-xs">F4</kbd> : la référence devient <code>$A$4</code></li>
-                    <li>Appuyez à nouveau sur <kbd>F4</kbd> : <code>A$4</code></li>
-                    <li>Appuyez encore : <code>$A4</code></li>
-                    <li>Encore : <code>A4</code></li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          {/* Section 3: Exemple */}
-          <div className="mb-12">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="flex items-center justify-center w-8 h-8 bg-green-100 rounded-full">
-                <span className="text-green-600 font-bold">3</span>
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">EXEMPLE PRATIQUE</h2>
-            </div>
-            
-            <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <p className="text-gray-700 mb-4">
-                Calcul des prix HT, prix TTC et leurs sommes dans un tableau de produits.
-              </p>
-              <ImageZoomable 
-                src="/cours/debutant/lecon5/exemple.png" 
-                alt="Exemple pratique de formules Excel" 
-                style={{ maxHeight: 400 }}
-                className="rounded-lg shadow-sm"
-              />
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              {/* Accès premium à la vidéo de correction */}
-              <PremiumVideo url="/cours/debutant/lecon5/exemple.mp4" title="Correction vidéo de l'exemple pratique" />
-            </div>
-          </div>
-            <div className="mt-12">
+  MousePointer2, 
+  Edit3, 
+  Type, 
+  Search, 
+  Check, 
+  Plus, 
+  Trash2, 
+  ArrowRight, 
+  ArrowDown, 
+  Calendar, 
+  Clock, 
+  Hash, 
+  AlignLeft, 
+  AlignRight, 
+  Keyboard, 
+  Target, 
+  Copy, 
+  RotateCcw, 
+  FileText,
+  Grid3X3,
+  Save,
+  X,
+  Home,
+  Navigation
+} from "lucide-react";
 
-              <QuizLecon5 onResult={onResult} />
-            </div>
-        </div>
-      );
+export default function Lecon5({ onResult }) {
+  const [fullscreen, setFullscreen] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(false);
+
+  const handleQuizComplete = (score) => {
+    setShowQuiz(false);
+    onResult(score);
+  };
+
+  if (showQuiz) {
+    return <QuizLecon5 onComplete={handleQuizComplete} />;
   }
+
+  return (
+    <div className="max-w-4xl mx-auto p-6 bg-white">
+    <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+      Leçon 5 - SÉRIES DE DONNÉES
+    </h2>
+    
+    <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+      <p className="text-gray-700 mb-4">
+        La procédure de création d'une série évite de saisir une à une les
+        données. Elle est plus rapide et plus fiable que la saisie individuelle de
+        chaque élément d'une série.
+      </p>
+      <p className="text-gray-700">
+        On peut créer une série dans tous les sens (vers le bas, le haut, la
+        droite ou la gauche).
+      </p>
+    </div>
+
+    <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <p className="text-gray-700 mb-4">
+        Pour créer une série numérique, une série chronologique ou une série
+        alphanumérique, on se servira :
+      </p>
+      <ul className="space-y-3">
+        <li className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          </svg>
+          <span className="text-gray-700">
+            Du cliqué-glissé sur la poignée ■ d'une sélection de cellules, le
+            pointeur revêt l'aspect d'une croix noire <strong>+</strong>.
+          </span>
+        </li>
+        <li className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          </svg>
+          <span className="text-gray-700">Du menu de la balise active qui apparaît en fin de cliqué-glissé</span>
+        </li>
+        <li className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          </svg>
+          <span className="text-gray-700">
+            De la fenêtre « Série de données ». Pour l'afficher : sous l'onglet
+            Accueil, dans le groupe « Edition », activez le bouton « Remplissage
+            Instantané » &gt; Série.
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+      </svg>
+      1. SÉRIE NUMÉRIQUE
+    </h3>
+
+    <div className="mb-8">
+      <h4 className="text-xl font-medium text-gray-800 mb-3 flex items-center gap-2">
+        <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+        Série linéaire
+      </h4>
+      
+      <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+        <p className="text-gray-700 mb-2">
+          Une série linéaire est une suite de nombres, chacun (à partir du 2ème) étant obtenu en ajoutant un nombre fixe à l'élément précédent.
+        </p>
+        <p className="text-gray-700 mb-2">
+          Le nombre ajouté est appelé « incrément » ou « pas ».
+        </p>
+        <p className="text-gray-700">
+          <u>Exemple :</u> 5, 8, 11, 14, 17, 20. Le pas de cette série linéaire est 3.
+        </p>
+      </div>
+
+      <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+          <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+          Pour créer une série linéaire, procédez ainsi :
+        </h5>
+        <ul className="space-y-3 mb-4">
+          <li className="flex items-start gap-3">
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">1</span>
+            <span className="text-gray-700">
+              Saisissez les 2 premiers éléments de la série, sur deux cellules
+              adjacentes, en ligne ou en colonne. Exemple : saisissez 5 et 8.
+              Excel en déduit le pas de la série. Dans l'exemple, le pas est 3.
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">2</span>
+            <span className="text-gray-700">
+              Sélectionnez les 2 cellules ainsi remplies, puis cliquez-glissez à
+              partir de la poignée ▪ de la sélection sur les cellules à remplir
+              avec les termes suivants de la série.
+            </span>
+          </li>
+        </ul>
+        
+        <ImageZoomable 
+          src="/cours/debutant/lecon5/serie_numerique_lineaire_excel.gif" 
+          alt="Série numérique linéaire Excel" 
+          style={{ maxHeight: 350 }} 
+        />
+      </div>
+
+      <div className="bg-green-50 border border-green-200 rounded-lg p-5 mb-6">
+        <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+          <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          Pour créer une suite de nombres de valeur constante
+        </h5>
+        <p className="text-gray-700 mb-4">
+          (exemple : 12, 12, 12) : saisissez ce nombre. Après validation,
+          sélectionnez la cellule et effectuez un cliqué-glissé sur la poignée.
+          Une seule cellule étant sélectionnée, Excel applique un pas nul.
+        </p>
+        <p className="text-gray-700 mb-4">
+          On peut ouvrir le menu de la balise pour incrémenter de 1, ou bien
+          afficher la fenêtre « Série de données » pour incrémenter du pas
+          souhaité. Pour afficher cette fenêtre : sous l'onglet Accueil, dans le
+          groupe « Edition », activez le bouton « Remplissage Instantané» &gt;
+          Série.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Dans la fenêtre, l'option « Tendance » aboutit au même résultat qu'un
+          cliqué-glissé.
+        </p>
+        
+        <ImageZoomable 
+          src="/cours/debutant/lecon5/serie_numerique_lineaire_constante_excel.gif" 
+          alt="Série numérique linéaire constante Excel" 
+          style={{ maxHeight: 350 }} 
+        />
+      </div>
+
+      <div className="bg-orange-50 border-l-4 border-orange-400 p-4">
+        <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+          <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+          </svg>
+          Série géométrique
+        </h5>
+        <p className="text-gray-700 mb-2">
+          Une série géométrique est une suite de nombres, chacun (à partir du
+          2ème) étant obtenu en multipliant par un nombre fixe l'élément
+          précédent.
+        </p>
+        <p className="text-gray-700 mb-4">
+          <u>Exemple :</u> 4, 8, 16, 32, 64. Le pas de cette série géométrique
+          est 2.
+        </p>
+        
+        <h6 className="font-medium text-gray-700 mb-3">Pour créer une série géométrique, procédez ainsi :</h6>
+        <ul className="space-y-2">
+          <li className="flex items-start gap-3">
+            <span className="bg-orange-100 text-orange-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">1</span>
+            <span className="text-gray-700">Saisissez le 1er élément. Validez.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="bg-orange-100 text-orange-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">2</span>
+            <div className="text-gray-700">
+              <p className="mb-2">Puis, au choix, sélectionnez :</p>
+              <ul className="ml-4 space-y-1">
+                <li>• Soit toutes les cellules à remplir,</li>
+                <li>• Soit uniquement la cellule du 1er élément. Indiquez alors la
+                  dernière valeur (exacte ou approximative) de la série. Le nombre
+                  de termes sera fonction de cette dernière valeur.</li>
+              </ul>
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="bg-orange-100 text-orange-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">3</span>
+            <span className="text-gray-700">
+              Affichez la fenêtre « Série de données » : sous l'onglet Accueil,
+              dans le groupe « Edition », activez le bouton « Remplissage » &gt;
+              Série. Choisissez vos options. Si vous n'avez sélectionné que la
+              cellule du 1er élément, indiquez la dernière valeur de la série.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-5 8H9m10 0a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2h10a2 2 0 012 2v10z" />
+      </svg>
+      2. SÉRIE CHRONOLOGIQUE
+    </h3>
+
+    <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
+      <p className="text-gray-700 mb-2">
+        Une série chronologique est une suite de dates, chacune (à partir de la
+        2ème) étant obtenue en ajoutant la même durée à la date précédente. La
+        durée ajoutée est le « pas » de la série.
+      </p>
+      <p className="text-gray-700 mb-2">
+        <u>Exemple :</u> 07/04/2025, 14/04/2025, 21/04/2025. Le pas de cette
+        série chronologique est 7.
+      </p>
+      <p className="text-gray-700">
+        Comme pour la création d'une série linéaire, on peut utiliser pour créer une série chronologique : 
+        cliqué-glissé sur la poignée de la sélection, balise active et fenêtre « Série de données ».
+      </p>
+    </div>
+
+    <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+      <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+        <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Pour créer une série chronologique, procédez ainsi :
+      </h5>
+      <ul className="space-y-3 mb-4">
+        <li className="flex items-start gap-3">
+          <span className="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">1</span>
+          <span className="text-gray-700">
+            Saisissez la date du 1er élément. Exemple : saisissez 07/04/2025. Puis validez.
+          </span>
+        </li>
+        <li className="flex items-start gap-3">
+          <span className="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">2</span>
+          <span className="text-gray-700">
+            Cliquez-glissez sur les cellules à remplir. Excel applique par défaut
+            une incrémentation de pas un. Exemple : 07/04/2025, 08/04/2025, 09/04/2025…
+          </span>
+        </li>
+        <li className="flex items-start gap-3">
+          <span className="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">3</span>
+          <div className="text-gray-700">
+            <p className="mb-2">Modifiez les saisies si vous le souhaitez, en utilisant :</p>
+            <ul className="ml-4 space-y-1">
+              <li>• Soit une option proposée dans le menu de la balise active. Excel
+                prend en compte que le 1er élément est une date, et propose des
+                options en conséquence (exemple : « Incrémenter les mois »).</li>
+              <li>• Soit des options proposées dans la fenêtre « Série de données »
+                (exemple : choisissez un pas de 7).</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <p className="text-gray-600 italic">
+        L'utilisation de la balise active est plus rapide. La fenêtre « Série de
+        données » offre davantage de possibilités.
+      </p>
+    </div>
+
+    <ImageZoomable 
+      src="/cours/debutant/lecon5/serie_chronologique_excel.gif" 
+      alt="Série chronologique Excel" 
+      style={{ maxHeight: 350 }} 
+    />
+
+    <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+      </svg>
+      3. SÉRIE ALPHANUMÉRIQUE
+    </h3>
+
+    <div className="bg-teal-50 border-l-4 border-teal-400 p-4 mb-4">
+      <p className="text-gray-700">
+        Les valeurs d'une série alphanumérique sont constituées d'un texte fixe et
+        d'un nombre qui peut être incrémenté.
+      </p>
+    </div>
+
+    <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+      <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+        <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+        </svg>
+        Pour créer une série alphanumérique, procédez ainsi :
+      </h5>
+      <ul className="space-y-3 mb-4">
+        <li className="flex items-start gap-3">
+          <span className="bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">1</span>
+          <span className="text-gray-700">
+            Saisissez le 1er élément (exemple : Eleve 1) ou les deux premiers
+            éléments (exemple : classe5 et classe7). Validez (cliquez dans une autre cellule).
+          </span>
+        </li>
+        <li className="flex items-start gap-3">
+          <span className="bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">2</span>
+          <span className="text-gray-700">
+            Étendez le contenu de la cellule, ou des deux cellules, par
+            cliqué-glissé sur la poignée de la sélection (on obtient dans le premier
+            exemple : Eleve 2, Eleve 3... et dans le second exemple : Classe9, Classe11...).
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+      <p className="text-gray-700 mb-2">
+        <strong>Important :</strong> La fenêtre « Série de données » n'est pas utilisable pour une série alphanumérique.
+      </p>
+      <p className="text-gray-700 mb-2">
+        Dans l'incrémentation, Excel ne prend en compte que le nombre situé le plus à droite (c'est-à-dire la dernière décimale).
+      </p>
+      <p className="text-gray-700">
+        <u>Exemple :</u> saisissez hauteur 1,84. Validez. Cliquez-glissez sur la poignée de la
+        cellule. Vous obtenez hauteur 1,85 puis hauteur 1,86…
+      </p>
+    </div>
+
+    <ImageZoomable 
+      src="/cours/debutant/lecon5/serie_alphanumerique_excel.gif" 
+      alt="Série alphanumérique Excel" 
+      style={{ maxHeight: 350 }} 
+    />
+
+    <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      4. SÉRIE CRÉÉE À PARTIR D'UNE LISTE PERSONNALISÉE
+    </h3>
+
+    <div className="bg-indigo-50 border-l-4 border-indigo-400 p-4 mb-6">
+      <p className="text-gray-700">
+        Avant de créer la série, il convient de créer la liste personnalisée.
+      </p>
+    </div>
+
+    <div className="space-y-6">
+      <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
+          <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+          Création d'une liste personnalisée
+        </h4>
+        
+        <h5 className="font-semibold text-gray-700 mb-3">Pour créer une liste personnalisée, procédez ainsi :</h5>
+        <ul className="space-y-3 mb-4">
+          <li className="flex items-start gap-3">
+            <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">1</span>
+            <span className="text-gray-700">
+              Affichez la fenêtre « Listes personnalisées » : ouvrez le menu
+              Fichier &gt; Options &gt; Options avancées. Dans la rubrique Général,
+              cliquez sur le bouton « Modifier les listes personnalisées » (en bas de la rubrique).
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">2</span>
+            <span className="text-gray-700">
+              Dans la zone « Listes personnalisées », choisissez « Nouvelle liste ».
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">3</span>
+            <div className="text-gray-700">
+              <p className="mb-2">Pour entrer les éléments dans la liste :</p>
+              <ul className="ml-4 space-y-2">
+                <li>• <strong>Soit vous les écrivez :</strong> dans la zone « Entrées de la liste »,
+                  tapez chaque élément, en validant avec Entrée après chaque
+                  saisie. Pour terminer, cliquez sur le bouton Ajouter.</li>
+                <li>• <strong>Soit vous les importez :</strong> cliquez dans la zone à côté du bouton
+                  Importer. Sélectionnez la plage contenant les éléments que doit
+                  contenir la liste. Cliquez sur le bouton Importer.</li>
+              </ul>
+            </div>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">4</span>
+            <span className="text-gray-700">Validez.</span>
+          </li>
+        </ul>
+        
+        <ImageZoomable 
+          src="/cours/debutant/lecon5/fenetre_liste_personnalisee.png" 
+          alt="Fenêtre des listes personnalisées Excel" 
+          style={{ maxHeight: 350 }} amine123456
+        />
+      </div>
+
+      <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
+          <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          Création de la série à partir d'une liste personnalisée
+        </h4>
+        <div className="space-y-2 mb-4">
+          <p className="text-gray-700">Dans une cellule, saisissez un élément de la liste. Validez.</p>
+          <p className="text-gray-700">Cliquez-glissez sur la poignée de la cellule dans le sens souhaité.</p>
+          <p className="text-gray-700">
+            Les éléments de la liste s'affichent dans les cellules adjacentes. Si on
+            a cliqué sur un nombre de cellules supérieur au nombre d'éléments de la
+            liste, celle-ci se répète.
+          </p>
+        </div>
+        
+        <ImageZoomable 
+          src="/cours/debutant/lecon5/creer_liste_personnalisee_exccel.gif" 
+          alt="Création d'une série avec liste personnalisée" 
+          style={{ maxHeight: 350 }} 
+        />
+      </div>
+    </div>
+
+    <div className="bg-blue-50 rounded-xl p-6 mt-8 border border-blue-200">
+      <h3 className="text-2xl font-semibold text-blue-800 mb-4 flex items-center gap-3">
+        <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m7 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Récapitulatif des méthodes
+      </h3>
+      
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-white border border-gray-200 rounded-lg">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="py-3 px-4 text-left font-semibold text-gray-700 border-b">Type de série</th>
+              <th className="py-3 px-4 text-left font-semibold text-gray-700 border-b">Méthode recommandée</th>
+              <th className="py-3 px-4 text-left font-semibold text-gray-700 border-b">Icône</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="py-3 px-4 border-b text-gray-700">Numérique (linéaire)</td>
+              <td className="py-3 px-4 border-b text-gray-700">Cliqué-glissé avec 2 valeurs initiales</td>
+              <td className="py-3 px-4 border-b">
+                <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <td className="py-3 px-4 border-b text-gray-700">Numérique (géométrique)</td>
+              <td className="py-3 px-4 border-b text-gray-700">Fenêtre "Série de données"</td>
+              <td className="py-3 px-4 border-b">
+                <svg className="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <td className="py-3 px-4 border-b text-gray-700">Chronologique</td>
+              <td className="py-3 px-4 border-b text-gray-700">Cliqué-glissé + menu contextuel</td>
+              <td className="py-3 px-4 border-b">
+                <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <td className="py-3 px-4 border-b text-gray-700">Alphanumérique</td>
+              <td className="py-3 px-4 border-b text-gray-700">Cliqué-glissé direct</td>
+              <td className="py-3 px-4 border-b">
+                <svg className="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <td className="py-3 px-4 text-gray-700">Liste personnalisée</td>
+              <td className="py-3 px-4 text-gray-700">Configuration préalable + cliqué-glissé</td>
+              <td className="py-3 px-4">
+                <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div className="mt-8 p-5 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border border-purple-200">
+      <h3 className="text-2xl font-bold text-purple-800 mb-4 flex items-center gap-3">
+        <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+        Bonnes pratiques
+      </h3>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="bg-white p-4 rounded-lg border-l-4 border-green-500 shadow-sm">
+          <div className="flex items-start gap-3">
+            <svg className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <h4 className="font-semibold text-gray-800">À faire</h4>
+              <ul className="mt-2 space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>Toujours vérifier l'incrément après création</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>Utiliser le menu contextuel pour les séries complexes</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>Créer des listes personnalisées pour les séries récurrentes</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-white p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+          <div className="flex items-start gap-3">
+            <svg className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <div>
+              <h4 className="font-semibold text-gray-800">À éviter</h4>
+              <ul className="mt-2 space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500">✗</span>
+                  <span>Saisir manuellement des longues séries de données</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500">✗</span>
+                  <span>Oublier de vérifier le sens de remplissage</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500">✗</span>
+                  <span>Utiliser la fenêtre Série pour les données alphanumériques</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Quiz d'évaluation */}
+    <div className="mt-12">
+      <QuizLecon5 onResult={onResult} />
+    </div>
+  </div>
+  );
+}
