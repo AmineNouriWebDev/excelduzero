@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
-import QuizLecon13 from "../../quizz/debutant/QuizLecon13";
+import QuizLecon13 from '@/components/quizz/debutant/QuizLecon13';
 import PremiumVideo from "../../ui/PremiumVideo";
 
 import { 
@@ -12,7 +12,7 @@ import {
   
   export default function Lecon13({ onResult }) {
     return (
-        <div className="max-w-4xl mx-auto p-6 bg-white">
+        <div className="max-w-6xl mx-auto p-6 bg-white">
           {/* En-tête principal */}
           <div className="mb-8 text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
@@ -607,7 +607,7 @@ import {
           </div>
             <div className="mt-12">
 
-              <QuizLecon13 onResult={onResult} />
+            <QuizLecon13 onResult={onResult} />
             </div>
         </div>
       );

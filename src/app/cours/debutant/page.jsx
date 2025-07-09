@@ -26,11 +26,11 @@ const LEÇONS = [
 
   // Impression & partage
   "Mise en page et aperçu avant impression",
-  "Gestion des zones d’impression",
+  "CRÉATION DE RAPPORTS MULTI-FEUILLES",
 
   // Formules & fonctions de base
   "Formules simples (+ - * /)",
-  "Somme, Moyenne, Min et Max",
+  "Les fonctions",
   "Utilisation des pourcentages",
   "Références relatives vs absolues (style, lignes alternées)",
 

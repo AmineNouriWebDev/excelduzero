@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
 import QuizLecon5 from "../../quizz/debutant/QuizLecon5";
+import PremiumVideo from "../../ui/PremiumVideo";
 import { 
   MousePointer2, 
   Edit3, 
@@ -42,7 +43,7 @@ export default function Lecon5({ onResult }) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white">
+    <div className="max-w-6xl mx-auto p-6 bg-white">
     <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
       <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -583,7 +584,90 @@ export default function Lecon5({ onResult }) {
       </div>
     </div>
 
-    {/* Quiz d'évaluation */}
+    {/* Exercices pratiques */}
+    <section id="exercices" className="mb-12">
+      <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <Target className="text-pink-600" />
+         Exercice pratique
+      </h2>
+      {/* Exercice sur les séries de données */}
+      <div className="mb-8 p-6 bg-gray-50 border border-gray-200 rounded-xl">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+          <Edit3 className="text-blue-500" />
+          Exercice : Créer différentes séries de données
+        </h3>
+        <ol className="list-decimal ml-6 space-y-4 text-gray-700">
+          <li>
+            <strong>Série numérique linéaire :</strong> <br />
+            Dans une colonne vide, saisissez les valeurs <b>2</b> et <b>5</b> dans deux cellules adjacentes. Sélectionnez-les, puis utilisez la poignée de recopie pour étendre la série jusqu'à obtenir 6 valeurs au total. <br />
+            <span className="text-sm text-gray-500">(Quel est le pas de la série obtenue ?)</span>
+          </li>
+          <li>
+            <strong>Série chronologique :</strong> <br />
+            Dans une autre colonne, saisissez la date <b>01/01/2026</b> dans une cellule. Utilisez la poignée de recopie pour étendre la série sur 7 cellules. Modifiez ensuite le pas pour obtenir une série de lundis (une semaine d'écart entre chaque date).
+          </li>
+          <li>
+            <strong>Série alphanumérique :</strong> <br />
+            Dans une colonne, saisissez <b>Produit 1</b> dans une cellule. Utilisez la poignée de recopie pour générer automatiquement <b>Produit 2</b>, <b>Produit 3</b>, etc., jusqu'à <b>Produit 10</b>.
+          </li>
+          <li>
+            <strong>Série à partir d'une liste personnalisée :</strong> <br />
+            Créez une liste personnalisée avec les valeurs suivantes : <b>Or, Argent, Bronze</b>. Utilisez ensuite cette liste pour remplir une colonne de façon répétée sur 9 cellules.
+          </li>
+        </ol>
+        <div className="mt-4 text-sm text-gray-600">
+          <b>Astuce :</b> Utilisez la fenêtre « Série de données » ou le menu contextuel pour ajuster le type de série et l'incrément si besoin.
+        </div>
+      </div>
+      <div className="mb-8">
+        <PremiumVideo
+          url="/cours/debutant/lecon5/correction_exercice.mp4"
+          title="Correction vidéo de l'exercice"
+        />
+      </div>
+    </section>
+
+    {/* Exercice pratique adapté au cours */}
+    <div className="mb-8 p-6 bg-gray-50 border border-gray-200 rounded-lg">
+      <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+        <Target className="text-pink-600" />
+        Exercice pratique : Maîtriser les séries de données dans Excel
+      </h3>
+      <ol className="list-decimal ml-6 space-y-4 text-gray-700">
+        <li>
+          <strong>Série numérique linéaire</strong><br />
+          Dans la colonne A d’une nouvelle feuille Excel, saisissez les deux premiers nombres de la série suivante : <b>10</b> et <b>15</b>.<br />
+          Utilisez la poignée de recopie pour compléter la série jusqu’à la cellule A10.<br />
+          Quel est le pas de la série ?<br />
+          Quel nombre apparaît en A10 ?
+        </li>
+        <li>
+          <strong>Série géométrique</strong><br />
+          Dans la colonne B, saisissez le nombre <b>2</b> en B1.<br />
+          Utilisez la fenêtre « Série de données » pour compléter la colonne jusqu’à B8 en multipliant chaque valeur par 2.<br />
+          Quel est le contenu de la cellule B8 ?
+        </li>
+        <li>
+          <strong>Série chronologique</strong><br />
+          En C1, saisissez la date du jour.<br />
+          Utilisez la poignée de recopie pour remplir les cellules jusqu’à C7, en incrémentant d’un jour.<br />
+          Modifiez ensuite la série pour qu’elle affiche uniquement les lundis (pas de 7 jours).<br />
+          Quelles sont les dates obtenues ?
+        </li>
+        <li>
+          <strong>Série alphanumérique</strong><br />
+          En D1, saisissez « Produit 1 ».<br />
+          Utilisez la poignée de recopie pour remplir jusqu’à D5.<br />
+          Quels sont les contenus des cellules D2 à D5 ?
+        </li>
+        <li>
+          <strong>Liste personnalisée</strong><br />
+          Créez une liste personnalisée avec les éléments suivants : « Printemps », « Été », « Automne », « Hiver ».<br />
+          Saisissez « Printemps » en E1 puis utilisez la poignée de recopie pour remplir jusqu’à E8.<br />
+          Que constatez-vous ?
+        </li>
+      </ol>
+    </div>
     <div className="mt-12">
       <QuizLecon5 onResult={onResult} />
     </div>

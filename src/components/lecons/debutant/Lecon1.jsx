@@ -1,11 +1,10 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
-import QuizLecon1 from "../../quizz/debutant/QuizLecon1";
+import QuizLecon1 from '@/components/quizz/debutant/QuizLecon1';
 import PremiumVideo from "../../ui/PremiumVideo";
-import { FileSpreadsheet, Monitor, Grid3X3, Calculator, BarChart3, Database, Settings, Eye, ArrowRight, ArrowDown, Plus, MousePointer2, Layout, Palette, Copy, Move, Trash2, ZoomIn, Maximize } from "lucide-react";
+import { FileSpreadsheet, Monitor, Grid3X3, Calculator, BarChart3, Database, Settings, Eye, ArrowRight, ArrowDown, MousePointer2, Layout, Palette, Menu, Save, FolderOpen, Printer, Undo, Redo, Search, HelpCircle, ZoomIn, Maximize, Command,FileText } from "lucide-react";
 
 // Leçon 1 du niveau débutant : Découverte de l'interface Excel
-// Utilise le même contenu JSX que précédemment, stylé avec Tailwind/prose
 export default function Lecon1({ onResult }) {
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -17,6 +16,9 @@ export default function Lecon1({ onResult }) {
           <FileSpreadsheet className="text-green-600" size={40} />
           Découverte de l'interface Excel
         </h1>
+        <p className="text-lg text-gray-600">
+          Apprenez à maîtriser l'interface d'Excel et ses composants essentiels
+        </p>
       </div>
 
       {/* Introduction */}
@@ -89,10 +91,20 @@ export default function Lecon1({ onResult }) {
           <div className="bg-white border-l-4 border-red-500 p-4 shadow-sm">
             <div className="flex items-center gap-2 mb-2">
               <Settings className="text-red-600" size={20} />
-              <strong>Macros</strong>
+              <strong>Macros et automatisation</strong>
             </div>
             <p className="text-sm text-gray-600">
               Automatisez des tâches répétitives en enregistrant des macros
+            </p>
+          </div>
+
+          <div className="bg-white border-l-4 border-cyan-500 p-4 shadow-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <Layout className="text-cyan-600" size={20} />
+              <strong>Mise en forme avancée</strong>
+            </div>
+            <p className="text-sm text-gray-600">
+              Personnalisez l'apparence de vos données avec une mise en forme professionnelle
             </p>
           </div>
         </div>
@@ -105,291 +117,340 @@ export default function Lecon1({ onResult }) {
           L'écran d'accueil Excel
         </h2>
 
+        <div className="bg-green-50 p-4 rounded-lg mb-6">
+          <p className="text-gray-700 mb-4">
+            Lors du lancement d'Excel, vous arrivez sur l'écran d'accueil qui vous permet de :
+          </p>
+          <ul className="list-disc pl-6 text-gray-700 space-y-2">
+            <li>Créer un nouveau classeur vierge</li>
+            <li>Choisir parmi des modèles prédéfinis</li>
+            <li>Ouvrir un fichier récent</li>
+            <li>Parcourir vos fichiers</li>
+          </ul>
+        </div>
+
         <ImageZoomable
           src="/cours/debutant/lecon1/ecran_accueil_excel.png"
           alt="Écran d'accueil Excel"
           style={{ maxHeight: 400 }}
         />
+      </section>
 
-        <div className="mt-6">
+      {/* Interface principale d'Excel */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+          <Layout className="text-blue-600" />
+          Interface principale d'Excel
+        </h2>
+
+        <div className="mb-6">
           <p className="text-gray-700 mb-4">
-            L'interface Excel comprend plusieurs éléments essentiels :
+            L'interface Excel comprend plusieurs éléments essentiels que vous devez connaître :
           </p>
 
-          <div className="space-y-3">
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <strong>Le ruban :</strong> Barre d'outils principale contenant tous les
-              commandes
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-md">
+                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                <strong>Barre de titre :</strong> Nom du fichier et contrôles de la fenêtre
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-green-50 rounded-md">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <strong>Barre d'accès rapide :</strong> Raccourcis vers les commandes fréquentes
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-purple-50 rounded-md">
+                <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                <strong>Le ruban :</strong> Barre d'outils principale avec tous les onglets
+              </div>
             </div>
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <strong>La barre de formule :</strong> Zone de saisie située sous le ruban
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-md">
+                <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                <strong>Zone de nom :</strong> Référence de la cellule active
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-red-50 rounded-md">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                <strong>Barre de formule :</strong> Zone de saisie et d'édition
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md">
+                <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
+                <strong>Barre d'état :</strong> Informations et modes d'affichage
+              </div>
             </div>
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md">
-              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-              <strong>Le classeur :</strong> Fenêtre principale de travail (amovible par
-              cliquer-glisser)
+          </div>
+        </div>
+
+        <ImageZoomable
+          src="/cours/debutant/lecon1/interface_excel_complete.png"
+          alt="Interface complète d'Excel"
+          style={{ maxHeight: 500 }}
+        />
+      </section>
+
+      {/* Barre de titre et barre d'accès rapide */}
+      <section className="mb-12">
+        <h3 className="text-2xl font-semibold text-gray-700 mb-4">
+          Barre de titre et barre d'accès rapide
+        </h3>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h4 className="font-semibold mb-3 flex items-center gap-2">
+              <Layout className="text-blue-600" size={16} />
+              Barre de titre
+            </h4>
+            <ul className="text-sm space-y-2">
+              <li>• Affiche le nom du fichier Excel</li>
+              <li>• Indique si le fichier est enregistré</li>
+              <li>• Contient les boutons Réduire, Agrandir, Fermer</li>
+              <li>• Peut afficher [Mode de compatibilité] pour les anciens formats</li>
+            </ul>
+          </div>
+
+          <div className="bg-green-50 p-4 rounded-lg">
+            <h4 className="font-semibold mb-3 flex items-center gap-2">
+              <Command className="text-green-600" size={16} />
+              Barre d'accès rapide
+            </h4>
+            <ul className="text-sm space-y-2">
+              <li>• Accès direct aux commandes fréquentes</li>
+              <li>• Personnalisable selon vos besoins</li>
+              <li>• Par défaut : Enregistrer, Annuler, Rétablir</li>
+              <li>• Clic droit pour ajouter/supprimer des commandes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-yellow-50 p-4 rounded-lg">
+          <h5 className="font-semibold mb-2">Personnaliser la barre d'accès rapide :</h5>
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <strong>Méthode 1 :</strong> Clic droit sur une commande du ruban → "Ajouter à la barre d'outils Accès rapide"
             </div>
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md">
-              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-              <strong>La barre d'état :</strong> Informations en bas de l'écran
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-              <strong>La barre des tâches :</strong> Barre système Windows
+            <div>
+              <strong>Méthode 2 :</strong> Flèche déroulante → "Autres commandes" → Personnaliser
             </div>
           </div>
         </div>
       </section>
 
-      {/* Le classeur et ses composants */}
+      {/* Le ruban et ses onglets */}
       <section className="mb-12">
         <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-          <FileSpreadsheet className="text-blue-600" />
-          Le classeur et ses composants
+          <Menu className="text-purple-600" />
+          Le ruban et ses onglets
         </h3>
 
-        {/* Structure du classeur */}
-        <div className="mb-8">
-          <h4 className="text-xl font-medium text-gray-700 mb-4">
-            Structure du classeur
-          </h4>
+        <div className="bg-purple-50 p-4 rounded-lg mb-6">
+          <p className="text-gray-700 mb-4">
+            Le ruban est l'élément central de l'interface Excel. Il regroupe toutes les commandes 
+            dans des onglets thématiques pour une meilleure organisation.
+          </p>
+        </div>
 
-          <div className="bg-yellow-50 p-4 rounded-lg mb-4">
-            <p className="text-gray-700 mb-4">
-              Un classeur est constitué de <strong>feuilles</strong>, chacune ayant un
-              onglet. Cliquer sur un onglet permet d'afficher la feuille correspondante.
-              L'onglet sur fond blanc désigne la feuille active.
-            </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-blue-600">Fichier</h5>
+            <p className="text-sm text-gray-600">Nouveau, Ouvrir, Enregistrer, Imprimer, Options</p>
           </div>
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-green-600">Accueil</h5>
+            <p className="text-sm text-gray-600">Mise en forme, Police, Alignement, Cellules</p>
+          </div>
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-purple-600">Insertion</h5>
+            <p className="text-sm text-gray-600">Tableaux, Graphiques, Images, Liens</p>
+          </div>
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-orange-600">Mise en page</h5>
+            <p className="text-sm text-gray-600">Orientation, Marges, Impression, Arrière-plan</p>
+          </div>
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-red-600">Formules</h5>
+            <p className="text-sm text-gray-600">Bibliothèque de fonctions, Calcul, Audit</p>
+          </div>
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-cyan-600">Données</h5>
+            <p className="text-sm text-gray-600">Tri, Filtre, Validation, Tableaux croisés</p>
+          </div>
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-indigo-600">Révision</h5>
+            <p className="text-sm text-gray-600">Vérification, Commentaires, Protection</p>
+          </div>
+          <div className="bg-white border p-4 rounded-lg">
+            <h5 className="font-semibold mb-2 text-pink-600">Affichage</h5>
+            <p className="text-sm text-gray-600">Modes d'affichage, Zoom, Fenêtres</p>
+          </div>
+        </div>
+
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <h5 className="font-semibold mb-2 flex items-center gap-2">
+            <Eye className="text-blue-600" size={16} />
+            Astuces pour le ruban :
+          </h5>
+          <ul className="text-sm space-y-1">
+            <li>• Double-clic sur un onglet pour masquer/afficher le ruban</li>
+            <li>• Ctrl + F1 pour basculer l'affichage du ruban</li>
+            <li>• Clic droit sur le ruban pour le personnaliser</li>
+            <li>• Les onglets contextuels apparaissent selon le contenu sélectionné</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Zone de nom et barre de formule */}
+      <section className="mb-12">
+        <h3 className="text-2xl font-semibold text-gray-700 mb-4">
+          Zone de nom et barre de formule
+        </h3>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-orange-50 p-4 rounded-lg">
+            <h4 className="font-semibold mb-3 flex items-center gap-2">
+              <MousePointer2 className="text-orange-600" size={16} />
+              Zone de nom
+            </h4>
+            <ul className="text-sm space-y-2">
+              <li>• Affiche la référence de la cellule active (ex: A1, B5)</li>
+              <li>• Permet de naviguer rapidement (tapez A1 et Entrée)</li>
+              <li>• Affiche le nom des plages nommées</li>
+              <li>• Indique la taille de la sélection multiple</li>
+            </ul>
+          </div>
+
+          <div className="bg-green-50 p-4 rounded-lg">
+            <h4 className="font-semibold mb-3 flex items-center gap-2">
+              <Calculator className="text-green-600" size={16} />
+              Barre de formule
+            </h4>
+            <ul className="text-sm space-y-2">
+              <li>• Zone principale de saisie et d'édition</li>
+              <li>• Affiche le contenu réel de la cellule</li>
+              <li>• Extensible en hauteur pour les formules longues</li>
+              <li>• Bouton fx pour accéder aux fonctions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-yellow-50 p-4 rounded-lg mb-4">
+          <h5 className="font-semibold mb-2">Avantages de la barre de formule :</h5>
+          <ul className="space-y-1 text-sm">
+            <li>• Idéale pour les saisies longues et les formules complexes</li>
+            <li>• Ne masque pas les données de la feuille pendant la saisie</li>
+            <li>• Permet de voir la formule même quand la cellule affiche le résultat</li>
+            <li>• Redimensionnable selon vos besoins</li>
+          </ul>
+        </div>
+
+        <ImageZoomable
+          src="/cours/debutant/lecon1/barre_de_formule.gif"
+          alt="Barre de formule Excel"
+          style={{ maxHeight: 300 }}
+        />
+      </section>
+
+      {/* Comprendre les cellules */}
+      <section className="mb-12">
+        <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <Grid3X3 className="text-green-600" />
+          Comprendre les cellules
+        </h3>
+
+        <div className="mb-6">
+          <p className="text-gray-700 mb-4">
+            Les cellules sont les unités de base d'Excel. Comprendre leur fonctionnement est essentiel.
+          </p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-6">
-            <div className="bg-white border p-4 rounded-lg">
-              <div className="flex items-center gap-2 mb-2">
-                <FileSpreadsheet className="text-blue-600" size={16} />
-                <strong>Nombre de feuilles :</strong>
-              </div>
-              <p className="text-sm text-gray-600">
-                Par défaut 3 feuilles, maximum 256 feuilles
-              </p>
-            </div>
-
-            <div className="bg-white border p-4 rounded-lg">
+            <div className="bg-green-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <ArrowRight className="text-green-600" size={16} />
-                <strong>Navigation :</strong>
+                <strong>16 384 colonnes</strong>
               </div>
               <p className="text-sm text-gray-600">
-                Boutons fléchés pour accéder aux onglets masqués
+                Nommées de A à Z, puis AA à AZ, BA à BZ... jusqu'à XFD
               </p>
             </div>
 
-            <div className="bg-white border p-4 rounded-lg">
+            <div className="bg-blue-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
-                <Eye className="text-purple-600" size={16} />
-                <strong>Liste complète :</strong>
+                <ArrowDown className="text-blue-600" size={16} />
+                <strong>1 048 576 lignes</strong>
               </div>
               <p className="text-sm text-gray-600">
-                Clic droit sur les boutons fléchés pour voir toutes les feuilles
-              </p>
-            </div>
-
-            <div className="bg-white border p-4 rounded-lg">
-              <div className="flex items-center gap-2 mb-2">
-                <Plus className="text-orange-600" size={16} />
-                <strong>Nouvelle feuille :</strong>
-              </div>
-              <p className="text-sm text-gray-600">
-                Onglet "+" pour insérer une nouvelle feuille
+                Numérotées de 1 à 1 048 576
               </p>
             </div>
           </div>
 
-          <ImageZoomable
-            src="/cours/debutant/lecon1/ajouter_onglet.gif"
-            alt="Ajouter un onglet Excel"
-            style={{ maxHeight: 300 }}
-          />
+          <div className="bg-purple-50 p-4 rounded-lg mb-6">
+            <h4 className="font-semibold mb-3 flex items-center gap-2">
+              <MousePointer2 className="text-purple-600" size={16} />
+              Référence des cellules
+            </h4>
+            <p className="text-gray-700 mb-2">
+              Chaque cellule a une référence unique formée par :
+            </p>
+            <ul className="text-sm space-y-1">
+              <li>• <strong>Lettre de colonne</strong> (A, B, C...)</li>
+              <li>• <strong>Numéro de ligne</strong> (1, 2, 3...)</li>
+              <li>• <strong>Exemple :</strong> A1, B5, Z100, AA1</li>
+            </ul>
+          </div>
 
-          <div className="bg-blue-50 p-4 rounded-lg mt-4">
-            <div className="flex items-start gap-2">
-              <div className="bg-blue-500 text-white rounded-full p-1 mt-1">
-                <Eye size={12} />
-              </div>
-              <div>
-                <strong>Astuce :</strong> La petite barre verticale à droite des onglets
-                permet d'ajuster l'affichage des onglets par cliquer-glisser.
-              </div>
-            </div>
+          <div className="bg-orange-50 p-4 rounded-lg mb-6">
+            <h4 className="font-semibold mb-3">Cellule active</h4>
+            <p className="text-gray-700 mb-2">
+              La <strong>cellule active</strong> est celle qui est sélectionnée. Elle se distingue par :
+            </p>
+            <ul className="text-sm space-y-1">
+              <li>• Un cadre plus épais</li>
+              <li>• Sa référence apparaît dans la zone de nom</li>
+              <li>• Son contenu s'affiche dans la barre de formule</li>
+              <li>• C'est là que s'inscrit la prochaine saisie</li>
+            </ul>
           </div>
 
           <ImageZoomable
-            src="/cours/debutant/lecon1/afficher_onglets.gif"
-            alt="Afficher les onglets Excel"
+            src="/cours/debutant/lecon1/celluleActiveExcel.png"
+            alt="Cellule active Excel"
             style={{ maxHeight: 300 }}
           />
         </div>
 
-        {/* La feuille de calcul */}
-        <div className="mb-8">
-          <h4 className="text-xl font-medium text-gray-700 mb-4 flex items-center gap-2">
-            <Grid3X3 className="text-green-600" />
-            La feuille de calcul
-          </h4>
-
-          {/* Colonnes et lignes */}
-          <div className="mb-6">
-            <h5 className="text-lg font-medium text-gray-600 mb-3">
-              Colonnes et lignes
-            </h5>
-            <p className="text-gray-700 mb-4">
-              Une feuille de calcul Excel comprend :
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-4 mb-4">
-              <div className="bg-green-50 p-4 rounded-lg">
-                <div className="flex items-center gap-2 mb-2">
-                  <ArrowRight className="text-green-600" size={16} />
-                  <strong>16 384 colonnes</strong>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Nommées de A à Z, puis AA à AZ, BA à BZ... jusqu'à XFD
-                </p>
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h5 className="font-semibold mb-2 flex items-center gap-2">
+            <Settings className="text-gray-600" size={16} />
+            Raccourcis de navigation :
+          </h5>
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Ctrl + →</kbd>
+                <span>Dernière colonne utilisée</span>
               </div>
-
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <div className="flex items-center gap-2 mb-2">
-                  <ArrowDown className="text-blue-600" size={16} />
-                  <strong>1 048 576 lignes</strong>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Numérotées de 1 à 1 048 576
-                </p>
+              <div className="flex items-center gap-2">
+                <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Ctrl + ↓</kbd>
+                <span>Dernière ligne utilisée</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Ctrl + Home</kbd>
+                <span>Cellule A1</span>
               </div>
             </div>
-
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h6 className="font-semibold mb-2 flex items-center gap-2">
-                <Settings className="text-gray-600" size={16} />
-                Raccourcis utiles :
-              </h6>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2">
-                  <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">
-                    Ctrl + →
-                  </kbd>
-                  <span>Aller à la dernière colonne (XFD)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">
-                    Ctrl + ↓
-                  </kbd>
-                  <span>Aller à la dernière ligne (1 048 576)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">
-                    Ctrl + Home
-                  </kbd>
-                  <span>Revenir en A1</span>
-                </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Ctrl + End</kbd>
+                <span>Dernière cellule utilisée</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">F5</kbd>
+                <span>Atteindre une cellule</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Tab</kbd>
+                <span>Cellule suivante (droite)</span>
               </div>
             </div>
-          </div>
-
-          {/* Cellule active */}
-          <div className="mb-6">
-            <h5 className="text-lg font-medium text-gray-600 mb-3 flex items-center gap-2">
-              <MousePointer2 className="text-purple-600" />
-              Cellule active
-            </h5>
-            <p className="text-gray-700 mb-4">
-              La <strong>cellule active</strong> est la cellule dans laquelle va
-              s'inscrire la saisie. Elle se distingue par un cadre plus marqué.
-            </p>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/celluleActiveExcel.png"
-              alt="Cellule active Excel"
-              style={{ maxHeight: 250 }}
-            />
-          </div>
-
-          {/* Plage de cellules */}
-          <div className="mb-6">
-            <h5 className="text-lg font-medium text-gray-600 mb-3">
-              Plage de cellules
-            </h5>
-            <div className="bg-orange-50 p-4 rounded-lg mb-4">
-              <p className="text-gray-700 mb-2">
-                Une <strong>plage de cellules</strong> est tout rectangle de cellules.
-                On la désigne par la référence de la première cellule (en haut à
-                gauche), suivie de deux points, puis de la dernière cellule (en bas à
-                droite).
-              </p>
-              <div className="bg-orange-200 p-2 rounded inline-block">
-                <strong>Exemple :</strong> B7:E12
-              </div>
-            </div>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/plage_cellule.png"
-              alt="Plage de cellules"
-              style={{ maxHeight: 300 }}
-            />
-          </div>
-
-          {/* Concepts importants */}
-          <div className="mb-6">
-            <h5 className="text-lg font-medium text-gray-600 mb-3">
-              Concepts importants
-            </h5>
-            <div className="space-y-3">
-              <div className="border-l-4 border-blue-500 pl-4">
-                <strong>Zone active :</strong> Plus petite plage commençant par A1 et
-                contenant toutes les données
-              </div>
-              <div className="border-l-4 border-green-500 pl-4">
-                <strong>Zone de cellules :</strong> Plage dont les cellules voisines
-                sont des en-têtes ou des cellules vides
-              </div>
-              <div className="border-l-4 border-purple-500 pl-4">
-                <strong>Barres de défilement :</strong> Verticale et horizontale pour
-                naviguer dans la feuille
-              </div>
-            </div>
-          </div>
-
-          {/* Zone de nom et barre de formule */}
-          <div className="mb-6">
-            <h5 className="text-lg font-medium text-gray-600 mb-3">
-              Zone de nom et barre de formule
-            </h5>
-            <div className="grid md:grid-cols-2 gap-4 mb-4">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <strong>Zone de nom :</strong> Affiche la référence de la cellule active
-              </div>
-              <div className="bg-green-50 p-4 rounded-lg">
-                <strong>Barre de formule :</strong> Zone de saisie extensible située à
-                droite de la zone de nom
-              </div>
-            </div>
-
-            <div className="bg-yellow-50 p-4 rounded-lg mb-4">
-              <h6 className="font-semibold mb-2">Avantages de la barre de formule :</h6>
-              <ul className="space-y-1 text-sm">
-                <li>• Pratique pour les saisies longues</li>
-                <li>• Ne recouvre pas les autres données</li>
-                <li>• Extensible en largeur et hauteur</li>
-                <li>• Bouton fx pour accéder aux fonctions Excel</li>
-              </ul>
-            </div>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/barre_de_formule.gif"
-              alt="Barre de formule Excel"
-              style={{ maxHeight: 300 }}
-            />
           </div>
         </div>
       </section>
@@ -397,44 +458,54 @@ export default function Lecon1({ onResult }) {
       {/* Barre d'état */}
       <section className="mb-12">
         <h3 className="text-2xl font-semibold text-gray-700 mb-4">
-          Barre d'état : calculs et modes d'affichage
+          Barre d'état : informations utiles
         </h3>
 
-        <div className="bg-indigo-50 p-4 rounded-lg mb-4">
+        <div className="bg-indigo-50 p-4 rounded-lg mb-6">
           <p className="text-gray-700 mb-4">
-            La barre d'état affiche automatiquement :
+            La barre d'état, située en bas de l'écran, fournit des informations précieuses :
           </p>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h6 className="font-semibold mb-2 flex items-center gap-2">
+              <h4 className="font-semibold mb-2 flex items-center gap-2">
                 <Calculator className="text-blue-600" size={16} />
                 Calculs automatiques
-              </h6>
+              </h4>
               <p className="text-sm text-gray-600 mb-2">
-                Après sélection d'une plage :
+                Quand vous sélectionnez plusieurs cellules numériques :
               </p>
               <ul className="text-sm space-y-1">
-                <li>• Moyenne des valeurs</li>
-                <li>• Nombre de cellules vides</li>
-                <li>• Nombre de cellules avec valeurs</li>
-                <li>• Somme des valeurs</li>
-                <li>• Minimum et maximum</li>
+                <li>• <strong>Somme :</strong> Total des valeurs</li>
+                <li>• <strong>Moyenne :</strong> Moyenne arithmétique</li>
+                <li>• <strong>Nombre :</strong> Nombre de cellules non vides</li>
+                <li>• <strong>Min/Max :</strong> Valeurs minimum et maximum</li>
               </ul>
             </div>
 
             <div>
-              <h6 className="font-semibold mb-2 flex items-center gap-2">
-                <Layout className="text-green-600" size={16} />
-                Trois modes d'affichage
-              </h6>
+              <h4 className="font-semibold mb-2 flex items-center gap-2">
+                <Eye className="text-green-600" size={16} />
+                Modes d'affichage
+              </h4>
               <ul className="text-sm space-y-1">
-                <li>• Normal</li>
-                <li>• Mise en page</li>
-                <li>• Aperçu des sauts de page</li>
+                <li>• <strong>Normal :</strong> Affichage standard</li>
+                <li>• <strong>Mise en page :</strong> Aperçu impression</li>
+                <li>• <strong>Sauts de page :</strong> Gestion des pages</li>
               </ul>
+              <p className="text-sm text-gray-600 mt-2">
+                + Curseur de zoom pour ajuster l'affichage
+              </p>
             </div>
           </div>
+        </div>
+
+        <div className="bg-yellow-50 p-4 rounded-lg mb-4">
+          <h5 className="font-semibold mb-2">Personnalisation de la barre d'état :</h5>
+          <p className="text-sm text-gray-600">
+            Clic droit sur la barre d'état pour choisir quelles informations afficher :
+            mode Caps Lock, Num Lock, statistiques étendues, etc.
+          </p>
         </div>
 
         <ImageZoomable
@@ -444,347 +515,88 @@ export default function Lecon1({ onResult }) {
         />
       </section>
 
-      {/* Paramétrage du logiciel */}
+      {/* Modes d'affichage */}
       <section className="mb-12">
         <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-          <Settings className="text-blue-600" />
-          Paramétrage du logiciel
+          <Layout className="text-blue-600" />
+          Modes d'affichage et zoom
         </h3>
 
-        <div className="bg-blue-50 p-4 rounded-lg mb-4">
-          <p className="text-gray-700 mb-2">
-            Pour personnaliser Excel, accédez aux options via : <strong>Fichier {'>'} Options</strong>
-          </p>
-          <p className="text-gray-700">
-            La fenêtre "Options Excel" contient dix catégories : Général, Formules,
-            Vérification, Enregistrement, etc. Le bouton ℹ️ indique la présence d'une
-            info-bulle.
-          </p>
-        </div>
-
-        <ImageZoomable
-          src="/cours/debutant/lecon1/options_excel.png"
-          alt="Options Excel"
-          style={{ maxHeight: 400 }}
-        />
-      </section>
-
-      {/* Gestion des feuilles et des classeurs */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6">
-          Gestion des feuilles et des classeurs
-        </h2>
-
-        {/* Gestion des feuilles de calcul */}
-        <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4">
-            Gestion des feuilles de calcul
-          </h3>
-          <p className="text-gray-700 mb-6">
-            La gestion des feuilles s'effectue principalement via leurs onglets. Voici
-            les opérations possibles :
-          </p>
-
-          {/* Nommer une feuille */}
-          <div className="mb-6">
-            <h4 className="text-xl font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <FileSpreadsheet className="text-blue-600" />
-              Nommer une feuille
-            </h4>
-            <div className="grid md:grid-cols-2 gap-4 mb-4">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <strong>Méthode 1 :</strong> Double-cliquer sur l'onglet
-              </div>
-              <div className="bg-green-50 p-4 rounded-lg">
-                <strong>Méthode 2 :</strong> Clic droit sur l'onglet {'>'} "Renommer"
-              </div>
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-green-50 p-4 rounded-lg">
+            <div className="flex items-center gap-3 mb-3">
+              <Eye className="text-green-600" size={20} />
+              <h4 className="font-semibold">Modes d'affichage</h4>
             </div>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/nommer_une_feuille.gif"
-              alt="Nommer une feuille Excel"
-              style={{ maxHeight: 300 }}
-            />
-          </div>
-
-          {/* Colorer un onglet */}
-          <div className="mb-6">
-            <h4 className="text-xl font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Palette className="text-purple-600" />
-              Colorer un onglet
-            </h4>
-            <div className="bg-purple-50 p-4 rounded-lg mb-4">
-              <strong>Procédure :</strong> Clic droit sur l'onglet {'>'} Couleur d'onglet
-              {'>'} Choisir la couleur
-            </div>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/couleur_onglet.gif"
-              alt="Couleur onglet Excel"
-              style={{ maxHeight: 300 }}
-            />
-          </div>
-
-          {/* Sélectionner des feuilles */}
-          <div className="mb-6">
-            <h4 className="text-xl font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <MousePointer2 className="text-green-600" />
-              Sélectionner des feuilles
-            </h4>
-
-            <div className="overflow-x-auto">
-              <table className="w-full border border-gray-300 rounded-lg">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left font-semibold">
-                      Type de sélection
-                    </th>
-                    <th className="border border-gray-300 px-4 py-2 text-left font-semibold">
-                      Méthode
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">Une feuille</td>
-                    <td className="border border-gray-300 px-4 py-2">Clic sur l'onglet</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 px-4 py-2">Feuilles adjacentes</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Clic sur la première + Maj + clic sur la dernière
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">Feuilles non adjacentes</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Clic sur la première + Ctrl + clic sur chaque autre
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 px-4 py-2">Toutes les feuilles</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      Clic droit sur un onglet {'>'} "Sélectionner toutes les feuilles"
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/selection_onglet.gif"
-              alt="Sélection onglet Excel"
-              style={{ maxHeight: 300 }}
-            />
-
-            <div className="bg-yellow-50 p-4 rounded-lg mt-4">
-              <strong>Groupe de travail :</strong> Plusieurs feuilles sélectionnées
-              constituent un "groupe de travail", indiqué dans la barre de titre par
-              [Groupe de travail].
-            </div>
-          </div>
-          {/* Insérer des feuilles */}
-          <div className="mb-6">
-            <h4 className="text-xl font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Plus className="text-blue-600" />
-              Insérer des feuilles
-            </h4>
-
             <div className="space-y-3">
-              <div className="bg-blue-50 p-3 rounded-lg flex items-start gap-2">
-                <div className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                  1
-                </div>
-                <div>
-                  <strong>Icône "+" :</strong> Cliquer sur l'icône + à côté des onglets
-                </div>
+              <div className="bg-white p-3 rounded">
+                <strong>Normal :</strong> Mode de travail standard
               </div>
-              <div className="bg-green-50 p-3 rounded-lg flex items-start gap-2">
-                <div className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                  2
-                </div>
-                <div>
-                  <strong>Raccourci clavier :</strong> Maj + F11
-                </div>
+              <div className="bg-white p-3 rounded">
+                <strong>Mise en page :</strong> Aperçu avant impression avec marges
               </div>
-              <div className="bg-purple-50 p-3 rounded-lg flex items-start gap-2">
-                <div className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                  3
-                </div>
-                <div>
-                  <strong>Menu contextuel :</strong> Clic droit sur un onglet {'>'} Insérer...
-                </div>
+              <div className="bg-white p-3 rounded">
+                <strong>Sauts de page :</strong> Visualisation des zones d'impression
               </div>
             </div>
           </div>
 
-          {/* Copier, déplacer, supprimer des feuilles */}
-          <div className="mb-6">
-            <h4 className="text-xl font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Copy className="text-green-700" />
-              Copier, déplacer, supprimer des feuilles
-            </h4>
-
-            <div className="grid md:grid-cols-3 gap-4 mb-4">
-              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-green-700">
-                <div className="flex items-center gap-2 mb-2">
-                  <Copy className="text-green-700" size={16} />
-                  <strong>Copier une feuille</strong>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Clic droit sur l'onglet {'>'} Déplacer ou copier {'>'} Cocher "Créer une copie"
-                </p>
-              </div>
-
-              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-700">
-                <div className="flex items-center gap-2 mb-2">
-                  <Move className="text-green-700" size={16} />
-                  <strong>Déplacer une feuille</strong>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Glisser-déposer l'onglet vers sa nouvelle position
-                </p>
-              </div>
-
-              <div className="bg-red-50 p-4 rounded-lg border-l-4 border-green-700">
-                <div className="flex items-center gap-2 mb-2">
-                  <Trash2 className="text-green-700" size={16} />
-                  <strong>Supprimer une feuille</strong>
-                </div>
-                <p className="text-sm text-gray-600">Clic droit sur l'onglet {'>'} Supprimer</p>
-              </div>
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <div className="flex items-center gap-3 mb-3">
+              <ZoomIn className="text-blue-600" size={20} />
+              <h4 className="font-semibold">Contrôles de zoom</h4>
             </div>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/copier_deplacer_supprimer_feuille_excel.gif"
-              alt="Déplacer une feuille Excel"
-              style={{ maxHeight: 300 }}
-            />
-          </div>
-
-          {/* Zoom et plein écran */}
-          <div className="mb-12">
-            <h4 className="text-xl font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <ZoomIn className="text-green-700" />
-              Zoom et plein écran
-            </h4>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-green-50 p-4 rounded-lg">
-                <div className="flex items-center gap-3 mb-3">
-                  <ZoomIn className="text-green-700" size={20} />
-                  <h5 className="font-semibold">Zoom</h5>
-                </div>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <ArrowRight className="text-green-700 mt-1" size={16} />
-                    <span>Utilisez le curseur de zoom dans la barre d'état</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ArrowRight className="text-green-700 mt-1" size={16} />
-                    <span>Ctrl + molette souris pour zoomer/dézoomer</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ArrowRight className="text-green-700 mt-1" size={16} />
-                    <span>Ctrl + Alt + "+" ou Ctrl + Alt + "-"</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <div className="flex items-center gap-3 mb-3">
-                  <Maximize className="text-green-700" size={20} />
-                  <h5 className="font-semibold">Plein écran</h5>
-                </div>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <ArrowRight className="text-green-700 mt-1" size={16} />
-                    <span>
-                      Affichage {'>'} Plein écran (ou Ctrl + Maj + F1)
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ArrowRight className="text-green-700 mt-1" size={16} />
-                    <span>Échap (Esc) pour quitter le mode plein écran</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <ImageZoomable
-              src="/cours/debutant/lecon1/zoom_selection_excel.gif"
-              alt="Zoom dans Excel"
-              style={{ maxHeight: 300 }}
-            />
+            <ul className="space-y-2 text-sm">
+              <li>• <strong>Curseur de zoom :</strong> Dans la barre d'état</li>
+              <li>• <strong>Ctrl + molette :</strong> Zoom rapide</li>
+              <li>• <strong>Ctrl + "+" :</strong> Zoom avant</li>
+              <li>• <strong>Ctrl + "-" :</strong> Zoom arrière</li>
+              <li>• <strong>Ctrl + 0 :</strong> Zoom 100%</li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      {/* Étapes pour bien débuter avec Excel */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-green-700 mb-6 flex items-center gap-2">
-          <FileSpreadsheet className="text-green-600" />
-          Bien démarrer avec Excel
-        </h2>
-        {/* 1. Lancement d’Excel et création d’un nouveau classeur */}
-        <div className="mb-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-          <h3 className="text-2xl font-bold text-green-800 mb-2">1. Lancer Excel et créer un classeur</h3>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Ouvrez Excel depuis le menu Démarrer ou le raccourci sur le bureau.</li>
-            <li>À l’ouverture, cliquez sur <strong>« Nouveau classeur »</strong> pour démarrer un document vierge.</li>
-            <li>Vous pouvez aussi choisir un modèle prédéfini pour des besoins spécifiques.</li>
-          </ul>
-        </div>
-        {/* 2. Enregistrement et ouverture d’un fichier */}
-        <div className="mb-8 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-          <h3 className="text-2xl font-bold text-blue-800 mb-2">2. Enregistrer et ouvrir un fichier</h3>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Pour enregistrer : cliquez sur <strong>Fichier {'>'} Enregistrer sous</strong>, choisissez l’emplacement et le nom du fichier.</li>
-            <li>Formats principaux : <strong>.xlsx</strong> (standard), <strong>.xls</strong> (ancien), <strong>.csv</strong> (texte, séparateur virgule).</li>
-            <li>Pour ouvrir un fichier existant : <strong>Fichier {'>'} Ouvrir</strong>, puis sélectionnez le document voulu.</li>
-            <li>Pensez à enregistrer régulièrement votre travail (Ctrl+S).</li>
-          </ul>
-        </div>
-        {/* 3. Présentation des éléments clés de l’interface */}
-        <div className="mb-8 bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
-          <h3 className="text-2xl font-bold text-yellow-800 mb-2">3. Les éléments clés de l’interface Excel</h3>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li><strong>Barre de menus</strong> : accès aux commandes principales (Fichier, Accueil, Insertion, Mise en page, Formules, etc.).</li>
-            <li><strong>Onglets du ruban</strong> : chaque onglet affiche des outils spécifiques (mise en forme, formules, données…).</li>
-            <li><strong>Cellules</strong> : zones de saisie identifiées par une lettre (colonne) et un chiffre (ligne), ex : B3.</li>
-            <li><strong>Barre de formule</strong> : affiche et permet d’éditer le contenu de la cellule active, notamment les formules.</li>
-            <li><strong>Barre d’état</strong> : en bas, affiche des infos utiles (somme, moyenne, mode d’affichage…)</li>
-            <li><strong>Onglets de feuilles</strong> : en bas, pour naviguer entre plusieurs feuilles du même classeur.</li>
-          </ul>
-        </div>
-        {/* 4. Autres bases utiles */}
-        <div className="mb-8 bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
-          <h3 className="text-2xl font-bold text-purple-800 mb-2">4. Autres bases à connaître</h3>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li><strong>Fermer un classeur</strong> : Fichier {'>'} Fermer ou Ctrl+W.</li>
-            <li><strong>Créer une nouvelle feuille</strong> : cliquez sur l’icône + en bas à gauche.</li>
-            <li><strong>Accéder à l’aide</strong> : touche F1 ou menu Aide.</li>
-            <li><strong>Annuler une action</strong> : Ctrl+Z, <strong>Rétablir</strong> : Ctrl+Y.</li>
-            <li><strong>Zoom</strong> : curseur en bas à droite ou Ctrl+molette souris.</li>
+        <div className="bg-purple-50 p-4 rounded-lg">
+          <h4 className="font-semibold mb-2">Plein écran</h4>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-start gap-2">
+              <ArrowRight className="text-purple-700 mt-1" size={16} />
+              <span>Affichage → Plein écran (ou Ctrl + Maj + F1)</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ArrowRight className="text-purple-700 mt-1" size={16} />
+              <span>Échap (Esc) pour quitter le mode plein écran</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ArrowRight className="text-purple-700 mt-1" size={16} />
+              <span>Idéal pour maximiser l'espace de travail</span>
+            </li>
           </ul>
         </div>
       </section>
 
-      {/* Exercice pratique de synthèse */}
+      {/* Exercice pratique */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-pink-700 mb-4 flex items-center gap-2">
           <FileSpreadsheet className="text-pink-600" />
-          Exercice pratique : Premiers pas sur Excel
+          Exercice pratique : Identifier les composants
         </h2>
         <div className="bg-pink-50 p-6 rounded-lg border-l-4 border-pink-400 mb-4">
           <ol className="list-decimal pl-6 text-gray-700 space-y-2">
-            <li>Lancez Excel et créez un nouveau classeur vierge.</li>
-            <li>Enregistrez le classeur sous le nom <strong>"Découverte.xlsx"</strong> sur votre bureau.</li>
-            <li>Dans la première feuille, saisissez en A1 : <strong>"Nom"</strong> et en B1 : <strong>"Âge"</strong>.</li>
-            <li>Ajoutez au moins 3 lignes de données fictives sous ces en-têtes.</li>
-            <li>Coloriez l’onglet de la feuille en bleu.</li>
-            <li>Ajoutez une nouvelle feuille et nommez-la <strong>"Calculs"</strong>.</li>
-            <li>Essayez de naviguer entre les feuilles, puis fermez et rouvrez le fichier.</li>
+            <li>Ouvrez Excel et créez un nouveau classeur</li>
+            <li>Identifiez ces éléments dans l'interface :
+              <ul className="list-disc pl-6 mt-2">
+                <li>Barre de titre</li>
+                <li>Barre d'accès rapide</li>
+                <li>Onglet "Accueil" du ruban</li>
+                <li>Zone de nom</li>
+                <li>Barre de formule</li>
+                <li>Barre d'état</li>
+              </ul>
+            </li>
+            <li>Sélectionnez plusieurs cellules et observez les calculs dans la barre d'état</li>
+            <li>Testez les différents modes d'affichage (Normal, Mise en page)</li>
+            <li>Utilisez le zoom pour agrandir/réduire l'affichage</li>
           </ol>
         </div>
         <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 mb-6">
@@ -793,10 +605,41 @@ export default function Lecon1({ onResult }) {
         {/* Accès premium à la vidéo de correction */}
         <PremiumVideo url="/cours/debutant/lecon1/correction_exercice1.mp4" title="Correction vidéo de l'exercice" />
       </section>
-
-      <div className="mt-12">
-        <QuizLecon1 onResult={onResult} />
-      </div>
+    
+      <section id="quiz" className="mb-12">
+        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-xl border-l-4 border-yellow-500">
+          <h2 className="text-3xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+            <FileText className="text-yellow-600" />
+            8. Quiz d'évaluation
+          </h2>
+          <div className="text-gray-700 mb-6">
+            <p className="mb-4">
+              Testez vos connaissances sur la saisie et manipulation des données avec ce quiz.
+              Vous devez obtenir au moins 70% pour valider la leçon.
+            </p>
+            <div className="bg-white p-4 rounded-lg shadow-sm inline-block">
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span>5 questions à choix multiples</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span>Basé sur les concepts de cette leçon</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <span>Pas de limite de temps</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <QuizLecon1 onResult={onResult} />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
 import QuizLecon4 from "../../quizz/debutant/QuizLecon4";
+import PremiumVideo from "../../ui/PremiumVideo";
 import { 
   MousePointer2, 
   Edit3, 
@@ -703,42 +704,19 @@ export default function Lecon4({ onResult }) {
           </div>
         </div>
       </section>
+      <div className="mb-8">
+          <PremiumVideo
+            url="/cours/debutant/lecon4/correction_exercice.mp4"
+            title="Correction vidéo de l'exercice"
+          />
+        </div>
 
-      {/* Section 8: Quiz */}
-      <section id="quiz" className="mb-12">
-        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-xl border-l-4 border-yellow-500">
-          <h2 className="text-3xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-            <FileText className="text-yellow-600" />
-            8. Quiz d'évaluation
-          </h2>
-          <div className="text-gray-700 mb-6">
-            <p className="mb-4">
-              Testez vos connaissances sur la saisie et manipulation des données avec ce quiz.
-              Vous devez obtenir au moins 70% pour valider la leçon.
-            </p>
-            <div className="bg-white p-4 rounded-lg shadow-sm inline-block">
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span>5 questions à choix multiples</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <span>Basé sur les concepts de cette leçon</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <span>Pas de limite de temps</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-12">
+      {/* Quiz d'évaluation */}
+        
+      <div className="mt-12">
             <QuizLecon4 onResult={onResult} />
           </div>
-        </div>
-      </section>
+        
     </div>
   );
 }
