@@ -30,17 +30,7 @@ import {
 } from "lucide-react";
 
 export default function Lecon4({ onResult }) {
-  const [fullscreen, setFullscreen] = useState(false);
-  const [showQuiz, setShowQuiz] = useState(false);
 
-  const handleQuizComplete = (score) => {
-    setShowQuiz(false);
-    onResult(score);
-  };
-
-  if (showQuiz) {
-    return <QuizLecon4 onComplete={handleQuizComplete} />;
-  }
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white">

@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import { useAuth } from '../../../hooks/useAuth';
 import { supabase } from '../../../lib/supabaseClient';
 import { Menu } from "lucide-react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const LEÇONS = [
   // Découverte & navigation
@@ -71,6 +71,7 @@ const statusIcons = {
 
 export default function CoursDebutant() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const leconParam = parseInt(searchParams.get("lecon"), 10);
   const [active, setActive] = useState(
     !isNaN(leconParam) && leconParam > 0 && leconParam <= LEÇONS.length ? leconParam - 1 : 0
@@ -227,7 +228,10 @@ export default function CoursDebutant() {
                   <li key={i}>
                     <button
                       className={`w-full flex items-center text-left px-3 py-2 rounded-lg transition font-medium ${active === i ? "bg-green-100 text-green-800 font-bold" : "hover:bg-gray-100 text-gray-700"}`}
-                      onClick={() => setActive(i)}
+                      onClick={() => {
+                        setActive(i);
+                        router.replace(`?lecon=${i+1}`, { scroll: false });
+                      }}
                     >
                       <span className="mr-2">{statusIcons[lessonStatus[i]]}</span>
                       <span className="mr-2 text-xs text-gray-400">{i + 1}.</span> {titre}
@@ -242,7 +246,10 @@ export default function CoursDebutant() {
                 <li key={i}>
                   <button
                     className={`w-8 h-8 flex items-center justify-center rounded-full transition font-bold text-sm ${active === i ? "bg-green-100 text-green-800" : "hover:bg-gray-100 text-gray-700"}`}
-                    onClick={() => setActive(i)}
+                    onClick={() => {
+                      setActive(i);
+                      router.replace(`?lecon=${i+1}`, { scroll: false });
+                    }}
                   >
                     {statusIcons[lessonStatus[i]]}
                   </button>
@@ -272,6 +279,7 @@ export default function CoursDebutant() {
                       onClick={() => {
                         setActive(i);
                         setShowMobileSidebar(false);
+                        router.replace(`?lecon=${i+1}`, { scroll: false });
                       }}
                     >
                       <span className="mr-2">{statusIcons[lessonStatus[i]]}</span>

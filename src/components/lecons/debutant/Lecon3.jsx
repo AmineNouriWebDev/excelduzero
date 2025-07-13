@@ -5,7 +5,7 @@ import PremiumVideo from "../../ui/PremiumVideo";
 import { Keyboard, Zap, MousePointer2, Layout, Search, Save, FolderOpen, Undo, Copy, Scissors, Clipboard, Bold, Italic, Underline, FunctionSquare, Table, Database, Eye, ArrowDown, ArrowUp, Command, Filter,Palette  } from "lucide-react";
 
 export default function Lecon3({ onResult }) {
-  const [fullscreen, setFullscreen] = useState(false);
+ 
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white">

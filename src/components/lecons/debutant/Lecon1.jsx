@@ -6,7 +6,7 @@ import { FileSpreadsheet, Monitor, Grid3X3, Calculator, BarChart3, Database, Set
 
 // Leçon 1 du niveau débutant : Découverte de l'interface Excel
 export default function Lecon1({ onResult }) {
-  const [fullscreen, setFullscreen] = useState(false);
+
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white">

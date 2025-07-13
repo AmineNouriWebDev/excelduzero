@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ImageZoomable from "../../ui/ImageZoomable";
 import QuizLecon9 from "../../quizz/debutant/QuizLecon9";
 import PremiumVideo from "../../ui/PremiumVideo";
@@ -31,18 +30,6 @@ import {
 } from "lucide-react";
 
 export default function Lecon9({ onResult }) {
-  const [fullscreen, setFullscreen] = useState(false);
-  const [showQuiz, setShowQuiz] = useState(false);
-
-  const handleQuizComplete = (score) => {
-    setShowQuiz(false);
-    onResult(score);
-  };
-
-  if (showQuiz) {
-    return <QuizLecon9 onComplete={handleQuizComplete} />;
-  }
-
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white">
       <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
@@ -561,10 +548,10 @@ export default function Lecon9({ onResult }) {
         </div>
       </div>
 
-   {/* Quiz d'évaluation */}
-                   <div className="mt-12">
-                     <QuizLecon9 onResult={onResult} />
-                   </div>
+      {/* Quiz d'évaluation */}
+      <div className="mt-12">
+        <QuizLecon9 onResult={onResult} />
+      </div>
     </div>
   );
 }

@@ -30,16 +30,7 @@ import {
 } from "lucide-react";
 
 export default function Lecon12({ onResult }) {
-  const [showQuiz, setShowQuiz] = useState(false);
-
-  const handleQuizComplete = (score) => {
-    setShowQuiz(false);
-    onResult(score);
-  };
-
-  if (showQuiz) {
-    return <QuizLecon12 onComplete={handleQuizComplete} />;
-  }
+  
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white">
