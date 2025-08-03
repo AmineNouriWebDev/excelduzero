@@ -122,7 +122,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/selection_feuilles.gif" 
+            src="/cours/debutant/Lecon12/selection_feuilles.gif" 
             alt="Sélection de feuilles multiples" 
             style={{ maxHeight: 350 }} 
           />
@@ -156,7 +156,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/impression_groupee.png" 
+            src="/cours/debutant/Lecon12/impression_groupee.gif" 
             alt="Impression de feuilles multiples" 
             style={{ maxHeight: 350 }} 
           />
@@ -218,7 +218,7 @@ export default function Lecon12({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/numerotation_pages.gif" 
+            src="/cours/debutant/Lecon12/numerotation_pages.gif" 
             alt="Configuration de la numérotation" 
             style={{ maxHeight: 350 }} 
           />

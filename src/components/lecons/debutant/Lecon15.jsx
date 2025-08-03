@@ -112,7 +112,7 @@ export default function Lecon15({ onResult }) {
             <li className="flex items-start gap-3">
               <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full mt-1">2</span>
               <span className="text-gray-700">
-                <code className="bg-gray-100 px-1">=B2/$B$10</code> → Formule sans format %
+                <code className="bg-gray-100 px-1">=B2/$B$8</code> → Formule sans format %
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -124,7 +124,7 @@ export default function Lecon15({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/pourcentages/calcul_base.gif" 
+            src="/cours/debutant/lecon15/calcul_base.gif" 
             alt="Calcul de pourcentage de base dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -161,7 +161,7 @@ export default function Lecon15({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/pourcentages/format_vs_calcul.png" 
+            src="/cours/debutant/lecon15/format_vs_calcul.png" 
             alt="Différence entre format pourcentage et calcul manuel" 
             style={{ maxHeight: 350 }} 
           />
@@ -224,7 +224,7 @@ export default function Lecon15({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/pourcentages/augmentation.gif" 
+            src="/cours/debutant/lecon15/augmentation.gif" 
             alt="Calcul d'augmentation en pourcentage" 
             style={{ maxHeight: 350 }} 
           />
@@ -262,7 +262,7 @@ export default function Lecon15({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/pourcentages/reduction.gif" 
+            src="/cours/debutant/lecon15/reduction.gif" 
             alt="Calcul de réduction en pourcentage" 
             style={{ maxHeight: 350 }} 
           />
@@ -336,7 +336,7 @@ export default function Lecon15({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/pourcentages/variation.gif" 
+            src="/cours/debutant/lecon15/variation.gif" 
             alt="Calcul de variation en pourcentage" 
             style={{ maxHeight: 350 }} 
           />
@@ -370,11 +370,7 @@ export default function Lecon15({ onResult }) {
             </div>
           </div>
           
-          <ImageZoomable 
-            src="/cours/debutant/pourcentages/variation_negative.png" 
-            alt="Gestion des variations négatives" 
-            style={{ maxHeight: 350 }} 
-          />
+        
         </div>
 
         <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
@@ -463,7 +459,7 @@ export default function Lecon15({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/pourcentages/calcul_marge.png" 
+            src="/cours/debutant/lecon15/calcul_marge.gif" 
             alt="Calcul de marge commerciale" 
             style={{ maxHeight: 350 }} 
           />
@@ -511,7 +507,7 @@ export default function Lecon15({ onResult }) {
           </p>
           
           <ImageZoomable 
-            src="/cours/debutant/pourcentages/total_cumule.gif" 
+            src="/cours/debutant/lecon15/total_cumule.gif" 
             alt="Calcul de pourcentage de total cumulé" 
             style={{ maxHeight: 350 }} 
           />
@@ -540,7 +536,7 @@ export default function Lecon15({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données à analyser :
           </p>
-          <a href="/cours/debutant/pourcentages/exercice_pourcentages.xlsx" 
+          <a href="/cours/debutant/lecon15/exercice_pourcentages.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -556,7 +552,7 @@ export default function Lecon15({ onResult }) {
             Solution détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/debutant/pourcentages/correction_exercice.mp4"
+            url="/cours/debutant/lecon15/correction_exercice.mp4"
             title="Correction de l'exercice sur les pourcentages"
           />
         </div>

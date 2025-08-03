@@ -179,7 +179,7 @@ export default function Lecon17({ onResult }) {
           </ol>
           
           <ImageZoomable 
-            src="/cours/debutant/lecon17/tri_personnalise_fenetre.png" 
+            src="/cours/debutant/lecon17/Tri_croissant.gif" 
             alt="Menu Trier et filtrer dans Excel" 
             className="mb-4"
           />
@@ -329,7 +329,7 @@ export default function Lecon17({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/lecon17/tri_par_noms.png" 
+            src="/cours/debutant/lecon17/tri_par_couleur.png" 
             alt="Tri par couleur dans Excel" 
             className="mb-4"
           />

@@ -123,7 +123,7 @@ export default function Lecon11({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/mode_mise_en_page.gif" 
+            src="/cours/debutant/Lecon11/mise_en_page.gif" 
             alt="Mode mise en page dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -317,7 +317,7 @@ export default function Lecon11({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/marges_orientation.png" 
+            src="/cours/debutant/Lecon11/marges.png" 
             alt="Configuration des marges et orientation" 
             style={{ maxHeight: 350 }} 
           />

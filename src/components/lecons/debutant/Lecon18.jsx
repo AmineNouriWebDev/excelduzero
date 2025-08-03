@@ -550,7 +550,7 @@ export default function Lecon18({ onResult }) {
                 
                 <div className="mt-4">
                   <ImageZoomable 
-                    src="/cours/debutant/lecon18/supprimer_doublons.png" 
+                    src="/cours/debutant/lecon18/supprimer_doublons.gif" 
                     alt="Suppression des doublons" 
                     className="rounded-lg border shadow-sm"
                   />

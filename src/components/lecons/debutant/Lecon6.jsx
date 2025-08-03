@@ -408,7 +408,7 @@ export default function Lecon6({ onResult }) {
           </ul>
 
           <ImageZoomable 
-            src="/cours/debutant/lecon6/recherche_format_excel.png" 
+            src="/cours/debutant/lecon6/recherche_format_excel.gif" 
             alt="Recherche par format Excel" 
             style={{ maxHeight: 350 }} 
           />

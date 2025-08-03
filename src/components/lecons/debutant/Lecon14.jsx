@@ -132,7 +132,7 @@ export default function Lecon14({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/syntaxe_fonction.png" 
+            src="/cours/debutant/lecon14/syntaxe_fonction.png" 
             alt="Structure d'une fonction Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -169,7 +169,7 @@ export default function Lecon14({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/erreurs_fonctions.gif" 
+            src="/cours/debutant/lecon14/erreurs_fonctions.gif" 
             alt="Résolution des erreurs courantes" 
             style={{ maxHeight: 350 }} 
           />
@@ -233,7 +233,7 @@ export default function Lecon14({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/concatenation_fonction.gif" 
+            src="/cours/debutant/lecon14/concatenation_fonction.gif" 
             alt="Concaténation de texte avec une fonction" 
             style={{ maxHeight: 350 }} 
           />
@@ -271,7 +271,7 @@ export default function Lecon14({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/copie_formule.gif" 
+            src="/cours/debutant/lecon14/copie_formule.gif" 
             alt="Recopie automatique de formules" 
             style={{ maxHeight: 350 }} 
           />
@@ -345,11 +345,7 @@ export default function Lecon14({ onResult }) {
             </div>
           </div>
           
-          <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/types_arguments.png" 
-            alt="Différents types d'arguments" 
-            style={{ maxHeight: 350 }} 
-          />
+          
         </div>
 
         <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
@@ -404,7 +400,7 @@ export default function Lecon14({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/somme_multi_arguments.gif" 
+            src="/cours/debutant/lecon14/somme_multi_arguments.gif" 
             alt="Fonction SOMME avec plusieurs arguments" 
             style={{ maxHeight: 350 }} 
           />
@@ -458,7 +454,7 @@ export default function Lecon14({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/inserer_fonction.gif" 
+            src="/cours/debutant/lecon14/inserer_fonction.gif" 
             alt="Utilisation de l'assistant de fonctions" 
             style={{ maxHeight: 350 }} 
           />
@@ -498,7 +494,7 @@ export default function Lecon14({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/bibliotheque_fonctions.png" 
+            src="/cours/debutant/lecon14/recherche_fonction.png" 
             alt="Bibliothèque de fonctions Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -538,7 +534,7 @@ export default function Lecon14({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/saisie_directe.gif" 
+            src="/cours/debutant/lecon14/saisie_directe.gif" 
             alt="Saisie directe de fonctions avec info-bulle" 
             style={{ maxHeight: 350 }} 
           />
@@ -585,7 +581,7 @@ export default function Lecon14({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/fonction_somme.gif" 
+            src="/cours/debutant/lecon14/fonction_somme_moy_prod.gif" 
             alt="Utilisation de la fonction SOMME" 
             style={{ maxHeight: 350 }} 
           />
@@ -620,7 +616,7 @@ export default function Lecon14({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/LeconFonctions/fonction_si.gif" 
+            src="/cours/debutant/lecon14/fonction_si.gif" 
             alt="Utilisation de la fonction SI" 
             style={{ maxHeight: 350 }} 
           />
@@ -717,7 +713,7 @@ export default function Lecon14({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données à mettre en forme :
           </p>
-          <a href="/cours/debutant/LeconFonctions/exercice_fonctions_debutant.xlsx" 
+          <a href="/cours/debutant/lecon14/exercice_fonctions_debutant.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
