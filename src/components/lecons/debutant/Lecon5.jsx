@@ -590,11 +590,11 @@ export default function Lecon5({ onResult }) {
           <li>
             <strong>Série numérique linéaire :</strong> <br />
             Dans une colonne vide, saisissez les valeurs <b>2</b> et <b>5</b> dans deux cellules adjacentes. Sélectionnez-les, puis utilisez la poignée de recopie pour étendre la série jusqu'à obtenir 6 valeurs au total. <br />
-            <span className="text-sm text-gray-500">(Quel est le pas de la série obtenue ?)</span>
+            
           </li>
           <li>
             <strong>Série chronologique :</strong> <br />
-            Dans une autre colonne, saisissez la date <b>01/01/2026</b> dans une cellule. Utilisez la poignée de recopie pour étendre la série sur 7 cellules. Modifiez ensuite le pas pour obtenir une série de lundis (une semaine d'écart entre chaque date).
+            Dans une autre colonne, saisissez la date <b>01/01/2024</b> dans une cellule. Utilisez la poignée de recopie pour étendre la série sur 7 cellules. Modifiez ensuite le pas pour obtenir une série de lundis (une semaine d'écart entre chaque date).
           </li>
           <li>
             <strong>Série alphanumérique :</strong> <br />
@@ -617,47 +617,6 @@ export default function Lecon5({ onResult }) {
       </div>
     </section>
 
-    {/* Exercice pratique adapté au cours */}
-    <div className="mb-8 p-6 bg-gray-50 border border-gray-200 rounded-lg">
-      <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-        <Target className="text-pink-600" />
-        Exercice pratique : Maîtriser les séries de données dans Excel
-      </h3>
-      <ol className="list-decimal ml-6 space-y-4 text-gray-700">
-        <li>
-          <strong>Série numérique linéaire</strong><br />
-          Dans la colonne A d’une nouvelle feuille Excel, saisissez les deux premiers nombres de la série suivante : <b>10</b> et <b>15</b>.<br />
-          Utilisez la poignée de recopie pour compléter la série jusqu’à la cellule A10.<br />
-          Quel est le pas de la série ?<br />
-          Quel nombre apparaît en A10 ?
-        </li>
-        <li>
-          <strong>Série géométrique</strong><br />
-          Dans la colonne B, saisissez le nombre <b>2</b> en B1.<br />
-          Utilisez la fenêtre « Série de données » pour compléter la colonne jusqu’à B8 en multipliant chaque valeur par 2.<br />
-          Quel est le contenu de la cellule B8 ?
-        </li>
-        <li>
-          <strong>Série chronologique</strong><br />
-          En C1, saisissez la date du jour.<br />
-          Utilisez la poignée de recopie pour remplir les cellules jusqu’à C7, en incrémentant d’un jour.<br />
-          Modifiez ensuite la série pour qu’elle affiche uniquement les lundis (pas de 7 jours).<br />
-          Quelles sont les dates obtenues ?
-        </li>
-        <li>
-          <strong>Série alphanumérique</strong><br />
-          En D1, saisissez « Produit 1 ».<br />
-          Utilisez la poignée de recopie pour remplir jusqu’à D5.<br />
-          Quels sont les contenus des cellules D2 à D5 ?
-        </li>
-        <li>
-          <strong>Liste personnalisée</strong><br />
-          Créez une liste personnalisée avec les éléments suivants : « Printemps », « Été », « Automne », « Hiver ».<br />
-          Saisissez « Printemps » en E1 puis utilisez la poignée de recopie pour remplir jusqu’à E8.<br />
-          Que constatez-vous ?
-        </li>
-      </ol>
-    </div>
     <div className="mt-12">
       <QuizLecon5 onResult={onResult} />
     </div>

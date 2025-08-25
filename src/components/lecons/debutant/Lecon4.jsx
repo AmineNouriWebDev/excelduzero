@@ -607,92 +607,62 @@ export default function Lecon4({ onResult }) {
       <section id="exercices" className="mb-12">
         <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Target className="text-pink-600" />
-          7. Exercices pratiques
+          7. Exercice pratique
         </h2>
 
         {/* Exercice 1 */}
-        <div className="mb-8">
-          <div className="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-lg border-l-4 border-pink-500">
-            <h3 className="text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-              <FileText className="text-pink-600" />
-              Exercice 1 : Manipulation de base
-            </h3>
-            <ol className="space-y-2 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
-                Créez un nouveau classeur
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
-                Saisissez "Produit" en A1 et "Prix" en B1
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
-                Ajoutez 5 produits avec leurs prix
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</span>
-                Modifiez deux prix en utilisant différentes méthodes
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        {/* Exercice 2 */}
-        <div className="mb-8">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
-            <h3 className="text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-              <FileText className="text-blue-600" />
-              Exercice 2 : Saisie et modification
-            </h3>
-            <ol className="space-y-2 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
-                Créez une liste de dates (format JJ/MM/AAAA)
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
-                Saisissez '00123 dans une cellule (nombre comme texte)
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
-                Utilisez la saisie multiple pour remplir 10 cellules avec "N/A"
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</span>
-                Supprimez le contenu de 3 cellules différentes
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        {/* Exercice 3 */}
-        <div className="mb-8">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-l-4 border-green-500">
-            <h3 className="text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-              <FileText className="text-green-600" />
-              Exercice 3 : Recherche et remplacement
-            </h3>
-            <ol className="space-y-2 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
-                Créez un tableau avec 20 noms de villes (avec répétitions)
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
-                Utilisez Ctrl+F pour trouver toutes les occurrences de "Paris"
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
-                Remplacez "Lyon" par "Lyon Ville" dans tout le document
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</span>
-                Utilisez la vérification orthographique
-              </li>
-            </ol>
-          </div>
-        </div>
+    <div className="mb-8">
+  <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg border-l-4 border-green-500">
+    <h3 className="text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+      <FileText className="text-green-600" />
+      Exercice  : Cas pratique - Gestion des ventes
+    </h3>
+    <p className="text-gray-700 mb-4">
+      Vous travaillez dans un petit magasin et devez créer un tableau Excel pour gérer les ventes de la semaine.
+      Suivez les étapes ci-dessous :
+    </p>
+    <ol className="space-y-2 text-gray-700">
+      <li className="flex items-start gap-2">
+        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
+        En <strong>A1</strong>, saisissez : <code className="bg-gray-100 px-2 py-1 rounded">Ventes Semaine 1</code>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
+        En <strong>A3:D3</strong>, créez l’en-tête suivant : 
+        <em>Produit – Quantité – Prix Unitaire (€) – Total (€)</em>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
+        Saisissez les données suivantes :
+        <ul className="list-disc list-inside ml-6">
+          <li>Pomme – 10 – 0,50</li>
+          <li>Orange – 8 – 0,70</li>
+          <li>Banane – 12 – 0,40</li>
+          <li>Raisin – 5 – 1,20</li>
+        </ul>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</span>
+        Corrigez la quantité de <strong>Raisin</strong> en <code>7</code> et modifiez le prix de <strong>Banane</strong> en <code>0,45</code>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">5</span>
+        Remplacez <strong>Orange</strong> par <strong>Mandarine</strong> en utilisant <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Ctrl + H</kbd>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">6</span>
+        Insérez une ligne après <strong>Banane</strong> et ajoutez : <em>Poire – 6 – 0,80</em>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">7</span>
+        Supprimez la ligne contenant <strong>Mandarine</strong>
+      </li>
+    </ol>
+    <p className="text-gray-700 mt-4 italic">
+      Résultat attendu : un tableau corrigé et organisé avec les bonnes données.
+    </p>
+  </div>
+</div>
       </section>
       <div className="mb-8">
           <PremiumVideo

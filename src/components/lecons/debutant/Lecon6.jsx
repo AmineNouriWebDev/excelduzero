@@ -423,12 +423,72 @@ export default function Lecon6({ onResult }) {
       </h3>
 
       <div className="bg-indigo-50 border-l-4 border-indigo-400 p-4 mb-6">
-        <p className="text-gray-700 mb-2">
-          Appliquez vos connaissances avec cet exercice pratique. Téléchargez le fichier Excel ci-dessous et suivez les instructions.
-        </p>
-        <p className="text-gray-700">
-          Une fois terminé, regardez la vidéo de correction pour comparer votre travail.
-        </p>
+          <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+    <FileText className="text-indigo-600" />
+    Exercice – Recherche et remplacement
+  </h4>
+  <p className="text-gray-700 mb-4">
+    Vous travaillez sur une feuille Excel contenant les informations suivantes (à partir de la cellule A1) :
+  </p>
+
+  <div className="overflow-x-auto mb-4">
+    <table className="min-w-full bg-white border border-gray-200 rounded-lg">
+      <thead>
+        <tr className="bg-gray-100">
+          <th className="py-2 px-4 border-b text-gray-700">Nom</th>
+          <th className="py-2 px-4 border-b text-gray-700">Email</th>
+          <th className="py-2 px-4 border-b text-gray-700">Ville</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="py-2 px-4 border-b">Martin</td>
+          <td className="py-2 px-4 border-b">martin@gmail.com</td>
+          <td className="py-2 px-4 border-b">Paris</td>
+        </tr>
+        <tr>
+          <td className="py-2 px-4 border-b">Michel</td>
+          <td className="py-2 px-4 border-b">michel@yahoo.com</td>
+          <td className="py-2 px-4 border-b">Lyon</td>
+        </tr>
+        <tr>
+          <td className="py-2 px-4 border-b">Marie</td>
+          <td className="py-2 px-4 border-b">marie@gmail.com</td>
+          <td className="py-2 px-4 border-b">Nice</td>
+        </tr>
+        <tr>
+          <td className="py-2 px-4 border-b">Marc</td>
+          <td className="py-2 px-4 border-b">marc@hotmail.com</td>
+          <td className="py-2 px-4 border-b">Paris</td>
+        </tr>
+           <tr>
+          <td className="py-2 px-4 border-b">Sophie</td>
+          <td className="py-2 px-4 border-b">contact@sophie.com</td>
+          <td className="py-2 px-4 border-b">Grenoble</td>
+        </tr>
+          <tr>
+          <td className="py-2 px-4 border-b">Marine</td>
+          <td className="py-2 px-4 border-b">contact@marine.com</td>
+          <td className="py-2 px-4 border-b">Paris</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p className="text-gray-700 mb-3">
+    Réalisez les actions suivantes avec la fonction <strong>Rechercher et remplacer</strong> :
+  </p>
+  <ol className="list-decimal list-inside space-y-2 text-gray-700">
+    <li>Recherchez toutes les personnes dont le prénom commence par "Mar".</li>
+    <li>Remplacez tous les emails <code>@gmail.com</code> par <code>@outlook.com</code>.</li>
+    <li>Corrigez la ville de "Nice" en "Marseille".</li>
+    <li>Utilisez un caractère générique pour trouver toutes les adresses finissant par <code>.com</code>.</li>
+    
+  </ol>
+
+  <p className="text-gray-700 mt-4 italic">
+    💡 Résultat attendu : un tableau où les emails sont mis à jour, la ville corrigée, et toutes les recherches effectuées correctement.
+  </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -468,22 +528,6 @@ export default function Lecon6({ onResult }) {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
-          <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-          </svg>
-          Consignes de l'exercice
-        </h4>
-        <ol className="list-decimal pl-6 space-y-3 text-gray-700">
-          <li>Ouvrez le fichier "Exercice_Recherche_Remplacement.xlsx"</li>
-          <li>Dans la feuille "Données", recherchez toutes les cellules contenant "Dupont"</li>
-          <li>Remplacez "Dupont" par "Martin" dans toute la feuille</li>
-          <li>Trouvez toutes les valeurs numériques commençant par "202"</li>
-          <li>Remplacez les références "A1" par "B1" dans les formules de la colonne "Calcul"</li>
-          <li>Recherchez toutes les cellules au format monétaire (€) et remplacez-les par le format numérique standard</li>
-        </ol>
-      </div>
 
       <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
