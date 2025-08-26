@@ -489,7 +489,7 @@ export default function Lecon9({ onResult }) {
               <li>Fusionnez les cellules A1:E1 pour créer le titre principal</li>
               <li>Centrez le titre et appliquez une mise en forme attractive</li>
               <li>Fusionnez les cellules des sous-titres selon le modèle</li>
-              <li>Créez des sections bien délimitées avec des fusions appropriées</li>
+              <li>Centrez l'entête du tableau</li>
             </ol>
           </div>
           <div>

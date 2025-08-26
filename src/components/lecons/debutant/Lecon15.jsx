@@ -581,14 +581,7 @@ export default function Lecon15({ onResult }) {
             </ol>
           </div>
         </div>
-        <div className="mt-6">
-          <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Tableau de bord</h5>
-          <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-            <li>Créez un <strong>résumé synthétique</strong> des indicateurs clés</li>
-            <li>Ajoutez une <strong>visualisation graphique</strong> des pourcentages</li>
-            <li>Mettez en forme avec un <strong>format conditionnel</strong> pour les variations</li>
-          </ol>
-        </div>
+      
       </div>
 
       {/* Synthèse des compétences acquises */}
