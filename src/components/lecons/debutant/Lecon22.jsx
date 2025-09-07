@@ -119,11 +119,7 @@ export default function Lecon22({ onResult }) {
               alt="Menu de protection du classeur" 
               style={{ maxHeight: 250 }} 
             />
-            <ImageZoomable 
-              src="/cours/debutant/Lecon22/password.png" 
-              alt="Saisie du mot de passe" 
-              style={{ maxHeight: 250 }} 
-            />
+           
           </div>
         </div>
 
@@ -228,12 +224,12 @@ export default function Lecon22({ onResult }) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <ImageZoomable 
-              src="/cours/debutant/Lecon22/protection_feuille.png" 
+              src="/cours/debutant/Lecon22/protection_feuille_fenetre.png" 
               alt="Menu de protection de feuille" 
               style={{ maxHeight: 250 }} 
             />
             <ImageZoomable 
-              src="/cours/debutant/Lecon22/protection_feuille_password.png" 
+              src="/cours/debutant/Lecon22/protection_feuille.png" 
               alt="Options de protection de feuille" 
               style={{ maxHeight: 250 }} 
             />
@@ -358,7 +354,7 @@ export default function Lecon22({ onResult }) {
       <div className="bg-orange-50 border-l-4 border-orange-400 p-4 mb-6">
         <p className="text-gray-700">
           Appliquez vos connaissances en protégeant un classeur financier avec différents niveaux de sécurité.
-          Téléchargez le fichier d'exercice et suivez les instructions détaillées.
+          
         </p>
       </div>
 
@@ -416,13 +412,7 @@ export default function Lecon22({ onResult }) {
             </ul>
           </div>
           
-          <div>
-            <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Gestion des permissions</h5>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Créez une zone de commentaires modifiable sur chaque feuille</li>
-              <li>Protégez les en-têtes et les formules de mise en forme</li>
-            </ul>
-          </div>
+      
         </div>
       </div>
 

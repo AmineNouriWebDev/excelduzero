@@ -204,12 +204,7 @@ export default function Lecon24({ onResult }) {
               <li>• Dates avec incréments (1/01, 2/01...)</li>
               <li>• Années (2023, 2024, 2025...)</li>
             </ul>
-            <ImageZoomable 
-              src="/cours/debutant/Lecon24/autofill_dates.png" 
-              alt="AutoFill pour les dates" 
-              className="mt-4"
-              style={{ maxHeight: 150 }} 
-            />
+           
           </div>
           
           <div className="bg-white border border-gray-200 rounded-lg p-5">
@@ -223,12 +218,7 @@ export default function Lecon24({ onResult }) {
               <li>• Équipes (Équipe A, Équipe B...)</li>
               <li>• Niveaux de priorité (Haut, Moyen, Bas)</li>
             </ul>
-            <ImageZoomable 
-              src="/cours/debutant/Lecon24/listes_personnalisees.png" 
-              alt="Listes personnalisées" 
-              className="mt-4"
-              style={{ maxHeight: 150 }} 
-            />
+           
           </div>
           
           <div className="bg-white border border-gray-200 rounded-lg p-5">
@@ -242,12 +232,7 @@ export default function Lecon24({ onResult }) {
               <li>• Séquences complexes (A1, A2, B1, B2...)</li>
               <li>• Valeurs avec préfixe/suffixe (ID-001, ID-002...)</li>
             </ul>
-            <ImageZoomable 
-              src="/cours/debutant/Lecon24/combinaisons.png" 
-              alt="Combinaisons AutoFill" 
-              className="mt-4"
-              style={{ maxHeight: 150 }} 
-            />
+           
           </div>
         </div>
 
@@ -327,7 +312,7 @@ export default function Lecon24({ onResult }) {
             <div className="mt-4">
               <h6 className="font-medium text-gray-800 mb-2">Tableaux Excel</h6>
               <p className="text-sm text-gray-600">
-                Convertissez votre plage en tableau (Ctrl + T) pour que les formules s'étendent automatiquement.
+                Convertissez votre plage en tableau (Ctrl + L) pour que les formules s'étendent automatiquement.
               </p>
               <ImageZoomable 
                 src="/cours/debutant/Lecon24/formule_tableau.gif" 
@@ -361,7 +346,7 @@ export default function Lecon24({ onResult }) {
                 <strong>Remarque :</strong> Les raccourcis Ctrl + Shift + C/V ne fonctionnent pas dans Excel 2016
               </p>
               <ImageZoomable 
-                src="/cours/debutant/Lecon24/pinceau_format.png" 
+                src="/cours/debutant/Lecon24/pinceau_format.gif" 
                 alt="Pinceau de format" 
                 className="mt-2"
                 style={{ maxHeight: 150 }} 
@@ -461,9 +446,9 @@ export default function Lecon24({ onResult }) {
           <div>
             <h5 className="font-semibold text-gray-800 mb-3">Partie 1 : Création de la structure</h5>
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Créez une colonne "Date" avec toutes les dates de janvier 2023 (AutoFill)</li>
-              <li>Ajoutez une colonne "Jour" avec les noms des jours en français</li>
-              <li>Générez une colonne "ID Vente" avec la séquence V-001, V-002, V-003...</li>
+              <li>Complétez la colonne "Date" avec toutes les dates de janvier 2023 (AutoFill)</li>
+              <li>Remplissez la colonne "Jour" avec les noms des jours en français (le premier Janvier 2023 correspond à un dimanche)</li>
+              <li>Complétez la séquence de la colonne "ID Vente"  </li>
             </ul>
           </div>
           
@@ -482,7 +467,7 @@ export default function Lecon24({ onResult }) {
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
               <li>Appliquez un format monétaire aux colonnes de prix</li>
               <li>Utilisez le pinceau de format pour copier la mise en forme</li>
-              <li>Créez un tableau structuré avec Ctrl + T</li>
+              <li>Créez un tableau structuré avec Ctrl + L</li>
             </ul>
           </div>
         </div>
@@ -516,7 +501,7 @@ export default function Lecon24({ onResult }) {
             <ul className="text-sm text-gray-600 space-y-2">
               <li>• <strong>Ctrl + Shift + L</strong> : Activer/désactiver les filtres</li>
               <li>• <strong>Alt + ↓</strong> : Ouvrir la liste déroulante du filtre</li>
-              <li>• <strong>Ctrl + T</strong> : Créer un tableau</li>
+              <li>• <strong>Ctrl + L</strong> : Créer un tableau</li>
               <li>• <strong>Ctrl + Shift + *</strong> : Sélectionner la région active</li>
               <li>• <strong>Ctrl + Page Up/Page Down</strong> : Naviguer entre les feuilles</li>
             </ul>

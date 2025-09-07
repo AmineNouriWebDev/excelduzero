@@ -409,7 +409,7 @@ export default function Lecon23({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon23/resoudre_discussion.png" 
+            src="/cours/debutant/Lecon23/resoudre_discussion.gif" 
             alt="Résolution d'une discussion" 
             className="mt-4"
             style={{ maxHeight: 200 }} 
@@ -575,7 +575,7 @@ export default function Lecon23({ onResult }) {
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
               <li>Démarrez une discussion sur la cellule D10 avec "Ce budget semble élevé"</li>
               <li>Mentionnez un collègue (@NomCollègue) dans une réponse</li>
-              <li>Résolvez la discussion après avoir obtenu une réponse</li>
+              <li>Résolvez la discussion .</li>
             </ul>
           </div>
           
@@ -583,8 +583,8 @@ export default function Lecon23({ onResult }) {
             <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Gestion avancée</h5>
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
               <li>Convertissez une note rapide en discussion</li>
-              <li>Convertissez une discussion en note rapide</li>
-              <li>Explorez le volet "Commentaires" pour voir toutes les interactions</li>
+              
+              
             </ul>
           </div>
         </div>

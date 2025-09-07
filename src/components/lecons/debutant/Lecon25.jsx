@@ -146,7 +146,7 @@ export default function Lecon25({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon25/supprimer-doublons.png" 
+            src="/cours/debutant/Lecon25/supprimer-doublons.gif" 
             alt="Boîte de dialogue Supprimer les doublons" 
             style={{ maxHeight: 200 }} 
           />
@@ -306,33 +306,47 @@ export default function Lecon25({ onResult }) {
           />
         </div>
       </div>
+<div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+  <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
+    <List className="w-5 h-5 text-orange-600" />
+    Consignes de l'exercice
+  </h4>
+  <div className="space-y-4">
+    
+    <div>
+      <h5 className="font-semibold text-gray-800 mb-3">Partie 1 : Gestion des doublons</h5>
+      <ul className="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Identifiez les doublons dans la colonne <strong>ID Client</strong> à l’aide de la mise en forme conditionnelle.</li>
+        <li>Surlignez les enregistrements en double pour les repérer visuellement.</li>
+        <li>Supprimez les doublons en utilisant l’outil <strong>Supprimer les doublons</strong> (conservez la première occurrence).</li>
+        <li>Comptez le nombre de lignes avant et après suppression pour vérifier le nettoyage.</li>
+      </ul>
+    </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
-          <List className="w-5 h-5 text-orange-600" />
-          Consignes de l'exercice
-        </h4>
-        <div className="space-y-4">
-          <div>
-            <h5 className="font-semibold text-gray-800 mb-3">Partie 1 : Gestion des doublons</h5>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Identifiez visuellement les doublons dans la colonne "Email"</li>
-              <li>Supprimez les doublons en conservant les enregistrements complets</li>
-              <li>Vérifiez que seuls les doublons d'email ont été supprimés</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h5 className="font-semibold text-gray-800 mb-3">Partie 2 : Mise en forme conditionnelle</h5>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Surlignez en rouge les clients avec solde &gt; 500€</li>
-              <li>Ajoutez des barres de données dans la colonne "Dépenses mensuelles"</li>
-              <li>Appliquez un dégradé de couleurs à la colonne "Ancienneté"</li>
-              <li>Marquez d'une icône d'alerte les comptes inactifs (dernière connexion &gt; 1 an)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div>
+      <h5 className="font-semibold text-gray-800 mb-3">Partie 2 : Mise en forme conditionnelle basique</h5>
+      <ul className="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Mettez en surbrillance en vert les clients avec un <strong>solde supérieur à 800 €</strong>.</li>
+        <li>Colorez en orange les clients dont les <strong>dépenses mensuelles</strong> sont comprises entre 100 € et 200 €.</li>
+        <li>Appliquez un fond bleu clair pour les clients habitant <strong>Paris</strong>.</li>
+        <li>Surlignez en vert les clients dont la <strong>dernière connexion</strong> est postérieure au 01/01/2025.</li>
+        <li>Ajoutez des <strong>barres de données</strong> dans la colonne <em>Ancienneté (jours)</em>.</li>
+        <li>Utilisez un <strong>jeu d’icônes</strong> sur la colonne <em>Statut</em> (✅ Actif, ❌ Inactif).</li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Règles supplémentaires</h5>
+      <ul className="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Mettez en évidence les <strong>3 clients ayant le solde le plus élevé</strong> (Top 3).</li>
+        <li>Appliquez un <strong>dégradé de couleurs</strong> (rouge → vert) sur la colonne <em>Dépenses mensuelles (€)</em>.</li>
+        <li>Allez dans <strong>Gérer les règles</strong> et réorganisez-les pour que la mise en surbrillance des <strong>soldes &gt; 800 €</strong> soit prioritaire.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
 
       <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
         <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
@@ -357,7 +371,7 @@ export default function Lecon25({ onResult }) {
               Mise en forme
             </h6>
             <ul className="text-sm text-gray-600 space-y-2">
-              <li>• <strong>Alt + H + L</strong> : Menu mise en forme cond.</li>
+              <li>• <strong>Alt + H + L</strong> : Menu mise en forme conditionnelle</li>
               <li>• <strong>Règles rapides</strong> : Accès direct aux formats courants</li>
               <li>• <strong>Gérer les règles</strong> : Pour des contrôles avancés</li>
             </ul>
