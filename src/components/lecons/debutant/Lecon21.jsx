@@ -23,7 +23,8 @@ import {
   Layout,
   BookOpen,
   Download,
-  Video
+  Video,
+  Lightbulb 
 } from "lucide-react";
 
 export default function Lecon21({ onResult }) {
@@ -205,38 +206,6 @@ export default function Lecon21({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
-          <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
-            <ChevronsDown className="w-5 h-5 text-teal-600" />
-            Exemple pratique : Système de priorités
-          </h5>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <h6 className="font-medium text-gray-800 mb-2">Préparation des données</h6>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>F1: 🔴 Urgent</li>
-                <li>F2: 🟡 Normal</li>
-                <li>F3: 🟢 Faible</li>
-                <li>F4: ⏸️ En attente</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h6 className="font-medium text-gray-800 mb-2">Configuration</h6>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>Plage: B2:B20</li>
-                <li>Source: $F$1:$F$4</li>
-              </ul>
-            </div>
-          </div>
-          
-          <ImageZoomable 
-            src="/cours/debutant/Lecon21/exemple_priorites.png" 
-            alt="Exemple de liste de priorités avec émojis" 
-            style={{ maxHeight: 250 }} 
-          />
-        </div>
       </div>
 
       <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -303,6 +272,11 @@ export default function Lecon21({ onResult }) {
           </div>
         </div>
       </div>
+         <ImageZoomable 
+            src="/cours/debutant/Lecon21/liste_deroulante_avancee.gif" 
+            alt="Création d'une liste déroulante dans Excel" 
+            style={{ maxHeight: 350 }} 
+          />
 
       <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Code className="w-6 h-6 text-orange-600" />
@@ -378,7 +352,7 @@ export default function Lecon21({ onResult }) {
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>• S'affichent quand la cellule est sélectionnée</li>
                 <li>• Guide pour la saisie correcte</li>
-                <li>• Ex: "Sélectionnez une priorité dans la liste"</li>
+                <li>• Ex: "La note doit être co"</li>
               </ul>
             </div>
             
@@ -456,7 +430,7 @@ export default function Lecon21({ onResult }) {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+        <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
         <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
           <BookOpen className="w-5 h-5 text-red-600" />
           Consignes de l'exercice
@@ -466,8 +440,32 @@ export default function Lecon21({ onResult }) {
             <h5 className="font-semibold text-gray-800 mb-3">1. Formulaire de contact</h5>
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
               <li>Créez une liste déroulante pour le type de demande (Commercial, Support, Réclamation)</li>
-              <li>Ajoutez une validation pour l'email avec format personnalisé</li>
-              <li>Limitez le numéro de téléphone à 10 chiffres</li>
+              <li>
+                Ajoutez une validation pour l'email avec format personnalisé
+                <div className="bg-yellow-50 border border-yellow-200 rounded-md p-3 mt-2 text-sm">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Lightbulb className="w-4 h-4 text-yellow-600" />
+                    <span className="font-medium text-gray-800">Astuce (formule email)</span>
+                  </div>
+                  <code className="block bg-gray-100 p-2 rounded text-sm">
+                    =ET(ESTNUM(CHERCHE("@";A1));ESTNUM(CHERCHE(".";A1)))
+                  </code>
+                  <p className="text-gray-600 mt-1">⚡ Vérifie que l'adresse contient bien "@" et un point. On peut remplacer CHERCHE() par TROUVE()</p>
+                </div>
+              </li>
+              <li>
+                Limitez le numéro de téléphone à 10 chiffres
+                <div className="bg-yellow-50 border border-yellow-200 rounded-md p-3 mt-2 text-sm">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Lightbulb className="w-4 h-4 text-yellow-600" />
+                    <span className="font-medium text-gray-800">Astuce (formule téléphone)</span>
+                  </div>
+                  <code className="block bg-gray-100 p-2 rounded text-sm">
+                    =ET(ESTNUM(--A1);NBCAR(A1)=10)
+                  </code>
+                  <p className="text-gray-600 mt-1">⚡ Vérifie que le numéro contient exactement 10 chiffres.</p>
+                </div>
+              </li>
             </ul>
           </div>
           
@@ -490,36 +488,6 @@ export default function Lecon21({ onResult }) {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
-          <Settings className="w-5 h-5 text-blue-600" />
-          Techniques avancées
-        </h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="border p-4 rounded-lg">
-            <h6 className="font-medium text-gray-800 mb-2 flex items-center gap-2">
-              <RefreshCw className="w-5 h-5 text-blue-600" />
-              Listes déroulantes en cascade
-            </h6>
-            <ul className="text-sm text-gray-600 space-y-2">
-              <li>• Pays → Villes dynamiques</li>
-              <li>• Utilisez =INDIRECT(A2) pour la seconde liste</li>
-              <li>• Nécessite des plages nommées</li>
-            </ul>
-          </div>
-          <div className="border p-4 rounded-lg">
-            <h6 className="font-medium text-gray-800 mb-2 flex items-center gap-2">
-              <Copy className="w-5 h-5 text-blue-600" />
-              Gestion des règles
-            </h6>
-            <ul className="text-sm text-gray-600 space-y-2">
-              <li>• Copie avec collage spécial (validation)</li>
-              <li>• Modification avec Données → Validation</li>
-              <li>• Suppression avec "Effacer tout"</li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
       {/* Quiz d'évaluation */}
       <div className="mt-12">

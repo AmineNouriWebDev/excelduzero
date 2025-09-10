@@ -21,7 +21,7 @@ export const questionsLecon21 = [
 	{
 	  question: "Comment spécifier les options d'une liste déroulante dans Excel?",
 	  options: [
-		"En tapant les valeurs séparées par des virgules",
+		"En écrivant les valeurs directement dans une cellule",
 		"En référençant une plage de cellules contenant les valeurs",
 		"En important un fichier CSV"
 	  ],

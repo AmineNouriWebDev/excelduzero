@@ -23,14 +23,20 @@ import {
   Hash,
   ArrowDownUp,
   Filter,
-  GanttChart
+  GanttChart,
+  TrendingUp,
+  BarChart3,
+  AreaChart
 } from "lucide-react";
 
 export default function Lecon19({ onResult }) {
   const [expandedSections, setExpandedSections] = useState({
-    creation: true,
+    introduction: true,
+    histogrammes: true,
+    camemberts: true,
+    courbes: true,
+    autres: true,
     personnalisation: true,
-    analyse: true,
     sparklines: true,
     exercice: true
   });
@@ -95,56 +101,41 @@ export default function Lecon19({ onResult }) {
         </div>
       </div>
 
-      {/* Section Création */}
+      {/* Section Introduction */}
       <div className="border rounded-lg overflow-hidden mb-8">
         <button 
           className="w-full flex justify-between items-center p-4 bg-blue-50 text-left"
-          onClick={() => toggleSection('creation')}
+          onClick={() => toggleSection('introduction')}
         >
           <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
-            <Plus className="w-5 h-5 text-blue-600" />
-            Création et Modification des Graphiques
+            <BarChart2 className="w-5 h-5 text-blue-600" />
+            Introduction aux Graphiques Excel
           </h2>
-          {expandedSections.creation ? 
+          {expandedSections.introduction ? 
             <ChevronUp className="w-5 h-5 text-blue-600" /> : 
             <ChevronDown className="w-5 h-5 text-blue-600" />
           }
         </button>
         
-        {expandedSections.creation && (
+        {expandedSections.introduction && (
           <div className="p-6">
             <div className="space-y-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <MoveRight className="w-5 h-5 text-blue-600" />
-                  Types de graphiques essentiels
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Pourquoi utiliser des graphiques dans Excel ?
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                  <div className="border rounded-lg p-4 text-center">
-                    <BarChart2 className="w-12 h-12 mx-auto text-blue-500 mb-2" />
-                    <h4 className="font-semibold">Histogrammes</h4>
-                    <p className="text-sm text-gray-600 mt-2">
-                      Idéal pour comparer des valeurs entre différentes catégories
-                    </p>
-                  </div>
-                  
-                  <div className="border rounded-lg p-4 text-center">
-                    <PieChart className="w-12 h-12 mx-auto text-green-500 mb-2" />
-                    <h4 className="font-semibold">Camemberts</h4>
-                    <p className="text-sm text-gray-600 mt-2">
-                      Montre les proportions d'un tout (part de marché, répartition budgétaire)
-                    </p>
-                  </div>
-                  
-                  <div className="border rounded-lg p-4 text-center">
-                    <LineChart className="w-12 h-12 mx-auto text-purple-500 mb-2" />
-                    <h4 className="font-semibold">Graphiques en ligne</h4>
-                    <p className="text-sm text-gray-600 mt-2">
-                      Visualise les tendances et évolutions dans le temps
-                    </p>
-                  </div>
-                </div>
+                <p className="text-gray-700 mb-4">
+                  Les graphiques transforment des données brutes en représentations visuelles faciles à comprendre. Ils permettent de :
+                </p>
+                
+                <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                  <li>Révéler des tendances et patterns dans vos données</li>
+                  <li>Comparer visuellement des valeurs et catégories</li>
+                  <li>Communiquer efficacement des informations complexes</li>
+                  <li>Prendre des décisions basées sur des données</li>
+                  <li>Créer des rapports professionnels et attrayants</li>
+                </ul>
               </div>
               
               <div>
@@ -174,44 +165,404 @@ export default function Lecon19({ onResult }) {
                   <p className="text-sm text-gray-500 mt-2 text-center">Processus de création d'un graphique en courbes</p>
                 </div>
               </div>
-              
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Section Histogrammes */}
+      <div className="border rounded-lg overflow-hidden mb-8">
+        <button 
+          className="w-full flex justify-between items-center p-4 bg-blue-100 text-left"
+          onClick={() => toggleSection('histogrammes')}
+        >
+          <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
+            <BarChart3 className="w-5 h-5 text-blue-700" />
+            Histogrammes et Graphiques en Barres
+          </h2>
+          {expandedSections.histogrammes ? 
+            <ChevronUp className="w-5 h-5 text-blue-700" /> : 
+            <ChevronDown className="w-5 h-5 text-blue-700" />
+          }
+        </button>
+        
+        {expandedSections.histogrammes && (
+          <div className="p-6">
+            <div className="space-y-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <Settings className="w-5 h-5 text-blue-600" />
-                  Modifier un graphique existant
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Quand utiliser un histogramme ?
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <p className="text-gray-700 mb-4">
+                  Les histogrammes (ou graphiques en barres) sont idéaux pour :
+                </p>
+                
+                <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                  <li>Comparer des valeurs entre différentes catégories</li>
+                  <li>Montrer l'évolution dans le temps lorsque les périodes sont limitées</li>
+                  <li>Visualiser des classements</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Exemple Pratique : Ventes trimestrielles
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">Changer le type de graphique</h4>
-                    <p className="text-gray-700 mb-3">
-                      Clic droit sur le graphique → <strong>Modifier le type de graphique</strong>
-                    </p>
+                    <h4 className="font-semibold text-gray-800 mb-2">Données :</h4>
+                    <div className="overflow-x-auto mb-4">
+                      <table className="min-w-full border">
+                        <thead>
+                          <tr className="bg-gray-100">
+                            <th className="border p-2">Trimestre</th>
+                            <th className="border p-2">Ventes (€)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td className="border p-2">T1</td><td className="border p-2">15 000</td></tr>
+                          <tr><td className="border p-2">T2</td><td className="border p-2">22 500</td></tr>
+                          <tr><td className="border p-2">T3</td><td className="border p-2">18 750</td></tr>
+                          <tr><td className="border p-2">T4</td><td className="border p-2">27 300</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
                     
-                    <h4 className="font-semibold text-gray-800 mb-2">Ajouter un axe secondaire</h4>
-                    <p className="text-gray-700">
-                      Pour les données de grandeurs différentes : clic droit sur la série → <strong>Mettre en forme une série de données</strong> → Axe secondaire
-                    </p>
+                    <h4 className="font-semibold text-gray-800 mb-2">Étapes :</h4>
+                    <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+                      <li>Sélectionnez les données (A1:B5)</li>
+                      <li>Onglet Insertion → Histogramme → Histogramme groupé</li>
+                      <li>Ajoutez un titre significatif</li>
+                      <li>Personnalisez les couleurs des barres</li>
+                    </ol>
                   </div>
                   
                   <div>
                     <ImageZoomable 
-                      src="/cours/debutant/lecon19/axe-secondaire.gif" 
-                      alt="Ajout d'un axe secondaire dans Excel" 
+                      src="/cours/debutant/lecon19/exemple-histogramme.gif" 
+                      alt="Exemple d'histogramme des ventes trimestrielles" 
+                      className="rounded-lg border shadow-sm"
+                    />
+                    <p className="text-sm text-gray-500 mt-2 text-center">Histogramme des ventes trimestrielles</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  <Lightbulb className="w-5 h-5 text-blue-600" />
+                  Astuce : Variantes d'histogrammes
+                </h4>
+                <p className="text-gray-700">
+                  Essayez les histogrammes empilés pour montrer la composition des valeurs, ou les histogrammes 3D pour un effet visuel plus marqué (à utiliser avec modération).
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Section Camemberts */}
+      <div className="border rounded-lg overflow-hidden mb-8">
+        <button 
+          className="w-full flex justify-between items-center p-4 bg-green-100 text-left"
+          onClick={() => toggleSection('camemberts')}
+        >
+          <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
+            <PieChart className="w-5 h-5 text-green-700" />
+            Graphiques en Secteurs (Camemberts)
+          </h2>
+          {expandedSections.camemberts ? 
+            <ChevronUp className="w-5 h-5 text-green-700" /> : 
+            <ChevronDown className="w-5 h-5 text-green-700" />
+          }
+        </button>
+        
+        {expandedSections.camemberts && (
+          <div className="p-6">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Quand utiliser un camembert ?
+                </h3>
+                
+                <p className="text-gray-700 mb-4">
+                  Les camemberts sont parfaits pour :
+                </p>
+                
+                <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                  <li>Montrer les proportions d'un tout (parts de marché, répartition budgétaire)</li>
+                  <li>Visualiser la composition d'une valeur totale</li>
+                  <li>Comparer des pourcentages (limité à environ 6-7 catégories maximum)</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Exemple Pratique : Répartition du budget marketing
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">Données :</h4>
+                    <div className="overflow-x-auto mb-4">
+                      <table className="min-w-full border">
+                        <thead>
+                          <tr className="bg-gray-100">
+                            <th className="border p-2">Poste</th>
+                            <th className="border p-2">Budget (€)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td className="border p-2">Publicité en ligne</td><td className="border p-2">12 000</td></tr>
+                          <tr><td className="border p-2">Événements</td><td className="border p-2">8 000</td></tr>
+                          <tr><td className="border p-2">Impression</td><td className="border p-2">5 000</td></tr>
+                          <tr><td className="border p-2">Relations presse</td><td className="border p-2">4 500</td></tr>
+                          <tr><td className="border p-2">Autres</td><td className="border p-2">2 500</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <h4 className="font-semibold text-gray-800 mb-2">Étapes :</h4>
+                    <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+                      <li>Sélectionnez les données (A1:B6)</li>
+                      <li>Onglet Insertion → Graphique en secteurs → Camembert</li>
+                      <li>Ajoutez des étiquettes de données avec pourcentages</li>
+                      <li>Excentrez le secteur le plus important pour le mettre en valeur</li>
+                    </ol>
+                  </div>
+                  
+                  <div>
+                    <ImageZoomable 
+                      src="/cours/debutant/lecon19/exemple-camembert.gif" 
+                      alt="Exemple de camembert du budget marketing" 
+                      className="rounded-lg border shadow-sm"
+                    />
+                    <p className="text-sm text-gray-500 mt-2 text-center">Répartition du budget marketing</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  <Lightbulb className="w-5 h-5 text-yellow-600" />
+                  Attention aux limites des camemberts
+                </h4>
+                <p className="text-gray-700">
+                  Évitez les camemberts avec trop de secteurs (plus de 6-7) car ils deviennent illisibles. Pour de nombreuses catégories, préférez un histogramme ou un graphique en barres.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Section Graphiques en Courbes */}
+      <div className="border rounded-lg overflow-hidden mb-8">
+        <button 
+          className="w-full flex justify-between items-center p-4 bg-purple-100 text-left"
+          onClick={() => toggleSection('courbes')}
+        >
+          <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
+            <LineChart className="w-5 h-5 text-purple-700" />
+            Graphiques en Courbes
+          </h2>
+          {expandedSections.courbes ? 
+            <ChevronUp className="w-5 h-5 text-purple-700" /> : 
+            <ChevronDown className="w-5 h-5 text-purple-700" />
+          }
+        </button>
+        
+        {expandedSections.courbes && (
+          <div className="p-6">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Quand utiliser un graphique en courbes ?
+                </h3>
+                
+                <p className="text-gray-700 mb-4">
+                  Les graphiques en courbes sont excellents pour :
+                </p>
+                
+                <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                  <li>Visualiser les tendances et évolutions dans le temps</li>
+                  <li>Comparer plusieurs séries de données continues</li>
+                  <li>Identifier des patterns saisonniers ou cycliques</li>
+                  <li>Projeter des tendances futures</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Exemple Pratique : Évolution des températures mensuelles
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">Données :</h4>
+                    <div className="overflow-x-auto mb-4">
+                      <table className="min-w-full border">
+                        <thead>
+                          <tr className="bg-gray-100">
+                            <th className="border p-2">Mois</th>
+                            <th className="border p-2">Paris (°C)</th>
+                            <th className="border p-2">Marseille (°C)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td className="border p-2">Jan</td><td className="border p-2">5</td><td className="border p-2">8</td></tr>
+                          <tr><td className="border p-2">Fév</td><td className="border p-2">6</td><td className="border p-2">9</td></tr>
+                          <tr><td className="border p-2">Mar</td><td className="border p-2">10</td><td className="border p-2">12</td></tr>
+                          <tr><td className="border p-2">Avr</td><td className="border p-2">13</td><td className="border p-2">15</td></tr>
+                          <tr><td className="border p-2">Mai</td><td className="border p-2">17</td><td className="border p-2">19</td></tr>
+                          <tr><td className="border p-2">Juin</td><td className="border p-2">20</td><td className="border p-2">23</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <h4 className="font-semibold text-gray-800 mb-2">Étapes :</h4>
+                    <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+                      <li>Sélectionnez les données (A1:C7)</li>
+                      <li>Onglet Insertion → Graphique en courbes</li>
+                      <li>Activez le lissage des courbes pour un aspect plus professionnel</li>
+                      
+                    </ol>
+                  </div>
+                  
+                  <div>
+                    <ImageZoomable 
+                      src="/cours/debutant/lecon19/exemple-courbes.gif" 
+                      alt="Exemple de graphique en courbes des températures" 
+                      className="rounded-lg border shadow-sm"
+                    />
+                    <p className="text-sm text-gray-500 mt-2 text-center">Évolution des températures mensuelles</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Ajouter une courbe de tendance
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-gray-700 mb-4">
+                      Pour projeter une tendance future sur votre graphique en courbes :
+                    </p>
+                    
+                    <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+                      <li>Cliquez droit sur la série de données</li>
+                      <li>Sélectionnez "Ajouter une courbe de tendance"</li>
+                      <li>Choisissez le type de tendance (linéaire, exponentielle, etc.)</li>
+                      <li>Optionnel : Affichez l'équation et le coefficient R²</li>
+                    </ol>
+                  </div>
+                  
+                  <div>
+                    <ImageZoomable 
+                      src="/cours/debutant/lecon19/courbe-tendance.png" 
+                      alt="Ajout d'une courbe de tendance" 
+                      className="rounded-lg border shadow-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Section Autres types de graphiques */}
+      <div className="border rounded-lg overflow-hidden mb-8">
+        <button 
+          className="w-full flex justify-between items-center p-4 bg-orange-100 text-left"
+          onClick={() => toggleSection('autres')}
+        >
+          <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
+            <AreaChart className="w-5 h-5 text-orange-700" />
+            Autres Types de Graphiques
+          </h2>
+          {expandedSections.autres ? 
+            <ChevronUp className="w-5 h-5 text-orange-700" /> : 
+            <ChevronDown className="w-5 h-5 text-orange-700" />
+          }
+        </button>
+        
+        {expandedSections.autres && (
+          <div className="p-6">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Graphiques en Aires
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <p className="text-gray-700 mb-4">
+                      Les graphiques en aires sont similaires aux graphiques en courbes mais avec la zone sous la courbe remplie de couleur. Ils sont utiles pour :
+                    </p>
+                    
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                      <li>Montrer l'accumulation de valeurs dans le temps</li>
+                      <li>Visualiser la contribution de différentes parties à un tout</li>
+                      <li>Représenter des volumes ou des quantités cumulées</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <ImageZoomable 
+                      src="/cours/debutant/lecon19/graphique-aires.png" 
+                      alt="Exemple de graphique en aires" 
                       className="rounded-lg border shadow-sm"
                     />
                   </div>
                 </div>
               </div>
               
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded mt-4">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Graphiques à Nuage de Points (XY)
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <p className="text-gray-700 mb-4">
+                      Les nuages de points montrent la relation entre deux variables. Ils sont parfaits pour :
+                    </p>
+                    
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                      <li>Identifier des corrélations entre variables</li>
+                      <li>Détecter des regroupements ou patterns</li>
+                      <li>Analyser des données scientifiques ou statistiques</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <ImageZoomable 
+                      src="/cours/debutant/lecon19/nuage-points.png" 
+                      alt="Exemple de nuage de points" 
+                      className="rounded-lg border shadow-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
                 <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                  <Lightbulb className="w-5 h-5 text-yellow-600" />
-                  Astuce importante
+                  <Lightbulb className="w-5 h-5 text-blue-600" />
+                  Guide de sélection du type de graphique
                 </h4>
-                <p className="text-gray-700">
-                  Pour déplacer un graphique sur une nouvelle feuille : onglet <strong>Création</strong> → <strong>Déplacer le graphique</strong>
-                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>Comparaison</strong> : Histogrammes, barres</li>
+                  <li>• <strong>Proportion</strong> : Camemberts, graphiques en secteurs</li>
+                  <li>• <strong>Tendance</strong> : Courbes, aires</li>
+                  <li>• <strong>Relation</strong> : Nuages de points, bulles</li>
+                  <li>• <strong>Distribution</strong> : Histogrammes, boîtes à moustaches</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -246,7 +597,7 @@ export default function Lecon19({ onResult }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <p className="text-gray-700 mb-4">
-                      Excel propose des dispositions prédéfinies qui ajoutent automatiquement des éléments comme les titres, légendes et étiquettes de données.
+                      Excel propose des dispositions prédéfinis qui ajoutent automatiquement des éléments comme les titres, légendes et étiquettes de données.
                     </p>
                     
                     <ul className="space-y-2 text-gray-700">
@@ -292,6 +643,11 @@ export default function Lecon19({ onResult }) {
                     <p className="text-gray-700">
                       Pour les camemberts : cliquez-glissez sur un secteur pour le mettre en valeur
                     </p>
+                    
+                    <h4 className="font-semibold text-gray-800 mb-2">Ajouter des étiquettes de données</h4>
+                    <p className="text-gray-700">
+                      Clic droit → Ajouter des étiquettes de données → Personnaliser le format
+                    </p>
                   </div>
                   
                   <div>
@@ -331,106 +687,6 @@ export default function Lecon19({ onResult }) {
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Section Analyse */}
-      <div className="border rounded-lg overflow-hidden mb-8">
-        <button 
-          className="w-full flex justify-between items-center p-4 bg-teal-50 text-left"
-          onClick={() => toggleSection('analyse')}
-        >
-          <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
-            <GanttChart className="w-5 h-5 text-teal-600" />
-            Analyse des Données avec Graphiques
-          </h2>
-          {expandedSections.analyse ? 
-            <ChevronUp className="w-5 h-5 text-teal-600" /> : 
-            <ChevronDown className="w-5 h-5 text-teal-600" />
-          }
-        </button>
-        
-        {expandedSections.analyse && (
-          <div className="p-6">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <LineChart className="w-5 h-5 text-teal-600" />
-                  Courbes de tendance
-                </h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <p className="text-gray-700 mb-4">
-                      Les courbes de tendance montrent l'évolution générale de vos données :
-                    </p>
-                    
-                    <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-                      <li>Sélectionnez une série de données</li>
-                      <li>Onglet <strong>Disposition</strong> → <strong>Courbe de tendance</strong></li>
-                      <li>Choisissez un type (linéaire, exponentielle, etc.)</li>
-                      <li>Optionnel : Affichez l'équation sur le graphique</li>
-                    </ol>
-                  </div>
-                  
-                  <div>
-                    <ImageZoomable 
-                      src="/cours/debutant/lecon19/courbe-tendance.png" 
-                      alt="Courbe de tendance dans Excel" 
-                      className="rounded-lg border shadow-sm"
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <BarChart2 className="w-5 h-5 text-teal-600" />
-                  Barres d'erreur et lignes de projection
-                </h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <p className="text-gray-700 mb-4">
-                      Pour les analyses statistiques ou scientifiques :
-                    </p>
-                    
-                    <ul className="space-y-2 text-gray-700">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Barres d'erreur</strong> : indiquent la marge d'erreur</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Lignes de projection</strong> : relient les points entre différentes séries</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <ImageZoomable 
-                      src="/cours/debutant/lecon19/barres-erreur.png" 
-                      alt="Barres d'erreur dans Excel" 
-                      className="rounded-lg border shadow-sm"
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                  <Lightbulb className="w-5 h-5 text-blue-600" />
-                  Quand utiliser chaque type de graphique
-                </h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Histogrammes</strong> : Comparer des valeurs entre catégories</li>
-                  <li>• <strong>Camemberts</strong> : Montrer les proportions d'un tout</li>
-                  <li>• <strong>Graphiques en ligne</strong> : Visualiser des tendances dans le temps</li>
-                  <li>• <strong>Graphiques en aires</strong> : Montrer l'accumulation de valeurs</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -544,7 +800,7 @@ export default function Lecon19({ onResult }) {
         )}
       </div>
 
-      {/* Exercice Pratique */}
+      {/* Exercice Pratique Amélioré */}
       <div className="border rounded-lg overflow-hidden mb-8">
         <button 
           className="w-full flex justify-between items-center p-4 bg-orange-50 text-left"
@@ -552,7 +808,7 @@ export default function Lecon19({ onResult }) {
         >
           <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
             <Target className="w-5 h-5 text-orange-600" />
-            Exercice Pratique - Analyse de Transport
+            Exercice Pratique Complet - Analyse Commerciale
           </h2>
           {expandedSections.exercice ? 
             <ChevronUp className="w-5 h-5 text-orange-600" /> : 
@@ -565,80 +821,91 @@ export default function Lecon19({ onResult }) {
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                 <BarChart2 className="w-5 h-5 text-orange-600" />
-                Données sur les moyens de transport
+                Données de ventes et performances
               </h3>
               
               <div className="overflow-x-auto mb-6">
                 <table className="min-w-full border">
                   <thead>
                     <tr className="bg-gray-100">
-                      <th className="border p-2 font-semibold">Transport</th>
-                      <th className="border p-2 font-semibold">Janvier</th>
-                      <th className="border p-2 font-semibold">Février</th>
-                      <th className="border p-2 font-semibold">Mars</th>
-                      <th className="border p-2 font-semibold">Avril</th>
+                      <th className="border p-2 font-semibold">Produit</th>
+                      <th className="border p-2 font-semibold">Jan</th>
+                      <th className="border p-2 font-semibold">Fév</th>
+                      <th className="border p-2 font-semibold">Mar</th>
+                      <th className="border p-2 font-semibold">Avr</th>
                       <th className="border p-2 font-semibold">Mai</th>
                       <th className="border p-2 font-semibold">Juin</th>
+                      <th className="border p-2 font-semibold">Total</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border p-2">Par avion</td>
-                      <td className="border p-2">1500</td>
-                      <td className="border p-2">2900</td>
-                      <td className="border p-2">3200</td>
-                      <td className="border p-2">2000</td>
-                      <td className="border p-2">3000</td>
-                      <td className="border p-2">2000</td>
-                    </tr>
-                    <tr>
-                      <td className="border p-2">Par train</td>
-                      <td className="border p-2">1800</td>
-                      <td className="border p-2">2300</td>
-                      <td className="border p-2">2500</td>
-                      <td className="border p-2">2400</td>
-                      <td className="border p-2">2200</td>
-                      <td className="border p-2">2100</td>
-                    </tr>
-                    <tr>
-                      <td className="border p-2">Par camion</td>
-                      <td className="border p-2">2000</td>
-                      <td className="border p-2">1000</td>
-                      <td className="border p-2">2500</td>
-                      <td className="border p-2">2600</td>
-                      <td className="border p-2">1600</td>
-                      <td className="border p-2">2800</td>
-                    </tr>
-                    <tr>
-                      <td className="border p-2">Par vélo</td>
-                      <td className="border p-2">20</td>
-                      <td className="border p-2">30</td>
-                      <td className="border p-2">40</td>
+                      <td className="border p-2">Ordinateurs</td>
+                      <td className="border p-2">45</td>
+                      <td className="border p-2">52</td>
+                      <td className="border p-2">48</td>
                       <td className="border p-2">60</td>
-                      <td className="border p-2">30</td>
-                      <td className="border p-2">50</td>
+                      <td className="border p-2">55</td>
+                      <td className="border p-2">62</td>
+                      <td className="border p-2 font-semibold">322</td>
+                    </tr>
+                    <tr>
+                      <td className="border p-2">Smartphones</td>
+                      <td className="border p-2">120</td>
+                      <td className="border p-2">135</td>
+                      <td className="border p-2">110</td>
+                      <td className="border p-2">145</td>
+                      <td className="border p-2">160</td>
+                      <td className="border p-2">175</td>
+                      <td className="border p-2 font-semibold">845</td>
+                    </tr>
+                    <tr>
+                      <td className="border p-2">Tablettes</td>
+                      <td className="border p-2">75</td>
+                      <td className="border p-2">80</td>
+                      <td className="border p-2">70</td>
+                      <td className="border p-2">85</td>
+                      <td className="border p-2">90</td>
+                      <td className="border p-2">95</td>
+                      <td className="border p-2 font-semibold">495</td>
+                    </tr>
+                    <tr>
+                      <td className="border p-2">Accessoires</td>
+                      <td className="border p-2">200</td>
+                      <td className="border p-2">180</td>
+                      <td className="border p-2">220</td>
+                      <td className="border p-2">210</td>
+                      <td className="border p-2">230</td>
+                      <td className="border p-2">250</td>
+                      <td className="border p-2 font-semibold">1290</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               
               <div className="border rounded-lg p-5 mb-8">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Missions :</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Missions complètes :</h3>
                 <ol className="list-decimal pl-6 space-y-4">
                   <li className="text-gray-700">
-                    Créez un <strong>graphique en courbes</strong> montrant l'évolution des 4 moyens de transport
+                    <strong>Histogramme groupé</strong> : Créez un histogramme comparant les ventes mensuelles des 4 produits
                   </li>
                   <li className="text-gray-700">
-                    Ajoutez un <strong>axe secondaire</strong> pour la série "Par vélo"
+                    <strong>Camembert</strong> : Représentez la part de marché de chaque produit dans le total des ventes
                   </li>
                   <li className="text-gray-700">
-                    Transformez le graphique en <strong>histogramme groupé</strong>
+                    <strong>Graphique en courbes</strong> : Montrez l'évolution des ventes de chaque produit sur les 6 mois
                   </li>
                   <li className="text-gray-700">
-                    Ajoutez une <strong>courbe de tendance linéaire</strong> pour la série "Par avion"
+                    <strong>Personnalisation</strong> : 
+                    <ul className="list-disc pl-6 mt-2">
+                      <li>Ajoutez un axe secondaire pour la série "Accessoires"</li>
+                      <li>Ajoutez une courbe de tendance linéaire pour la série "Smartphones"</li>
+                      <li>Excentrez le secteur "Accessoires" dans le camembert</li>
+                      <li>Appliquez un style prédéfini à l'histogramme</li>
+                    </ul>
                   </li>
                   <li className="text-gray-700">
-                    Créez des <strong>Sparklines</strong> dans une nouvelle colonne pour chaque moyen de transport
+                    <strong>Sparklines</strong> : Créez des mini-graphiques dans la colonne "Tendance" pour visualiser l'évolution de chaque produit
                   </li>
                 </ol>
               </div>
@@ -675,7 +942,7 @@ export default function Lecon19({ onResult }) {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span>Commencez par sélectionner toutes les données avant de créer le graphique</span>
+                    <span>Commencez par sélectionner les données appropriées pour chaque type de graphique</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -684,6 +951,10 @@ export default function Lecon19({ onResult }) {
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                     <span>Les Sparklines se créent via l'onglet Insertion → Sparklines</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>N'oubliez pas d'ajouter des titres significatifs à chaque graphique</span>
                   </li>
                 </ul>
               </div>
