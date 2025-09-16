@@ -281,7 +281,7 @@ export default function Lecon18({ onResult }) {
                     Raccourci clavier
                   </h4>
                   <p className="text-gray-700">
-                    <strong>Ctrl + T</strong> : Créer un tableau rapidement
+                    <strong>Ctrl + L</strong> : Créer un tableau rapidement
                   </p>
                 </div>
               </div>

@@ -4,7 +4,7 @@ export const questionsLecon18 = [
 	  question: "Quel est le raccourci clavier pour créer rapidement un tableau dans Excel?",
 	  options: [
 		"Ctrl + B",
-		"Ctrl + T",
+		"Ctrl + L",
 		"Alt + F1"
 	  ],
 	  answer: 1 // index 1 (Ctrl + T)
