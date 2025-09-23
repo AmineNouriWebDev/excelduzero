@@ -1,14 +1,38 @@
+// components/PremiumVideo.jsx
 import PremiumGate from "../common/PremiumGate";
+import { useState, useEffect } from 'react';
 
 /**
  * Composant vidéo premium universel
- * @param {string} url - Lien YouTube (https://...) ou mp4 (/.mp4)
+ * @param {string} url - Lien YouTube (https://...) ou fichier mp4 local
  * @param {string} [title] - Titre optionnel
  * @param {string} [className] - Classes CSS optionnelles
  */
 export default function PremiumVideo({ url, title = "Vidéo de correction", className = "" }) {
-  // Détection YouTube
-  const isYoutube = url.includes("youtube.com") || url.includes("youtu.be");
+  const [videoId, setVideoId] = useState(null);
+  const isYoutube = url?.includes("youtube.com") || url?.includes("youtu.be");
+
+  // Extraire l'ID de la vidéo YouTube
+  useEffect(() => {
+    if (isYoutube) {
+      let id = null;
+      
+      // Format 1: https://www.youtube.com/watch?v=VIDEO_ID
+      if (url.includes("youtube.com")) {
+        const match = url.match(/[?&]v=([^&]+)/);
+        if (match) id = match[1];
+      }
+      
+      // Format 2: https://youtu.be/VIDEO_ID
+      if (url.includes("youtu.be")) {
+        const match = url.match(/youtu\.be\/([^?]+)/);
+        if (match) id = match[1];
+      }
+      
+      setVideoId(id);
+    }
+  }, [url, isYoutube]);
+
   return (
     <PremiumGate
       fallback={
@@ -22,22 +46,31 @@ export default function PremiumVideo({ url, title = "Vidéo de correction", clas
     >
       <div className={`bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col items-center ${className}`}>
         {title && <div className="mb-4 text-lg font-semibold text-gray-700">{title}</div>}
+
         {isYoutube ? (
           <div className="w-full max-w-2xl aspect-video">
-            <iframe
-              src={
-                url.includes("embed")
-                  ? url
-                  : url.replace("watch?v=", "embed/")
-              }
-              title={title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-lg shadow"
-            />
+            {videoId ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0&fs=1`}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
+                frameBorder="0"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gray-200 rounded-lg">
+                <p>Chargement de la vidéo...</p>
+              </div>
+            )}
           </div>
         ) : (
-          <video width="640" height="360" controls className="w-full max-w-2xl rounded-lg shadow">
+          <video
+            controls
+            className="w-full max-w-2xl rounded-lg shadow aspect-video"
+            muted={true}
+            playsInline
+          >
             <source src={url} type="video/mp4" />
             Votre navigateur ne supporte pas la balise vidéo.
           </video>

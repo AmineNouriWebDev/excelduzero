@@ -16,16 +16,17 @@ import {
   MoveRight,
   Lightbulb,
   CalendarCheck,
-  CalendarRange,
-  Target
+  Target,
+  Users,
+  Clock,
+  List,
 } from "lucide-react";
 
 export default function Lecon20({ onResult }) {
   const [expandedSections, setExpandedSections] = useState({
     preparation: true,
-    mois: true,
-    jours: true,
-    semaine: true,
+    structure: true,
+    formules: true,
     miseEnForme: true,
     exercice: true
   });
@@ -44,7 +45,7 @@ export default function Lecon20({ onResult }) {
           <div>
             <h1 className="text-3xl font-bold flex items-center gap-3">
               <CalendarDays className="w-8 h-8" />
-              Créer un Calendrier Dynamique dans Excel
+              Créer un Calendrier Mensuel Dynamique dans Excel
             </h1>
             <p className="mt-2 opacity-90">Formation niveau débutant - Excel 2016 et versions ultérieures</p>
           </div>
@@ -57,8 +58,8 @@ export default function Lecon20({ onResult }) {
       <div className="mb-8">
         <div className="bg-blue-50 rounded-lg p-5 mb-6">
           <p className="text-gray-700">
-            Dans cette leçon, vous apprendrez à créer un calendrier dynamique qui s'adapte automatiquement à l'année sélectionnée, 
-            avec mise en forme conditionnelle et gestion des jours de la semaine.
+            Dans cette leçon, vous apprendrez à créer un calendrier mensuel dynamique qui s'adapte automatiquement 
+            au mois et à l'année sélectionnés, avec une mise en forme conditionnelle pour les week-ends.
           </p>
         </div>
         
@@ -69,11 +70,11 @@ export default function Lecon20({ onResult }) {
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Utiliser les fonctions DATE et JOURSEM</span>
+              <span className="text-gray-700">Utiliser les fonctions DATE, JOURSEM et FIN.MOIS</span>
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Créer des formules dynamiques pour les mois et jours</span>
+              <span className="text-gray-700">Créer des formules dynamiques pour afficher les jours en grille</span>
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -81,11 +82,7 @@ export default function Lecon20({ onResult }) {
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Générer automatiquement le jour de la semaine</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Créer un calendrier qui s'adapte à n'importe quelle année</span>
+              <span className="text-gray-700">Gérer l'affichage des jours du mois précédent/suivant</span>
             </li>
           </ul>
         </div>
@@ -113,7 +110,7 @@ export default function Lecon20({ onResult }) {
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                   <ArrowRight className="w-5 h-5 text-blue-600" />
-                  Définir l'année de référence
+                  Définir l'année et le mois de référence
                 </h3>
                 
                 <ol className="list-decimal pl-6 space-y-3 mb-4">
@@ -124,72 +121,162 @@ export default function Lecon20({ onResult }) {
                     Dans la cellule <strong className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">B1</strong>, saisissez une année (ex: <strong>2025</strong>)
                   </li>
                   <li className="text-gray-700">
-                    Formatez B1 en <strong>Nombre sans décimales</strong>
+                    Dans la cellule <strong className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">A2</strong>, tapez <code>Mois</code>
+                  </li>
+                  <li className="text-gray-700">
+                    Dans la cellule <strong className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">B2</strong>, saisissez un numéro de mois (1 à 12)
                   </li>
                 </ol>
                 
                 <div className="mt-4">
                   <ImageZoomable 
                     src="/cours/debutant/lecon20/etape1.png" 
-                    alt="Définition de l'année dans Excel" 
+                    alt="Définition de l'année et du mois dans Excel" 
                     className="rounded-lg border shadow-sm"
                   />
                 </div>
               </div>
-              
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
-                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                  <Lightbulb className="w-5 h-5 text-yellow-600" />
-                  Pourquoi cette étape est importante?
-                </h4>
-                <p className="text-gray-700">
-                  La cellule B1 servira de référence pour toutes les formules de date. 
-                  En changeant simplement cette valeur, tout votre calendrier s'adaptera automatiquement.
+
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                  <ArrowRight className="w-5 h-5 text-blue-600" />
+                  Cellules d'aide (optionnel mais recommandé)
+                </h3>
+                
+                <p className="text-gray-700 mb-4">
+                  Pour simplifier nos formules, créons quelques cellules d'aide :
                 </p>
+                
+                <ol className="list-decimal pl-6 space-y-3 mb-4">
+                  <li className="text-gray-700">
+                    Dans la cellule <strong className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">D1</strong>, 
+                    tapez <code>=DATE(B1;B2;1)</code> (Premier jour du mois)
+                  </li>
+                  <li className="text-gray-700">
+                    Dans la cellule <strong className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">D2</strong>, 
+                    tapez <code>=JOURSEM(D1;2)</code> (Jour de la semaine du 1er)
+                  </li>
+                  <li className="text-gray-700">
+                    Dans la cellule <strong className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">D3</strong>, 
+                    tapez <code>=JOUR(FIN.MOIS(D1;0))</code> (Nombre de jours dans le mois)
+                  </li>
+                </ol>
+                
+                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                  <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-yellow-600" />
+                    Pourquoi ces cellules d'aide?
+                  </h4>
+                  <p className="text-gray-700">
+                    Ces cellules nous permettront de créer des formules plus lisibles et faciles à comprendre. 
+                    Vous pourrez les masquer une fois le calendrier terminé.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         )}
       </div>
 
-      {/* Section Mois */}
+      {/* Section Structure */}
       <div className="border rounded-lg overflow-hidden mb-8">
         <button 
           className="w-full flex justify-between items-center p-4 bg-purple-50 text-left"
-          onClick={() => toggleSection('mois')}
+          onClick={() => toggleSection('structure')}
         >
           <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
-            <CalendarRange className="w-5 h-5 text-purple-600" />
-            Création des Mois
+            <LayoutTemplate className="w-5 h-5 text-purple-600" />
+            Structure du Calendrier
           </h2>
-          {expandedSections.mois ? 
+          {expandedSections.structure ? 
             <ChevronUp className="w-5 h-5 text-purple-600" /> : 
             <ChevronDown className="w-5 h-5 text-purple-600" />
           }
         </button>
         
-        {expandedSections.mois && (
+        {expandedSections.structure && (
           <div className="p-6">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                   <MoveRight className="w-5 h-5 text-purple-600" />
-                  Lister les 12 mois
+                  Créer l'en-tête du mois
                 </h3>
                 
                 <ol className="list-decimal pl-6 space-y-3 mb-4">
                   <li className="text-gray-700">
-                    Dans la colonne A, à partir de <strong className="bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded">A3</strong>, tapez les noms des 12 mois
+                    Dans la cellule <strong className="bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded">B4</strong>, 
+                    tapez <code>=TEXTE(DATE(B1;B2;1);"mmmm aaaa")</code>
                   </li>
                   <li className="text-gray-700">
-                    Formatez-les en gras et avec une couleur distinctive
+                    Fusionnez les cellules <strong>B4:H4</strong> et centrez le texte
+                  </li>
+                  <li className="text-gray-700">
+                    Appliquez une mise en forme (gras, taille 14, couleur bleue)
                   </li>
                 </ol>
                 
                 <div className="mt-4">
                   <ImageZoomable 
-                    src="/cours/debutant/lecon20/mois.png" 
-                    alt="Liste des mois dans Excel" 
+                    src="/cours/debutant/lecon20/entete-mois.png" 
+                    alt="En-tête du mois dynamique" 
+                    className="rounded-lg border shadow-sm"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                  <MoveRight className="w-5 h-5 text-purple-600" />
+                  Créer l'en-tête des jours de la semaine
+                </h3>
+                
+                <ol className="list-decimal pl-6 space-y-3 mb-4">
+                  <li className="text-gray-700">
+                    Dans la cellule <strong className="bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded">B5</strong>, tapez <code>Lun</code>
+                  </li>
+                  <li className="text-gray-700">
+                    Dans les cellules <strong>C5</strong> à <strong>H5</strong>, tapez <code>Mar, Mer, Jeu, Ven, Sam, Dim</code>
+                  </li>
+                  <li className="text-gray-700">
+                    Centrez et mettez en gras ces cellules d'en-tête
+                  </li>
+                </ol>
+                
+                <div className="mt-4">
+                  <ImageZoomable 
+                    src="/cours/debutant/lecon20/structure-jours.png" 
+                    alt="En-tête des jours de la semaine" 
+                    className="rounded-lg border shadow-sm"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                  <MoveRight className="w-5 h-5 text-purple-600" />
+                  Préparer la grille du calendrier
+                </h3>
+                
+                <ol className="list-decimal pl-6 space-y-3 mb-4">
+                  <li className="text-gray-700">
+                    Sélectionnez la plage <strong>B6:H11</strong> (6 lignes x 7 colonnes)
+                  </li>
+                  <li className="text-gray-700">
+                    Ajoutez des bordures à toutes ces cellules
+                  </li>
+                  <li className="text-gray-700">
+                    Ajustez la hauteur des lignes et la largeur des colonnes 
+                  </li>
+                  <li className="text-gray-700">
+                    Centrez le contenu horizontalement et verticalement
+                  </li>
+                </ol>
+                
+                <div className="mt-4">
+                  <ImageZoomable 
+                    src="/cours/debutant/lecon20/grille-calendrier.gif" 
+                    alt="Grille du calendrier" 
                     className="rounded-lg border shadow-sm"
                   />
                 </div>
@@ -199,165 +286,114 @@ export default function Lecon20({ onResult }) {
         )}
       </div>
 
-      {/* Section Jours */}
+      {/* Section Formules */}
       <div className="border rounded-lg overflow-hidden mb-8">
         <button 
           className="w-full flex justify-between items-center p-4 bg-teal-50 text-left"
-          onClick={() => toggleSection('jours')}
+          onClick={() => toggleSection('formules')}
         >
           <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
             <CalendarCheck className="w-5 h-5 text-teal-600" />
-            Génération des Jours
+            Formules Dynamiques
           </h2>
-          {expandedSections.jours ? 
+          {expandedSections.formules ? 
             <ChevronUp className="w-5 h-5 text-teal-600" /> : 
             <ChevronDown className="w-5 h-5 text-teal-600" />
           }
         </button>
         
-        {expandedSections.jours && (
+        {expandedSections.formules && (
           <div className="p-6">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                   <ArrowRight className="w-5 h-5 text-teal-600" />
-                  Formule pour le premier jour du mois
+                  Formule pour afficher les jours dans la grille
                 </h3>
                 
                 <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm font-mono">=DATE($B$1;1;1)  // Pour janvier</pre>
+                  <pre className="text-sm font-mono whitespace-pre-wrap">
+{`=SI(ET(LIGNE(A1)<=6;COLONNE(A1)<=7);
+   SI((LIGNE(A1)-1)*7+COLONNE(A1)-$D$2+1>0;
+      SI((LIGNE(A1)-1)*7+COLONNE(A1)-$D$2+1<=$D$3;
+         (LIGNE(A1)-1)*7+COLONNE(A1)-$D$2+1;
+         "");
+      "");
+   "")`}
+                  </pre>
                 </div>
                 
-                <p className="text-gray-700 mb-4">
-                  Cette formule crée une date correspondant au 1er janvier de l'année sélectionnée.
-                </p>
+                <ol className="list-decimal pl-6 space-y-3 mb-4">
+                  <li className="text-gray-700">
+                    Saisissez cette formule dans la cellule <strong>B6</strong>
+                  </li>
+                  <li className="text-gray-700">
+                    Copiez cette cellule (Ctrl+C)
+                  </li>
+                  <li className="text-gray-700">
+                    Sélectionnez la plage <strong>B6:H11</strong>
+                  </li>
+                  <li className="text-gray-700">
+                    Collez la formule (Ctrl+V)
+                  </li>
+                </ol>
+                
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-blue-600" />
+                    Explication de la formule
+                  </h4>
+                  <p className="text-gray-700">
+                    Cette formule calcule pour chaque cellule de la grille si elle doit afficher un jour du mois sélectionné.
+                    Elle tient compte du décalage du premier jour du mois et du nombre total de jours dans le mois.
+                  </p>
+                </div>
                 
                 <div className="mt-4">
                   <ImageZoomable 
-                    src="/cours/debutant/lecon20/premier-jour.png" 
-                    alt="Formule du premier jour dans Excel" 
+                    src="/cours/debutant/lecon20/formule-grille.gif" 
+                    alt="Animation de la formule de grille" 
                     className="rounded-lg border shadow-sm"
                   />
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                   <MoveRight className="w-5 h-5 text-teal-600" />
-                  Générer tous les jours du mois
+                  Test et validation
                 </h3>
-                
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm font-mono">=SI(MOIS(B3+1)=1; B3+1; "")</pre>
-                </div>
-                
-                <ol className="list-decimal pl-6 space-y-3 mb-4">
-                  <li className="text-gray-700">
-                    Placez cette formule dans la cellule <strong>B4</strong>
-                  </li>
-                  <li className="text-gray-700">
-                    Copiez-la vers le bas pour couvrir 31 jours (jusqu'à B33)
-                  </li>
-                  <li className="text-gray-700">
-                    Répétez pour chaque mois en adaptant le numéro du mois
-                  </li>
-                </ol>
-                
-                <div className="mt-4">
-                  <ImageZoomable 
-                    src="/cours/debutant/lecon20/generation-jours.gif" 
-                    alt="Animation de génération des jours dans Excel" 
-                    className="rounded-lg border shadow-sm"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <Settings className="w-5 h-5 text-teal-600" />
-                  Afficher uniquement le numéro du jour
-                </h3>
-                
-                <ol className="list-decimal pl-6 space-y-3 mb-4">
-                  <li className="text-gray-700">
-                    Sélectionnez toutes les cellules de dates
-                  </li>
-                  <li className="text-gray-700">
-                    Clic droit → <strong>Format de cellule</strong>
-                  </li>
-                  <li className="text-gray-700">
-                    Personnalisé → Tapez <code>j</code> dans le champ Type
-                  </li>
-                </ol>
-                
-                <div className="mt-4">
-                  <ImageZoomable 
-                    src="/cours/debutant/lecon20/format-jour.png" 
-                    alt="Format personnalisé pour les jours" 
-                    className="rounded-lg border shadow-sm"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Section Jour de la Semaine */}
-      <div className="border rounded-lg overflow-hidden mb-8">
-        <button 
-          className="w-full flex justify-between items-center p-4 bg-indigo-50 text-left"
-          onClick={() => toggleSection('semaine')}
-        >
-          <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
-            <CalendarDays className="w-5 h-5 text-indigo-600" />
-            Jour de la Semaine
-          </h2>
-          {expandedSections.semaine ? 
-            <ChevronUp className="w-5 h-5 text-indigo-600" /> : 
-            <ChevronDown className="w-5 h-5 text-indigo-600" />
-          }
-        </button>
-        
-        {expandedSections.semaine && (
-          <div className="p-6">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <ArrowRight className="w-5 h-5 text-indigo-600" />
-                  Formule pour le jour de la semaine
-                </h3>
-                
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm font-mono">=TEXTE(B3;"dddd")</pre>
-                </div>
                 
                 <p className="text-gray-700 mb-4">
-                  Cette formule convertit la date en texte correspondant au jour de la semaine (ex: "Lundi").
+                  Testez votre calendrier avec ces configurations :
                 </p>
                 
-                <div className="mt-4">
-                  <ImageZoomable 
-                    src="/cours/debutant/lecon20/jour-semaine.png" 
-                    alt="Formule pour le jour de la semaine" 
-                    className="rounded-lg border shadow-sm"
-                  />
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="bg-gray-50 p-3 rounded">
+                    <strong>Janvier 2024</strong><br/>
+                    <small className="text-gray-600">Commence un lundi</small>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded">
+                    <strong>Février 2024</strong><br/>
+                    <small className="text-gray-600">29 jours (bissextile)</small>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded">
+                    <strong>Mai 2024</strong><br/>
+                    <small className="text-gray-600">Commence un mercredi</small>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded">
+                    <strong>Décembre 2024</strong><br/>
+                    <small className="text-gray-600">Commence un dimanche</small>
+                  </div>
                 </div>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <MoveRight className="w-5 h-5 text-indigo-600" />
-                  Alternative avec la fonction JOURSEM
-                </h3>
                 
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm font-mono">=JOURSEM(B3;2)  // Retourne 1 (Lundi) à 7 (Dimanche)</pre>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <h4 className="font-semibold text-gray-800 mb-2">Résultat attendu</h4>
+                  <p className="text-gray-700">
+                    Votre calendrier doit afficher correctement tous les jours du mois sélectionné, 
+                    avec les espaces vides en début et fin de mois.
+                  </p>
                 </div>
-                
-                <p className="text-gray-700">
-                  Cette fonction est utile pour les calculs et la mise en forme conditionnelle.
-                </p>
               </div>
             </div>
           </div>
@@ -372,7 +408,7 @@ export default function Lecon20({ onResult }) {
         >
           <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
             <Palette className="w-5 h-5 text-orange-600" />
-            Mise en Forme Avancée
+            Mise en Forme Conditionnelle
           </h2>
           {expandedSections.miseEnForme ? 
             <ChevronUp className="w-5 h-5 text-orange-600" /> : 
@@ -391,7 +427,7 @@ export default function Lecon20({ onResult }) {
                 
                 <ol className="list-decimal pl-6 space-y-3 mb-4">
                   <li className="text-gray-700">
-                    Sélectionnez les cellules de jours
+                    Sélectionnez la plage <strong>B6:H11</strong>
                   </li>
                   <li className="text-gray-700">
                     Accédez à <strong>Accueil → Mise en forme conditionnelle → Nouvelle règle</strong>
@@ -400,12 +436,25 @@ export default function Lecon20({ onResult }) {
                     Choisissez <strong>Utiliser une formule pour déterminer les cellules à formater</strong>
                   </li>
                   <li className="text-gray-700">
-                    Entrez la formule : <code>=OU(JOURSEM(B3;2)=6; JOURSEM(B3;2)=7)</code>
+                    Entrez la formule : <code>=ET(B6{'<>'}"";OU(JOURSEM(DATE($B$1;$B$2;B6);2)=6;JOURSEM(DATE($B$1;$B$2;B6);2)=7))</code>
                   </li>
                   <li className="text-gray-700">
-                    Définissez un format (ex: fond gris clair)
+                    Définissez un format avec un fond gris clair (RGB: 240, 240, 240)
                   </li>
                 </ol>
+                
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-blue-600" />
+                    Explication de la formule de mise en forme
+                  </h4>
+                  <p className="text-gray-700">
+                    <strong>ET(B6{'<>'}""; ...)</strong> : Vérifie que la cellule n'est pas vide<br/>
+                    <strong>JOURSEM(...; 2)=6</strong> : Samedi<br/>
+                    <strong>JOURSEM(...; 2)=7</strong> : Dimanche<br/>
+                    La condition <strong>OU</strong> applique la mise en forme pour les deux jours du week-end.
+                  </p>
+                </div>
                 
                 <div className="mt-4">
                   <ImageZoomable 
@@ -419,21 +468,52 @@ export default function Lecon20({ onResult }) {
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                   <ArrowRight className="w-5 h-5 text-orange-600" />
-                  Améliorations supplémentaires
+                  Mise en forme du jour actuel (bonus)
+                </h3>
+                
+                <ol className="list-decimal pl-6 space-y-3 mb-4">
+                  <li className="text-gray-700">
+                    Créez une nouvelle règle de mise en forme conditionnelle
+                  </li>
+                  <li className="text-gray-700">
+                    Utilisez la formule : <code>=ET(B6{'<>'}"";DATE($B$1;$B$2;B6)=AUJOURDHUI())</code>
+                  </li>
+                  <li className="text-gray-700">
+                    Définissez un format avec un fond bleu clair et du texte en gras
+                  </li>
+                </ol>
+                
+                <div className="mt-4">
+                  <ImageZoomable 
+                    src="/cours/debutant/lecon20/jour-actuel.gif" 
+                    alt="Mise en évidence du jour actuel" 
+                    className="rounded-lg border shadow-sm"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                  <ArrowRight className="w-5 h-5 text-orange-600" />
+                  Finitions esthétiques
                 </h3>
                 
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                    <span>Ajoutez des bordures entre les mois</span>
+                    <span>Appliquez une bordure plus épaisse autour de tout le calendrier</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                    <span>Utilisez des couleurs différentes pour chaque mois</span>
+                    <span>Utilisez une police sans-serif (Arial, Calibri) pour une meilleure lisibilité</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                    <span>Ajoutez une colonne "Événements" pour les notes personnelles</span>
+                    <span>Ajustez l'espacement des cellules pour un rendu professionnel</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span>Masquez les cellules d'aide (D1:D3) si vous les avez utilisées</span>
                   </li>
                 </ul>
                 
@@ -452,8 +532,8 @@ export default function Lecon20({ onResult }) {
                   Astuce de pro
                 </h4>
                 <p className="text-gray-700">
-                  Pour ajouter des jours fériés, créez une liste à part avec les dates, 
-                  puis utilisez la fonction RECHERCHEV pour les afficher automatiquement dans votre calendrier.
+                  Pour créer un calendrier interactif, vous pouvez ajouter des contrôles de formulaire (curseurs ou liste déroulante) 
+                  pour sélectionner le mois et l'année au lieu de modifier directement les cellules B1 et B2.
                 </p>
               </div>
             </div>
@@ -461,15 +541,16 @@ export default function Lecon20({ onResult }) {
         )}
       </div>
 
-      {/* Exercice Pratique */}
-      <div className="border rounded-lg overflow-hidden mb-8">
+    
+        {/* Exercice Pratique */}
+     <div className="border rounded-lg overflow-hidden mb-8">
         <button 
           className="w-full flex justify-between items-center p-4 bg-green-50 text-left"
           onClick={() => toggleSection('exercice')}
         >
           <h2 className="text-xl font-bold text-gray-800 flex items-center gap-3">
             <CalendarCheck className="w-5 h-5 text-green-600" />
-            Exercice Pratique - Création de Calendrier
+            Exercice Pratique - Calendrier de Pointage pour Techniciens
           </h2>
           {expandedSections.exercice ? 
             <ChevronUp className="w-5 h-5 text-green-600" /> : 
@@ -486,15 +567,14 @@ export default function Lecon20({ onResult }) {
               </h3>
               
               <p className="text-gray-700 mb-4">
-                Créez un calendrier dynamique pour l'année 2025 qui inclut:
+                Transformez le calendrier mensuel en un outil de pointage pour techniciens. Vous devrez créer un système qui permet de :
               </p>
               
               <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-6">
-                <li>Tous les mois avec leurs jours</li>
-                <li>Le jour de la semaine pour chaque date</li>
-                <li>Une mise en forme conditionnelle pour les week-ends</li>
-                <li>Une colonne pour les événements personnels</li>
-                <li>La possibilité de changer d'année facilement</li>
+                <li>Visualiser les plannings de plusieurs techniciens</li>
+                <li>Suivre les heures de travail et les rendez-vous</li>
+                <li>Calculer automatiquement le nombre d'heures travaillées par technicien</li>
+                <li>Mettre en forme les jours avec différents types d'activités</li>
               </ol>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -503,10 +583,13 @@ export default function Lecon20({ onResult }) {
                     <Download className="w-5 h-5 text-green-600" />
                     Fichier de départ
                   </h4>
-                  <a href="#" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
+                  <a href="/fichiers/exercices/calendrier-pointage.xlsx" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
                     <Download className="w-5 h-5 mr-2" />
                     Télécharger le modèle (.xlsx)
                   </a>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Le fichier contient déjà un calendrier de base et une liste de techniciens avec leurs spécialités.
+                  </p>
                 </div>
                 
                 <div className="border rounded-lg p-5">
@@ -515,10 +598,76 @@ export default function Lecon20({ onResult }) {
                     Correction vidéo
                   </h4>
                   <PremiumVideo
-                    url="/cours/debutant/calendrier/correction-exercice.mp4"
-                    title="Correction de l'exercice sur les calendriers"
+                    url="/cours/debutant/calendrier/correction-pointage.mp4"
+                    title="Correction de l'exercice sur le calendrier de pointage"
                   />
                 </div>
+              </div>
+              
+              <div className="mt-8">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                  <Users className="w-5 h-5 text-blue-600" />
+                  Structure du fichier de départ
+                </h3>
+                
+                <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                    <List className="w-5 h-5 text-blue-600" />
+                    Données fournies dans le fichier
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li><strong>Colonne J:</strong> Liste des techniciens (Jean Dupont, Marie Martin, etc.)</li>
+                    <li><strong>Colonne K:</strong> Spécialités des techniciens</li>
+                    <li><strong>Colonne L:</strong> Dates des rendez-vous (ex: 15/01/2024)</li>
+                    <li><strong>Colonne M:</strong> Noms des techniciens pour chaque rendez-vous</li>
+                    <li><strong>Colonne N:</strong> Heures de travail pour chaque rendez-vous</li>
+                    <li><strong>Colonne O:</strong> Type d'intervention (Maintenance, Installation, Réparation)</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                  <Settings className="w-5 h-5 text-blue-600" />
+                  Instructions détaillées
+                </h3>
+                
+                <ol className="list-decimal pl-6 space-y-4 text-gray-700">
+                  <li>
+                    <strong>Ajouter des listes déroulantes pour l'année et le mois</strong>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Créez des listes déroulantes en B1 (pour les années 2023-2025) et B2 (pour les mois 1-12) 
+                      en utilisant la validation des données.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>Ajouter une liste déroulante pour le technicien</strong>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Créez une liste déroulante en F1 avec les noms des techniciens (colonne J).
+                    </p>
+                  </li>
+                  <li>
+                    <strong>Adapter le calendrier pour afficher les rendez-vous</strong>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Modifiez la formule du calendrier pour qu'elle affiche le jour et, en dessous, 
+                      les heures de travail du technicien sélectionné pour ce jour.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>Mise en forme conditionnelle avancée</strong>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Ajoutez une mise en forme pour différencier les types d'intervention 
+                      (couleurs différentes pour Maintenance, Installation, Réparation).
+                    </p>
+                  </li>
+                  <li>
+                    <strong>Créer un résumé mensuel</strong>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Ajoutez une section qui calcule le total d'heures travaillées et le nombre 
+                      de rendez-vous pour le technicien sélectionné.
+                    </p>
+                  </li>
+                </ol>
               </div>
               
               <div className="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg">
@@ -529,26 +678,39 @@ export default function Lecon20({ onResult }) {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span>Commencez par définir l'année de référence en B1</span>
+                    <span>Utilisez la fonction SOMME.SI.ENS pour calculer les heures par technicien et par date</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span>Utilisez la fonction DATE pour le premier jour de chaque mois</span>
+                    <span>Créez des règles de mise en forme conditionnelle avec des formules basées sur le type d'intervention</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span>La formule SI avec MOIS permet de générer la suite des jours</span>
+                    <span>Utilisez la concaténation pour afficher le jour et les heures dans la même cellule</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span>Testez votre calendrier avec différentes années</span>
+                    <span>Testez avec différents techniciens et différentes périodes</span>
                   </li>
                 </ul>
+              </div>
+
+              <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  <Lightbulb className="w-5 h-5 text-yellow-600" />
+                  Formules clés pour l'exercice
+                </h4>
+                <div className="text-sm text-gray-700 space-y-2">
+                  <p><strong>Pour les listes déroulantes:</strong> Données → Validation des données → Liste</p>
+                  <p><strong>Pour afficher les heures:</strong> =B6 & SI(SOMME.SI.ENS(...){'>'}0; "\n" & SOMME.SI.ENS(...) & "h"; "")</p>
+                  <p><strong>Pour la mise en forme:</strong> =ET(B6{'"<>""'}; RECHERCHEV(DATE($B$1;$B$2;B6)&$F$1; $L:$O; 4; FAUX)="Maintenance")</p>
+                </div>
               </div>
             </div>
           </div>
         )}
       </div>
+
 
       {/* Quiz d'évaluation */}
       <div className="mt-8 border-t pt-8">

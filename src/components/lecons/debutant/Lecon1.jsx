@@ -603,7 +603,7 @@ export default function Lecon1({ onResult }) {
           <strong>Correction vidéo :</strong> Retrouvez la correction détaillée de cet exercice en vidéo ci-dessous !
         </div>
         {/* Accès premium à la vidéo de correction */}
-        <PremiumVideo url="https://www.youtube.com/embed/QiSOq-2fiAI" title="Correction vidéo de l'exercice" />
+        <PremiumVideo url="https://youtu.be/QiSOq-2fiAI" title="Correction vidéo de l'exercice" />
       </section>
     
       <section id="quiz" className="mb-12">
