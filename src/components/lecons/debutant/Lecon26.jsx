@@ -56,6 +56,17 @@ export default function Lecon26({ onResult }) {
           </p>
         </div>
       </div>
+      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8 rounded-r-lg">
+  <p className="text-gray-700">
+    ⚠️ <span className="font-semibold">Important :</span><br />
+    Certains raccourcis clavier peuvent ne pas fonctionner selon la <strong>langue d’installation d’Excel</strong> 
+    (français ou anglais) ou le <strong>type de clavier</strong> utilisé (<em>AZERTY</em> ou <em>QWERTY</em>).<br />
+    Par exemple, <strong>Ctrl + G</strong> (Gras) sur Excel en français correspond à <strong>Ctrl + B</strong> 
+    sur Excel en anglais.<br />
+    Si un raccourci ne fonctionne pas, essayez sa version anglaise ou vérifiez votre disposition de clavier 
+    dans les paramètres système.
+  </p>
+</div>
 
       {/* Section: Raccourcis fréquemment utilisés */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
