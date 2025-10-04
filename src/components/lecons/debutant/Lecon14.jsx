@@ -762,8 +762,7 @@ export default function Lecon14({ onResult }) {
         <div className="mt-6">
           <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Formatage et présentation</h5>
           <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-            <li>Créez une colonne <strong>"Performance"</strong> avec des libellés dynamiques combinant texte et fonctions</li>
-            <li>Ajoutez un <strong>résumé statistique</strong> en bas du tableau</li>
+            <li>Créez une colonne <strong>"Performance"</strong> avec des libellés dynamiques combinant texte et fonctions pour afficher un message (Bonne vente pour _ suivi du nom du produit _  ou bien A améliorer pour _suivi du nom de produit_)</li>
             <li>Mettez en forme les résultats avec un style professionnel</li>
           </ol>
         </div>

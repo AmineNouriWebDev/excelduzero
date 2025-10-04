@@ -507,7 +507,6 @@ export default function Lecon9({ onResult }) {
           <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Optimisation de la mise en page</h5>
           <ol className="list-decimal pl-6 space-y-2 text-gray-700">
             <li>Configurez l'orientation en mode Paysage</li>
-            <li>Ajustez la mise à l'échelle pour tenir sur une page</li>
             <li>Vérifiez l'aperçu avant impression</li>
             <li>Ajustez les marges si nécessaire</li>
             <li>Testez différents modes d'affichage</li>

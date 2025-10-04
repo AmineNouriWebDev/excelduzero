@@ -43,7 +43,7 @@ const LEÇONS = [
   "Création de calendriers simples",
 
   // Validation & protection
-  "Validation de données basique (listes déroulantes)",
+  "Validation de données basique",
   "Protection de feuille et de classeur",
 
   // Commentaires & astuces

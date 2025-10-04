@@ -12,7 +12,7 @@ export const questionsLecon14 = [
 	{
 	  question: "Quelle formule utiliseriez-vous pour extraire les 3 premiers caractères du nom dans la cellule A1 et les convertir en majuscules ?",
 	  options: [
-		"=GAUCHE(MAJUSCULE(A1);3)",
+		"=DROITE(MAJUSCULE(A1);3)",
 		"=MAJUSCULE(GAUCHE(A1;3))",
 		"=EXTRACTION(MAJUSCULE(A1);1;3)"
 	  ],
@@ -37,13 +37,13 @@ export const questionsLecon14 = [
 	  answer: 0 // =NB.SI(A1:A10;"<>") (index 0)
 	},
 	{
-	  question: "Vous avez un tableau avec : Colonne A (Produit), Colonne B (Prix), Colonne C (Quantité). Quelle formule utiliseriez-vous pour :\n1. Calculer le total par produit (Prix * Quantité)\n2. Ajouter \"Total : \" devant chaque résultat\n3. Afficher \"NA\" si la quantité est manquante",
+	  question: "Quelle fonction Excel utiliseriez-vous pour calculer la moyenne des valeurs dans la plage A1:A10 en ignorant les cellules vides ?",
 	  options: [
-		"=\"Total : \" & SI(ESTVIDE(C2); \"NA\"; B2*C2)",
-		"=CONCAT(\"Total : \"; SI(C2=\"\"; \"NA\"; PRODUIT(B2;C2)))",
-		"=\"Total : \" & SI(C2=\"\"; \"NA\"; B2*C2)"
+		"=MOYENNE(A1:A10)",
+		"=SOMME(A1:A10)/NB(A1:A10)",
+		"=MOYENNE.SI(A1:A10;\">0\")"
 	  ],
-	  answer: 2 // La plus complète (index 2)
+	  answer: 0 // =MOYENNE(A1:A10) ignore automatiquement les cellules vides (index 0)
 	}
   ];
   

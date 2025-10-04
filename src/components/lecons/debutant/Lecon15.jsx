@@ -563,24 +563,24 @@ export default function Lecon15({ onResult }) {
           <BookOpen className="w-5 h-5 text-red-600" />
           Consignes détaillées
         </h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h5 className="font-semibold text-gray-800 mb-3">Partie 1 : Analyses commerciales</h5>
-            <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-              <li>Calculez la <strong>contribution en %</strong> de chaque produit au CA total</li>
-              <li>Déterminez la <strong>marge brute</strong> de chaque produit en %</li>
-              <li>Calculez l'<strong>évolution des ventes</strong> par rapport au mois précédent</li>
-            </ol>
-          </div>
-          <div>
-            <h5 className="font-semibold text-gray-800 mb-3">Partie 2 : Scénarios commerciaux</h5>
-            <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-              <li>Appliquez une <strong>remise de 15%</strong> sur tous les produits de la catégorie B</li>
-              <li>Calculez le <strong>prix de vente conseillé</strong> avec une marge de 40%</li>
-              <li>Simulez une <strong>augmentation de 8%</strong> des coûts de production</li>
-            </ol>
-          </div>
-        </div>
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div>
+    <h5 className="font-semibold text-gray-800 mb-3">Partie 1 : Analyses commerciales</h5>
+    <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+      <li><strong>Contribution en %</strong> : Calcule la part du chiffre d'affaires de chaque produit par rapport au chiffre d'affaires total.</li>
+      <li><strong>% Marge brute</strong> : Calcule le pourcentage de marge brute par rapport au prix de vente.</li>
+      <li><strong>Évolution des ventes</strong> : Calcule l'évolution des quantités vendues par rapport à la période précédente (N-1). </li>
+    </ol>
+  </div>
+  <div>
+    <h5 className="font-semibold text-gray-800 mb-3">Partie 2 : Scénarios commerciaux</h5>
+    <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+      <li><strong>Remise 15%</strong> : Calcule le nouveau prix de vente après application d'une remise de 15%.</li>
+      <li><strong>PVC (Chiffre d'affaires)</strong> : Calcule le chiffre d'affaires généré par chaque produit (Prix de vente × Quantité vendue).</li>
+      <li><strong>Augmentation de 8%</strong> : Calcule le nouveau prix de vente après une augmentation de 8%.</li>
+    </ol>
+  </div>
+</div>
       
       </div>
 

@@ -77,7 +77,7 @@ export default function Lecon23({ onResult }) {
         <div className="bg-purple-50 border-l-4 border-purple-400 p-4 mb-4">
           <p className="text-gray-700">
             Excel propose deux systèmes de commentaires distincts : les notes rapides (héritées des anciennes versions)
-            et les discussions (introduites à partir d'Excel 2016) qui permettent une collaboration en temps réel.
+            et les discussions (introduites à partir d'Excel 2019) qui permettent une collaboration en temps réel.
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export default function Lecon23({ onResult }) {
                 <tr className="bg-gray-50">
                   <td className="border p-2">Excel 2016</td>
                   <td className="border p-2 text-center">✓</td>
-                  <td className="border p-2 text-center">✓</td>
+                  <td className="border p-2 text-center">✗</td>
                 </tr>
                 <tr>
                   <td className="border p-2">Excel 2019 et 365</td>

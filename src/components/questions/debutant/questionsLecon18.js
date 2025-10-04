@@ -41,9 +41,9 @@ export const questionsLecon18 = [
 	  options: [
 		"Onglet Données > Supprimer les doublons",
 		"Onglet Accueil > Nettoyer",
-		"Onglet Création > Supprimer les doublons"
+		"Onglet Création > Filtrer"
 	  ],
-	  answer: 2 // index 2 (Onglet Création)
+	  answer: 0 // index 0 (Onglet Données)
 	}
   ];
   

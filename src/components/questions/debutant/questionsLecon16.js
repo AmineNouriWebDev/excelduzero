@@ -19,10 +19,10 @@ export const questionsLecon16 = [
 	  answer: 2 // index 2
 	},
 	{
-	  question: "Vous devez créer un tableau où seule la colonne doit rester fixe lors de la copie verticale. Quelle référence utiliser?",
+	  question: "Lors de la création d'un tableau de calcul, vous devez fixer uniquement la référence de ligne lors de la copie horizontale. Quelle syntaxe utiliser?",
 	  options: [
-		"$A1",
 		"A$1",
+		"$A1",
 		"$A$1"
 	  ],
 	  answer: 0 // index 0

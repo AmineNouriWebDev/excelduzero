@@ -38,19 +38,7 @@ export default function Lecon24({ onResult }) {
         </p>
       </div>
 
-      {/* Notice de correction */}
-      <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-        <div className="flex items-start gap-3">
-          <AlertTriangle className="w-5 h-5 text-yellow-600 mt-1 flex-shrink-0" />
-          <div>
-            <p className="font-medium text-yellow-800 mb-2">Version corrigée - Excel 2016 et versions ultérieures</p>
-            <p className="text-yellow-700 text-sm">
-              Les raccourcis clavier ont été vérifiés et corrigés pour Excel 2016. 
-              Certains raccourcis peuvent varier selon la version d'Excel et la configuration régionale.
-            </p>
-          </div>
-        </div>
-      </div>
+     
 
       <div className="bg-gray-50 rounded-lg p-5 mb-6">
         <p className="text-gray-700 mb-4">

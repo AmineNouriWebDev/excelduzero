@@ -884,28 +884,33 @@ export default function Lecon19({ onResult }) {
               </div>
               
               <div className="border rounded-lg p-5 mb-8">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Missions complètes :</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Mission à compléter :</h3>
                 <ol className="list-decimal pl-6 space-y-4">
                   <li className="text-gray-700">
-                    <strong>Histogramme groupé</strong> : Créez un histogramme comparant les ventes mensuelles des 4 produits
+                    <strong>Histogramme groupé</strong> : <br /> Créez un histogramme comparant les ventes mensuelles des 4 produits (Jan à Juin). <br />
+                    Appliquez un style prédéfini au graphique. <br />
+                    Ajoutez un titre clair et une légende.
                   </li>
                   <li className="text-gray-700">
-                    <strong>Camembert</strong> : Représentez la part de marché de chaque produit dans le total des ventes
+                    <strong>Camembert</strong> : <br />
+                    Représentez la part de marché de chaque produit dans le total des ventes. <br />
+                    Excentrez le secteur Accessoires pour le mettre en valeur. <br />
+                 
+
                   </li>
                   <li className="text-gray-700">
-                    <strong>Graphique en courbes</strong> : Montrez l'évolution des ventes de chaque produit sur les 6 mois
+                    <strong>Graphique en courbes</strong> : <br />
+                    Montrez l'évolution des ventes de chaque produit sur les 6 mois. <br />
+                    Ajoutez une courbe de tendance linéaire pour la série Smartphones.
                   </li>
                   <li className="text-gray-700">
-                    <strong>Personnalisation</strong> : 
+                    <strong>Personnalisation avancée</strong> :  <br />
                     <ul className="list-disc pl-6 mt-2">
-                      <li>Ajoutez un axe secondaire pour la série "Accessoires"</li>
-                      <li>Ajoutez une courbe de tendance linéaire pour la série "Smartphones"</li>
-                      <li>Excentrez le secteur "Accessoires" dans le camembert</li>
-                      <li>Appliquez un style prédéfini à l'histogramme</li>
+                    Ajoutez un axe secondaire pour la série Accessoires dans l'histogramme.
                     </ul>
                   </li>
                   <li className="text-gray-700">
-                    <strong>Sparklines</strong> : Créez des mini-graphiques dans la colonne "Tendance" pour visualiser l'évolution de chaque produit
+                    <strong>Sparklines</strong> : <br /> Ajoutez une colonne Tendance et insérez des Sparklines (mini-graphiques) pour chaque produit.
                   </li>
                 </ol>
               </div>
@@ -916,7 +921,7 @@ export default function Lecon19({ onResult }) {
                     <Download className="w-5 h-5 text-orange-600" />
                     Fichier d'exercice
                   </h4>
-                  <a href="#" className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700">
+                  <a href="/cours/debutant/lecon19/exercice_graphique.xlsx" className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700">
                     <Download className="w-5 h-5 mr-2" />
                     Télécharger (.xlsx)
                   </a>

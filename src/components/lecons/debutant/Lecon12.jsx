@@ -252,7 +252,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/numerotation_avancee.png" 
+            src="/cours/debutant/Lecon12/numerotation_avancee.png" 
             alt="Options de numérotation avancée" 
             style={{ maxHeight: 350 }} 
           />
@@ -324,7 +324,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/entetes_uniformes.gif" 
+            src="/cours/debutant/Lecon12/entetes_uniformes.gif" 
             alt="Création d'en-têtes uniformes" 
             style={{ maxHeight: 350 }} 
           />
@@ -360,11 +360,7 @@ export default function Lecon12({ onResult }) {
             </div>
           </div>
           
-          <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/codes_entetes.png" 
-            alt="Codes d'en-tête et pied de page" 
-            style={{ maxHeight: 350 }} 
-          />
+
         </div>
 
         <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
@@ -469,7 +465,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/sauts_page.gif" 
+            src="/cours/debutant/Lecon12/sauts_page.gif" 
             alt="Gestion des sauts de page" 
             style={{ maxHeight: 350 }} 
           />
@@ -504,7 +500,7 @@ export default function Lecon12({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/intermediaire/LeconRapportsMultiFeuilles/impression_selective.png" 
+            src="/cours/debutant/Lecon12/impression_selective.gif" 
             alt="Options d'impression sélective" 
             style={{ maxHeight: 350 }} 
           />
@@ -559,7 +555,7 @@ export default function Lecon12({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données à mettre en forme :
           </p>
-          <a href="/cours/intermediaire/LeconRapportsMultiFeuilles/exercice_rapports_multi_feuilles.xlsx" 
+          <a href="/cours/debutant/Lecon12/exercice_rapports_multi_feuilles.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -646,16 +642,7 @@ export default function Lecon12({ onResult }) {
         </div>
       </div>
 
-      {/* Bouton pour passer le quiz */}
-      <div className="flex justify-end items-center border-t pt-6 mt-6">
-        <button 
-          onClick={() => setShowQuiz(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 flex items-center"
-        >
-          Passer le quiz
-          <ArrowRightLeft className="w-5 h-5 ml-2" />
-        </button>
-      </div>
+     
       
         {/* Quiz d'évaluation */}
             <div className="mt-12">

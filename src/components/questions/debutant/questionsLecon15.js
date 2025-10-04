@@ -27,15 +27,15 @@ export const questionsLecon15 = [
 		],
 		answer: 1 // =85 / (1 - 15%) (index 1)
 	  },
-	  {
-		question: "Vous avez un prix d'achat de 50€ et un prix de vente de 80€. Comment calculer la marge en pourcentage?",
-		options: [
-		  "=(80 - 50) / 50",
-		  "=(80 - 50) / 80",
-		  "=50 / 80"
-		],
-		answer: 1 // =(80 - 50) / 80 (index 1)
-	  },
+	 {
+  question: "Vous avez un prix d'achat de 50€ et un prix de vente de 80€. Comment calculer la marge commerciale (en % du prix de vente)?",
+  options: [
+    "=(80 - 50) / 50",    // Marge sur coût
+    "=(80 - 50) / 80",    // Marge sur prix de vente ✓
+    "=50 / 80"            // Ratio coût/vente
+  ],
+  answer: 1 // Maintenant clair qu'on veut la marge sur prix de vente
+},
 	  {
 		question: "Quelle formule permet de calculer la contribution d'une valeur (B2) au total général (B10) avec une référence absolue correcte?",
 		options: [

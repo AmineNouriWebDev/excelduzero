@@ -717,20 +717,12 @@ export default function Lecon16({ onResult }) {
           <div>
             <h5 className="font-semibold text-gray-800 mb-3">Partie 2 : Calculs avec références</h5>
             <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-              <li>Appliquez le <strong>taux de TVA</strong> (cellule G1) à tous les produits</li>
               <li>Calculez le <strong>prix TTC</strong> pour chaque produit</li>
               <li>Calculez la <strong>contribution</strong> de chaque produit au chiffre d'affaires total</li>
             </ol>
           </div>
         </div>
-        <div className="mt-6">
-          <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Tableau croisé</h5>
-          <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-            <li>Créez un <strong>tableau croisé</strong> des ventes par produit et par mois</li>
-            <li>Calculez les <strong>pourcentages par ligne et par colonne</strong> en utilisant des références mixtes</li>
-            <li>Ajoutez des <strong>totaux</strong> avec les références appropriées</li>
-          </ol>
-        </div>
+        
       </div>
 
       {/* Synthèse des compétences acquises */}

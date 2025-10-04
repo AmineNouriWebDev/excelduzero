@@ -581,7 +581,7 @@ export default function Lecon17({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données à manipuler :
           </p>
-          <a href="/cours/debutant/tris-filtres/exercice_clients.xlsx" 
+          <a href="/cours/debutant/lecon17/exercice_clients.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -630,8 +630,8 @@ export default function Lecon17({ onResult }) {
           <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Analyse</h5>
           <ol className="list-decimal pl-6 space-y-2 text-gray-700">
             <li>Identifiez le <strong>top 5</strong> des clients par chiffre d'affaires</li>
-            <li>Filtrez les clients <strong>inactifs depuis plus d'un an</strong></li>
-            <li>Exportez les résultats dans une nouvelle feuille</li>
+            <li>Filtrez les clients <strong>inactifs avant 2023</strong></li>
+            <li>Exportez les résultats dans des nouvelles feuilles</li>
           </ol>
         </div>
       </div>

@@ -464,8 +464,8 @@ export default function Lecon11({ onResult }) {
             <h5 className="font-semibold text-gray-800 mb-3">Partie 1 : Préparation</h5>
             <ol className="list-decimal pl-6 space-y-2 text-gray-700">
               <li>Ouvrez le fichier "Rapport_Trimestriel.xlsx"</li>
-              <li>Activez le mode Mise en page</li>
-              <li>Définissez l'orientation Paysage</li>
+              <li>Passez en Mode Mise en page</li>
+              <li>Orientation : choisissez Paysage</li>
               <li>Ajustez les marges en mode Étroites</li>
             </ol>
           </div>
@@ -483,7 +483,8 @@ export default function Lecon11({ onResult }) {
           <h5 className="font-semibold text-gray-800 mb-3">Partie 3 : Finalisation</h5>
           <ol className="list-decimal pl-6 space-y-2 text-gray-700">
             <li>Ajoutez un en-tête avec le nom du rapport à gauche</li>
-            <li>Ajoutez un pied de page avec la date à droite</li>
+            <li>Ajoutez un pied de page avec la date à droite. Ajoutez au centre : Page &[Page]/&[Pages].
+</li>
             <li>Vérifiez l'aperçu avant impression</li>
             <li>Exportez en PDF</li>
           </ol>

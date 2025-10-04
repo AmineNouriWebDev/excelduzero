@@ -32,7 +32,7 @@ export default function Lecon21({ onResult }) {
     <div className="max-w-6xl mx-auto p-6 bg-white">
       <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <List className="w-8 h-8 text-blue-600" />
-        Leçon 21 - VALIDATION DE DONNÉES BASIQUE (LISTES DÉROULANTES)
+        Leçon 21 - VALIDATION DE DONNÉES BASIQUE 
       </h2>
       
       <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
@@ -352,7 +352,7 @@ export default function Lecon21({ onResult }) {
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>• S'affichent quand la cellule est sélectionnée</li>
                 <li>• Guide pour la saisie correcte</li>
-                <li>• Ex: "La note doit être co"</li>
+                <li>• Ex: "La note doit être comprise entre 0 et 20"</li>
               </ul>
             </div>
             

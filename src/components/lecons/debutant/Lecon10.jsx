@@ -535,7 +535,7 @@ export default function Lecon10({ onResult }) {
               <li>Insérez une image depuis Bing Image Search</li>
               <li>Recadrez l'image et supprimez l'arrière-plan</li>
               <li>Ajoutez un effet artistique "Aquarelle"</li>
-              <li>Insérez un clipart illustrant votre thème</li>
+              <li>Insérez une icône illustrant votre thème</li>
             </ol>
           </div>
           <div>

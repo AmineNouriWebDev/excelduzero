@@ -78,12 +78,7 @@ import {
               <h2 className="text-3xl font-bold text-blue-800">1. ÉLÉMENTS DE MISE EN FORME</h2>
             </div>
   
-            <div className="bg-blue-100 border-2 border-dashed border-blue-400 rounded-xl p-6 text-center mb-6 flex items-center justify-center">
-              <Play className="w-6 h-6 mr-2 text-blue-600" />
-              <p className="text-blue-700 font-semibold">
-                Vidéo démonstrative : Vue d'ensemble des éléments de mise en forme
-              </p>
-            </div>
+          
   
             <p className="text-gray-700 mb-6 text-lg leading-relaxed">
               La mise en forme d'une cellule concerne plusieurs éléments essentiels :
