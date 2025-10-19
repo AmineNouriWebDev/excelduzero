@@ -1,3 +1,5 @@
+"use client";
+
 // Composant Quiz générique
 import { useState } from "react";
 
