@@ -76,45 +76,45 @@ export default function Lecon18({ onResult }) {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-4 bg-white">
+    <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec nouveau dégradé bleu/vert */}
-      <div className="bg-gradient-to-r from-cyan-600 via-blue-500 to-teal-500 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-4">
-              <div className="bg-white/20 p-3 rounded-xl">
-                <Search className="w-8 h-8" />
-              </div>
-              <div>
-                <h1 className="text-4xl font-bold">Audit de Formules Excel</h1>
-                <p className="text-xl opacity-90 mt-2">Déboguez, Analysez, Maîtrisez - Devenez Expert de Vos Feuilles de Calcul</p>
-              </div>
-            </div>
-            <div className="bg-white/20 rounded-xl px-6 py-3 text-lg font-semibold">
-              Leçon 18 - Niveau Intermédiaire
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <GitPullRequest className="w-6 h-6 mb-2" />
-              <p className="font-semibold">Relations</p>
-            </div>
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <Bug className="w-6 h-6 mb-2" />
-              <p className="font-semibold">Débogage</p>
-            </div>
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <Eye className="w-6 h-6 mb-2" />
-              <p className="font-semibold">Surveillance</p>
-            </div>
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <Shield className="w-6 h-6 mb-2" />
-              <p className="font-semibold">Fiabilité</p>
-            </div>
-          </div>
+    <div className="bg-gradient-to-r from-cyan-600 via-blue-500 to-teal-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+  <div className="absolute inset-0 bg-black/10"></div>
+  <div className="relative z-10">
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
+      <div className="flex items-start gap-4">
+        <div className="bg-white/20 p-2 md:p-3 rounded-xl flex-shrink-0">
+          <Search className="w-6 h-6 md:w-8 md:h-8" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h1 className="text-2xl md:text-4xl font-bold break-words">Audit de Formules Excel</h1>
+          <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Déboguez, Analysez, Maîtrisez - Devenez Expert de Vos Feuilles de Calcul</p>
         </div>
       </div>
+      <div className="bg-white/20 rounded-xl px-4 py-2 md:px-6 md:py-3 text-base md:text-lg font-semibold self-start md:self-auto">
+        Leçon 18 - Niveau Intermédiaire
+      </div>
+    </div>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-4 md:mt-6">
+      <div className="bg-white/10 p-3 md:p-4 rounded-lg backdrop-blur-sm">
+        <GitPullRequest className="w-5 h-5 md:w-6 md:h-6 mb-1 md:mb-2" />
+        <p className="font-semibold text-sm md:text-base">Relations</p>
+      </div>
+      <div className="bg-white/10 p-3 md:p-4 rounded-lg backdrop-blur-sm">
+        <Bug className="w-5 h-5 md:w-6 md:h-6 mb-1 md:mb-2" />
+        <p className="font-semibold text-sm md:text-base">Débogage</p>
+      </div>
+      <div className="bg-white/10 p-3 md:p-4 rounded-lg backdrop-blur-sm">
+        <Eye className="w-5 h-5 md:w-6 md:h-6 mb-1 md:mb-2" />
+        <p className="font-semibold text-sm md:text-base">Surveillance</p>
+      </div>
+      <div className="bg-white/10 p-3 md:p-4 rounded-lg backdrop-blur-sm">
+        <Shield className="w-5 h-5 md:w-6 md:h-6 mb-1 md:mb-2" />
+        <p className="font-semibold text-sm md:text-base">Fiabilité</p>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Introduction */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-cyan-50/30">

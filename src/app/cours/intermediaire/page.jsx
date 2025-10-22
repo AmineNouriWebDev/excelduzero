@@ -57,7 +57,7 @@ const LEÇONS = [
   "Statistiques descriptives simples",
 
   // Reporting & impression
-  "Gestion des zones d'impression",
+  "Fonctions SOMME.SI, SOMME.SI.ENS, SOMME.PROD",
   "Création de modèles personnalisés",
 
   // Interfaces & contrôles
@@ -67,7 +67,7 @@ const LEÇONS = [
 
   // Projet intermédiaire
   "Création d'un mini tableau de bord interactif",
-  "Exercice de synthèse"
+
 ];
 
 // Statut possible pour chaque leçon : 'not_started', 'success', 'failed'
