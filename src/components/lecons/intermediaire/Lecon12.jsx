@@ -137,7 +137,11 @@ export default function Lecon12({ onResult }) {
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
                 <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-4 py-2 rounded-xl font-semibold shadow-lg">
-                  Notre objectif final
+                  <a href="/cours/intermediaire/Lecon12/modele-donnees-initiales.xlsx" 
+                    className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold text-sm">
+                    <Download className="w-4 h-4 mr-2" />
+                    Télécharger les Données Initiales
+                  </a>
                 </div>
               </div>
             </div>
@@ -376,7 +380,7 @@ export default function Lecon12({ onResult }) {
                     <ul className="text-gray-700 list-disc list-inside space-y-1 text-sm">
                       <li>Choisissez un style clair et épuré</li>
                       <li>Ajustez les formats de nombres (devise, pourcentage)</li>
-                      <li>Triez les données par ordre décroissant pour mettre en avant l'essentiel</li>
+                      
                     </ul>
                   </div>
                 </div>
@@ -399,12 +403,12 @@ export default function Lecon12({ onResult }) {
                 </p>
                 
                 <div className="space-y-2 text-sm text-gray-700">
-                  <p>→ <strong>Lignes</strong> : Date (regroupement par mois ou trimestre)</p>
+                  <p>→ <strong>Lignes</strong> : Date (regroupement par années et trimestres)</p>
                   <p>→ <strong>Valeurs</strong> : Chiffre d'affaires</p>
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/tcd-evolution-temporelle.png" 
+                  src="/cours/intermediaire/Lecon12/tcd-evolution-temporelle.gif" 
                   alt="Capture du TCD d'évolution temporelle"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -423,7 +427,7 @@ export default function Lecon12({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/nommage-tcd.png" 
+                  src="/cours/intermediaire/Lecon12/nommage-tcd.gif" 
                   alt="Capture montrant où renommer un TCD"
                   className="rounded-xl shadow-lg"
                 />
@@ -595,7 +599,7 @@ export default function Lecon12({ onResult }) {
                       </div>
                       <div>
                         <p className="font-medium text-gray-800">Accédez à "Analyse" &gt; "Insérer un segment"</p>
-                        <p className="text-sm text-gray-600">Choisissez les champs pour filtrer (ex: Région, Catégorie)</p>
+                        <p className="text-sm text-gray-600">Choisissez les champs pour filtrer (ex: Région)</p>
                       </div>
                     </div>
                     
@@ -635,7 +639,7 @@ export default function Lecon12({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/personnalisation-segments.png" 
+                  src="/cours/intermediaire/Lecon12/personnalisation-segments.gif" 
                   alt="Capture des options de personnalisation des segments"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -711,7 +715,7 @@ export default function Lecon12({ onResult }) {
                       </div>
                       <div>
                         <p className="font-medium text-gray-800">Disposez les éléments de façon logique</p>
-                        <p className="text-sm text-gray-600">Segments en haut, KPI importants en évidence</p>
+                        <p className="text-sm text-gray-600">Segments à gauche ...</p>
                       </div>
                     </div>
                     
@@ -810,7 +814,7 @@ export default function Lecon12({ onResult }) {
                 
                 <div className="text-center p-4 bg-white rounded-lg">
                   <MoveRight className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                  <p className="text-sm font-medium text-gray-800">Prochaine Étape</p>
+                  <p className="text-sm font-medium text-gray-800">Prochain TP </p>
                   <p className="text-xs text-gray-600">Dans la leçon 34 : Tableaux de bord interactifs avancés</p>
                 </div>
               </div>

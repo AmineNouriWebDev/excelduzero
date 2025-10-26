@@ -15,7 +15,7 @@ export const questionsLecon12 = [
         options: [
             "Les références absolues ($A$1)",
             "La mise en forme conditionnelle",
-            "Les tableaux Excel structurés (Ctrl + T)",
+            "Les tableaux Excel structurés (Ctrl + L)",
             "Les segments (Slicers)"
         ],
         answer: 2, // Bonne réponse à l'index 2
@@ -45,7 +45,7 @@ export const questionsLecon12 = [
         options: [
             "Placer tous les éléments au centre",
             "Utiliser le quadrillage Excel comme guide",
-            "Disposer les segments en haut et les KPI importants en évidence",
+            "Disposer les segments à gauches et les graphiques à droite",
             "Mettre les graphiques en arrière-plan"
         ],
         answer: 2, // Bonne réponse à l'index 2

@@ -196,7 +196,7 @@ export default function Lecon13({ onResult }) {
                     <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Exemple : Budget départemental</h5>
                       <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                        =ET(A2&gt;=0, A2&lt;=50000, OU(B2="Marketing", B2="R&D"))
+                        =ET(B2&gt;=0; B2&lt;50000), OU(A2="Marketing"; A2="Finance")
                       </code>
                       <p className="text-sm text-gray-600">
                         Le budget doit être positif, inférieur à 50K, et uniquement pour certains départements
@@ -206,7 +206,7 @@ export default function Lecon13({ onResult }) {
                     <div className="p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Exemple : Date de projet</h5>
                       <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                        =ET(A2&gt;=DATE(2024,1,1), A2&lt;=DATE(2024,12,31), JOURSEM(A2,2)&lt;6)
+                        =ET(C2&gt;=DATE(2024;1;1); C2&lt;=DATE(2024;12;31); JOURSEM(C2;2)&lt;6)
                       </code>
                       <p className="text-sm text-gray-600">
                         La date doit être en 2024 et un jour de semaine (lundi-vendredi)
@@ -248,7 +248,7 @@ export default function Lecon13({ onResult }) {
                 <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Exemple : Code produit valide</h5>
                   <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                    =NON(ESTERREUR(RECHERCHEV(A2,Produits!A:B,1,FAUX)))
+                    =NON(ESTERREUR(RECHERCHEV(D2;$J$2:$J$11;1;0)))
                   </code>
                   <p className="text-sm text-gray-600">
                     Vérifie que le code produit existe dans la colonne A de la feuille "Produits"
@@ -256,7 +256,7 @@ export default function Lecon13({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon13/recherchev-validation.png" 
+                  src="/cours/intermediaire/Lecon13/recherchev-validation.gif" 
                   alt="Exemple de validation avec RECHERCHEV"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -273,14 +273,14 @@ export default function Lecon13({ onResult }) {
                   <div className="p-4 bg-white rounded-lg border-2 border-orange-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Email professionnel</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                      =ET(ESTNUM(TROUVE("@",A2)), GAUCHE(DROITE(A2,NBCAR(A2)-TROUVE("@",A2)),4)=".com")
+                      =ET(ESTNUM(CHERCHE("@";E2));ESTNUM(CHERCHE(".";E2));NBCAR(E2)-NBCAR(SUBSTITUE(E2;"@";""))=1;CHERCHE("@";E2)&gt;1;CHERCHE(".";E2)&gt;CHERCHE("@";E2)+1;NON(ESTNUM(CHERCHE(" ";E2))))
                     </code>
                   </div>
                   
                   <div className="p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Code postal français</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                      =ET(ESTNUM(A2), NBCAR(A2)=5, A2&gt;=1000, A2&lt;=99999)
+                     =ET(ESTNUM(F2);NBCAR(TEXTE(F2;"0"))=5;F2&gt;=1000;F2&lt;=98999)
                     </code>
                   </div>
                 </div>
@@ -331,19 +331,19 @@ export default function Lecon13({ onResult }) {
                         Créez des plages nommées correspondant à chaque catégorie :
                       </p>
                       <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-                        <li><code className="bg-gray-100 px-1 rounded">France</code> = A2:A10</li>
-                        <li><code className="bg-gray-100 px-1 rounded">Allemagne</code> = B2:B8</li>
-                        <li><code className="bg-gray-100 px-1 rounded">Espagne</code> = C2:C6</li>
+                        <li><code className="bg-gray-100 px-1 rounded">France</code> = E2:E10</li>
+                        <li><code className="bg-gray-100 px-1 rounded">Allemagne</code> = F2:F8</li>
+                        <li><code className="bg-gray-100 px-1 rounded">Espagne</code> = G2:G6</li>
                       </ul>
                     </div>
                     
                     <div className="p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Étape 2 : Validation avec INDIRECT()</h5>
                       <code className="block text-sm bg-gray-100 p-3 rounded-lg">
-                        =INDIRECT(B2)
+                        =INDIRECT(A2)
                       </code>
                       <p className="text-sm text-gray-600 mt-2">
-                        Où B2 contient le pays sélectionné dans la première liste
+                        Où A2 contient le pays sélectionné dans la première liste
                       </p>
                     </div>
                   </div>
