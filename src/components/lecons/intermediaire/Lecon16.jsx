@@ -130,7 +130,7 @@ export default function Lecon16({ onResult }) {
                   La Puissance de l'Optimisation Mathématique
                 </h3>
                 <p className="text-gray-700 text-lg mb-6">
-                  Le Solveur Excel va bien au-delà de l'analyse de scénarios en trouvant <strong>automatiquement</strong> la meilleure solution possible pour vos problèmes complexes, dans les limites des contraintes que vous définissez:cite[1]:cite[3].
+                  Le Solveur Excel va bien au-delà de l'analyse de scénarios en trouvant <strong>automatiquement</strong> la meilleure solution possible pour vos problèmes complexes, dans les limites des contraintes que vous définissez.
                 </p>
                 
                 <div className="space-y-4">
@@ -138,7 +138,7 @@ export default function Lecon16({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Résolution de problèmes complexes</h4>
-                      <p className="text-gray-600 text-sm">Optimisez des problèmes avec des dizaines de variables et contraintes simultanément:cite[3]</p>
+                      <p className="text-gray-600 text-sm">Optimisez des problèmes avec des dizaines de variables et contraintes simultanément</p>
                     </div>
                   </div>
                   
@@ -146,7 +146,7 @@ export default function Lecon16({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Trois méthodes spécialisées</h4>
-                      <p className="text-gray-600 text-sm">Choisissez entre Simplex LP, GRG Nonlinéaire et Evolutionary selon votre problème:cite[1]:cite[3]</p>
+                      <p className="text-gray-600 text-sm">Choisissez entre Simplex LP, GRG Nonlinéaire et Evolutionary selon votre problème.</p>
                     </div>
                   </div>
                   
@@ -154,7 +154,7 @@ export default function Lecon16({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Applications illimitées</h4>
-                      <p className="text-gray-600 text-sm">De la planification de production à l'optimisation de portefeuille financier:cite[10]</p>
+                      <p className="text-gray-600 text-sm">De la planification de production à l'optimisation de portefeuille financier</p>
                     </div>
                   </div>
                 </div>
@@ -252,19 +252,19 @@ export default function Lecon16({ onResult }) {
                       <h5 className="font-semibold text-gray-800 mb-2">Étapes détaillées :</h5>
                       <ol className="text-sm text-gray-600 space-y-3 list-decimal pl-4">
                         <li>
-                          <strong>Ouvrez Excel</strong> et cliquez sur l'onglet <strong>Fichier</strong>:cite[4]:cite[10]
+                          <strong>Ouvrez Excel</strong> et cliquez sur l'onglet <strong>Fichier</strong>
                         </li>
                         <li>
-                          <strong>Options → Compléments</strong> dans le volet gauche:cite[3]
+                          <strong>Options → Compléments</strong> dans le volet gauche
                         </li>
                         <li>
-                          En bas, dans <strong>Gérer</strong>, sélectionnez <strong>Compléments Excel</strong> et cliquez sur <strong>OK</strong>:cite[10]
+                          En bas, dans <strong>Gérer</strong>, sélectionnez <strong>Compléments Excel</strong> et cliquez sur <strong>OK</strong>
                         </li>
                         <li>
-                          Cochez la case <strong>Complément Solveur</strong> dans la liste:cite[4]
+                          Cochez la case <strong>Complément Solveur</strong> dans la liste
                         </li>
                         <li>
-                          <strong>Validez</strong> et suivez les instructions si nécessaire:cite[3]
+                          <strong>Validez</strong> et suivez les instructions si nécessaire
                         </li>
                       </ol>
                     </div>
@@ -275,7 +275,7 @@ export default function Lecon16({ onResult }) {
                         Vérification de l'installation
                       </h5>
                       <p className="text-amber-700 text-sm">
-                        Une fois activé, l'option <strong>Solveur</strong> apparaît dans l'onglet <strong>Données</strong>, groupe <strong>Analyse</strong>. Si absent, redémarrez Excel:cite[3]:cite[10].
+                        Une fois activé, l'option <strong>Solveur</strong> apparaît dans l'onglet <strong>Données</strong>, groupe <strong>Analyse</strong>. Si absent, redémarrez Excel.
                       </p>
                     </div>
                   </div>
@@ -386,7 +386,7 @@ export default function Lecon16({ onResult }) {
                   </div>
                   <div className="p-4">
                     <p className="text-gray-700 mb-3">
-                      <strong>La cellule que vous voulez optimiser</strong> - maximiser, minimiser ou atteindre une valeur spécifique:cite[1]:cite[10].
+                      <strong>La cellule que vous voulez optimiser</strong> - maximiser, minimiser ou atteindre une valeur spécifique.
                     </p>
                     <div className="text-sm text-gray-600 space-y-2">
                       <div className="flex items-start gap-2">
@@ -415,7 +415,7 @@ export default function Lecon16({ onResult }) {
                   </div>
                   <div className="p-4">
                     <p className="text-gray-700 mb-3">
-                      <strong>Les cellules que Solveur peut modifier</strong> pour optimiser l'objectif:cite[1]:cite[3].
+                      <strong>Les cellules que Solveur peut modifier</strong> pour optimiser l'objectif.
                     </p>
                     <div className="text-sm text-gray-600 space-y-2">
                       <div className="flex items-start gap-2">
@@ -444,7 +444,7 @@ export default function Lecon16({ onResult }) {
                   </div>
                   <div className="p-4">
                     <p className="text-gray-700 mb-3">
-                      <strong>Les limites et restrictions</strong> que la solution doit respecter:cite[3]:cite[10].
+                      <strong>Les limites et restrictions</strong> que la solution doit respecter.
                     </p>
                     <div className="text-sm text-gray-600 space-y-2">
                       <div className="flex items-start gap-2">
@@ -474,7 +474,7 @@ export default function Lecon16({ onResult }) {
                     className="rounded-xl max-w-2xl"
                   />
                   <p className="text-gray-600 text-sm mt-4 text-center">
-                    Les cellules variables influencent la cellule objectif via des formules, tandis que les contraintes limitent les valeurs possibles des variables:cite[1].
+                    Les cellules variables influencent la cellule objectif via des formules, tandis que les contraintes limitent les valeurs possibles des variables.
                   </p>
                 </div>
               </div>
@@ -518,7 +518,7 @@ export default function Lecon16({ onResult }) {
                   </div>
                   <div className="p-4">
                     <p className="text-gray-700 mb-3">
-                      Pour les problèmes où <strong>toutes les relations sont linéaires</strong>:cite[3].
+                      Pour les problèmes où <strong>toutes les relations sont linéaires</strong>.
                     </p>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2">
@@ -553,7 +553,7 @@ export default function Lecon16({ onResult }) {
                   </div>
                   <div className="p-4">
                     <p className="text-gray-700 mb-3">
-                      Pour les problèmes avec <strong>au moins une relation non linéaire</strong>:cite[1]:cite[3].
+                      Pour les problèmes avec <strong>au moins une relation non linéaire</strong>.
                     </p>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2">
@@ -588,7 +588,7 @@ export default function Lecon16({ onResult }) {
                   </div>
                   <div className="p-4">
                     <p className="text-gray-700 mb-3">
-                      Pour les problèmes <strong>non linéaires et non convexes</strong>:cite[1].
+                      Pour les problèmes <strong>non linéaires et non convexes</strong>.
                     </p>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2">
@@ -630,13 +630,13 @@ export default function Lecon16({ onResult }) {
                   <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-400">
                     <h5 className="font-semibold text-amber-800 mb-2">💡 Conseil important</h5>
                     <p className="text-amber-700 text-sm">
-                      Commencez toujours par <strong>Simplex LP</strong> si votre problème peut être linéaire. C'est le plus rapide et le plus fiable:cite[3].
+                      Commencez toujours par <strong>Simplex LP</strong> si votre problème peut être linéaire. C'est le plus rapide et le plus fiable.
                     </p>
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
                     <h5 className="font-semibold text-blue-800 mb-2">⚠️ Attention</h5>
                     <p className="text-blue-700 text-sm">
-                      Si Simplex LP échoue, passez à <strong>GRG Nonlinéaire</strong>. N'utilisez Evolutionary qu'en dernier recours:cite[1].
+                      Si Simplex LP échoue, passez à <strong>GRG Nonlinéaire</strong>. N'utilisez Evolutionary qu'en dernier recours.
                     </p>
                   </div>
                 </div>
@@ -676,7 +676,7 @@ export default function Lecon16({ onResult }) {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Scénario de l'Entreprise</h4>
                   <p className="text-gray-700 mb-4">
-                    Votre boulangerie produit des croissants et des muffins. Vous devez déterminer la quantité optimale de chaque produit à produire pour <strong>maximiser le profit</strong> tout en respectant les limites de ressources:cite[10].
+                    Votre boulangerie produit des croissants et des muffins. Vous devez déterminer la quantité optimale de chaque produit à produire pour <strong>maximiser le profit</strong> tout en respectant les limites de ressources.
                   </p>
                   
                   <div className="space-y-4">
@@ -950,7 +950,7 @@ export default function Lecon16({ onResult }) {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                        <span><strong>Nommez les plages de cellules</strong> pour plus de clarté:cite[5]</span>
+                        <span><strong>Nommez les plages de cellules</strong> pour plus de clarté</span>
                       </li>
                     </ul>
                   </div>
@@ -968,7 +968,7 @@ export default function Lecon16({ onResult }) {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
-                        <span>Utilisez <strong>int</strong> pour les variables entières, <strong>bin</strong> pour binaires:cite[1]</span>
+                        <span>Utilisez <strong>int</strong> pour les variables entières, <strong>bin</strong> pour binaires</span>
                       </li>
                     </ul>
                   </div>
@@ -982,7 +982,7 @@ export default function Lecon16({ onResult }) {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-purple-500 mt-1 flex-shrink-0" />
-                        <span>Examinez les <strong>rapports de sensibilité</strong> de Solveur:cite[1]</span>
+                        <span>Examinez les <strong>rapports de sensibilité</strong> de Solveur</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-purple-500 mt-1 flex-shrink-0" />
@@ -1023,7 +1023,7 @@ export default function Lecon16({ onResult }) {
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li className="flex items-start gap-2">
                         <Settings className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                        <span><strong>Augmentez le nombre d'itérations</strong> dans les options:cite[1]</span>
+                        <span><strong>Augmentez le nombre d'itérations</strong> dans les options</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Settings className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
@@ -1100,7 +1100,7 @@ export default function Lecon16({ onResult }) {
                   </div>
                   <div className="mt-3 bg-purple-50 p-3 rounded-lg">
                     <p className="text-purple-800 text-xs">
-                      <strong>Astuce :</strong> Utilisez les contraintes <strong>int</strong> et <strong>bin</strong> pour les problèmes de décision discrète (oui/non, nombre entier d'unités):cite[1].
+                      <strong>Astuce :</strong> Utilisez les contraintes <strong>int</strong> et <strong>bin</strong> pour les problèmes de décision discrète (oui/non, nombre entier d'unités).
                     </p>
                   </div>
                 </div>

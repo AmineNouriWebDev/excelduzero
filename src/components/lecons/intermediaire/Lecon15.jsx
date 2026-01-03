@@ -120,7 +120,7 @@ export default function Lecon15({ onResult }) {
                   Anticiper au lieu de Subir : La Puissance du "Et Si..."
                 </h3>
                 <p className="text-gray-700 text-lg mb-6">
-                  L'analyse de scénarios vous permet d'explorer différentes situations en modifiant des valeurs clés pour voir comment ces changements affectent vos résultats. C'est un outil indispensable pour la planification financière, l'analyse de risque et la prise de décision éclairée:cite[1]:cite[2].
+                  L'analyse de scénarios vous permet d'explorer différentes situations en modifiant des valeurs clés pour voir comment ces changements affectent vos résultats. C'est un outil indispensable pour la planification financière, l'analyse de risque et la prise de décision éclairée  .
                 </p>
                 
                 <div className="space-y-4">
@@ -128,7 +128,7 @@ export default function Lecon15({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Évaluation de multiples possibilités</h4>
-                      <p className="text-gray-600 text-sm">Testez des hypothèses de marché, des variations de coûts ou différents scénarios économiques sans risque:cite[7]</p>
+                      <p className="text-gray-600 text-sm">Testez des hypothèses de marché, des variations de coûts ou différents scénarios économiques sans risque </p>
                     </div>
                   </div>
                   
@@ -136,7 +136,7 @@ export default function Lecon15({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Optimisation des résultats</h4>
-                      <p className="text-gray-600 text-sm">Trouvez les valeurs d'entrée nécessaires pour atteindre un objectif spécifique avec l'outil Valeur Cible:cite[1]</p>
+                      <p className="text-gray-600 text-sm">Trouvez les valeurs d'entrée nécessaires pour atteindre un objectif spécifique avec l'outil Valeur Cible </p>
                     </div>
                   </div>
                   
@@ -144,7 +144,7 @@ export default function Lecon15({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Visualisation d'impacts complexes</h4>
-                      <p className="text-gray-600 text-sm">Analysez l'effet d'une ou deux variables sur vos résultats avec les Tables de Données:cite[2]</p>
+                      <p className="text-gray-600 text-sm">Analysez l'effet d'une ou deux variables sur vos résultats avec les Tables de Données </p>
                     </div>
                   </div>
                 </div>
@@ -156,9 +156,7 @@ export default function Lecon15({ onResult }) {
                   alt="Diagramme montrant les trois types d'analyse de scénarios dans Excel"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
-                <div className="absolute -bottom-4 -left-4 bg-red-500 text-white px-4 py-2 rounded-xl shadow-lg">
-                  <span className="font-semibold">3 Outils</span> complémentaires
-                </div>
+                
               </div>
             </div>
 
@@ -184,19 +182,19 @@ export default function Lecon15({ onResult }) {
                     <tr>
                       <td className="p-4 font-semibold text-orange-600">Gestionnaire de Scénarios</td>
                       <td className="p-4 text-gray-700">Comparer plusieurs jeux d'hypothèses complets</td>
-                      <td className="p-4 text-gray-700">Jusqu'à 32 variables par scénario:cite[1]</td>
+                      <td className="p-4 text-gray-700">Jusqu'à 32 variables par scénario </td>
                       <td className="p-4 text-gray-700">Maximum 32 valeurs différentes par scénario</td>
                     </tr>
                     <tr>
                       <td className="p-4 font-semibold text-blue-600">Valeur Cible</td>
                       <td className="p-4 text-gray-700">Trouver l'entrée nécessaire pour un résultat souhaité</td>
-                      <td className="p-4 text-gray-700">1 variable d'entrée:cite[1]</td>
+                      <td className="p-4 text-gray-700">1 variable d'entrée </td>
                       <td className="p-4 text-gray-700">Ne fonctionne qu'avec une seule variable à la fois</td>
                     </tr>
                     <tr>
                       <td className="p-4 font-semibold text-green-600">Tables de Données</td>
                       <td className="p-4 text-gray-700">Analyser l'impact d'1 ou 2 variables sur un résultat</td>
-                      <td className="p-4 text-gray-700">1 ou 2 variables:cite[2]</td>
+                      <td className="p-4 text-gray-700">1 ou 2 variables </td>
                       <td className="p-4 text-gray-700">Limité à deux variables maximum</td>
                     </tr>
                   </tbody>
@@ -237,7 +235,7 @@ export default function Lecon15({ onResult }) {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Préparer son modèle pour les scénarios</h4>
                   <p className="text-gray-700 mb-4">
-                    Avant de créer des scénarios, structurez votre feuille de calcul en identifiant clairement les cellules variables (entrées) et les cellules de résultats (sorties):cite[5].
+                    Avant de créer des scénarios, structurez votre feuille de calcul en identifiant clairement les cellules variables (entrées) et les cellules de résultats (sorties) .
                   </p>
                   
                   <div className="space-y-4">
@@ -257,7 +255,7 @@ export default function Lecon15({ onResult }) {
                         Bonne pratique : Nommez vos cellules variables
                       </h5>
                       <p className="text-amber-700 text-sm">
-                        Utilisez des noms de plages pour vos cellules variables (ex: <code className="bg-amber-100 px-1 rounded">TAUX_CROISSANCE</code>, <code className="bg-amber-100 px-1 rounded">PRIX_VENTE</code>). Cela rendra la création de scénarios plus intuitive:cite[5].
+                        Utilisez des noms de plages pour vos cellules variables (ex: <code className="bg-amber-100 px-1 rounded">TAUX_CROISSANCE</code>, <code className="bg-amber-100 px-1 rounded">PRIX_VENTE</code>). Cela rendra la création de scénarios plus intuitive .
                       </p>
                     </div>
                   </div>
@@ -284,7 +282,7 @@ export default function Lecon15({ onResult }) {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Créer votre premier scénario</h4>
                   <p className="text-gray-700 mb-4">
-                    Le Gestionnaire de scénarios vous permet d'enregistrer différents jeux de valeurs pour les mêmes cellules variables et de basculer entre eux facilement:cite[1].
+                    Le Gestionnaire de scénarios vous permet d'enregistrer différents jeux de valeurs pour les mêmes cellules variables et de basculer entre eux facilement .
                   </p>
                   
                   <div className="p-4 bg-white rounded-lg border-2 border-green-200">
@@ -314,7 +312,7 @@ export default function Lecon15({ onResult }) {
               <div className="mb-8">
                 <h4 className="font-semibold text-gray-800 mb-4">Rapport de synthèse des scénarios</h4>
                 <p className="text-gray-700 mb-4">
-                  Générez un rapport qui compare tous vos scénarios côte à côte dans une nouvelle feuille de calcul pour une analyse facile:cite[1].
+                  Générez un rapport qui compare tous vos scénarios côte à côte dans une nouvelle feuille de calcul pour une analyse facile .
                 </p>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -347,14 +345,14 @@ export default function Lecon15({ onResult }) {
                         Important : Actualisation des rapports
                       </h5>
                       <p className="text-blue-700 text-sm">
-                        Les rapports de scénarios ne se mettent pas à jour automatiquement. Si vous modifiez un scénario, vous devez générer un nouveau rapport de synthèse:cite[1].
+                        Les rapports de scénarios ne se mettent pas à jour automatiquement. Si vous modifiez un scénario, vous devez générer un nouveau rapport de synthèse .
                       </p>
                     </div>
                   </div>
                   
                   <div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon15/rapport-synthese-scenarios.png" 
+                      src="/cours/intermediaire/Lecon15/rapport-synthese-scenarios.gif" 
                       alt="Exemple de rapport de synthèse de scénarios"
                       className="rounded-xl shadow-lg"
                     />
@@ -396,7 +394,7 @@ export default function Lecon15({ onResult }) {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Quand utiliser la Valeur Cible ?</h4>
                   <p className="text-gray-700 mb-4">
-                    La Valeur Cible (Goal Seek) est parfaite quand vous connaissez le résultat souhaité, mais ignorez la valeur d'entrée nécessaire pour l'atteindre:cite[1]:cite[7].
+                    La Valeur Cible (Goal Seek) est parfaite quand vous connaissez le résultat souhaité, mais ignorez la valeur d'entrée nécessaire pour l'atteindre  .
                   </p>
                   
                   <div className="space-y-4">
@@ -428,7 +426,7 @@ export default function Lecon15({ onResult }) {
                         Limitation importante
                       </h5>
                       <p className="text-blue-700 text-sm">
-                        La Valeur Cible ne fonctionne qu'avec une seule variable d'entrée. Pour plusieurs variables, utilisez le Solveur:cite[1].
+                        La Valeur Cible ne fonctionne qu'avec une seule variable d'entrée. Pour plusieurs variables, utilisez le Solveur .
                       </p>
                     </div>
                   </div>
@@ -455,16 +453,16 @@ export default function Lecon15({ onResult }) {
                   <h5 className="font-semibold text-gray-800 mb-2">Configuration :</h5>
                   <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                     <li>Créez votre modèle avec les cellules : <br/>
-                      • <code className="bg-gray-100 px-1 rounded">B1</code> : Montant du prêt (200 000) <br/>
-                      • <code className="bg-gray-100 px-1 rounded">B2</code> : Durée en mois (240) <br/>
-                      • <code className="bg-gray-100 px-1 rounded">B3</code> : Taux d'intérêt annuel (variable à trouver) <br/>
-                      • <code className="bg-gray-100 px-1 rounded">B4</code> : Mensualité <code className="bg-gray-100 px-1 rounded">=PMT(B3/12,B2,B1)</code>
+                      • <code className="bg-gray-100 px-1 rounded">B4</code> : Montant du prêt (200 000) <br/>
+                      • <code className="bg-gray-100 px-1 rounded">B5</code> : Durée en mois (240) <br/>
+                      • <code className="bg-gray-100 px-1 rounded">B6</code> : Taux d'intérêt annuel (variable à trouver) <br/>
+                      • <code className="bg-gray-100 px-1 rounded">B8</code> : Mensualité <code className="bg-gray-100 px-1 rounded">=VPM(B6/12;B5;B4)</code>
                     </li>
                     <li>Allez dans <strong>Données → Analyse de scénarios → Valeur cible</strong></li>
                     <li>Remplissez la boîte de dialogue : <br/>
-                      • <strong>Définir la cellule</strong> : <code className="bg-gray-100 px-1 rounded">B4</code> (mensualité) <br/>
+                      • <strong>Définir la cellule</strong> : <code className="bg-gray-100 px-1 rounded">B8</code> (mensualité) <br/>
                       • <strong>Pour la valeur</strong> : <code className="bg-gray-100 px-1 rounded">-1100</code> (valeur cible, négative car sortie de fonds) <br/>
-                      • <strong>En modifiant la cellule</strong> : <code className="bg-gray-100 px-1 rounded">B3</code> (taux d'intérêt)
+                      • <strong>En modifiant la cellule</strong> : <code className="bg-gray-100 px-1 rounded">B6</code> (taux d'intérêt)
                     </li>
                     <li>Cliquez sur <strong>OK</strong> et Excel trouve la solution</li>
                   </ol>
@@ -473,7 +471,7 @@ export default function Lecon15({ onResult }) {
               
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon15/valeur-cible-dialog.png" 
+                  src="/cours/intermediaire/Lecon15/valeur-cible-dialog.gif" 
                   alt="Boîte de dialogue Valeur Cible d'Excel"
                   className="rounded-xl shadow-lg mb-4"
                 />
@@ -509,7 +507,7 @@ export default function Lecon15({ onResult }) {
                   <p className="font-semibold text-gray-800">Configuration Valeur Cible :</p>
                   <ul className="mt-1 space-y-1">
                     <li>• Définir la cellule : <strong>Profit</strong></li>
-                    <li>• Pour la valeur : <strong>15000</strong></li>
+                    <li>• Pour la valeur : <strong>15000 €</strong></li>
                     <li>• En modifiant : <strong>Quantité</strong></li>
                   </ul>
                 </div>
@@ -549,7 +547,7 @@ export default function Lecon15({ onResult }) {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Table à une variable</h4>
                   <p className="text-gray-700 mb-4">
-                    Analysez comment une seule variable affecte un ou plusieurs résultats. Parfait pour des analyses de sensibilité simples:cite[2].
+                    Analysez comment une seule variable affecte un ou plusieurs résultats. Parfait pour des analyses de sensibilité simples .
                   </p>
                   
                   <div className="space-y-4">
@@ -579,7 +577,7 @@ export default function Lecon15({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/table-une-variable.png" 
+                    src="/cours/intermediaire/Lecon15/table-une-variable.gif" 
                     alt="Exemple de table de données à une variable"
                     className="rounded-xl shadow-lg"
                   />
@@ -589,7 +587,7 @@ export default function Lecon15({ onResult }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/table-deux-variables.png" 
+                    src="/cours/intermediaire/Lecon15/table-deux-variables.gif" 
                     alt="Exemple de table de données à deux variables"
                     className="rounded-xl shadow-lg"
                   />
@@ -598,7 +596,7 @@ export default function Lecon15({ onResult }) {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Table à deux variables</h4>
                   <p className="text-gray-700 mb-4">
-                    Analysez l'impact combiné de deux variables différentes sur un seul résultat. Idéal pour comprendre les interactions complexes:cite[2]:cite[5].
+                    Analysez l'impact combiné de deux variables différentes sur un seul résultat. Idéal pour comprendre les interactions complexes  .
                   </p>
                   
                   <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
@@ -842,235 +840,258 @@ export default function Lecon15({ onResult }) {
         )}
       </div>
 
-      {/* Exercice Pratique Complet */}
-      <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-red-50/30">
-        <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-red-50 to-pink-50 text-left hover:from-red-100 transition-all"
-          onClick={() => toggleSection('exercice')}
-        >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
-            <div className="bg-red-100 p-3 rounded-xl">
-              <Crosshair className="w-6 h-6 text-red-600" />
-            </div>
-            Exercice Pratique : Plan d'Affaires et Analyse de Sensibilité
-          </h2>
-          {expandedSections.exercice ? 
-            <ChevronUp className="w-6 h-6 text-red-600" /> : 
-            <ChevronDown className="w-6 h-6 text-red-600" />
-          }
-        </button>
+      
+     {/* Exercice Pratique Complet */}
+<div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-red-50/30">
+  <button 
+    className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-red-50 to-pink-50 text-left hover:from-red-100 transition-all"
+    onClick={() => toggleSection('exercice')}
+  >
+    <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+      <div className="bg-red-100 p-3 rounded-xl">
+        <Crosshair className="w-6 h-6 text-red-600" />
+      </div>
+      Exercice Pratique : Plan d'Affaires et Analyse de Sensibilité
+    </h2>
+    {expandedSections.exercice ? 
+      <ChevronUp className="w-6 h-6 text-red-600" /> : 
+      <ChevronDown className="w-6 h-6 text-red-600" />
+    }
+  </button>
+  
+  {expandedSections.exercice && (
+    <div className="p-8">
+      <div className="mb-8">
+        <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
+          <BarChart3 className="w-6 h-6 text-red-600" />
+          Mission : Évaluer la Viabilité d'un Nouveau Produit
+        </h3>
         
-        {expandedSections.exercice && (
-          <div className="p-8">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
-                <BarChart3 className="w-6 h-6 text-red-600" />
-                Mission : Évaluer la Viabilité d'un Nouveau Produit
-              </h3>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-4">Scénario d'Entreprise Réel</h4>
-                  <p className="text-gray-700 mb-4">
-                    Vous êtes responsable du lancement d'un nouveau produit. Vous devez analyser la viabilité financière sous différentes hypothèses de marché et présenter une recommandation éclairée à la direction.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
-                      <Clock className="w-5 h-5 text-green-600" />
-                      <div>
-                        <p className="font-semibold text-gray-800">Durée estimée</p>
-                        <p className="text-sm text-gray-600">60-90 minutes</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
-                      <Zap className="w-5 h-5 text-blue-600" />
-                      <div>
-                        <p className="font-semibold text-gray-800">Niveau de difficulté</p>
-                        <p className="text-sm text-gray-600">Intermédiaire à Avancé</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-purple-200">
-                      <Tag className="w-5 h-5 text-purple-600" />
-                      <div>
-                        <p className="font-semibold text-gray-800">Outils utilisés</p>
-                        <p className="text-sm text-gray-600">Scénarios, Valeur Cible, Tables de Données</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/exercice-plan-affaires.png" 
-                    alt="Aperçu du modèle de plan d'affaires pour l'exercice"
-                    className="rounded-xl shadow-lg border-2 border-white"
-                  />
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h4 className="font-semibold text-gray-800 mb-4">Scénario d'Entreprise Réel</h4>
+            <p className="text-gray-700 mb-4">
+              Vous êtes responsable du lancement d'un nouveau produit. Vous devez analyser la viabilité financière sous différentes hypothèses de marché et comprendre l'impact des variables clés sur la rentabilité.
+            </p>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl border-2 border-blue-100">
-                  <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <div className="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                      1
-                    </div>
-                    Modèle de Base et Hypothèses
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Créer un modèle avec : Prix de vente, Coûts variables, Coûts fixes, Volume de ventes</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Calculer : Chiffre d'affaires, Marge, Profit, Seuil de rentabilité</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Documenter les hypothèses de base réalistes</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white p-6 rounded-xl border-2 border-purple-100">
-                  <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <div className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                      2
-                    </div>
-                    Analyse avec Gestionnaire de Scénarios
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Créer 3 scénarios : Optimiste, Réaliste, Pessimiste</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Varier : Prix, Volume, Part de marché, Coûts</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Générer un rapport de synthèse comparatif</span>
-                    </li>
-                  </ul>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+                <Clock className="w-5 h-5 text-green-600" />
+                <div>
+                  <p className="font-semibold text-gray-800">Durée estimée</p>
+                  <p className="text-sm text-gray-600">10-15 minutes</p>
                 </div>
               </div>
               
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl border-2 border-green-100">
-                  <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                      3
-                    </div>
-                    Analyses Avancées avec Valeur Cible et Tables
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Utiliser Valeur Cible pour trouver le volume minimal pour la rentabilité</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Créer une table à 2 variables : Prix vs Volume sur le Profit</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Identifier la combinaison Prix/Volume optimale</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white p-6 rounded-xl border-2 border-red-100">
-                  <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <div className="bg-red-100 text-red-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                      4
-                    </div>
-                    Rapport et Recommandation
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Synthétiser les résultats des différentes analyses</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Identifier les risques principaux et opportunités</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Formuler une recommandation claire pour la direction</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 rounded-2xl p-6 mb-8">
-              <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                <Target className="w-5 h-5 text-red-600" />
-                Critères de Réussite de l'Exercice
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+                <Zap className="w-5 h-5 text-blue-600" />
                 <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">📊 Aspects techniques :</h5>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Modèle financier sans erreurs de formules</li>
-                    <li>• 3 scénarios pertinents et bien documentés</li>
-                    <li>• Utilisation correcte des trois outils d'analyse</li>
-                    <li>• Tableaux de données fonctionnels et interprétables</li>
-                  </ul>
+                  <p className="font-semibold text-gray-800">Niveau de difficulté</p>
+                  <p className="text-sm text-gray-600">Intermédiaire</p>
                 </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">💡 Analyse business :</h5>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Identification des variables les plus sensibles</li>
-                    <li>• Évaluation réaliste des risques</li>
-                    <li>• Recommandation étayée par les données</li>
-                    <li>• Communication claire des résultats</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
-                <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
-                  <Download className="w-5 h-5 text-red-600" />
-                  Fichier d'Exercice
-                </h4>
-                <p className="text-gray-700 mb-4">
-                  Téléchargez le modèle de plan d'affaires à analyser :
-                </p>
-                <a href="/cours/intermediaire/Lecon15/exercice-plan-affaires.xlsx" 
-                  className="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors font-semibold">
-                  <Download className="w-5 h-5 mr-2" />
-                  Télécharger l'Exercice (.xlsx)
-                </a>
               </div>
 
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
-                <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
-                  <Video className="w-5 h-5 text-purple-600" />
-                  Guide de Résolution
-                </h4>
-                <p className="text-gray-700 mb-4">
-                  Solution complète avec explications détaillées :
-                </p>
-                <PremiumVideo
-                  url="/cours/intermediaire/Lecon15/correction-analyse-scenarios.mp4"
-                  title="Correction de l'analyse de scénarios pour un plan d'affaires"
-                />
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-purple-200">
+                <Tag className="w-5 h-5 text-purple-600" />
+                <div>
+                  <p className="font-semibold text-gray-800">Outils utilisés</p>
+                  <p className="text-sm text-gray-600">Scénarios, Valeur Cible, Tables de Données</p>
+                </div>
               </div>
             </div>
           </div>
-        )}
+          
+          <div>
+            <ImageZoomable 
+              src="/cours/intermediaire/Lecon15/exercice-plan-affaires.png" 
+              alt="Aperçu du modèle de plan d'affaires pour l'exercice"
+              className="rounded-xl shadow-lg border-2 border-white"
+            />
+          </div>
+        </div>
       </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-xl border-2 border-blue-100">
+            <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+              <div className="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                1
+              </div>
+              Modèle de Base et Calculs
+            </h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Nommez les cellules</strong> : B6 → Prix_vente, B7 → Cout_variable_unite, B8 → Cout_fixe, B9 → Volume_ventes</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Calculer</strong> : Chiffre d'affaires = Prix_vente × Volume_ventes</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Marge unitaire</strong> = Prix_vente - Cout_variable_unite</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Profit</strong> = (Marge unitaire × Volume_ventes) - Cout_fixe</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Seuil de rentabilité</strong> = Cout_fixe / Marge unitaire</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl border-2 border-purple-100">
+            <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+              <div className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                2
+              </div>
+              Analyse avec Gestionnaire de Scénarios
+            </h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Créer 3 scénarios</strong> avec ces valeurs :</span>
+              </li>
+              <li className="ml-6 text-sm text-gray-600">
+                • <strong>Optimiste</strong> : Prix=55, Volume=1500, Coûts fixes=9500
+              </li>
+              <li className="ml-6 text-sm text-gray-600">
+                • <strong>Réaliste</strong> : Prix=50, Volume=1000, Coûts fixes=10000
+              </li>
+              <li className="ml-6 text-sm text-gray-600">
+                • <strong>Pessimiste</strong> : Prix=45, Volume=800, Coûts fixes=11000
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span>Comparer les profits obtenus dans chaque scénario</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-xl border-2 border-green-100">
+            <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+              <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                3
+              </div>
+              Analyses Avancées avec Valeur Cible et Tables
+            </h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Valeur Cible</strong> : Définir la cellule Profit (B13) à 30 000€ en modifiant le Volume (B9)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span><strong>Table de données</strong> : Configurer avec :</span>
+              </li>
+              <li className="ml-6 text-sm text-gray-600">
+                • <strong>Cellule d'entrée ligne</strong> : B6 (Prix_vente)
+              </li>
+              <li className="ml-6 text-sm text-gray-600">
+                • <strong>Cellule d'entrée colonne</strong> : B9 (Volume_ventes)
+              </li>
+              <li className="ml-6 text-sm text-gray-600">
+                • <strong>Cellule A20</strong> = B13 (Profit)
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span>Observer l'impact des différentes combinaisons Prix/Volume sur le Profit</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl border-2 border-red-100">
+            <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+              <div className="bg-red-100 text-red-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                4
+              </div>
+              Analyse des Résultats
+            </h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span>Identifier le scénario le plus rentable</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span>Analyser la sensibilité du profit aux variations de prix et volume</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                <span>Comprendre l'impact des coûts fixes sur la rentabilité</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 rounded-2xl p-6 mb-8">
+        <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+          <Target className="w-5 h-5 text-red-600" />
+          Critères de Réussite de l'Exercice
+        </h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h5 className="font-semibold text-gray-700 mb-2">📊 Aspects techniques :</h5>
+            <ul className="text-sm text-gray-600 space-y-1">
+              <li>• Noms de cellules correctement attribués</li>
+              <li>• Formules de calcul sans erreurs</li>
+              <li>• 3 scénarios créés avec les valeurs spécifiées</li>
+              <li>• Valeur cible configurée pour 30 000€ de profit</li>
+              <li>• Table de données correctement paramétrée</li>
+            </ul>
+          </div>
+          <div>
+            <h5 className="font-semibold text-gray-700 mb-2">💡 Analyse business :</h5>
+            <ul className="text-sm text-gray-600 space-y-1">
+              <li>• Compréhension de l'impact prix/volume sur le profit</li>
+              <li>• Identification du scénario optimal</li>
+              <li>• Analyse de sensibilité des variables clés</li>
+              <li>• Interprétation correcte des résultats</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+          <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+            <Download className="w-5 h-5 text-red-600" />
+            Fichier d'Exercice
+          </h4>
+          <p className="text-gray-700 mb-4">
+            Téléchargez le modèle de plan d'affaires à analyser :
+          </p>
+          <a href="/cours/intermediaire/Lecon15/exercice-plan-affaires.xlsx" 
+            className="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors font-semibold">
+            <Download className="w-5 h-5 mr-2" />
+            Télécharger l'Exercice (.xlsx)
+          </a>
+        </div>
 
+        <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+          <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+            <Video className="w-5 h-5 text-purple-600" />
+            Guide de Résolution
+          </h4>
+          <p className="text-gray-700 mb-4">
+            Solution complète avec explications détaillées :
+          </p>
+          <PremiumVideo
+            url="/cours/intermediaire/Lecon15/correction-analyse-scenarios.mp4"
+            title="Correction de l'analyse de scénarios pour un plan d'affaires"
+          />
+        </div>
+      </div>
+    </div>
+  )}
+</div>
       {/* Quiz d'évaluation */}
       <div className="mt-12">
         <QuizLecon15 onResult={onResult} />

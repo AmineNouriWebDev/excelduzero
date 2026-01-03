@@ -140,7 +140,7 @@ export default function Lecon17({ onResult }) {
                   L'Automatisation à Votre Portée
                 </h3>
                 <p className="text-gray-700 text-lg mb-6">
-                  Une macro Excel est une <strong>séquence d'actions enregistrée</strong> que vous pouvez exécuter automatiquement pour accomplir des tâches répétitives en un clic :cite[2]:cite[4]. 
+                  Une macro Excel est une <strong>séquence d'actions enregistrée</strong> que vous pouvez exécuter automatiquement pour accomplir des tâches répétitives en un clic . 
                   Imaginez pouvoir reproduire des heures de travail en quelques secondes !
                 </p>
                 
@@ -149,7 +149,7 @@ export default function Lecon17({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Gain de temps exceptionnel</h4>
-                      <p className="text-gray-600 text-sm">Automatisez les tâches répétitives et gagnez plusieurs heures par semaine :cite[4]:cite[9]</p>
+                      <p className="text-gray-600 text-sm">Automatisez les tâches répétitives et gagnez plusieurs heures par semaine </p>
                     </div>
                   </div>
                   
@@ -157,7 +157,7 @@ export default function Lecon17({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Élimination des erreurs</h4>
-                      <p className="text-gray-600 text-sm">Une macro exécute toujours les mêmes actions parfaitement, sans oubli ni erreur humaine :cite[4]</p>
+                      <p className="text-gray-600 text-sm">Une macro exécute toujours les mêmes actions parfaitement, sans oubli ni erreur humaine </p>
                     </div>
                   </div>
                   
@@ -165,7 +165,7 @@ export default function Lecon17({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Accessible à tous</h4>
-                      <p className="text-gray-600 text-sm">Aucune connaissance en programmation requise grâce à l'enregistreur de macros :cite[2]:cite[4]</p>
+                      <p className="text-gray-600 text-sm">Aucune connaissance en programmation requise grâce à l'enregistreur de macros </p>
                     </div>
                   </div>
                 </div>
@@ -177,9 +177,7 @@ export default function Lecon17({ onResult }) {
                   alt="Diagramme montrant le processus d'enregistrement et d'exécution d'une macro"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
-                <div className="absolute -bottom-4 -left-4 bg-pink-500 text-white px-4 py-2 rounded-xl shadow-lg">
-                  <span className="font-semibold">Jusqu'à 90% de temps gagné</span>
-                </div>
+                
               </div>
             </div>
 
@@ -258,7 +256,7 @@ export default function Lecon17({ onResult }) {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-4">Définition Simple</h4>
                   <p className="text-gray-700 mb-4">
-                    Une macro est un <strong>enregistrement de vos actions</strong> dans Excel qui peut être rejoué à l'identique autant de fois que nécessaire :cite[2]:cite[6]. 
+                    Une macro est un <strong>enregistrement de vos actions</strong> dans Excel qui peut être rejoué à l'identique autant de fois que nécessaire . 
                     C'est comme si vous pouviez enregistrer votre façon de travailler et la rejouer en accéléré.
                   </p>
                   
@@ -277,7 +275,7 @@ export default function Lecon17({ onResult }) {
                         1
                       </div>
                       <p className="text-gray-700 text-sm">
-                        <strong>Enregistrement :</strong> Excel observe et note chaque clic, frappe au clavier et action que vous effectuez :cite[6]
+                        <strong>Enregistrement :</strong> Excel observe et note chaque clic, frappe au clavier et action que vous effectuez 
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
@@ -285,7 +283,7 @@ export default function Lecon17({ onResult }) {
                         2
                       </div>
                       <p className="text-gray-700 text-sm">
-                        <strong>Traduction :</strong> Ces actions sont converties en code VBA (Visual Basic for Applications) :cite[4]:cite[6]
+                        <strong>Traduction :</strong> Ces actions sont converties en code VBA (Visual Basic for Applications) 
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
@@ -293,7 +291,7 @@ export default function Lecon17({ onResult }) {
                         3
                       </div>
                       <p className="text-gray-700 text-sm">
-                        <strong>Exécution :</strong> Le code est rejoué exactement, reproduisant fidèlement vos actions :cite[2]
+                        <strong>Exécution :</strong> Le code est rejoué exactement, reproduisant fidèlement vos actions 
                       </p>
                     </div>
                   </div>
@@ -314,7 +312,7 @@ export default function Lecon17({ onResult }) {
                     <p className="text-gray-700 text-sm">
                       <strong>VBA</strong> (Visual Basic for Applications) est le langage de programmation derrière les macros. 
                       Mais bonne nouvelle : <strong>vous n'avez pas besoin de le connaître</strong> pour utiliser les macros ! 
-                      L'enregistreur fait tout le travail pour vous :cite[4].
+                      L'enregistreur fait tout le travail pour vous .
                     </p>
                   </div>
                 </div>
@@ -352,7 +350,7 @@ export default function Lecon17({ onResult }) {
                 <div className="mt-4 bg-amber-50 p-4 rounded-lg border-l-4 border-amber-400">
                   <p className="text-amber-700 text-sm text-center">
                     <strong>Dans cette leçon :</strong> Nous nous concentrons sur les <strong>macros enregistrées</strong>, 
-                    la méthode la plus accessible pour commencer l'automatisation dans Excel :cite[2].
+                    la méthode la plus accessible pour commencer l'automatisation dans Excel .
                   </p>
                 </div>
               </div>
@@ -391,7 +389,7 @@ export default function Lecon17({ onResult }) {
                 <div>
                   <p className="text-gray-700 mb-4">
                     Par mesure de sécurité, l'onglet Développeur contenant les outils macros est <strong>masqué par défaut</strong> dans Excel. 
-                    Voici comment l'activer :cite[2]:cite[4] :
+                    Voici comment l'activer :
                   </p>
                   
                   <div className="space-y-4">
@@ -399,13 +397,13 @@ export default function Lecon17({ onResult }) {
                       <h5 className="font-semibold text-gray-800 mb-2">Étapes détaillées :</h5>
                       <ol className="text-sm text-gray-600 space-y-3 list-decimal pl-4">
                         <li>
-                          <strong>Cliquez sur Fichier</strong> puis <strong>Options</strong> :cite[4]
+                          <strong>Cliquez sur Fichier</strong> puis <strong>Options</strong> 
                         </li>
                         <li>
                           Sélectionnez <strong>Personnaliser le ruban</strong> dans le volet de gauche
                         </li>
                         <li>
-                          Dans la colonne de droite <strong>Onglets principaux</strong>, cochez la case <strong>Développeur</strong> :cite[2]:cite[4]
+                          Dans la colonne de droite <strong>Onglets principaux</strong>, cochez la case <strong>Développeur</strong> 
                         </li>
                         <li>
                           <strong>Cliquez sur OK</strong> pour valider
@@ -532,7 +530,7 @@ export default function Lecon17({ onResult }) {
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
                           <Circle className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
-                          <span>Onglet <strong>Développeur</strong> → <strong>Enregistrer une macro</strong> :cite[2]</span>
+                          <span>Onglet <strong>Développeur</strong> → <strong>Enregistrer une macro</strong> </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Circle className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
@@ -548,7 +546,7 @@ export default function Lecon17({ onResult }) {
                         </li>
                         <li className="flex items-start gap-2">
                           <Circle className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
-                          <span>Cliquez sur <strong>OK</strong> pour démarrer :cite[6]</span>
+                          <span>Cliquez sur <strong>OK</strong> pour démarrer </span>
                         </li>
                       </ul>
                     </div>
@@ -594,7 +592,7 @@ export default function Lecon17({ onResult }) {
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
                           <Square className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                          <span>Onglet <strong>Développeur</strong> → <strong>Arrêter l'enregistrement</strong> :cite[2]</span>
+                          <span>Onglet <strong>Développeur</strong> → <strong>Arrêter l'enregistrement</strong> </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Square className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
@@ -607,7 +605,7 @@ export default function Lecon17({ onResult }) {
                 
                 <div className="space-y-6">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon17/enregistrement-macro.png" 
+                    src="/cours/intermediaire/Lecon17/enregistrement-macro.gif" 
                     alt="Capture des étapes d'enregistrement d'une macro"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -616,7 +614,7 @@ export default function Lecon17({ onResult }) {
                     <h5 className="font-semibold text-purple-800 mb-2">💡 Conseil Pro :</h5>
                     <p className="text-purple-700 text-sm">
                       <strong>Répétez mentalement vos actions avant d'enregistrer</strong>. 
-                      Plus votre séquence est fluide, plus votre macro sera propre et efficace :cite[6].
+                      Plus votre séquence est fluide, plus votre macro sera propre et efficace .
                     </p>
                   </div>
 
@@ -624,7 +622,7 @@ export default function Lecon17({ onResult }) {
                     <h5 className="font-semibold text-amber-800 mb-2">⚠️ Attention :</h5>
                     <p className="text-amber-700 text-sm">
                       <strong>Toutes vos actions sont enregistrées</strong>, même les erreurs ! 
-                      Si vous vous trompez, il vaut mieux tout recommencer plutôt que de corriger pendant l'enregistrement :cite[6].
+                      Si vous vous trompez, il vaut mieux tout recommencer plutôt que de corriger pendant l'enregistrement .
                     </p>
                   </div>
                 </div>
@@ -811,7 +809,7 @@ export default function Lecon17({ onResult }) {
                     <h5 className="font-semibold text-gray-800 mb-3">Étapes :</h5>
                     <ol className="text-sm text-gray-600 space-y-3 list-decimal pl-4">
                       <li>
-                        <strong>Onglet Développeur</strong> → <strong>Insérer</strong> → <strong>Bouton (Contrôles de formulaire)</strong> :cite[7]
+                        <strong>Onglet Développeur</strong> → <strong>Insérer</strong> → <strong>Bouton (Contrôles de formulaire)</strong> 
                       </li>
                       <li>
                         <strong>Dessinez le bouton</strong> dans votre feuille avec la souris
@@ -832,7 +830,7 @@ export default function Lecon17({ onResult }) {
                   </div>
                   <div className="flex justify-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon17/bouton-macro.png" 
+                      src="/cours/intermediaire/Lecon17/bouton-macro.gif" 
                       alt="Capture montrant la création d'un bouton pour macro"
                       className="rounded-xl shadow-md max-w-xs"
                     />
@@ -850,7 +848,7 @@ export default function Lecon17({ onResult }) {
                   <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
                     <h5 className="font-semibold text-blue-800 mb-2">💡 Astuce :</h5>
                     <p className="text-blue-700 text-sm">
-                      Utilisez des <strong>noms explicites</strong> pour vos boutons : "Générer le rapport" plutôt que "Macro1". 
+                      Utilisez des <strong>noms explicites</strong> pour vos boutons : "GénérerLeRapport" plutôt que "Macro1". 
                       Cela améliore l'expérience utilisateur.
                     </p>
                   </div>
@@ -892,7 +890,7 @@ export default function Lecon17({ onResult }) {
                   <div className="p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">⚠️ Pourquoi Excel bloque les macros ?</h5>
                     <p className="text-gray-700 text-sm mb-3">
-                      Les macros peuvent contenir du code malveillant. Par mesure de sécurité, Excel les désactive par défaut :cite[4].
+                      Les macros peuvent contenir du code malveillant. Par mesure de sécurité, Excel les désactive par défaut .
                     </p>
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li className="flex items-start gap-2">
@@ -917,7 +915,7 @@ export default function Lecon17({ onResult }) {
                         <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
                         <span>
                           <strong>"Désactiver toutes les macros avec notification"</strong><br/>
-                          <em>Meilleur compromis sécurité/commodité</em> :cite[4]
+                          <em>Meilleur compromis sécurité/commodité</em> 
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
@@ -953,8 +951,13 @@ export default function Lecon17({ onResult }) {
                       <li><strong>Choisir le niveau de sécurité</strong></li>
                       <li><strong>OK</strong> pour valider</li>
                     </ol>
+                       <ImageZoomable 
+                      src="/cours/intermediaire/Lecon17/parametres_securite_macro.png" 
+                      alt="Capture montrant la création d'un bouton pour macro"
+                      className="rounded-xl shadow-md max-w-xs"
+                    />
                   </div>
-                  
+                 
                   <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
                     <h5 className="font-semibold text-gray-800 mb-2">💾 Enregistrement avec Macros</h5>
                     <p className="text-gray-700 text-sm mb-2">
@@ -965,11 +968,12 @@ export default function Lecon17({ onResult }) {
                       <code className="bg-gray-200 px-2 py-1 rounded text-sm">.xlsm</code>
                     </div>
                     <p className="text-gray-600 text-xs mt-2">
-                      Excel vous proposera automatiquement ce format lorsque vous enregistrerez un fichier contenant des macros :cite[1].
+                      Excel vous proposera automatiquement ce format lorsque vous enregistrerez un fichier contenant des macros .
                     </p>
                   </div>
                 </div>
               </div>
+              
             </div>
 
             {/* Message d'alerte typique */}
@@ -994,6 +998,7 @@ export default function Lecon17({ onResult }) {
                     </div>
                   </div>
                 </div>
+                 
               </div>
               <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-green-50 p-3 rounded-lg">
@@ -1008,7 +1013,9 @@ export default function Lecon17({ onResult }) {
                 </div>
               </div>
             </div>
+             
           </div>
+          
         )}
       </div>
 

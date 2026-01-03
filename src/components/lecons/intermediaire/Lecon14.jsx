@@ -135,7 +135,7 @@ export default function Lecon14({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Maintenance facilitée</h4>
-                      <p className="text-gray-600 text-sm">Modifiez la plage dans le Gestionnaire de noms, toutes les formules utilisant ce nom sont mises à jour automatiquement:cite[4]</p>
+                      <p className="text-gray-600 text-sm">Modifiez la plage dans le Gestionnaire de noms, toutes les formules utilisant ce nom sont mises à jour automatiquement</p>
                     </div>
                   </div>
                   
@@ -143,7 +143,7 @@ export default function Lecon14({ onResult }) {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Navigation ultra-rapide</h4>
-                      <p className="text-gray-600 text-sm">Atteignez instantanément n'importe quelle zone de votre classeur via la zone de liste déroulante Nom:cite[1]</p>
+                      <p className="text-gray-600 text-sm">Atteignez instantanément n'importe quelle zone de votre classeur via la zone de liste déroulante Nom</p>
                     </div>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export default function Lecon14({ onResult }) {
                         <div className="text-gray-700">Modifier une seule fois la plage nommée</div>
                       </td>
                       <td className="p-4 text-gray-700">
-                        <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Maintenance centralisée:cite[4]</span>
+                        <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Maintenance centralisée</span>
                       </td>
                     </tr>
                   </tbody>
@@ -258,7 +258,7 @@ export default function Lecon14({ onResult }) {
                       <h5 className="font-semibold text-gray-800 mb-2">Étapes :</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li>Sélectionnez la plage de cellules</li>
-                        <li>Cliquez sur la <strong>Zone Nom</strong> en haut à gauche de la barre de formule:cite[1]</li>
+                        <li>Cliquez sur la <strong>Zone Nom</strong> en haut à gauche de la barre de formule</li>
                         <li>Tapez le nom (sans espaces) et appuyez sur <code className="bg-gray-100 px-1 rounded">Entrée</code></li>
                       </ol>
                     </div>
@@ -270,7 +270,7 @@ export default function Lecon14({ onResult }) {
                       </h5>
                       <p className="text-blue-700 text-sm">
                         Utilisez des majuscules et des tirets bas _ pour séparer les mots. 
-                        Par exemple : <code className="bg-blue-100 px-1 rounded">CHIFFRE_AFFAIRES_Q1</code> ou <code className="bg-blue-100 px-1 rounded">Taux_Remise_Standard</code>:cite[4]
+                        Par exemple : <code className="bg-blue-100 px-1 rounded">CHIFFRE_AFFAIRES_Q1</code> ou <code className="bg-blue-100 px-1 rounded">Taux_Remise_Standard</code>
                       </p>
                     </div>
                   </div>
@@ -288,7 +288,7 @@ export default function Lecon14({ onResult }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/creation-selection.png" 
+                    src="/cours/intermediaire/Lecon14/creation-selection.gif" 
                     alt="Interface de création de noms à partir d'une sélection"
                     className="rounded-xl shadow-lg"
                   />
@@ -304,7 +304,7 @@ export default function Lecon14({ onResult }) {
                     <h5 className="font-semibold text-gray-800 mb-2">Étapes :</h5>
                     <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                       <li>Sélectionnez votre tableau complet avec les en-têtes</li>
-                      <li>Accédez à <strong>Formules → Créer à partir de la sélection</strong>:cite[5]</li>
+                      <li>Accédez à <strong>Formules → Depuis sélection</strong></li>
                       <li>Choisissez la position de vos étiquettes (Ligne du haut, Colonne de gauche, etc.)</li>
                       <li>Validez avec <strong>OK</strong></li>
                     </ol>
@@ -333,7 +333,7 @@ export default function Lecon14({ onResult }) {
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                          <span>Accédez via <strong>Formules → Gestionnaire de noms</strong>:cite[1]</span>
+                          <span>Accédez via <strong>Formules → Gestionnaire de noms</strong></span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
@@ -341,7 +341,7 @@ export default function Lecon14({ onResult }) {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                          <span>Définissez la portée (Classeur ou Feuille spécifique):cite[8]</span>
+                          <span>Définissez la portée (Classeur ou Feuille spécifique)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
@@ -406,13 +406,13 @@ export default function Lecon14({ onResult }) {
                         <div>
                           <p className="text-sm text-gray-600 mb-1">SANS noms de plages :</p>
                           <code className="block text-sm bg-red-50 text-red-700 p-3 rounded-lg">
-                            =C2*$F$2-D2
+                            =D2*(E2-F2)
                           </code>
                         </div>
                         <div>
                           <p className="text-sm text-gray-600 mb-1">AVEC noms de plages :</p>
                           <code className="block text-sm bg-green-50 text-green-700 p-3 rounded-lg">
-                            =Quantite * Prix_Unitaire - Cout_Production
+                            =Quantite * (Prix_Unitaire - Cout_Production)
                           </code>
                         </div>
                       </div>
@@ -425,7 +425,7 @@ export default function Lecon14({ onResult }) {
                       </h5>
                       <p className="text-green-700 text-sm">
                         Dans une formule, commencez à taper le nom de votre plage, Excel proposera 
-                        la saisie semi-automatique. Appuyez sur Tab pour l'insérer:cite[1].
+                        la saisie semi-automatique. Appuyez sur Tab pour l'insérer.
                       </p>
                     </div>
                   </div>
@@ -452,11 +452,17 @@ export default function Lecon14({ onResult }) {
                 <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Formule DECALER() dynamique</h5>
                   <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                    =DECALER($A$1,0,0,NBVAL($A:$A),1)
+                    =DECALER($B$1;0;0;NBVAL($B:$B);1)
                   </code>
                   <p className="text-sm text-gray-600 mb-4">
                     Cette formule crée une plage qui commence en A1 et s'étend vers le bas du nombre de cellules non vides dans la colonne A.
                   </p>
+                  
+                  <ImageZoomable 
+                    src="/cours/intermediaire/Lecon14/decaler-dynamique.gif" 
+                    alt="Exemple visuel de la formule DECALER() dynamique"
+                    className="rounded-xl shadow-lg mt-4"
+                  />
                   
                   <h5 className="font-semibold text-gray-800 mb-2">Application :</h5>
                   <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
@@ -475,30 +481,25 @@ export default function Lecon14({ onResult }) {
                   ouvrant la voie à des systèmes de validation et calculs extrêmement flexibles.
                 </p>
                 
+                <ImageZoomable 
+                  src="/cours/intermediaire/Lecon14/indirect-exemple.gif" 
+                  alt="Illustration de l'utilisation de la fonction INDIRECT()"
+                  className="rounded-xl shadow-lg mb-4"
+                />
+                
                 <div className="space-y-4">
                   <div className="p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Application : Listes dépendantes avancées</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                      =INDIRECT($B$2)
+                      =INDIRECT($B$1)
                     </code>
                     <p className="text-sm text-gray-600">
-                      Si B2 contient "France", la validation cherchera une plage nommée "France". 
+                      Si B1 contient "France", la validation cherchera une plage nommée "France". 
                       Parfait pour créer des systèmes de navigation hiérarchique.
                     </p>
                   </div>
                   
-                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-lg">
-                    <h5 className="font-semibold text-blue-800 mb-2 flex items-center gap-2">
-                      <Lightbulb className="w-5 h-5 text-blue-600" />
-                      Bonne pratique : Gestion des erreurs
-                    </h5>
-                    <p className="text-blue-700 text-sm">
-                      Combinez INDIRECT() avec SIERREUR() pour éviter les messages d'erreur si une plage nommée n'existe pas :
-                      <code className="block bg-blue-100 p-2 rounded mt-2 text-sm">
-                        =SIERREUR(INDIRECT($B$2), "Plage non trouvée")
-                      </code>
-                    </p>
-                  </div>
+               
                 </div>
               </div>
             </div>
@@ -562,7 +563,7 @@ export default function Lecon14({ onResult }) {
                       </div>
                       <p className="text-sm text-gray-600">
                         Accessible seulement depuis la feuille où elle est définie. Parfaite pour réutiliser 
-                        le même nom dans différentes feuilles avec des valeurs différentes:cite[8].
+                        le même nom dans différentes feuilles avec des valeurs différentes.
                       </p>
                       <code className="block text-xs bg-gray-100 p-2 rounded mt-2">
                         Feuille1!Ventes, Feuille2!Ventes, Feuille3!Ventes
@@ -585,7 +586,7 @@ export default function Lecon14({ onResult }) {
                     </h5>
                     <p className="text-blue-700 text-sm">
                       Dans le Gestionnaire de noms, lors de la création ou modification, 
-                      utilisez le champ "Étendue" pour choisir entre "Classeur" ou une feuille spécifique:cite[8].
+                      utilisez le champ "Zone" pour choisir entre "Classeur" ou une feuille spécifique.
                     </p>
                   </div>
                 </div>
@@ -664,7 +665,7 @@ export default function Lecon14({ onResult }) {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
-                        <span>Ajout de commentaires explicatifs pour chaque plage:cite[1]</span>
+                        <span>Ajout de commentaires explicatifs pour chaque plage</span>
                       </li>
                     </ul>
                   </div>
@@ -724,7 +725,8 @@ export default function Lecon14({ onResult }) {
                     <div className="p-4 bg-white rounded-lg border-2 border-teal-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Configuration :</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
-                        <li>Créez une plage nommée dynamique avec DECALER()</li>
+                        <li>Créez une plage nommée dynamique avec <code className="bg-gray-100 px-1 rounded">=DECALER(Ventes!$A$1;0;0;NBVAL(Ventes!$A:$A);5)</code>  
+                        </li>
                         <li>Insérez un tableau croisé dynamique</li>
                         <li>Dans "Plage de tableau", entrez le nom de votre plage dynamique</li>
                         <li>Actualisez simplement vos données, le TCD capturera les nouvelles lignes automatiquement</li>
@@ -754,72 +756,7 @@ export default function Lecon14({ onResult }) {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-4">Automatisation VBA avec plages nommées</h4>
-                <p className="text-gray-700 mb-4">
-                  En VBA, référencer des plages par leur nom plutôt que par leur adresse rend 
-                  votre code plus robuste aux modifications structurelles de vos feuilles.
-                </p>
-                
-                <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
-                  <h5 className="font-semibold text-gray-800 mb-2">Exemple de code VBA :</h5>
-                  <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
-                    {`' ACCÈS À UNE PLAGE NOMMÉE
-Range("TAUX_TVA").Value = 0.2
-
-' BOUCLE SUR CHAQUE CELLULE D'UNE PLAGE NOMMÉE
-Dim cell As Range
-For Each cell In Range("LISTE_PRODUITS")
-    If cell.Value > 100 Then
-        cell.Interior.Color = RGB(255, 200, 200)
-    End If
-Next cell`}
-                  </code>
-                  <p className="text-sm text-gray-600">
-                    Ce code est beaucoup plus lisible et maintenable qu'avec des références cellulaires directes:cite[4]:cite[8].
-                  </p>
-                </div>
-                
-                <ImageZoomable 
-                  src="/cours/intermediaire/Lecon14/vba-plages-nommees.png" 
-                  alt="Exemple de code VBA utilisant des plages nommées"
-                  className="rounded-xl shadow-lg mt-4"
-                />
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-4">Validation de données avancée</h4>
-                <p className="text-gray-700 mb-4">
-                  Combinez les plages nommées avec la validation de données pour créer des systèmes 
-                  de saisie cohérents et professionnels.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
-                    <h5 className="font-semibold text-gray-800 mb-2">Listes de validation basées sur plages nommées</h5>
-                    <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
-                      <li>Créez une plage nommée pour votre liste de valeurs</li>
-                      <li>Sélectionnez la cellule à valider</li>
-                      <li>Accédez à Données → Validation des données</li>
-                      <li>Choisissez "Liste" comme critère</li>
-                      <li>Dans "Source", tapez <code className="bg-gray-100 px-1 rounded">=NOM_DE_VOTRE_PLAGE</code></li>
-                    </ol>
-                  </div>
-                  
-                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg">
-                    <h5 className="font-semibold text-yellow-800 mb-2 flex items-center gap-2">
-                      <AlertTriangle className="w-5 h-5 text-yellow-600" />
-                      Attention aux références externes
-                    </h5>
-                    <p className="text-yellow-700 text-sm">
-                      Si votre plage nommée fait référence à un autre classeur, assurez-vous que 
-                      ce dernier est ouvert pour que la validation fonctionne correctement.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+         
           </div>
         )}
       </div>
@@ -864,7 +801,7 @@ Next cell`}
                       <Clock className="w-5 h-5 text-green-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Durée estimée</p>
-                        <p className="text-sm text-gray-600">45-75 minutes</p>
+                        <p className="text-sm text-gray-600">10-20 minutes</p>
                       </div>
                     </div>
                     
