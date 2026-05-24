@@ -2,12 +2,12 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faFacebookF, 
-  faTiktok, 
-  faLinkedinIn, 
+import {
+  faFacebookF,
+  faTiktok,
+  faLinkedinIn,
   faYoutube,
-  faInstagram 
+  faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
       toast.error("Veuillez entrer une adresse email valide.");
       return;
     }
-    
+
     setLoading(true);
     try {
       const response = await fetch("https://n8n.deposark.com/webhook/excel-du-zero-signup", {
@@ -30,7 +30,7 @@ export default function Footer() {
         },
         body: JSON.stringify({ email }),
       });
-      
+
       if (response.ok) {
         toast.success("Merci pour votre inscription à la newsletter !");
         setEmail("");
@@ -147,16 +147,16 @@ export default function Footer() {
               <p className="text-gray-400">Inscrivez-vous à notre newsletter pour recevoir des conseils Excel.</p>
             </div>
             <form onSubmit={handleNewsletterSubmit} className="flex w-full md:w-auto">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={loading}
-                placeholder="Votre email" 
+                placeholder="Votre email"
                 className="px-4 py-3 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500 w-full md:w-64 disabled:opacity-50"
               />
-              <button 
+              <button
                 type="submit"
                 disabled={loading}
                 className="bg-gradient-to-r from-green-500 to-green-700 px-6 py-3 rounded-r-lg font-medium hover:from-green-600 hover:to-green-800 transition-all disabled:opacity-50"
@@ -170,7 +170,7 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} ExcelDuZero. Tous droits réservés. <span className="ml-1">by <a href="https://maxsolving.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">Maxsolving</a></span>
+            © {new Date().getFullYear()} ExcelDuZero. Tous droits réservés. <span className="ml-1">by <a href="https://maxsolving.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">MaxSolving</a></span>
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-green-400 text-sm transition-colors">
