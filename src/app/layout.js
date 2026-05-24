@@ -28,6 +28,10 @@ export const metadata = {
   },
   description: "Formations interactives Excel pour tous les niveaux. Passez de débutant à expert avec nos cours pratiques, quiz et vidéos.",
   keywords: ["Excel", "formation", "cours", "débutant", "expert", "tableur", "Microsoft Excel", "apprendre Excel"],
+  authors: [{ name: "MaxSolving", url: "https://maxsolving.com" }],
+  alternates: {
+    canonical: "https://excelduzero.com",
+  },
   verification: {
     google: "Ee2TVe6YVv6xUuzTHodcVN95LiHAI30wIdtwP1tduC8",
   },
@@ -62,6 +66,28 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "ExcelDuZero",
+              url: "https://excelduzero.com",
+              logo: "https://excelduzero.com/icon-512x512.png",
+              description: "Plateforme d'apprentissage en ligne dédiée à la maîtrise de Microsoft Excel."
+            }),
+          }}
+        />
+        <Script id="register-sw" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+              });
+            }
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}

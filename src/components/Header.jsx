@@ -193,9 +193,9 @@ export default function Header() {
                 <Link href="/">E</Link>
               </span>
             </div>
-            <h1 className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent ml-1 sm:ml-2">
+            <p className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent ml-1 sm:ml-2">
               xcelDuZero
-            </h1>
+            </p>
           </div>
           {/* Liens d'ancre visibles seulement sur la page d'accueil ET si non connecté */}
           {isHome && !user && (
