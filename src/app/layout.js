@@ -27,12 +27,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <head>
         {/* Import Google Fonts Inter via next/font/google (App Router) */}
       </head>
       <body
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <ProtectedRoute>{children}</ProtectedRoute>
         <ScrollToTopButton />
