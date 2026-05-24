@@ -58,7 +58,7 @@ export default function QuizComponent({ questions, title, onResult }) {
 	if (done) {
 		const isSuccess = score >= 3;
 		return (
-			<div className={`mt-8 p-4 rounded-xl border text-center ${isSuccess ? "bg-green-50 border-green-200 text-green-800" : "bg-red-50 border-red-200 text-red-800"}`}>
+			<div className={`mt-6 p-3 sm:p-4 rounded-xl border text-center ${isSuccess ? "bg-green-50 border-green-200 text-green-800" : "bg-red-50 border-red-200 text-red-800"}`}>
 				<div className="text-lg font-bold mb-2 flex items-center justify-center gap-2">
 					{isSuccess ? (
 						<>
@@ -101,7 +101,7 @@ export default function QuizComponent({ questions, title, onResult }) {
 								const isCorrect = userAnswer?.isCorrect;
 								
 								return (
-									<div key={qIndex} className="bg-white rounded-lg p-4 border border-gray-200">
+									<div key={qIndex} className="bg-white rounded-lg p-3 sm:p-4 border border-gray-200">
 										<div className="font-medium text-gray-800 mb-3">
 											<span className="text-blue-600">Question {qIndex + 1}:</span> {q.question}
 										</div>
@@ -177,7 +177,7 @@ export default function QuizComponent({ questions, title, onResult }) {
 	}
 
 	return (
-		<div className="mt-8 p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200">
+		<div className="mt-6 p-3 sm:p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200">
 			<div className="flex items-center gap-3 mb-4">
 				<svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -189,14 +189,14 @@ export default function QuizComponent({ questions, title, onResult }) {
 				Question {step + 1} sur {questions.length}
 			</div>
 
-			<div className="bg-white rounded-lg p-4 mb-4 border border-blue-100">
+			<div className="bg-white rounded-lg p-3 sm:p-4 mb-4 border border-blue-100">
 				<div className="font-medium text-gray-800 mb-4">{questions[step].question}</div>
 
 				<div className="space-y-3">
 					{questions[step].options.map((opt, idx) => (
 						<button
 							key={idx}
-							className={`block w-full text-left px-4 py-3 rounded-lg border-2 transition-all duration-200 focus:outline-none ${
+							className={`block w-full text-left px-3 py-2 sm:px-4 sm:py-3 rounded-lg border-2 transition-all duration-200 focus:outline-none ${
 								selected === idx
 									? "bg-blue-100 border-blue-400 text-blue-800 shadow-md"
 									: "bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300"

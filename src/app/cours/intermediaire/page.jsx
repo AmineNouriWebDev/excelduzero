@@ -303,7 +303,7 @@ export default function CoursIntermediaire() {
         )}
 
         {/* Contenu Principal */}
-        <section className="flex-1 bg-white rounded-2xl shadow p-4 sm:p-6 min-h-[400px] md:mr-2 overflow-x-auto max-w-full">
+        <section className="flex-1 bg-white md:rounded-2xl shadow p-3 sm:p-6 min-h-[400px] md:mr-2 overflow-x-auto max-w-full">
           <div className="mb-4 text-sm text-gray-500">Leçon {active + 1} / {LEÇONS.length}</div>
           <h2 className="text-2xl font-bold text-yellow-700 mb-4 break-words">{LEÇONS[active]}</h2>
           <div className="text-gray-700 w-full max-w-full overflow-x-auto">
