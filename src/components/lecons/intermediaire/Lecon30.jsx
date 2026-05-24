@@ -39,7 +39,7 @@ export default function Lecon30({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé indigo */}
-      <div className="bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -48,7 +48,7 @@ export default function Lecon30({ onResult }) {
                 <LayoutTemplate className="w-6 h-6 md:w-8 md:h-8" />
               </div>
               <div className="flex-1 min-w-0">
-                <h1 className="text-2xl md:text-4xl font-bold break-words">Création de Modèles Personnalisés</h1>
+                <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Création de Modèles Personnalisés</h1>
                 <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Concevez des modèles Excel professionnels, réutilisables et automatisés</p>
               </div>
             </div>
@@ -80,10 +80,10 @@ export default function Lecon30({ onResult }) {
       {/* Introduction */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-indigo-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-indigo-50 to-blue-50 text-left hover:from-indigo-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-indigo-50 to-blue-50 text-left hover:from-indigo-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-indigo-100 p-3 rounded-xl">
               <Lightbulb className="w-6 h-6 text-indigo-600" />
             </div>
@@ -96,7 +96,7 @@ export default function Lecon30({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Standardisez et Automatisez vos Processus</h3>
@@ -105,7 +105,7 @@ export default function Lecon30({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <Zap className="w-6 h-6 text-amber-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Gain de Temps Exceptionnel</h4>
@@ -113,7 +113,7 @@ export default function Lecon30({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckSquare className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Cohérence et Exactitude</h4>
@@ -121,7 +121,7 @@ export default function Lecon30({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <Building className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Standardisation Organisationnelle</h4>
@@ -144,19 +144,19 @@ export default function Lecon30({ onResult }) {
             </div>
 
             {/* Section Chiffres Clés */}
-            <div className="mt-8 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl p-6 text-white">
+            <div className="mt-8 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
               <h4 className="font-bold text-lg mb-4 text-center">📊 Impact Business des Modèles Excel</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm text-center">
-                  <div className="text-2xl font-bold mb-2">80%</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">80%</div>
                   <p className="text-sm opacity-90">Réduction du temps sur tâches répétitives :cite[2]</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm text-center">
-                  <div className="text-2xl font-bold mb-2">100%</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">100%</div>
                   <p className="text-sm opacity-90">Cohérence dans les rapports et analyses</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm text-center">
-                  <div className="text-2xl font-bold mb-2">⭐</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">⭐</div>
                   <p className="text-sm opacity-90">Meilleure prise de décision avec données fiables</p>
                 </div>
               </div>
@@ -168,10 +168,10 @@ export default function Lecon30({ onResult }) {
       {/* Principes de Conception */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-amber-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-yellow-50 text-left hover:from-amber-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-amber-50 to-yellow-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('conception')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <LayoutTemplate className="w-6 h-6 text-amber-600" />
             </div>
@@ -184,7 +184,7 @@ export default function Lecon30({ onResult }) {
         </button>
         
         {expandedSections.conception && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Structurez Votre Modèle pour le Succès</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -338,10 +338,10 @@ export default function Lecon30({ onResult }) {
       {/* Composants Avancés */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-purple-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('composants')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Sliders className="w-6 h-6 text-purple-600" />
             </div>
@@ -354,7 +354,7 @@ export default function Lecon30({ onResult }) {
         </button>
         
         {expandedSections.composants && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Rendez Vos Modèles Interactifs et Sûrs</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -498,10 +498,10 @@ export default function Lecon30({ onResult }) {
       {/* Templates pour différents secteurs */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-blue-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('professionnel')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Building className="w-6 h-6 text-blue-600" />
             </div>
@@ -514,7 +514,7 @@ export default function Lecon30({ onResult }) {
         </button>
         
         {expandedSections.professionnel && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Adaptez Vos Modèles à Votre Métier</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -601,7 +601,7 @@ export default function Lecon30({ onResult }) {
               <div className="bg-amber-500 p-4 text-white text-center">
                 <h4 className="font-bold text-lg">📊 Modèle de Budget d'Entreprise - Exemple Complet</h4>
               </div>
-              <div className="p-6">
+              <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-4">Structure du Modèle</h5>
@@ -641,10 +641,10 @@ export default function Lecon30({ onResult }) {
       {/* Déploiement et Partage */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-green-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('deploiement')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <Upload className="w-6 h-6 text-green-600" />
             </div>
@@ -657,7 +657,7 @@ export default function Lecon30({ onResult }) {
         </button>
         
         {expandedSections.deploiement && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Diffusez Vos Modèles dans Votre Organisation</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -695,7 +695,7 @@ export default function Lecon30({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">🎯 Projet Pratique: Créez Votre Premier Modèle</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
@@ -725,7 +725,7 @@ export default function Lecon30({ onResult }) {
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
                 
-                <div className="bg-white rounded-2xl border-2 border-amber-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-amber-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
                     <a href="/cours/intermediaire/lecon30/kit-modeles-professionnels.zip" 
@@ -756,7 +756,7 @@ export default function Lecon30({ onResult }) {
               <div className="bg-gray-800 p-4 text-white text-center">
                 <h4 className="font-bold text-lg">Compétences Maîtrisées - Leçon 30</h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="text-center">
                   <div className="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                     <LayoutTemplate className="w-6 h-6 text-indigo-600" />

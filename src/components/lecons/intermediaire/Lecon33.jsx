@@ -36,7 +36,7 @@ export default function Lecon33({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé VERT - NOUVEAU THÈME pour cette leçon */}
-      <div className="bg-gradient-to-r from-green-500 via-emerald-600 to-teal-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+      <div className="bg-gradient-to-r from-green-500 via-emerald-600 to-teal-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -45,7 +45,7 @@ export default function Lecon33({ onResult }) {
                 <Link className="w-6 h-6 md:w-8 md:h-8" />
               </div>
               <div className="flex-1 min-w-0">
-                <h1 className="text-2xl md:text-4xl font-bold break-words">Liens Dynamiques entre Classeurs</h1>
+                <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Liens Dynamiques entre Classeurs</h1>
                 <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Connectez vos données et automatisez vos rapports</p>
               </div>
             </div>
@@ -77,10 +77,10 @@ export default function Lecon33({ onResult }) {
       {/* Introduction */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-green-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <Lightbulb className="w-6 h-6 text-green-600" />
             </div>
@@ -93,7 +93,7 @@ export default function Lecon33({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Centralisez l'Information depuis Plusieurs Sources</h3>
@@ -102,7 +102,7 @@ export default function Lecon33({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <RefreshCw className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Mise à Jour Automatique</h4>
@@ -110,7 +110,7 @@ export default function Lecon33({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <Database className="w-6 h-6 text-emerald-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Source Unique de Vérité</h4>
@@ -118,7 +118,7 @@ export default function Lecon33({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <FileText className="w-6 h-6 text-teal-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Gain de Temps</h4>
@@ -141,19 +141,19 @@ export default function Lecon33({ onResult }) {
             </div>
 
             {/* Section Cas d'Usage */}
-            <div className="mt-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-6 text-white">
+            <div className="mt-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
               <h4 className="font-bold text-lg mb-4 text-center">🎯 Cas d'Utilisation des Liens entre Classeurs</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl font-bold mb-2">📊</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">📊</div>
                   <p className="text-sm opacity-90">Rapports mensuels avec fichiers sources par département</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl font-bold mb-2">🏢</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">🏢</div>
                   <p className="text-sm opacity-90">Consolidation de budgets par services ou filiales</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl font-bold mb-2">📈</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">📈</div>
                   <p className="text-sm opacity-90">Tableaux de bord de suivi d'activité :cite[7]</p>
                 </div>
               </div>
@@ -165,10 +165,10 @@ export default function Lecon33({ onResult }) {
       {/* Principes Fondamentaux */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-emerald-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-emerald-50 to-teal-50 text-left hover:from-emerald-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-emerald-50 to-teal-50 text-left hover:from-emerald-100 transition-all"
           onClick={() => toggleSection('principes')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-emerald-100 p-3 rounded-xl">
               <Workflow className="w-6 h-6 text-emerald-600" />
             </div>
@@ -181,7 +181,7 @@ export default function Lecon33({ onResult }) {
         </button>
         
         {expandedSections.principes && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Comment Excel Gère les Liens entre Classeurs ?</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -284,10 +284,10 @@ export default function Lecon33({ onResult }) {
       {/* Méthodes de Création */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-teal-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-teal-50 to-cyan-50 text-left hover:from-teal-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-teal-50 to-cyan-50 text-left hover:from-teal-100 transition-all"
           onClick={() => toggleSection('methodes')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-teal-100 p-3 rounded-xl">
               <Link className="w-6 h-6 text-teal-600" />
             </div>
@@ -300,7 +300,7 @@ export default function Lecon33({ onResult }) {
         </button>
         
         {expandedSections.methodes && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Trois Techniques pour Créer vos Liens</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
@@ -424,7 +424,7 @@ export default function Lecon33({ onResult }) {
               <div className="bg-blue-500 p-4 text-white text-center">
                 <h4 className="font-bold text-lg">🎬 Démonstration des Méthodes</h4>
               </div>
-              <div className="p-6">
+              <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                   <div className="text-center">
                     <ImageZoomable 
@@ -460,10 +460,10 @@ export default function Lecon33({ onResult }) {
       {/* Cas Pratique : Rapport Mensuel */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-amber-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('pratique')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <PlayCircle className="w-6 h-6 text-amber-600" />
             </div>
@@ -476,7 +476,7 @@ export default function Lecon33({ onResult }) {
         </button>
         
         {expandedSections.pratique && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Créez un Rapport qui S'Actualise Automatiquement</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -522,7 +522,7 @@ export default function Lecon33({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">🎯 Solution avec INDIRECT Dynamique</h4>
                   <div className="space-y-3">
                     <div className="bg-amber-800/30 p-3 rounded-lg">
@@ -540,7 +540,7 @@ export default function Lecon33({ onResult }) {
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
                 
-                <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-green-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
                     <a href="/cours/intermediaire/lecon33/cas-pratique-rapport.xlsx" 
@@ -564,7 +564,7 @@ export default function Lecon33({ onResult }) {
               <div className="bg-blue-500 p-4 text-white text-center">
                 <h4 className="font-bold text-lg">Fonctions Excel Essentielles pour les Liens</h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="text-center">
                   <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                     <span className="font-bold text-blue-600">I</span>
@@ -602,10 +602,10 @@ export default function Lecon33({ onResult }) {
       {/* Techniques Avancées */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-red-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-red-50 to-pink-50 text-left hover:from-red-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-red-50 to-pink-50 text-left hover:from-red-100 transition-all"
           onClick={() => toggleSection('avance')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-red-100 p-3 rounded-xl">
               <Zap className="w-6 h-6 text-red-600" />
             </div>
@@ -618,7 +618,7 @@ export default function Lecon33({ onResult }) {
         </button>
         
         {expandedSections.avance && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Optimisation et Résolution des Problèmes</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -668,7 +668,7 @@ export default function Lecon33({ onResult }) {
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
                 
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">💡 Bonnes Pratiques Avancées</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
@@ -693,7 +693,7 @@ export default function Lecon33({ onResult }) {
               <div className="bg-gray-800 p-4 text-white text-center">
                 <h4 className="font-bold text-lg">Compétences Maîtrisées - Leçon 33</h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="text-center">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                     <Workflow className="w-6 h-6 text-green-600" />

@@ -8,7 +8,7 @@ export default function Lecon3({ onResult }) {
  
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
+    <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-4 flex items-center gap-3">
@@ -22,7 +22,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Introduction */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Zap className="text-yellow-600" />
           Pourquoi utiliser les raccourcis clavier ?
         </h2>
@@ -81,7 +81,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Raccourcis fréquemment utilisés */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Keyboard className="text-blue-600" />
           Raccourcis les plus utilisés
         </h2>
@@ -152,7 +152,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Navigation dans Excel */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <ArrowUp className="text-purple-600" />
           Navigation dans les cellules
         </h2>
@@ -222,7 +222,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Mise en forme */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Bold className="text-orange-600" />
           Mise en forme des cellules
         </h2>
@@ -305,7 +305,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Sélection et actions */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <MousePointer2 className="text-green-600" />
           Sélection et actions
         </h2>
@@ -375,7 +375,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Données et formules */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <FunctionSquare className="text-red-600" />
           Données et formules
         </h2>
@@ -463,7 +463,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Touches de fonction */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Keyboard className="text-indigo-600" />
           Les touches de fonction
         </h2>
@@ -535,7 +535,7 @@ export default function Lecon3({ onResult }) {
 
       {/* Exercice pratique */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold text-green-700 mb-4 flex items-center gap-2">
+        <h2 className="text-base md:text-2xl font-bold text-green-700 mb-4 flex items-center gap-2">
           <Keyboard className="text-green-600" />
           Exercice pratique : Mémorisation et application
         </h2>

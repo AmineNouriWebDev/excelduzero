@@ -12,13 +12,13 @@ import {
   
   export default function Lecon13({ onResult }) {
     return (
-        <div className="max-w-6xl mx-auto p-6 bg-white">
+        <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
           {/* En-tête principal */}
           <div className="mb-8 text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
               <Calculator className="w-8 h-8 text-green-600" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Les Formules Excel</h1>
+            <h1 className="text-lg md:text-3xl font-bold text-gray-900 mb-2">Les Formules Excel</h1>
             <p className="text-lg text-gray-600">
               Maîtrisez les formules et fonctions essentielles d'Excel
             </p>
@@ -38,7 +38,7 @@ import {
           <div className="mb-8">
             <div className="flex items-center space-x-3 mb-4">
               <AlertTriangle className="w-6 h-6 text-orange-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
+              <h2 className="text-base md:text-2xl font-semibold text-gray-900">
                 Règle fondamentale : Le signe égal =
               </h2>
             </div>
@@ -89,7 +89,7 @@ import {
           <div className="mb-8">
             <div className="flex items-center space-x-3 mb-4">
               <Type className="w-6 h-6 text-purple-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
+              <h2 className="text-base md:text-2xl font-semibold text-gray-900">
                 Sensibilité à la casse
               </h2>
             </div>
@@ -104,7 +104,7 @@ import {
           <div className="mb-8">
             <div className="flex items-center space-x-3 mb-4">
               <Eye className="w-6 h-6 text-indigo-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
+              <h2 className="text-base md:text-2xl font-semibold text-gray-900">
                 Affichage des formules
               </h2>
             </div>
@@ -146,7 +146,7 @@ import {
           <div className="mb-8">
             <div className="flex items-center space-x-3 mb-4">
               <GitBranch className="w-6 h-6 text-emerald-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
+              <h2 className="text-base md:text-2xl font-semibold text-gray-900">
                 Formules indépendantes et dépendantes
               </h2>
             </div>
@@ -180,7 +180,7 @@ import {
           <div className="mb-8">
             <div className="flex items-center space-x-3 mb-6">
               <Plus className="w-6 h-6 text-violet-500" />
-              <h2 className="text-2xl font-semibold text-gray-900">
+              <h2 className="text-base md:text-2xl font-semibold text-gray-900">
                 Les fonctions
               </h2>
             </div>
@@ -261,7 +261,7 @@ import {
               <div className="flex items-center justify-center w-8 h-8 bg-indigo-100 rounded-full">
                 <span className="text-indigo-600 font-bold">1</span>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">OPÉRATEURS</h2>
+              <h2 className="text-base md:text-2xl font-bold text-gray-900">OPÉRATEURS</h2>
             </div>
       
             {/* Opérateurs de calcul */}
@@ -364,7 +364,7 @@ import {
               <div className="flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full">
                 <span className="text-blue-600 font-bold">2</span>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">RÉFÉRENCES RELATIVES OU ABSOLUES</h2>
+              <h2 className="text-base md:text-2xl font-bold text-gray-900">RÉFÉRENCES RELATIVES OU ABSOLUES</h2>
             </div>
       
             <div className="bg-blue-50 p-6 rounded-lg mb-6">
@@ -585,7 +585,7 @@ import {
               <div className="flex items-center justify-center w-8 h-8 bg-green-100 rounded-full">
                 <span className="text-green-600 font-bold">3</span>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">EXEMPLE PRATIQUE</h2>
+              <h2 className="text-base md:text-2xl font-bold text-gray-900">EXEMPLE PRATIQUE</h2>
             </div>
             
             <div className="bg-green-50 p-6 rounded-lg mb-6">

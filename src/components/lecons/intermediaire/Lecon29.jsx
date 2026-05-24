@@ -41,7 +41,7 @@ export default function Lecon29({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé vert/professionnel */}
-      <div className="bg-gradient-to-r from-emerald-500 via-green-600 to-teal-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+      <div className="bg-gradient-to-r from-emerald-500 via-green-600 to-teal-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -50,7 +50,7 @@ export default function Lecon29({ onResult }) {
                 <Filter className="w-6 h-6 md:w-8 md:h-8" />
               </div>
               <div className="flex-1 min-w-0">
-                <h1 className="text-2xl md:text-4xl font-bold break-words">SOMME.SI, SOMME.SI.ENS et SOMMEPROD</h1>
+                <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">SOMME.SI, SOMME.SI.ENS et SOMMEPROD</h1>
                 <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Maîtrisez les sommes conditionnelles et les calculs avancés dans Excel</p>
               </div>
             </div>
@@ -82,10 +82,10 @@ export default function Lecon29({ onResult }) {
       {/* Introduction */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-emerald-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-emerald-50 to-teal-50 text-left hover:from-emerald-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-emerald-50 to-teal-50 text-left hover:from-emerald-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-emerald-100 p-3 rounded-xl">
               <Lightbulb className="w-6 h-6 text-emerald-600" />
             </div>
@@ -98,7 +98,7 @@ export default function Lecon29({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Analysez vos données intelligemment</h3>
@@ -107,7 +107,7 @@ export default function Lecon29({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <Database className="w-6 h-6 text-emerald-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Analyse Commerciale Ciblée</h4>
@@ -115,7 +115,7 @@ export default function Lecon29({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <BarChart3 className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Reporting Automatisé</h4>
@@ -123,7 +123,7 @@ export default function Lecon29({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <Calculator className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Calculs Complexes Simplifiés</h4>
@@ -146,19 +146,19 @@ export default function Lecon29({ onResult }) {
             </div>
 
             {/* Section Évolution */}
-            <div className="mt-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl p-6 text-white">
+            <div className="mt-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
               <h4 className="font-bold text-lg mb-4 text-center">🚀 Évolution des Fonctions de Somme</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm text-center">
-                  <div className="text-2xl font-bold mb-2">SOMME</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">SOMME</div>
                   <p className="text-sm opacity-90">Somme simple sans condition</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm text-center">
-                  <div className="text-2xl font-bold mb-2">SOMME.SI</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">SOMME.SI</div>
                   <p className="text-sm opacity-90">1 critère</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm text-center">
-                  <div className="text-2xl font-bold mb-2">SOMME.SI.ENS</div>
+                  <div className="text-base md:text-2xl font-bold mb-2">SOMME.SI.ENS</div>
                   <p className="text-sm opacity-90">Multi-critères</p>
                 </div>
               </div>
@@ -170,10 +170,10 @@ export default function Lecon29({ onResult }) {
       {/* SOMME.SI */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-blue-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('somme_si')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Filter className="w-6 h-6 text-blue-600" />
             </div>
@@ -186,7 +186,7 @@ export default function Lecon29({ onResult }) {
         </button>
         
         {expandedSections.somme_si && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Maîtriser la Somme avec un Seul Critère</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -338,10 +338,10 @@ export default function Lecon29({ onResult }) {
       {/* SOMME.SI.ENS */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-purple-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-indigo-50 text-left hover:from-purple-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-purple-50 to-indigo-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('somme_si_ens')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Layers className="w-6 h-6 text-purple-600" />
             </div>
@@ -354,7 +354,7 @@ export default function Lecon29({ onResult }) {
         </button>
         
         {expandedSections.somme_si_ens && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Maîtriser les Sommes avec Critères Multiples</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -507,10 +507,10 @@ export default function Lecon29({ onResult }) {
       {/* SOMMEPROD */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-orange-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('sommeprod')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <Grid3X3 className="w-6 h-6 text-orange-600" />
             </div>
@@ -523,7 +523,7 @@ export default function Lecon29({ onResult }) {
         </button>
         
         {expandedSections.sommeprod && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Au-Delà des Sommes : Multiplications et Conditions Combinées</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -678,10 +678,10 @@ export default function Lecon29({ onResult }) {
       {/* Cas Pratique Complet */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-rose-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-rose-50 to-pink-50 text-left hover:from-rose-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-rose-50 to-pink-50 text-left hover:from-rose-100 transition-all"
           onClick={() => toggleSection('cas_pratique')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-rose-100 p-3 rounded-xl">
               <Target className="w-6 h-6 text-rose-600" />
             </div>
@@ -694,7 +694,7 @@ export default function Lecon29({ onResult }) {
         </button>
         
         {expandedSections.cas_pratique && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6">🎯 Mission : Tableau de Bord des Ventes</h3>
               
@@ -709,7 +709,7 @@ export default function Lecon29({ onResult }) {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-blue-200">
                       <Target className="w-5 h-5 text-blue-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Questions Business</p>
@@ -717,7 +717,7 @@ export default function Lecon29({ onResult }) {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-green-200">
                       <Zap className="w-5 h-5 text-green-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Solutions</p>
@@ -739,7 +739,7 @@ export default function Lecon29({ onResult }) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl border-2 border-purple-100">
+                <div className="bg-white px-4 py-4 md:p-6 md:rounded-lg rounded-none rounded-xl border-2 border-purple-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📝 Solutions Implémentées</h4>
                   
                   <div className="space-y-4">
@@ -769,7 +769,7 @@ export default function Lecon29({ onResult }) {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl border-2 border-green-100">
+                <div className="bg-white px-4 py-4 md:p-6 md:rounded-lg rounded-none rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
                     <a href="/cours/intermediaire/lecon29/cas-pratique-ventes.zip" 
@@ -787,7 +787,7 @@ export default function Lecon29({ onResult }) {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-rose-50 to-pink-50 border-2 border-rose-200 rounded-2xl p-6">
+              <div className="bg-gradient-to-br from-rose-50 to-pink-50 border-2 border-rose-200 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <h4 className="font-semibold text-gray-800 mb-4">🏆 Insights Obtenus</h4>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 p-3 bg-white rounded-lg">
@@ -824,7 +824,7 @@ export default function Lecon29({ onResult }) {
               <div className="bg-gray-800 p-4 text-white text-center">
                 <h4 className="font-bold text-lg">Ce Que Vous Maîtrisez Maintenant</h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="text-center">
                   <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
                     <Filter className="w-6 h-6 text-blue-600" />

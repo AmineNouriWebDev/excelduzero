@@ -8,7 +8,7 @@ export default function Lecon2({ onResult }) {
 
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
+    <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-4 flex items-center gap-3">
@@ -22,7 +22,7 @@ export default function Lecon2({ onResult }) {
 
       {/* Introduction */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <LayoutGrid className="text-blue-600" />
           Introduction à la gestion des feuilles
         </h2>
@@ -48,7 +48,7 @@ export default function Lecon2({ onResult }) {
 
       {/* Structure du classeur */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Grid3X3 className="text-green-600" />
           Structure du classeur Excel
         </h2>
@@ -84,14 +84,14 @@ export default function Lecon2({ onResult }) {
 
       {/* Gestion des feuilles */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <FileEdit className="text-purple-600" />
           Opérations de base sur les feuilles
         </h2>
 
         {/* Ajouter des feuilles */}
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
             <FilePlus className="text-green-600" />
             Ajouter des feuilles
           </h3>
@@ -137,7 +137,7 @@ export default function Lecon2({ onResult }) {
 
         {/* Supprimer des feuilles */}
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
             <FileMinus className="text-red-600" />
             Supprimer des feuilles
           </h3>
@@ -180,7 +180,7 @@ export default function Lecon2({ onResult }) {
 
         {/* Renommer des feuilles */}
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
             <FileEdit className="text-blue-600" />
             Renommer des feuilles
           </h3>
@@ -226,7 +226,7 @@ export default function Lecon2({ onResult }) {
 
         {/* Déplacer des feuilles */}
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
             <ArrowRight className="text-orange-600" />
             Déplacer des feuilles
           </h3>
@@ -270,7 +270,7 @@ export default function Lecon2({ onResult }) {
 
         {/* Copier des feuilles */}
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
             <Copy className="text-purple-600" />
             Copier des feuilles
           </h3>
@@ -311,7 +311,7 @@ export default function Lecon2({ onResult }) {
 
       {/* Personnalisation des onglets */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Palette className="text-pink-600" />
           Personnalisation des onglets
         </h2>
@@ -357,7 +357,7 @@ export default function Lecon2({ onResult }) {
 
       {/* Gestion des groupes de feuilles */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Layers className="text-green-600" />
           Groupes de feuilles
         </h2>
@@ -370,7 +370,7 @@ export default function Lecon2({ onResult }) {
         </div>
 
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4">
+          <h3 className="text-base md:text-2xl font-semibold text-gray-700 mb-4">
             Créer un groupe de feuilles
           </h3>
 
@@ -414,7 +414,7 @@ export default function Lecon2({ onResult }) {
         </div>
 
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4">
+          <h3 className="text-base md:text-2xl font-semibold text-gray-700 mb-4">
             Utiliser les groupes de feuilles
           </h3>
 
@@ -441,7 +441,7 @@ export default function Lecon2({ onResult }) {
 
       {/* Navigation avancée */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <ArrowRight className="text-blue-600" />
           Navigation avancée
         </h2>
@@ -503,7 +503,7 @@ export default function Lecon2({ onResult }) {
 
       {/* Exercice pratique */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold text-purple-700 mb-4 flex items-center gap-2">
+        <h2 className="text-base md:text-2xl font-bold text-purple-700 mb-4 flex items-center gap-2">
           <FileSpreadsheet className="text-purple-600" />
           Exercice pratique : Organisation d'un classeur
         </h2>

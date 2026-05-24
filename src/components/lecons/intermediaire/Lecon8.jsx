@@ -26,7 +26,7 @@ import {
 export default function Lecon8({ onResult }) {
   return (
     <div className="max-w-6xl mx-auto p-1 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Layers className="w-8 h-8 text-indigo-600" />
         Leçon 8 - CONSOLIDATION DE DONNÉES : Fusionnez vos rapports en un seul
       </h2>
@@ -37,7 +37,7 @@ export default function Lecon8({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -70,13 +70,13 @@ export default function Lecon8({ onResult }) {
       </div>
       
       {/* SECTION QU'EST-CE QUE LA CONSOLIDATION */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Lightbulb className="w-6 h-6 text-indigo-600" />
         Qu'est-ce que la Consolidation de Données ?
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700 mb-4">
             La consolidation est un outil qui agrège les données d'une ou plusieurs plages (appelées **références**) dans une feuille de calcul unique de destination. L'agrégation s'effectue à l'aide d'une fonction de synthèse, la plus courante étant la **SOMME** .
           </p>
@@ -107,7 +107,7 @@ export default function Lecon8({ onResult }) {
       </div>
       
       {/* SECTION PRÉPARATION ET MÉTHODES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Settings className="w-6 h-6 text-orange-600" />
         1. Préparation et choix de la méthode
       </h3>
@@ -125,7 +125,7 @@ export default function Lecon8({ onResult }) {
         </h4>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
               <AlignLeft className="w-5 h-5 text-blue-600" />
               Consolidation par **Position**
@@ -138,7 +138,7 @@ export default function Lecon8({ onResult }) {
             </div>
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
               <Columns className="w-5 h-5 text-blue-600" />
               Consolidation par **Catégorie** (Étiquettes)
@@ -164,7 +164,7 @@ export default function Lecon8({ onResult }) {
       </div>
       
       {/* SECTION ÉTAPES DE CONSOLIDATION */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Zap className="w-6 h-6 text-green-600" />
         2. Les étapes de la consolidation
       </h3>
@@ -176,7 +176,7 @@ export default function Lecon8({ onResult }) {
           </p>
         </div>
         
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <ol className="space-y-4 list-decimal list-inside text-gray-700">
             <li className="font-semibold">
               <span className="font-normal">Sélectionnez la cellule de destination</span>
@@ -225,7 +225,7 @@ export default function Lecon8({ onResult }) {
       </div>
       
       {/* SECTION LIENS ET PLAN */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Link className="w-6 h-6 text-purple-600" />
         3. Options avancées : Liens et Plan
       </h3>
@@ -237,7 +237,7 @@ export default function Lecon8({ onResult }) {
           </p>
         </div>
         
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Link className="w-5 h-5 text-purple-600" />
             Lier aux données source
@@ -271,13 +271,13 @@ export default function Lecon8({ onResult }) {
       </div>
 
       {/* SECTION CONSOLIDATION ET TCD (DIFFÉRENCE) */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Calculator className="w-6 h-6 text-yellow-600" />
         4. Consolidation vs. TCD : Quand utiliser quoi ?
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
@@ -317,7 +317,7 @@ export default function Lecon8({ onResult }) {
       </div>
 
       {/* EXERCICE PRATIQUE */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <BookOpen className="w-6 h-6 text-indigo-600" />
         EXERCICE PRATIQUE : CONSOLIDATION DE BUDGETS
       </h3>
@@ -329,7 +329,7 @@ export default function Lecon8({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-indigo-600" />
             Fichier d'exercice
@@ -344,7 +344,7 @@ export default function Lecon8({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-indigo-600" />
             Correction vidéo
@@ -359,14 +359,14 @@ export default function Lecon8({ onResult }) {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+      <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
+        <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
           <Calculator className="w-6 h-6 text-indigo-600" />
           Consignes de l'exercice
         </h3>
 
         <div className="space-y-6">
-          <div className="bg-green-50 border border-green-200 rounded-lg p-5">
+          <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <Layers className="w-5 h-5 text-green-600" />
               Tâche : Consolidation par Catégorie avec Liens

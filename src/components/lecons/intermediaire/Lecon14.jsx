@@ -56,7 +56,7 @@ export default function Lecon14({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé moderne */}
-    <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+    <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-500 rounded-2xl p-6 md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
   <div className="absolute inset-0 bg-black/10"></div>
   <div className="relative z-10">
     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -65,7 +65,7 @@ export default function Lecon14({ onResult }) {
           <Tag className="w-6 h-6 md:w-8 md:h-8" />
         </div>
         <div className="flex-1 min-w-0">
-          <h1 className="text-2xl md:text-4xl font-bold break-words">Maîtrise des Noms de Plages</h1>
+          <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Maîtrise des Noms de Plages</h1>
           <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Formules lisibles, Références stables et Automatisation avancée</p>
         </div>
       </div>
@@ -96,7 +96,7 @@ export default function Lecon14({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Tag className="w-6 h-6 text-blue-600" />
             </div>
@@ -109,7 +109,7 @@ export default function Lecon14({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
@@ -123,7 +123,7 @@ export default function Lecon14({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Clarté et lisibilité des formules</h4>
@@ -131,7 +131,7 @@ export default function Lecon14({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Maintenance facilitée</h4>
@@ -139,7 +139,7 @@ export default function Lecon14({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Navigation ultra-rapide</h4>
@@ -226,7 +226,7 @@ export default function Lecon14({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('creation')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <Bookmark className="w-6 h-6 text-green-600" />
             </div>
@@ -239,7 +239,7 @@ export default function Lecon14({ onResult }) {
         </button>
         
         {expandedSections.creation && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Cpu className="w-6 h-6 text-green-600" />
@@ -254,7 +254,7 @@ export default function Lecon14({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Étapes :</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li>Sélectionnez la plage de cellules</li>
@@ -300,7 +300,7 @@ export default function Lecon14({ onResult }) {
                     Excel peut créer automatiquement plusieurs plages nommées en une seule opération en utilisant les étiquettes de votre tableau comme noms.
                   </p>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Étapes :</h5>
                     <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                       <li>Sélectionnez votre tableau complet avec les en-têtes</li>
@@ -310,7 +310,7 @@ export default function Lecon14({ onResult }) {
                     </ol>
                   </div>
                   
-                  <div className="mt-4 p-4 bg-white rounded-lg border-2 border-purple-200">
+                  <div className="mt-4 px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Résultat :</h5>
                     <p className="text-sm text-gray-600">
                       Si votre tableau a des en-têtes "Ventes", "Coûts" et "Bénéfices" en ligne du haut, 
@@ -328,7 +328,7 @@ export default function Lecon14({ onResult }) {
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Accès et fonctionnalités :</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -371,7 +371,7 @@ export default function Lecon14({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('utilisation')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Navigation className="w-6 h-6 text-purple-600" />
             </div>
@@ -384,7 +384,7 @@ export default function Lecon14({ onResult }) {
         </button>
         
         {expandedSections.utilisation && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Code className="w-6 h-6 text-purple-600" />
@@ -400,7 +400,7 @@ export default function Lecon14({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Exemple : Calcul de bénéfice</h5>
                       <div className="space-y-2">
                         <div>
@@ -449,7 +449,7 @@ export default function Lecon14({ onResult }) {
                   des données, éliminant ainsi les mises à jour manuelles.
                 </p>
                 
-                <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Formule DECALER() dynamique</h5>
                   <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                     =DECALER($B$1;0;0;NBVAL($B:$B);1)
@@ -488,7 +488,7 @@ export default function Lecon14({ onResult }) {
                 />
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Application : Listes dépendantes avancées</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                       =INDIRECT($B$1)
@@ -513,7 +513,7 @@ export default function Lecon14({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-red-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('bonnes_pratiques')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <Settings className="w-6 h-6 text-orange-600" />
             </div>
@@ -526,7 +526,7 @@ export default function Lecon14({ onResult }) {
         </button>
         
         {expandedSections.bonnes_pratiques && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Database className="w-6 h-6 text-orange-600" />
@@ -542,7 +542,7 @@ export default function Lecon14({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <div className="flex items-center gap-3 mb-2">
                         <CheckCircle className="w-5 h-5 text-green-500" />
                         <span className="font-semibold text-gray-800">Plage de Classeur (Globale)</span>
@@ -556,7 +556,7 @@ export default function Lecon14({ onResult }) {
                       </code>
                     </div>
                     
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <div className="flex items-center gap-3 mb-2">
                         <CheckCircle className="w-5 h-5 text-blue-500" />
                         <span className="font-semibold text-gray-800">Plage de Feuille (Spécifique)</span>
@@ -602,7 +602,7 @@ export default function Lecon14({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Règles essentielles :</h5>
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li className="flex items-start gap-2">
@@ -624,7 +624,7 @@ export default function Lecon14({ onResult }) {
                     </ul>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Exemples de bonnes pratiques :</h5>
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       <div>
@@ -652,7 +652,7 @@ export default function Lecon14({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-yellow-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-yellow-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Utilisation du Gestionnaire de noms</h5>
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li className="flex items-start gap-2">
@@ -693,7 +693,7 @@ export default function Lecon14({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-teal-50 to-green-50 text-left hover:from-teal-100 transition-all"
           onClick={() => toggleSection('integration')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-teal-100 p-3 rounded-xl">
               <BarChart3 className="w-6 h-6 text-teal-600" />
             </div>
@@ -706,7 +706,7 @@ export default function Lecon14({ onResult }) {
         </button>
         
         {expandedSections.integration && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <GitBranch className="w-6 h-6 text-teal-600" />
@@ -722,7 +722,7 @@ export default function Lecon14({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-teal-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-teal-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Configuration :</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li>Créez une plage nommée dynamique avec <code className="bg-gray-100 px-1 rounded">=DECALER(Ventes!$A$1;0;0;NBVAL(Ventes!$A:$A);5)</code>  
@@ -767,7 +767,7 @@ export default function Lecon14({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('exercice')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <Crosshair className="w-6 h-6 text-amber-600" />
             </div>
@@ -780,7 +780,7 @@ export default function Lecon14({ onResult }) {
         </button>
         
         {expandedSections.exercice && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Database className="w-6 h-6 text-amber-600" />
@@ -797,7 +797,7 @@ export default function Lecon14({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-green-200">
                       <Clock className="w-5 h-5 text-green-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Durée estimée</p>
@@ -805,7 +805,7 @@ export default function Lecon14({ onResult }) {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-blue-200">
                       <Zap className="w-5 h-5 text-blue-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Niveau de difficulté</p>
@@ -813,7 +813,7 @@ export default function Lecon14({ onResult }) {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-purple-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-purple-200">
                       <Tag className="w-5 h-5 text-purple-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Concepts appliqués</p>
@@ -941,22 +941,22 @@ export default function Lecon14({ onResult }) {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div className="bg-white p-4 rounded-xl border-2 border-blue-100">
-                  <p className="text-2xl font-bold text-blue-600">-60%</p>
+                  <p className="text-base md:text-2xl font-bold text-blue-600">-60%</p>
                   <p className="text-sm text-gray-600">Temps de modification des formules</p>
                 </div>
                 <div className="bg-white p-4 rounded-xl border-2 border-green-100">
-                  <p className="text-2xl font-bold text-green-600">+80%</p>
+                  <p className="text-base md:text-2xl font-bold text-green-600">+80%</p>
                   <p className="text-sm text-gray-600">Lisibilité des formules</p>
                 </div>
                 <div className="bg-white p-4 rounded-xl border-2 border-purple-100">
-                  <p className="text-2xl font-bold text-purple-600">-90%</p>
+                  <p className="text-base md:text-2xl font-bold text-purple-600">-90%</p>
                   <p className="text-sm text-gray-600">Erreurs de référence</p>
                 </div>
               </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+              <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
                 <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Download className="w-5 h-5 text-amber-600" />
                   Fichier d'Exercice
@@ -971,7 +971,7 @@ export default function Lecon14({ onResult }) {
                 </a>
               </div>
 
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+              <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
                 <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Video className="w-5 h-5 text-indigo-600" />
                   Correction Détaillée

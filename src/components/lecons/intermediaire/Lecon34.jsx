@@ -53,7 +53,7 @@ export default function Lecon34({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête spécial TP avec dégradé ORANGE/VIOLET */}
-      <div className="bg-gradient-to-r from-orange-500 via-amber-600 to-purple-600 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+      <div className="bg-gradient-to-r from-orange-500 via-amber-600 to-purple-600 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -66,7 +66,7 @@ export default function Lecon34({ onResult }) {
                   <Puzzle className="w-4 h-4" />
                   <span>TRAVAUX PRATIQUES - SYNTHÈSE INTERMÉDIAIRE</span>
                 </div>
-                <h1 className="text-2xl md:text-4xl font-bold break-words">Création d'un Tableau de Bord Interactif</h1>
+                <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Création d'un Tableau de Bord Interactif</h1>
                 <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Mettez en pratique toutes vos compétences acquises</p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function Lecon34({ onResult }) {
       </div>
 
       {/* Barre de progression des étapes */}
-      <div className="bg-white border-2 border-orange-200 rounded-2xl p-6 mb-8">
+      <div className="bg-white border-2 border-orange-200 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
           <Play className="w-5 h-5 text-orange-500" />
           Parcours du TP
@@ -133,10 +133,10 @@ export default function Lecon34({ onResult }) {
       {/* Présentation du TP */}
       <div className="border-2 border-orange-200 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-orange-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('presentation')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <Target className="w-6 h-6 text-orange-600" />
             </div>
@@ -149,10 +149,10 @@ export default function Lecon34({ onResult }) {
         </button>
         
         {expandedSections.presentation && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl border-2 border-orange-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-orange-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h3 className="text-xl font-semibold text-gray-800 mb-4">🎯 Objectif Final</h3>
                   <p className="text-gray-700 text-lg mb-4">
                     Créer un <strong>tableau de bord de vente interactif</strong> qui permet de suivre les performances commerciales avec des filtres dynamiques, des graphiques interactifs et des indicateurs clés en temps réel.
@@ -160,25 +160,25 @@ export default function Lecon34({ onResult }) {
                   
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-3 bg-orange-50 rounded-lg">
-                      <div className="text-2xl">📊</div>
+                      <div className="text-base md:text-2xl">📊</div>
                       <p className="text-sm font-semibold">4 Graphiques</p>
                     </div>
                     <div className="text-center p-3 bg-purple-50 rounded-lg">
-                      <div className="text-2xl">🎛️</div>
+                      <div className="text-base md:text-2xl">🎛️</div>
                       <p className="text-sm font-semibold">3 Contrôles</p>
                     </div>
                     <div className="text-center p-3 bg-blue-50 rounded-lg">
-                      <div className="text-2xl">📈</div>
+                      <div className="text-base md:text-2xl">📈</div>
                       <p className="text-sm font-semibold">6 KPI</p>
                     </div>
                     <div className="text-center p-3 bg-green-50 rounded-lg">
-                      <div className="text-2xl">⚡</div>
+                      <div className="text-base md:text-2xl">⚡</div>
                       <p className="text-sm font-semibold">Temps Réel</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-purple-500 to-orange-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-purple-500 to-orange-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">🏆 Ce que vous allez accomplir</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
@@ -208,7 +208,7 @@ export default function Lecon34({ onResult }) {
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
                 
-                <div className="bg-white rounded-2xl border-2 border-blue-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-blue-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
                     <Download className="w-5 h-5 text-blue-500" />
                     Ressources du TP
@@ -248,10 +248,10 @@ export default function Lecon34({ onResult }) {
       {/* Objectifs pédagogiques */}
       <div className="border-2 border-purple-200 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-purple-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-violet-50 text-left hover:from-purple-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-purple-50 to-violet-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('objectifs')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Lightbulb className="w-6 h-6 text-purple-600" />
             </div>
@@ -264,12 +264,12 @@ export default function Lecon34({ onResult }) {
         </button>
         
         {expandedSections.objectifs && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Toutes les fonctionnalités intermédiaires en pratique</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Logique conditionnelle */}
-              <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-green-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-green-100 p-2 rounded-lg">
                     <Zap className="w-5 h-5 text-green-600" />
@@ -293,7 +293,7 @@ export default function Lecon34({ onResult }) {
               </div>
 
               {/* Recherche & Références */}
-              <div className="bg-white rounded-2xl border-2 border-blue-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-blue-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-blue-100 p-2 rounded-lg">
                     <FileText className="w-5 h-5 text-blue-600" />
@@ -317,7 +317,7 @@ export default function Lecon34({ onResult }) {
               </div>
 
               {/* Tableaux & Analyse */}
-              <div className="bg-white rounded-2xl border-2 border-purple-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-purple-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-purple-100 p-2 rounded-lg">
                     <BarChart3 className="w-5 h-5 text-purple-600" />
@@ -341,7 +341,7 @@ export default function Lecon34({ onResult }) {
               </div>
 
               {/* Graphiques & Visuel */}
-              <div className="bg-white rounded-2xl border-2 border-orange-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-orange-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-orange-100 p-2 rounded-lg">
                     <Settings className="w-5 h-5 text-orange-600" />
@@ -365,7 +365,7 @@ export default function Lecon34({ onResult }) {
               </div>
 
               {/* Contrôles & Interactivité */}
-              <div className="bg-white rounded-2xl border-2 border-red-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-red-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-red-100 p-2 rounded-lg">
                     <Users className="w-5 h-5 text-red-600" />
@@ -389,7 +389,7 @@ export default function Lecon34({ onResult }) {
               </div>
 
               {/* Autres Fonctions */}
-              <div className="bg-white rounded-2xl border-2 border-amber-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-amber-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-amber-100 p-2 rounded-lg">
                     <Zap className="w-5 h-5 text-amber-600" />
@@ -419,10 +419,10 @@ export default function Lecon34({ onResult }) {
       {/* Étape 1: Préparation des données */}
       <div className="border-2 border-blue-200 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-blue-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('etape1')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <div className="w-6 h-6 text-blue-600 font-bold">1</div>
             </div>
@@ -435,10 +435,10 @@ export default function Lecon34({ onResult }) {
         </button>
         
         {expandedSections.etape1 && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl border-2 border-blue-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-blue-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">📊 Structuration de la Base de Données</h3>
                   
                   <div className="space-y-4">
@@ -477,7 +477,7 @@ export default function Lecon34({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">💡 Bonnes Pratiques</h4>
                   <div className="space-y-2 text-sm">
                     <p>✅ Utilisez des noms de plages pour les zones importantes</p>
@@ -494,7 +494,7 @@ export default function Lecon34({ onResult }) {
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
                 
-                <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-green-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">🔍 Vérifications à Effectuer</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
@@ -520,10 +520,10 @@ export default function Lecon34({ onResult }) {
       {/* Étape 2: Structure du tableau de bord */}
       <div className="border-2 border-green-200 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-green-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('etape2')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <div className="w-6 h-6 text-green-600 font-bold">2</div>
             </div>
@@ -536,10 +536,10 @@ export default function Lecon34({ onResult }) {
         </button>
         
         {expandedSections.etape2 && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-green-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">📈 Calcul des Indicateurs Clés</h3>
                   
                   <div className="space-y-4">
@@ -566,7 +566,7 @@ export default function Lecon34({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">🎯 KPI à Implémenter</h4>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>• CA Total</div>
@@ -586,7 +586,7 @@ export default function Lecon34({ onResult }) {
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
                 
-                <div className="bg-white rounded-2xl border-2 border-blue-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-blue-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">⚡ Techniques Avancées</h4>
                   <div className="space-y-3">
                     <div className="p-3 bg-blue-50 rounded-lg">
@@ -608,10 +608,10 @@ export default function Lecon34({ onResult }) {
       {/* Étape 3: Création des graphiques */}
       <div className="border-2 border-purple-200 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-purple-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-violet-50 text-left hover:from-purple-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-purple-50 to-violet-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('etape3')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <div className="w-6 h-6 text-purple-600 font-bold">3</div>
             </div>
@@ -624,10 +624,10 @@ export default function Lecon34({ onResult }) {
         </button>
         
         {expandedSections.etape3 && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl border-2 border-purple-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-purple-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">📊 Graphiques à Créer</h3>
                   
                   <div className="space-y-4">
@@ -653,7 +653,7 @@ export default function Lecon34({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">🎨 Personnalisation Avancée</h4>
                   <div className="space-y-2 text-sm">
                     <p>• Utilisez une palette de couleurs cohérente</p>
@@ -671,7 +671,7 @@ export default function Lecon34({ onResult }) {
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
                 
-                <div className="bg-white rounded-2xl border-2 border-orange-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-orange-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">🔗 Données Dynamiques</h4>
                   <div className="space-y-3">
                     <p className="text-sm text-gray-600">
@@ -691,10 +691,10 @@ export default function Lecon34({ onResult }) {
       {/* Étape 4: Interactivité et contrôles */}
       <div className="border-2 border-orange-200 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-orange-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('etape4')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <div className="w-6 h-6 text-orange-600 font-bold">4</div>
             </div>
@@ -707,10 +707,10 @@ export default function Lecon34({ onResult }) {
         </button>
         
         {expandedSections.etape4 && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl border-2 border-orange-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-orange-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">🎛️ Contrôles de Formulaire</h3>
                   
                   <div className="space-y-4">
@@ -731,7 +731,7 @@ export default function Lecon34({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">⚡ Automatisation</h4>
                   <div className="space-y-2 text-sm">
                     <p>• Configurez les liens de cellules pour chaque contrôle</p>
@@ -749,7 +749,7 @@ export default function Lecon34({ onResult }) {
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
                 
-                <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-green-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">✅ Checklist de Finalisation</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
@@ -779,10 +779,10 @@ export default function Lecon34({ onResult }) {
       {/* Section Finalisation */}
       <div className="border-2 border-gray-200 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-gray-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-gray-50 to-blue-50 text-left hover:from-gray-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-gray-50 to-blue-50 text-left hover:from-gray-100 transition-all"
           onClick={() => toggleSection('finalisation')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Trophy className="w-6 h-6 text-blue-600" />
             </div>
@@ -795,10 +795,10 @@ export default function Lecon34({ onResult }) {
         </button>
         
         {expandedSections.finalisation && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-green-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">🎉 Félicitations !</h3>
                   <p className="text-gray-700 mb-4">
                     Vous venez de créer un tableau de bord interactif professionnel qui combine toutes les compétences du niveau intermédiaire. Ce projet démontre votre maîtrise d'Excel pour l'analyse de données et la création de rapports dynamiques.
@@ -817,7 +817,7 @@ export default function Lecon34({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl border-2 border-purple-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-purple-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">🚀 Pour Aller Plus Loin</h4>
                   <div className="space-y-3">
                     <div className="p-3 bg-purple-50 rounded-lg">
@@ -837,7 +837,7 @@ export default function Lecon34({ onResult }) {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-6 text-white">
+                <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
                   <h4 className="font-bold text-lg mb-4">📋 Prochain Défi: Niveau Avancé</h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
@@ -859,7 +859,7 @@ export default function Lecon34({ onResult }) {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl border-2 border-orange-200 p-6">
+                <div className="bg-white rounded-2xl border-2 border-orange-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-4">💾 Sauvegardez Votre Projet</h4>
                   <div className="space-y-3">
                     <a href="/cours/intermediaire/lecon34/modele-final.xlsx" 
@@ -888,10 +888,10 @@ export default function Lecon34({ onResult }) {
         <QuizLecon34 onResult={onResult} />
       </div>
       {/* Section de félicitations */}
-<div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-2xl p-8 text-center text-white mb-8">
+<div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-2xl px-4 py-6 md:p-8 md:rounded-xl rounded-none text-center text-white mb-8">
   <div className="max-w-2xl mx-auto">
     <Trophy className="w-16 h-16 mx-auto mb-4 text-yellow-200" />
-    <h3 className="text-2xl md:text-3xl font-bold mb-4">Félicitations !</h3>
+    <h3 className="text-base md:text-2xl md:text-3xl font-bold mb-4">Félicitations !</h3>
     <p className="text-lg mb-6">
       Vous avez terminé toutes les leçons du niveau intermédiaire d'Excel. Vous maîtrisez désormais 
       les fonctionnalités avancées pour analyser et visualiser vos données comme un professionnel.

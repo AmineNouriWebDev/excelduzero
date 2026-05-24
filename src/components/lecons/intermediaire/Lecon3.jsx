@@ -22,7 +22,7 @@ import {
 export default function Lecon3({ onResult }) {
   return (
     <div className="max-w-6xl mx-auto p-1 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Shield className="w-8 h-8 text-blue-600" />
         Leçon 3 - Gestion des erreurs (#N/A, #VALUE!)
       </h2>
@@ -34,7 +34,7 @@ export default function Lecon3({ onResult }) {
       </div>
 
       {/* Section objectifs d'apprentissage */}
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">Dans cette leçon, vous apprendrez à :</p>
         <ul className="space-y-3">
           <li className="flex items-start gap-3">
@@ -57,7 +57,7 @@ export default function Lecon3({ onResult }) {
       </div>
 
       {/* Section 1: Erreur #N/A */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <AlertTriangle className="w-6 h-6 text-red-600" />
         1. ERREUR #N/A : VALEUR NON DISPONIBLE
       </h3>
@@ -77,7 +77,7 @@ export default function Lecon3({ onResult }) {
           style={{ maxHeight: 300 }}
         />
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Search className="w-5 h-5 text-red-600" />
             Causes principales de l'erreur #N/A
@@ -121,7 +121,7 @@ export default function Lecon3({ onResult }) {
       </div>
 
       {/* Section 2: Erreur #VALUE! */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <AlertTriangle className="w-6 h-6 text-orange-600" />
         2. ERREUR #VALUE! : TYPE DE DONNÉES INCORRECT
       </h3>
@@ -133,7 +133,7 @@ export default function Lecon3({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Calculator className="w-5 h-5 text-orange-600" />
             Scénarios courants pour #VALUE!
@@ -172,7 +172,7 @@ export default function Lecon3({ onResult }) {
       </div>
 
       {/* Section 3: Solutions avec SIERREUR et ESTNA */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Code className="w-6 h-6 text-teal-600" />
         3. SOLUTIONS : SIERREUR ET ESTNA
       </h3>
@@ -185,7 +185,7 @@ export default function Lecon3({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-teal-600" />
               SIERREUR - La solution universelle
@@ -208,7 +208,7 @@ export default function Lecon3({ onResult }) {
             </p>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-teal-600" />
               ESTNA - Pour un contrôle précis
@@ -233,7 +233,7 @@ export default function Lecon3({ onResult }) {
         </div>
 
         {/* Tableau comparatif */}
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Filter className="w-5 h-5 text-teal-600" />
             Comparaison : Quand utiliser quelle fonction?
@@ -276,7 +276,7 @@ export default function Lecon3({ onResult }) {
       </div>
 
       {/* Section 4: Bonnes pratiques et exercice */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Lightbulb className="w-6 h-6 text-purple-600" />
         4. BONNES PRATIQUES ET EXERCICE PRATIQUE
       </h3>
@@ -289,7 +289,7 @@ export default function Lecon3({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-purple-600" />
               Prévention des erreurs
@@ -314,7 +314,7 @@ export default function Lecon3({ onResult }) {
             </ul>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <XCircle className="w-5 h-5 text-purple-600" />
               Pièges à éviter
@@ -341,7 +341,7 @@ export default function Lecon3({ onResult }) {
         </div>
 
         {/* Exercice pratique */}
-        <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-indigo-600" />
             Exercice pratique : Créer un tableau de bord de gestion des stocks robuste

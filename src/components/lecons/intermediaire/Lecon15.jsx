@@ -60,7 +60,7 @@ export default function Lecon15({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé moderne - Nouvelle palette de couleurs */}
-     <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+     <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 rounded-2xl p-6 md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
   <div className="absolute inset-0 bg-black/10"></div>
   <div className="relative z-10">
     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -69,7 +69,7 @@ export default function Lecon15({ onResult }) {
           <GitCompare className="w-6 h-6 md:w-8 md:h-8" />
         </div>
         <div className="flex-1 min-w-0">
-          <h1 className="text-2xl md:text-4xl font-bold break-words">Analyse de Scénarios Excel</h1>
+          <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Analyse de Scénarios Excel</h1>
           <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Explorez l'avenir, Préparez vos décisions, Maîtrisez l'incertain</p>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function Lecon15({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <Sparkles className="w-6 h-6 text-amber-600" />
             </div>
@@ -112,7 +112,7 @@ export default function Lecon15({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
@@ -124,7 +124,7 @@ export default function Lecon15({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Évaluation de multiples possibilités</h4>
@@ -132,7 +132,7 @@ export default function Lecon15({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Optimisation des résultats</h4>
@@ -140,7 +140,7 @@ export default function Lecon15({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Visualisation d'impacts complexes</h4>
@@ -211,7 +211,7 @@ export default function Lecon15({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('scenario_manager')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Trello className="w-6 h-6 text-blue-600" />
             </div>
@@ -224,7 +224,7 @@ export default function Lecon15({ onResult }) {
         </button>
         
         {expandedSections.scenario_manager && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Users className="w-6 h-6 text-blue-600" />
@@ -239,7 +239,7 @@ export default function Lecon15({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Étapes de configuration :</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li>Identifiez les <strong>cellules variables</strong> qui changeront selon les scénarios</li>
@@ -285,7 +285,7 @@ export default function Lecon15({ onResult }) {
                     Le Gestionnaire de scénarios vous permet d'enregistrer différents jeux de valeurs pour les mêmes cellules variables et de basculer entre eux facilement .
                   </p>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Processus de création :</h5>
                     <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                       <li>Allez dans <strong>Données → Analyse de scénarios → Gestionnaire de scénarios</strong></li>
@@ -297,7 +297,7 @@ export default function Lecon15({ onResult }) {
                     </ol>
                   </div>
                   
-                  <div className="mt-4 p-4 bg-white rounded-lg border-2 border-purple-200">
+                  <div className="mt-4 px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Exemple concret :</h5>
                     <p className="text-sm text-gray-600">
                       Pour un budget, créez trois scénarios : <br/>
@@ -317,7 +317,7 @@ export default function Lecon15({ onResult }) {
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Création du rapport :</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -370,7 +370,7 @@ export default function Lecon15({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('goal_seek')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <Target className="w-6 h-6 text-green-600" />
             </div>
@@ -383,7 +383,7 @@ export default function Lecon15({ onResult }) {
         </button>
         
         {expandedSections.goal_seek && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Navigation className="w-6 h-6 text-green-600" />
@@ -398,7 +398,7 @@ export default function Lecon15({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Cas d'usage typiques :</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -449,7 +449,7 @@ export default function Lecon15({ onResult }) {
                   Supposons que vous vouliez emprunter 200 000€ sur 20 ans et que vous ne pouvez pas payer plus de 1 100€ par mois. Quel taux d'intérêt pouvez-vous vous permettre ?
                 </p>
                 
-                <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Configuration :</h5>
                   <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                     <li>Créez votre modèle avec les cellules : <br/>
@@ -523,7 +523,7 @@ export default function Lecon15({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('data_tables')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Table className="w-6 h-6 text-purple-600" />
             </div>
@@ -536,7 +536,7 @@ export default function Lecon15({ onResult }) {
         </button>
         
         {expandedSections.data_tables && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Database className="w-6 h-6 text-purple-600" />
@@ -551,7 +551,7 @@ export default function Lecon15({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Mise en place :</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li>Listez les valeurs à tester dans une colonne</li>
@@ -599,7 +599,7 @@ export default function Lecon15({ onResult }) {
                     Analysez l'impact combiné de deux variables différentes sur un seul résultat. Idéal pour comprendre les interactions complexes  .
                   </p>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Configuration :</h5>
                     <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                       <li>Placez les valeurs de la première variable dans une colonne</li>
@@ -612,7 +612,7 @@ export default function Lecon15({ onResult }) {
                     </ol>
                   </div>
                   
-                  <div className="mt-4 p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="mt-4 px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Application marketing :</h5>
                     <p className="text-sm text-gray-600">
                       Analysez comment différentes combinaisons de <strong>prix</strong> (ligne) et de <strong>budgets publicitaires</strong> (colonne) affectent votre profit. Vous verrez immédiatement la combinaison optimale.
@@ -626,7 +626,7 @@ export default function Lecon15({ onResult }) {
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-2">✅ Points forts :</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -650,7 +650,7 @@ export default function Lecon15({ onResult }) {
                   </div>
                   
                   <div>
-                    <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                       <h5 className="font-semibold text-gray-800 mb-2">❌ Limitations :</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -685,7 +685,7 @@ export default function Lecon15({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-red-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('bonnes_pratiques')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <Settings className="w-6 h-6 text-orange-600" />
             </div>
@@ -698,7 +698,7 @@ export default function Lecon15({ onResult }) {
         </button>
         
         {expandedSections.bonnes_pratiques && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Cpu className="w-6 h-6 text-orange-600" />
@@ -713,7 +713,7 @@ export default function Lecon15({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Processus recommandé :</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li><strong>Exploration large</strong> : Utilisez les Tables de Données pour identifier les plages de valeurs intéressantes</li>
@@ -753,7 +753,7 @@ export default function Lecon15({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">❌ Erreurs à éviter :</h5>
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li className="flex items-start gap-2">
@@ -775,7 +775,7 @@ export default function Lecon15({ onResult }) {
                     </ul>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">✅ Bonnes pratiques :</h5>
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li className="flex items-start gap-2">
@@ -806,7 +806,7 @@ export default function Lecon15({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Quand utiliser le Solveur ?</h5>
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li className="flex items-start gap-2">
@@ -847,7 +847,7 @@ export default function Lecon15({ onResult }) {
     className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-red-50 to-pink-50 text-left hover:from-red-100 transition-all"
     onClick={() => toggleSection('exercice')}
   >
-    <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+    <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
       <div className="bg-red-100 p-3 rounded-xl">
         <Crosshair className="w-6 h-6 text-red-600" />
       </div>
@@ -860,7 +860,7 @@ export default function Lecon15({ onResult }) {
   </button>
   
   {expandedSections.exercice && (
-    <div className="p-8">
+    <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
       <div className="mb-8">
         <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
           <BarChart3 className="w-6 h-6 text-red-600" />
@@ -875,7 +875,7 @@ export default function Lecon15({ onResult }) {
             </p>
             
             <div className="space-y-4">
-              <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+              <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-green-200">
                 <Clock className="w-5 h-5 text-green-600" />
                 <div>
                   <p className="font-semibold text-gray-800">Durée estimée</p>
@@ -883,7 +883,7 @@ export default function Lecon15({ onResult }) {
                 </div>
               </div>
               
-              <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+              <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-blue-200">
                 <Zap className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-semibold text-gray-800">Niveau de difficulté</p>
@@ -891,7 +891,7 @@ export default function Lecon15({ onResult }) {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-purple-200">
+              <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-purple-200">
                 <Tag className="w-5 h-5 text-purple-600" />
                 <div>
                   <p className="font-semibold text-gray-800">Outils utilisés</p>
@@ -1060,7 +1060,7 @@ export default function Lecon15({ onResult }) {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+        <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
           <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Download className="w-5 h-5 text-red-600" />
             Fichier d'Exercice
@@ -1075,7 +1075,7 @@ export default function Lecon15({ onResult }) {
           </a>
         </div>
 
-        <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+        <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
           <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Video className="w-5 h-5 text-purple-600" />
             Guide de Résolution

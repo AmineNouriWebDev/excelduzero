@@ -34,8 +34,8 @@ export default function Lecon11({ onResult }) {
 
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+    <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Printer className="w-8 h-8 text-blue-600" />
         Leçon 11 - MISE EN PAGE ET IMPRESSION
       </h2>
@@ -49,7 +49,7 @@ export default function Lecon11({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -81,7 +81,7 @@ export default function Lecon11({ onResult }) {
         </ul>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Eye className="w-6 h-6 text-purple-600" />
         1. PRÉVISUALISATION ET MODES D'AFFICHAGE
       </h3>
@@ -95,7 +95,7 @@ export default function Lecon11({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Layout className="w-5 h-5 text-purple-600" />
             Mode Mise en page
@@ -129,7 +129,7 @@ export default function Lecon11({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <ZoomIn className="w-5 h-5 text-purple-600" />
             Aperçu avant impression
@@ -180,7 +180,7 @@ export default function Lecon11({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Printer className="w-6 h-6 text-teal-600" />
         2. CONFIGURATION DE L'IMPRESSION
       </h3>
@@ -193,7 +193,7 @@ export default function Lecon11({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Scan className="w-5 h-5 text-teal-600" />
             Zone d'impression
@@ -227,7 +227,7 @@ export default function Lecon11({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Paperclip className="w-5 h-5 text-teal-600" />
             Paramètres d'impression
@@ -261,7 +261,7 @@ export default function Lecon11({ onResult }) {
           />
         </div>
 
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-6">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Settings className="w-5 h-5 text-blue-600" />
             Annulation d'impression
@@ -275,7 +275,7 @@ export default function Lecon11({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Layout className="w-6 h-6 text-indigo-600" />
         3. MISE EN PAGE AVANCÉE
       </h3>
@@ -289,7 +289,7 @@ export default function Lecon11({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <ArrowDownUp className="w-5 h-5 text-indigo-600" />
             Marges et orientation
@@ -323,7 +323,7 @@ export default function Lecon11({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Rows className="w-5 h-5 text-indigo-600" />
             Titres à imprimer
@@ -357,7 +357,7 @@ export default function Lecon11({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <ZoomIn className="w-5 h-5 text-indigo-600" />
             Mise à l'échelle
@@ -383,7 +383,7 @@ export default function Lecon11({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-green-50 border border-green-200 rounded-lg p-5 mb-6">
+        <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Columns className="w-5 h-5 text-green-600" />
             Options d'impression
@@ -409,7 +409,7 @@ export default function Lecon11({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <Target className="w-6 h-6 text-orange-600" />
         4. EXERCICE PRATIQUE
       </h3>
@@ -422,7 +422,7 @@ export default function Lecon11({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-orange-600" />
             Fichier d'exercice
@@ -437,7 +437,7 @@ export default function Lecon11({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />

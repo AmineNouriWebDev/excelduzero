@@ -58,7 +58,7 @@ export default function Lecon10({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé moderne */}
-     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-500 rounded-2xl p-6 md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
   <div className="absolute inset-0 bg-black/10"></div>
   <div className="relative z-10">
     {/* Conteneur principal avec disposition colonne sur mobile */}
@@ -69,7 +69,7 @@ export default function Lecon10({ onResult }) {
           <LineChart className="w-6 h-6 md:w-8 md:h-8" />
         </div>
         <div className="flex-1 min-w-0"> {/* min-w-0 permet le truncate */}
-          <h1 className="text-2xl md:text-4xl font-bold break-words"> 
+          <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words"> 
             Graphiques Avancés
           </h1>
           <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">
@@ -108,7 +108,7 @@ export default function Lecon10({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Target className="w-6 h-6 text-blue-600" />
             </div>
@@ -121,7 +121,7 @@ export default function Lecon10({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
@@ -134,7 +134,7 @@ export default function Lecon10({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Graphiques combinés multi-types</h4>
@@ -142,7 +142,7 @@ export default function Lecon10({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Axes secondaires avancés</h4>
@@ -150,7 +150,7 @@ export default function Lecon10({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Courbes de tendance complexes</h4>
@@ -179,7 +179,7 @@ export default function Lecon10({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('courbes')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <TrendingUp className="w-6 h-6 text-purple-600" />
             </div>
@@ -192,7 +192,7 @@ export default function Lecon10({ onResult }) {
         </button>
         
         {expandedSections.courbes && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <LineChart className="w-6 h-6 text-purple-600" />
@@ -280,7 +280,7 @@ export default function Lecon10({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-red-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('combinés')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <Layers className="w-6 h-6 text-orange-600" />
             </div>
@@ -293,7 +293,7 @@ export default function Lecon10({ onResult }) {
         </button>
         
         {expandedSections.combinés && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <GitBranch className="w-6 h-6 text-orange-600" />
@@ -366,7 +366,7 @@ export default function Lecon10({ onResult }) {
               </h4>
               
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="text-center p-4 bg-white rounded-lg">
+                <div className="text-center px-4 py-3 md:p-4 bg-white rounded-lg">
                   <div className="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-2">
                     1
                   </div>
@@ -374,7 +374,7 @@ export default function Lecon10({ onResult }) {
                   <p className="text-xs text-gray-600">Avec toutes vos séries</p>
                 </div>
                 
-                <div className="text-center p-4 bg-white rounded-lg">
+                <div className="text-center px-4 py-3 md:p-4 bg-white rounded-lg">
                   <div className="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-2">
                     2
                   </div>
@@ -382,7 +382,7 @@ export default function Lecon10({ onResult }) {
                   <p className="text-xs text-gray-600">Sur la série à modifier</p>
                 </div>
                 
-                <div className="text-center p-4 bg-white rounded-lg">
+                <div className="text-center px-4 py-3 md:p-4 bg-white rounded-lg">
                   <div className="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-2">
                     3
                   </div>
@@ -390,7 +390,7 @@ export default function Lecon10({ onResult }) {
                   <p className="text-xs text-gray-600">Sélectionnez le type secondaire</p>
                 </div>
                 
-                <div className="text-center p-4 bg-white rounded-lg">
+                <div className="text-center px-4 py-3 md:p-4 bg-white rounded-lg">
                   <div className="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-2">
                     4
                   </div>
@@ -409,7 +409,7 @@ export default function Lecon10({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-teal-50 to-green-50 text-left hover:from-teal-100 transition-all"
           onClick={() => toggleSection('axes')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-teal-100 p-3 rounded-xl">
               <Settings className="w-6 h-6 text-teal-600" />
             </div>
@@ -422,7 +422,7 @@ export default function Lecon10({ onResult }) {
         </button>
         
         {expandedSections.axes && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Cpu className="w-6 h-6 text-teal-600" />
@@ -434,7 +434,7 @@ export default function Lecon10({ onResult }) {
                   <h4 className="font-semibold text-gray-800 mb-4">Quand utiliser un axe secondaire ?</h4>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <div className="flex items-center gap-3 mb-2">
                         <CheckCircle className="w-5 h-5 text-green-500" />
                         <span className="font-semibold text-gray-800">Unités différentes</span>
@@ -442,7 +442,7 @@ export default function Lecon10({ onResult }) {
                       <p className="text-sm text-gray-600">€ vs %, quantités vs pourcentages, etc.</p>
                     </div>
                     
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <div className="flex items-center gap-3 mb-2">
                         <CheckCircle className="w-5 h-5 text-green-500" />
                         <span className="font-semibold text-gray-800">Échelles très éloignées</span>
@@ -450,7 +450,7 @@ export default function Lecon10({ onResult }) {
                       <p className="text-sm text-gray-600">Milliers vs millions, petites vs grandes valeurs</p>
                     </div>
                     
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <div className="flex items-center gap-3 mb-2">
                         <CheckCircle className="w-5 h-5 text-green-500" />
                         <span className="font-semibold text-gray-800">Séries de nature différente</span>
@@ -525,7 +525,7 @@ export default function Lecon10({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('tendances')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <TrendingUp className="w-6 h-6 text-purple-600" />
             </div>
@@ -538,7 +538,7 @@ export default function Lecon10({ onResult }) {
         </button>
         
         {expandedSections.tendances && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <GanttChart className="w-6 h-6 text-purple-600" />
@@ -666,7 +666,7 @@ export default function Lecon10({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-indigo-50 to-blue-50 text-left hover:from-indigo-100 transition-all"
           onClick={() => toggleSection('interactivite')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-indigo-100 p-3 rounded-xl">
               <Zap className="w-6 h-6 text-indigo-600" />
             </div>
@@ -679,7 +679,7 @@ export default function Lecon10({ onResult }) {
         </button>
         
         {expandedSections.interactivite && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <GitBranch className="w-6 h-6 text-indigo-600" />
@@ -756,7 +756,7 @@ export default function Lecon10({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('exercice')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <Target className="w-6 h-6 text-amber-600" />
             </div>
@@ -769,7 +769,7 @@ export default function Lecon10({ onResult }) {
         </button>
         
         {expandedSections.exercice && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <BarChart3 className="w-6 h-6 text-amber-600" />
@@ -785,7 +785,7 @@ export default function Lecon10({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-green-200">
                       <Clock className="w-5 h-5 text-green-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Durée estimée</p>
@@ -793,7 +793,7 @@ export default function Lecon10({ onResult }) {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-blue-200">
                       <TrendingUp className="w-5 h-5 text-blue-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Niveau de difficulté</p>
@@ -912,7 +912,7 @@ export default function Lecon10({ onResult }) {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+              <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
                 <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Download className="w-5 h-5 text-amber-600" />
                   Fichier d'Exercice
@@ -927,7 +927,7 @@ export default function Lecon10({ onResult }) {
                 </a>
               </div>
 
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+              <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
                 <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Video className="w-5 h-5 text-indigo-600" />
                   Correction Détaillée

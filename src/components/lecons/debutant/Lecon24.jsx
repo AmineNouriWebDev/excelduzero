@@ -25,8 +25,8 @@ import {
 
 export default function Lecon24({ onResult }) {
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+    <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Zap className="w-8 h-8 text-blue-600" />
         Leçon 24 - Astuces de Productivité dans Excel
       </h2>
@@ -40,7 +40,7 @@ export default function Lecon24({ onResult }) {
 
      
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -72,7 +72,7 @@ export default function Lecon24({ onResult }) {
         </ul>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <MousePointer className="w-6 h-6 text-purple-600" />
         1. MAÎTRISER LA POIGNÉE DE RECOPIE
       </h3>
@@ -85,7 +85,7 @@ export default function Lecon24({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Move className="w-5 h-5 text-purple-600" />
             Utilisation de base
@@ -119,7 +119,7 @@ export default function Lecon24({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Copy className="w-5 h-5 text-purple-600" />
             Options avancées
@@ -168,7 +168,7 @@ export default function Lecon24({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <PlusSquare className="w-6 h-6 text-teal-600" />
         2. L'AUTOFILL INTELLIGENT
       </h3>
@@ -181,7 +181,7 @@ export default function Lecon24({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <Calendar className="w-5 h-5 text-teal-600" />
               Séquences de dates
@@ -195,7 +195,7 @@ export default function Lecon24({ onResult }) {
            
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <List className="w-5 h-5 text-teal-600" />
               Listes personnalisées
@@ -209,7 +209,7 @@ export default function Lecon24({ onResult }) {
            
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <Hash className="w-5 h-5 text-teal-600" />
               Combinaisons
@@ -224,7 +224,7 @@ export default function Lecon24({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Settings className="w-5 h-5 text-teal-600" />
             Créer vos propres listes
@@ -265,7 +265,7 @@ export default function Lecon24({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Type className="w-6 h-6 text-indigo-600" />
         3. FORMULES ET MISES EN FORME RAPIDES
       </h3>
@@ -278,7 +278,7 @@ export default function Lecon24({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <Hash className="w-5 h-5 text-indigo-600" />
               Application rapide de formules
@@ -311,7 +311,7 @@ export default function Lecon24({ onResult }) {
             </div>
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <Layout className="w-5 h-5 text-indigo-600" />
               Copie de mise en forme
@@ -343,7 +343,7 @@ export default function Lecon24({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Zap className="w-5 h-5 text-indigo-600" />
             Astuces supplémentaires (CORRIGÉES)
@@ -382,7 +382,7 @@ export default function Lecon24({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <BookOpen className="w-6 h-6 text-orange-600" />
         EXERCICE PRATIQUE
       </h3>
@@ -395,7 +395,7 @@ export default function Lecon24({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-orange-600" />
             Fichier d'exercice
@@ -410,7 +410,7 @@ export default function Lecon24({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-orange-600" />
             Correction vidéo

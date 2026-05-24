@@ -45,7 +45,7 @@ export default function Lecon27({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé or/bleu */}
-      <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-300 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+      <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-300 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -54,7 +54,7 @@ export default function Lecon27({ onResult }) {
                 <TrendingUp className="w-6 h-6 md:w-8 md:h-8" />
               </div>
               <div className="flex-1 min-w-0">
-                <h1 className="text-2xl md:text-4xl font-bold break-words">Fonctions Financières Excel : VC, VA, VPM</h1>
+                <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Fonctions Financières Excel : VC, VA, VPM</h1>
                 <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Maîtrisez les calculs de prêts, d'épargne et d'investissement</p>
               </div>
             </div>
@@ -86,10 +86,10 @@ export default function Lecon27({ onResult }) {
       {/* Introduction */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-amber-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <Lightbulb className="w-6 h-6 text-amber-600" />
             </div>
@@ -102,7 +102,7 @@ export default function Lecon27({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Prenez des Décisions Financières Éclairées</h3>
@@ -112,7 +112,7 @@ export default function Lecon27({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <Home className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Prêts Immobiliers</h4>
@@ -120,7 +120,7 @@ export default function Lecon27({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <TrendingUp className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Planification Épargne</h4>
@@ -128,7 +128,7 @@ export default function Lecon27({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <Car className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Achats Importants</h4>
@@ -151,19 +151,19 @@ export default function Lecon27({ onResult }) {
             </div>
 
             {/* Section Avantages */}
-            <div className="mt-8 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-6 text-white">
+            <div className="mt-8 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none text-white">
               <h4 className="font-bold text-lg mb-4 text-center">🚀 Les Avantages des Fonctions Financières</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl font-bold mb-1">100%</div>
+                  <div className="text-base md:text-2xl font-bold mb-1">100%</div>
                   <p className="text-sm opacity-90">Exactitude des calculs:cite[2]</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl font-bold mb-1">10x</div>
+                  <div className="text-base md:text-2xl font-bold mb-1">10x</div>
                   <p className="text-sm opacity-90">Gain de temps</p>
                 </div>
                 <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl font-bold mb-1">0</div>
+                  <div className="text-base md:text-2xl font-bold mb-1">0</div>
                   <p className="text-sm opacity-90">Erreurs de calcul</p>
                 </div>
               </div>
@@ -175,10 +175,10 @@ export default function Lecon27({ onResult }) {
       {/* Concepts de Base */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-blue-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('concepts_base')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Calculator className="w-6 h-6 text-blue-600" />
             </div>
@@ -191,7 +191,7 @@ export default function Lecon27({ onResult }) {
         </button>
         
         {expandedSections.concepts_base && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Un Euro Aujourd'hui ≠ Un Euro Demain</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -331,10 +331,10 @@ export default function Lecon27({ onResult }) {
       {/* Fonction VC (Valeur Future) */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-green-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('fonction_vc')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <TrendingUp className="w-6 h-6 text-green-600" />
             </div>
@@ -347,7 +347,7 @@ export default function Lecon27({ onResult }) {
         </button>
         
         {expandedSections.fonction_vc && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Calculer la Valeur Future de Vos Investissements</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -476,10 +476,10 @@ export default function Lecon27({ onResult }) {
       {/* Fonction VA (Valeur Actuelle) */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-purple-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('fonction_va')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Calculator className="w-6 h-6 text-purple-600" />
             </div>
@@ -492,7 +492,7 @@ export default function Lecon27({ onResult }) {
         </button>
         
         {expandedSections.fonction_va && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Évaluer la Valeur Actuelle de Flux Futurs</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -622,10 +622,10 @@ export default function Lecon27({ onResult }) {
       {/* Fonction VPM (Mensualités) */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-orange-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-orange-50 to-amber-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('fonction_vpm')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <PieChart className="w-6 h-6 text-orange-600" />
             </div>
@@ -638,7 +638,7 @@ export default function Lecon27({ onResult }) {
         </button>
         
         {expandedSections.fonction_vpm && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Calculer Vos Mensualités de Prêt Facilement</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -782,10 +782,10 @@ export default function Lecon27({ onResult }) {
       {/* Cas Pratique Complet */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-rose-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-rose-50 to-pink-50 text-left hover:from-rose-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-rose-50 to-pink-50 text-left hover:from-rose-100 transition-all"
           onClick={() => toggleSection('cas_pratique')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-rose-100 p-3 rounded-xl">
               <Target className="w-6 h-6 text-rose-600" />
             </div>
@@ -798,7 +798,7 @@ export default function Lecon27({ onResult }) {
         </button>
         
         {expandedSections.cas_pratique && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6">🎯 Mission : Analyser un Projet d'Achat Immobilier</h3>
               
@@ -814,7 +814,7 @@ export default function Lecon27({ onResult }) {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-blue-200">
                       <Target className="w-5 h-5 text-blue-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Objectifs</p>
@@ -822,7 +822,7 @@ export default function Lecon27({ onResult }) {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-green-200">
                       <Zap className="w-5 h-5 text-green-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Méthode</p>
@@ -844,7 +844,7 @@ export default function Lecon27({ onResult }) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl border-2 border-purple-100">
+                <div className="bg-white px-4 py-4 md:p-6 md:rounded-lg rounded-none rounded-xl border-2 border-purple-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📝 Solutions par Fonction</h4>
                   
                   <div className="space-y-4">
@@ -874,7 +874,7 @@ export default function Lecon27({ onResult }) {
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl border-2 border-green-100">
+                <div className="bg-white px-4 py-4 md:p-6 md:rounded-lg rounded-none rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
                     <a href="/cours/intermediaire/lecon27/cas-pratique-immobilier.zip" 
@@ -892,7 +892,7 @@ export default function Lecon27({ onResult }) {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-rose-50 to-pink-50 border-2 border-rose-200 rounded-2xl p-6">
+              <div className="bg-gradient-to-br from-rose-50 to-pink-50 border-2 border-rose-200 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <h4 className="font-semibold text-gray-800 mb-4">🏆 Analyse Financière Complète</h4>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 p-3 bg-white rounded-lg">
@@ -932,7 +932,7 @@ export default function Lecon27({ onResult }) {
               <div className="bg-gray-800 p-4 text-white text-center">
                 <h4 className="font-bold text-lg">Transformation de l'Analyse Financière</h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🔴 Avant Excel</h5>
                   <ImageZoomable 

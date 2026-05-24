@@ -25,13 +25,13 @@ export default function Lecon26({ onResult }) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4 md:p-6 bg-white">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl p-6 md:p-8 mb-8 text-white">
+    <div className="max-w-6xl mx-auto p-4 md:px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl p-6 md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <div className="flex items-center gap-3 mb-3">
               <Zap className="w-8 h-8 text-yellow-300" />
-              <h1 className="text-2xl md:text-3xl font-bold"> Raccourcis Clavier Excel Avancés</h1>
+              <h1 className="text-base md:text-2xl md:text-3xl font-bold"> Raccourcis Clavier Excel Avancés</h1>
             </div>
             <p className="text-blue-100 max-w-3xl">
               Maîtrisez les raccourcis clavier essentiels pour devenir un expert Excel. Cette dernière leçon du niveau débutant 
@@ -68,7 +68,7 @@ export default function Lecon26({ onResult }) {
       {/* Section: Raccourcis fréquemment utilisés */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
         <button
-          className={`flex justify-between items-center w-full p-5 text-left font-semibold text-lg ${
+          className={`flex justify-between items-center w-full px-4 py-4 md:p-5 md:rounded-xl rounded-none text-left font-semibold text-lg ${
             openSections.frequent ? 'bg-blue-50 text-blue-700' : 'bg-gray-50 text-gray-800'
           }`}
           onClick={() => toggleSection('frequent')}
@@ -81,7 +81,7 @@ export default function Lecon26({ onResult }) {
         </button>
 
         {openSections.frequent && (
-          <div className="p-5">
+          <div className="px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
@@ -152,7 +152,7 @@ export default function Lecon26({ onResult }) {
       {/* Section: Raccourcis du ruban */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
         <button
-          className={`flex justify-between items-center w-full p-5 text-left font-semibold text-lg ${
+          className={`flex justify-between items-center w-full px-4 py-4 md:p-5 md:rounded-xl rounded-none text-left font-semibold text-lg ${
             openSections.ribbon ? 'bg-blue-50 text-blue-700' : 'bg-gray-50 text-gray-800'
           }`}
           onClick={() => toggleSection('ribbon')}
@@ -165,7 +165,7 @@ export default function Lecon26({ onResult }) {
         </button>
 
         {openSections.ribbon && (
-          <div className="p-5">
+          <div className="px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
@@ -231,7 +231,7 @@ export default function Lecon26({ onResult }) {
       {/* Section: Sélection & manipulation avancée */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
         <button
-          className={`flex justify-between items-center w-full p-5 text-left font-semibold text-lg ${
+          className={`flex justify-between items-center w-full px-4 py-4 md:p-5 md:rounded-xl rounded-none text-left font-semibold text-lg ${
             openSections.selection ? 'bg-blue-50 text-blue-700' : 'bg-gray-50 text-gray-800'
           }`}
           onClick={() => toggleSection('selection')}
@@ -243,7 +243,7 @@ export default function Lecon26({ onResult }) {
           {openSections.selection ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </button>
         {openSections.selection && (
-          <div className="p-5">
+          <div className="px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
@@ -294,7 +294,7 @@ export default function Lecon26({ onResult }) {
       {/* Section: Formules & calculs */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
         <button
-          className={`flex justify-between items-center w-full p-5 text-left font-semibold text-lg ${
+          className={`flex justify-between items-center w-full px-4 py-4 md:p-5 md:rounded-xl rounded-none text-left font-semibold text-lg ${
             openSections.formulas ? 'bg-blue-50 text-blue-700' : 'bg-gray-50 text-gray-800'
           }`}
           onClick={() => toggleSection('formulas')}
@@ -306,7 +306,7 @@ export default function Lecon26({ onResult }) {
           {openSections.formulas ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </button>
         {openSections.formulas && (
-          <div className="p-5">
+          <div className="px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
@@ -352,7 +352,7 @@ export default function Lecon26({ onResult }) {
       {/* Section: Autres raccourcis utiles */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-8">
         <button
-          className={`flex justify-between items-center w-full p-5 text-left font-semibold text-lg ${
+          className={`flex justify-between items-center w-full px-4 py-4 md:p-5 md:rounded-xl rounded-none text-left font-semibold text-lg ${
             openSections.other ? 'bg-blue-50 text-blue-700' : 'bg-gray-50 text-gray-800'
           }`}
           onClick={() => toggleSection('other')}
@@ -364,7 +364,7 @@ export default function Lecon26({ onResult }) {
           {openSections.other ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </button>
         {openSections.other && (
-          <div className="p-5">
+          <div className="px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
@@ -398,7 +398,7 @@ export default function Lecon26({ onResult }) {
       </div>
 
       {/* Section de téléchargement */}
-      <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-6 md:p-8 mb-8 text-white">
+      <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-6 md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <h3 className="text-xl md:text-2xl font-bold mb-3">Téléchargez le mémo complet</h3>
@@ -419,10 +419,10 @@ export default function Lecon26({ onResult }) {
       </div>
 
       {/* Section de félicitations */}
-      <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl p-8 text-center text-white mb-8">
+      <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl px-4 py-6 md:p-8 md:rounded-xl rounded-none text-center text-white mb-8">
         <div className="max-w-2xl mx-auto">
           <Award className="w-16 h-16 mx-auto mb-4 text-yellow-300" />
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Félicitations !</h3>
+          <h3 className="text-base md:text-2xl md:text-3xl font-bold mb-4">Félicitations !</h3>
           <p className="text-lg mb-6">
             Vous avez terminé toutes les leçons du niveau débutant d’Excel. Vous maîtrisez désormais les bases essentielles pour travailler efficacement.
           </p>

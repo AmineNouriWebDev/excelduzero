@@ -53,7 +53,7 @@ export default function Lecon13({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec dégradé moderne */}
-    <div className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+    <div className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-500 rounded-2xl p-6 md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
   <div className="absolute inset-0 bg-black/10"></div>
   <div className="relative z-10">
     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -62,7 +62,7 @@ export default function Lecon13({ onResult }) {
           <Shield className="w-6 h-6 md:w-8 md:h-8" />
         </div>
         <div className="flex-1 min-w-0">
-          <h1 className="text-2xl md:text-4xl font-bold break-words">Validation des Données Avancée</h1>
+          <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Validation des Données Avancée</h1>
           <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Formules Complexes, Listes Dépendantes & Automatisation</p>
         </div>
       </div>
@@ -93,7 +93,7 @@ export default function Lecon13({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <Shield className="w-6 h-6 text-green-600" />
             </div>
@@ -106,7 +106,7 @@ export default function Lecon13({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
@@ -120,7 +120,7 @@ export default function Lecon13({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Formules de validation complexes</h4>
@@ -128,7 +128,7 @@ export default function Lecon13({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Listes dépendantes multi-niveaux</h4>
@@ -136,7 +136,7 @@ export default function Lecon13({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Intégration avec les tableaux croisés dynamiques</h4>
@@ -164,7 +164,7 @@ export default function Lecon13({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('formules')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Code className="w-6 h-6 text-blue-600" />
             </div>
@@ -177,7 +177,7 @@ export default function Lecon13({ onResult }) {
         </button>
         
         {expandedSections.formules && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Cpu className="w-6 h-6 text-blue-600" />
@@ -193,7 +193,7 @@ export default function Lecon13({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Exemple : Budget départemental</h5>
                       <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                         =ET(B2&gt;=0; B2&lt;50000), OU(A2="Marketing"; A2="Finance")
@@ -203,7 +203,7 @@ export default function Lecon13({ onResult }) {
                       </p>
                     </div>
                     
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Exemple : Date de projet</h5>
                       <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                         =ET(C2&gt;=DATE(2024;1;1); C2&lt;=DATE(2024;12;31); JOURSEM(C2;2)&lt;6)
@@ -245,7 +245,7 @@ export default function Lecon13({ onResult }) {
                   de cohérence entre différentes feuilles.
                 </p>
                 
-                <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Exemple : Code produit valide</h5>
                   <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                     =NON(ESTERREUR(RECHERCHEV(D2;$J$2:$J$11;1;0)))
@@ -270,14 +270,14 @@ export default function Lecon13({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-orange-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-orange-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Email professionnel</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                       =ET(ESTNUM(CHERCHE("@";E2));ESTNUM(CHERCHE(".";E2));NBCAR(E2)-NBCAR(SUBSTITUE(E2;"@";""))=1;CHERCHE("@";E2)&gt;1;CHERCHE(".";E2)&gt;CHERCHE("@";E2)+1;NON(ESTNUM(CHERCHE(" ";E2))))
                     </code>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Code postal français</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                      =ET(ESTNUM(F2);NBCAR(TEXTE(F2;"0"))=5;F2&gt;=1000;F2&lt;=98999)
@@ -296,7 +296,7 @@ export default function Lecon13({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('dependantes')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <GitBranch className="w-6 h-6 text-purple-600" />
             </div>
@@ -309,7 +309,7 @@ export default function Lecon13({ onResult }) {
         </button>
         
         {expandedSections.dependantes && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Users className="w-6 h-6 text-purple-600" />
@@ -325,7 +325,7 @@ export default function Lecon13({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Étape 1 : Définir les plages nommées</h5>
                       <p className="text-sm text-gray-600 mb-2">
                         Créez des plages nommées correspondant à chaque catégorie :
@@ -337,7 +337,7 @@ export default function Lecon13({ onResult }) {
                       </ul>
                     </div>
                     
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Étape 2 : Validation avec INDIRECT()</h5>
                       <code className="block text-sm bg-gray-100 p-3 rounded-lg">
                         =INDIRECT(A2)
@@ -367,7 +367,7 @@ export default function Lecon13({ onResult }) {
                   des éléments dans vos tables sources.
                 </p>
                 
-                <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Formule DECALER() dynamique</h5>
                   <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                     =DECALER($A$1,0,0,NBVAL($A:$A),1)
@@ -392,7 +392,7 @@ export default function Lecon13({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-yellow-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-yellow-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Solution : SIERREUR() + SI()</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                       =SI(B2="", $A$2:$A$10, SIERREUR(INDIRECT(B2), $A$2:$A$10))
@@ -425,7 +425,7 @@ export default function Lecon13({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-orange-50 to-red-50 text-left hover:from-orange-100 transition-all"
           onClick={() => toggleSection('erreurs')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-xl">
               <AlertTriangle className="w-6 h-6 text-orange-600" />
             </div>
@@ -438,7 +438,7 @@ export default function Lecon13({ onResult }) {
         </button>
         
         {expandedSections.erreurs && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <MessageSquare className="w-6 h-6 text-orange-600" />
@@ -454,7 +454,7 @@ export default function Lecon13({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-orange-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-orange-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Message conditionnel</h5>
                       <p className="text-sm text-gray-600 mb-2">
                         Si le département "R&D" est sélectionné :
@@ -464,7 +464,7 @@ export default function Lecon13({ onResult }) {
                       </p>
                     </div>
                     
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Formatage riche des messages</h5>
                       <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
                         <li>Utilisez des retours à la ligne avec <code className="bg-gray-100 px-1 rounded">Ctrl+Enter</code></li>
@@ -494,7 +494,7 @@ export default function Lecon13({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                     <div className="flex items-center gap-3 mb-2">
                       <AlertTriangle className="w-5 h-5 text-red-500" />
                       <span className="font-semibold text-gray-800">Arrêt (Critique)</span>
@@ -505,7 +505,7 @@ export default function Lecon13({ onResult }) {
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-yellow-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-yellow-200">
                     <div className="flex items-center gap-3 mb-2">
                       <AlertTriangle className="w-5 h-5 text-yellow-500" />
                       <span className="font-semibold text-gray-800">Avertissement (Important)</span>
@@ -516,7 +516,7 @@ export default function Lecon13({ onResult }) {
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                     <div className="flex items-center gap-3 mb-2">
                       <AlertTriangle className="w-5 h-5 text-blue-500" />
                       <span className="font-semibold text-gray-800">Information (Conseil)</span>
@@ -536,7 +536,7 @@ export default function Lecon13({ onResult }) {
                   les problèmes de validation récurrents.
                 </p>
                 
-                <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Formule de détection d'erreurs</h5>
                   <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                     =SI(ESTERREUR(CHERCHE("Invalide",CELLULE("content",A2))), "❌", "✅")
@@ -563,7 +563,7 @@ export default function Lecon13({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-teal-50 to-green-50 text-left hover:from-teal-100 transition-all"
           onClick={() => toggleSection('integration')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-teal-100 p-3 rounded-xl">
               <BarChart3 className="w-6 h-6 text-teal-600" />
             </div>
@@ -576,7 +576,7 @@ export default function Lecon13({ onResult }) {
         </button>
         
         {expandedSections.integration && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Database className="w-6 h-6 text-teal-600" />
@@ -592,7 +592,7 @@ export default function Lecon13({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-teal-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-teal-200">
                       <h5 className="font-semibold text-gray-800 mb-2">Source dynamique depuis TCD</h5>
                       <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                         =DECALER(TCD_Categories!$A$3,0,0,NBVAL(TCD_Categories!$A:$A)-2,1)
@@ -634,7 +634,7 @@ export default function Lecon13({ onResult }) {
                   automatiquement extensibles.
                 </p>
                 
-                <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                   <h5 className="font-semibold text-gray-800 mb-2">Avantages des tables structurées</h5>
                   <ul className="text-sm text-gray-600 space-y-2">
                     <li className="flex items-start gap-2">
@@ -666,7 +666,7 @@ export default function Lecon13({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Macro d'actualisation</h5>
                     <code className="block text-sm bg-gray-100 p-3 rounded-lg mb-2">
                       Sub ActualiserValidations()<br />
@@ -703,7 +703,7 @@ export default function Lecon13({ onResult }) {
           className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('exercice')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <Crosshair className="w-6 h-6 text-amber-600" />
             </div>
@@ -716,7 +716,7 @@ export default function Lecon13({ onResult }) {
         </button>
         
         {expandedSections.exercice && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Database className="w-6 h-6 text-amber-600" />
@@ -732,7 +732,7 @@ export default function Lecon13({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-green-200">
                       <Clock className="w-5 h-5 text-green-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Durée estimée</p>
@@ -740,7 +740,7 @@ export default function Lecon13({ onResult }) {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-blue-200">
                       <Zap className="w-5 h-5 text-blue-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Niveau de difficulté</p>
@@ -859,7 +859,7 @@ export default function Lecon13({ onResult }) {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+              <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
                 <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Download className="w-5 h-5 text-amber-600" />
                   Fichier d'Exercice
@@ -874,7 +874,7 @@ export default function Lecon13({ onResult }) {
                 </a>
               </div>
 
-              <div className="border-2 border-gray-200 rounded-xl p-6 bg-white">
+              <div className="border-2 border-gray-200 rounded-xl px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
                 <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Video className="w-5 h-5 text-indigo-600" />
                   Correction Détaillée

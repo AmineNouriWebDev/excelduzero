@@ -43,7 +43,7 @@ export default function Lecon6({ onResult }) {
 
   return (
     <div className="max-w-6xl mx-auto p-1 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Sparkles className="w-8 h-8 text-purple-600" />
         Leçon 6 - Tableaux Structurés Avancés : Références Dynamiques et Productivité
       </h2>
@@ -54,7 +54,7 @@ export default function Lecon6({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon avancée, vous maîtriserez :
         </p>
@@ -95,7 +95,7 @@ export default function Lecon6({ onResult }) {
         </button>
         
         {expandedSections.avantages && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="space-y-4">
                 <div className="border-l-4 border-green-500 pl-4 py-2">
@@ -114,7 +114,7 @@ export default function Lecon6({ onResult }) {
                 </div>
               </div>
               
-              <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
                 <h5 className="font-semibold text-gray-800 mb-3">Comparaison Avancée</h5>
                 <div className="space-y-3">
                   <div>
@@ -155,7 +155,7 @@ export default function Lecon6({ onResult }) {
         </button>
         
         {expandedSections.references && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
               <p className="text-gray-700">
                 Les références structurées utilisent le nom de votre tableau et de ses colonnes au lieu des adresses de cellules classiques, rendant vos formules <strong>auto-documentées</strong> et <strong>dynamiques</strong> .
@@ -270,7 +270,7 @@ export default function Lecon6({ onResult }) {
         </button>
         
         {expandedSections.dynamiques && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -355,7 +355,7 @@ export default function Lecon6({ onResult }) {
         </button>
         
         {expandedSections.formules && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="border p-4 rounded-lg">
                 <h5 className="font-semibold text-gray-800 mb-3">Recherche avec INDEX/EQUIV</h5>
@@ -378,7 +378,7 @@ export default function Lecon6({ onResult }) {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-5">
+            <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
               <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                 <ArrowRightLeft className="w-5 h-5 text-orange-600" />
                 Références structurées avec fonctions matricielles
@@ -446,7 +446,7 @@ export default function Lecon6({ onResult }) {
         </button>
         
         {expandedSections.integration && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -543,7 +543,7 @@ export default function Lecon6({ onResult }) {
         </button>
         
         {expandedSections.exercice && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="bg-teal-50 border-l-4 border-teal-400 p-4 mb-6">
               <p className="text-gray-700">
                 Créez un système commercial complet exploitant toutes les fonctionnalités avancées des tableaux structurés.
@@ -581,7 +581,7 @@ export default function Lecon6({ onResult }) {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
                 <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
                   <Download className="w-5 h-5 text-teal-600" />
                   Fichier d'exercice avancé
@@ -596,7 +596,7 @@ export default function Lecon6({ onResult }) {
                 </a>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
                 <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
                   <Video className="w-5 h-5 text-teal-600" />
                   Correction vidéo avancée

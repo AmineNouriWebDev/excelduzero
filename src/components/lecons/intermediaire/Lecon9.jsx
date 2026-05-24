@@ -26,7 +26,7 @@ import {
 export default function Lecon9({ onResult }) {
   return (
     <div className="max-w-6xl mx-auto p-1 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Layers className="w-8 h-8 text-blue-600" />
         Leçon 9 - SOUS-TOTAUX AUTOMATIQUES : L'analyse structurée et hiérarchique dans Excel
       </h2>
@@ -37,7 +37,7 @@ export default function Lecon9({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous découvrirez :
         </p>
@@ -76,13 +76,13 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* SECTION INTRODUCTION */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Lightbulb className="w-6 h-6 text-blue-600" />
         Introduction à l'Analyse Structurée des Données
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h4 className="text-xl font-medium text-gray-800 mb-3 flex items-center gap-2">
             <FileText className="w-5 h-5 text-blue-600" />
             Définition et Utilité des Sous-totaux Automatiques
@@ -126,7 +126,7 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* SECTION PRÉREQUIS TRI */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <ArrowUpDown className="w-6 h-6 text-orange-600" />
         1. Le Prérequis Fondamental : Le Tri des Données
       </h3>
@@ -138,7 +138,7 @@ export default function Lecon9({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <AlertTriangle className="w-5 h-5 text-orange-600" />
             Pourquoi le tri est obligatoire
@@ -204,7 +204,7 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* SECTION MISE EN ŒUVRE */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Zap className="w-6 h-6 text-green-600" />
         2. Créer des Sous-totaux en 4 Étapes 
       </h3>
@@ -217,7 +217,7 @@ export default function Lecon9({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 1
@@ -232,7 +232,7 @@ export default function Lecon9({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 2
@@ -247,7 +247,7 @@ export default function Lecon9({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 3
@@ -262,7 +262,7 @@ export default function Lecon9({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 4
@@ -287,13 +287,13 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* SECTION PLAN HIÉRARCHIQUE */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Layers className="w-6 h-6 text-purple-600" />
         3. Maîtriser le Plan Hiérarchique
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700 mb-4">
             L'un des avantages majeurs des sous-totaux automatiques est la création d'un <strong>plan hiérarchique</strong> qui permet de naviguer rapidement entre différentes vues de vos données .
           </p>
@@ -351,13 +351,13 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* SECTION FONCTION SOUS.TOTAL */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Calculator className="w-6 h-6 text-indigo-600" />
         4. Comprendre la Fonction SOUS.TOTAL
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Lightbulb className="w-5 h-5 text-indigo-600" />
             L'avantage dynamique de SOUS.TOTAL
@@ -418,13 +418,13 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* SECTION TECHNIQUES AVANCÉES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Zap className="w-6 h-6 text-yellow-600" />
         5. Techniques Avancées des Professionnels 
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="bg-yellow-50 p-4 rounded-lg">
@@ -478,13 +478,13 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* SECTION COMPARAISON TCD */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <BarChart3 className="w-6 h-6 text-red-600" />
         6. Choix Stratégique : Sous-totaux vs Tableaux Croisés Dynamiques
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <div className="overflow-x-auto mb-6">
             <table className="min-w-full divide-y divide-gray-200">
               <thead>
@@ -560,7 +560,7 @@ export default function Lecon9({ onResult }) {
       </div>
 
       {/* EXERCICE PRATIQUE */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <BookOpen className="w-6 h-6 text-indigo-600" />
         EXERCICE PRATIQUE : RAPPORT COMMERCIAL STRUCTURÉ
       </h3>
@@ -572,7 +572,7 @@ export default function Lecon9({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-indigo-600" />
             Fichier d'exercice
@@ -587,7 +587,7 @@ export default function Lecon9({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-indigo-600" />
             Correction vidéo
@@ -602,14 +602,14 @@ export default function Lecon9({ onResult }) {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+      <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
+        <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
           <Calculator className="w-6 h-6 text-indigo-600" />
           Consignes de l'exercice
         </h3>
 
         <div className="space-y-6">
-          <div className="bg-green-50 border border-green-200 rounded-lg p-5">
+          <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <Layers className="w-5 h-5 text-green-600" />
               Niveau 1 : Sous-totaux par région
@@ -648,7 +648,7 @@ export default function Lecon9({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-5">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <Layers className="w-5 h-5 text-blue-600" />
               Niveau 2 : Sous-totaux imbriqués par commercial

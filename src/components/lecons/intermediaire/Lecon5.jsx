@@ -25,7 +25,7 @@ import {
 export default function Lecon5({ onResult }) {
   return (
     <div className="max-w-6xl mx-auto p-1 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Layers className="w-8 h-8 text-blue-600" />
         Leçon 5 - INDEX & EQUIV : La combinaison ultime pour des recherches avancées dans Excel
       </h2>
@@ -36,7 +36,7 @@ export default function Lecon5({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -69,8 +69,8 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* TABLEAU COMPARATIF AVEC RECHERCHEV */}
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
+        <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
           <Table className="w-6 h-6 text-purple-600" />
           Pourquoi INDEX-EQUIV est supérieur à RECHERCHEV
         </h3>
@@ -111,7 +111,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* SECTION FONCTION INDEX */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Crosshair className="w-6 h-6 text-blue-600" />
         1. LA FONCTION INDEX : RETOURNER UNE VALEUR SPÉCIFIQUE
       </h3>
@@ -123,7 +123,7 @@ export default function Lecon5({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Code className="w-5 h-5 text-blue-600" />
             Syntaxe de la fonction INDEX
@@ -190,7 +190,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* SECTION FONCTION EQUIV */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Search className="w-6 h-6 text-orange-600" />
         2. LA FONCTION EQUIV : TROUVER LA POSITION D'UNE VALEUR
       </h3>
@@ -202,7 +202,7 @@ export default function Lecon5({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Code className="w-5 h-5 text-orange-600" />
             Syntaxe de la fonction EQUIV
@@ -277,7 +277,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* SECTION COMBINAISON INDEX-EQUIV */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <ArrowRightLeft className="w-6 h-6 text-purple-600" />
         3. LA COMBINAISON INDEX-EQUIV : LA SOLUTION ULTIME
       </h3>
@@ -289,7 +289,7 @@ export default function Lecon5({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Code className="w-5 h-5 text-purple-600" />
             Syntaxe de la combinaison INDEX-EQUIV
@@ -358,7 +358,7 @@ export default function Lecon5({ onResult }) {
         </div>
 
         {/* AVANTAGES INDEX-EQUIV */}
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Lightbulb className="w-5 h-5 text-yellow-600" />
             Avantages de INDEX-EQUIV sur RECHERCHEV
@@ -403,7 +403,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* SECTION EXEMPLES CONCRETS */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Calculator className="w-6 h-6 text-green-600" />
         4. EXEMPLES CONCRETS ET APPLICATIONS PRATIQUES
       </h3>
@@ -416,7 +416,7 @@ export default function Lecon5({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3">Gestion de stock</h5>
             <div className="bg-gray-800 text-green-400 p-3 rounded font-mono text-sm mb-2">
               =INDEX($D$2:$D$500; EQUIV($G$2; $A$2:$A$500; 0))
@@ -431,7 +431,7 @@ export default function Lecon5({ onResult }) {
             </ul>
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3">Recherche employé</h5>
             <div className="bg-gray-800 text-green-400 p-3 rounded font-mono text-sm mb-2">
               =INDEX($B$2:$B$200; EQUIV($H$3; $C$2:$C$200; 0))
@@ -447,7 +447,7 @@ export default function Lecon5({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h5 className="font-semibold text-gray-800 mb-3">Recherche bidirectionnelle avancée</h5>
           <div className="bg-gray-800 text-green-400 p-3 rounded font-mono text-sm mb-2">
             =INDEX($B$2:$G$12; EQUIV($I$2; $A$2:$A$12; 0); EQUIV($I$3; $B$1:$G$1; 0))
@@ -464,7 +464,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* SECTION GESTION DES ERREURS */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <AlertTriangle className="w-6 h-6 text-red-600" />
         5. GESTION DES ERREURS COURANTES
       </h3>
@@ -477,7 +477,7 @@ export default function Lecon5({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <XCircle className="w-5 h-5 text-red-600" />
               Erreur #N/A
@@ -506,7 +506,7 @@ export default function Lecon5({ onResult }) {
             </div>
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <XCircle className="w-5 h-5 text-red-600" />
               Erreur #REF!
@@ -534,7 +534,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* SECTION BONNES PRATIQUES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Lightbulb className="w-6 h-6 text-yellow-600" />
         6. BONNES PRATIQUES ET ASTUCES AVANCÉES
       </h3>
@@ -547,7 +547,7 @@ export default function Lecon5({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <Zap className="w-5 h-5 text-blue-600" />
               Utiliser des Tables Excel
@@ -565,7 +565,7 @@ export default function Lecon5({ onResult }) {
             </p>
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <Filter className="w-5 h-5 text-blue-600" />
               Combiner avec SIERREUR
@@ -584,7 +584,7 @@ export default function Lecon5({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h5 className="font-semibold text-gray-800 mb-3">Validation des données en amont</h5>
           <p className="text-sm text-gray-700 mb-3">
             Utilisez des listes déroulantes pour garantir que les valeurs recherchées existent bien dans vos tables.
@@ -607,7 +607,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       {/* EXERCICE PRATIQUE */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <BookOpen className="w-6 h-6 text-indigo-600" />
         EXERCICE PRATIQUE : SYSTÈME DE GESTION COMMERCIAL AVANCÉ
       </h3>
@@ -619,7 +619,7 @@ export default function Lecon5({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-indigo-600" />
             Fichier d'exercice
@@ -634,7 +634,7 @@ export default function Lecon5({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-indigo-600" />
             Correction vidéo

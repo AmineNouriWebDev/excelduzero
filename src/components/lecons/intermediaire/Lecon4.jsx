@@ -22,7 +22,7 @@ import {
 export default function Lecon4({ onResult }) {
   return (
     <div className="max-w-6xl mx-auto p-1 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Navigation className="w-8 h-8 text-purple-600" />
         Leçon 4 - RECHERCHEV & RECHERCHEH : Maîtriser les recherches dans Excel
       </h2>
@@ -33,7 +33,7 @@ export default function Lecon4({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -66,8 +66,8 @@ export default function Lecon4({ onResult }) {
       </div>
 
       {/* TABLEAU COMPARATIF */}
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
+        <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
           <Table className="w-6 h-6 text-blue-600" />
         Vue d'ensemble : RECHERCHEV vs RECHERCHEH
         </h3>
@@ -121,7 +121,7 @@ export default function Lecon4({ onResult }) {
       </div>
 
       {/* SECTION RECHERCHEV */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <TrendingUp className="w-6 h-6 text-green-600" />
         1. RECHERCHEV : LA RECHERCHE VERTICALE
       </h3>
@@ -133,7 +133,7 @@ export default function Lecon4({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Code className="w-5 h-5 text-green-600" />
             Syntaxe détaillée de RECHERCHEV
@@ -204,7 +204,7 @@ export default function Lecon4({ onResult }) {
         </div>
 
         {/* RECHERCHEV - Correspondance exacte vs approximative */}
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Filter className="w-5 h-5 text-green-600" />
             Correspondance exacte (FAUX) vs approximative (VRAI)
@@ -249,7 +249,7 @@ export default function Lecon4({ onResult }) {
       </div>
 
       {/* SECTION RECHERCHEH */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Navigation className="w-6 h-6 text-orange-600" />
         2. RECHERCHEH : LA RECHERCHE HORIZONTALE
       </h3>
@@ -261,7 +261,7 @@ export default function Lecon4({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Code className="w-5 h-5 text-orange-600" />
             Syntaxe détaillée de RECHERCHEH
@@ -305,7 +305,7 @@ export default function Lecon4({ onResult }) {
       </div>
 
       {/* SECTION ERREURS COURANTES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <AlertTriangle className="w-6 h-6 text-red-600" />
         3. GESTION DES ERREURS COURANTES
       </h3>
@@ -326,7 +326,7 @@ export default function Lecon4({ onResult }) {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <XCircle className="w-5 h-5 text-red-600" />
               Erreur #N/A
@@ -348,7 +348,7 @@ export default function Lecon4({ onResult }) {
             </ul>
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <XCircle className="w-5 h-5 text-red-600" />
               Erreur #REF!
@@ -373,7 +373,7 @@ export default function Lecon4({ onResult }) {
       </div>
 
       {/* SECTION BONNES PRATIQUES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Lightbulb className="w-6 h-6 text-yellow-600" />
         4. BONNES PRATIQUES ET ASTUCES AVANCÉES
       </h3>
@@ -394,7 +394,7 @@ export default function Lecon4({ onResult }) {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-green-600" />
               Références absolues
@@ -409,7 +409,7 @@ export default function Lecon4({ onResult }) {
             </div>
           </div>
           
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <Zap className="w-5 h-5 text-blue-600" />
               Recherche sur plusieurs feuilles
@@ -427,7 +427,7 @@ export default function Lecon4({ onResult }) {
       </div>
 
       {/* EXERCICE PRATIQUE */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <BookOpen className="w-6 h-6 text-indigo-600" />
         EXERCICE PRATIQUE : SYSTÈME DE GESTION COMMERCIAL
       </h3>
@@ -441,7 +441,7 @@ export default function Lecon4({ onResult }) {
    
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-indigo-600" />
             Fichier d'exercice
@@ -456,7 +456,7 @@ export default function Lecon4({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-indigo-600" />
             Correction vidéo
@@ -470,15 +470,15 @@ export default function Lecon4({ onResult }) {
           />
         </div>
       </div>
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-  <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+      <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
+  <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
     <Calculator className="w-6 h-6 text-indigo-600" />
     Consignes de l'exercice pratique
   </h3>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     {/* PARTIE RECHERCHEV */}
-    <div className="bg-green-50 border border-green-200 rounded-lg p-5">
+    <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
       <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <TrendingUp className="w-5 h-5 text-green-600" />
         Partie 1 : RECHERCHEV (Feuille "Produits")
@@ -530,7 +530,7 @@ export default function Lecon4({ onResult }) {
     </div>
 
     {/* PARTIE RECHERCHEH */}
-    <div className="bg-orange-50 border border-orange-200 rounded-lg p-5">
+    <div className="bg-orange-50 border border-orange-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
       <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Navigation className="w-5 h-5 text-orange-600" />
         Partie 2 : RECHERCHEH (Feuille "Ventes")

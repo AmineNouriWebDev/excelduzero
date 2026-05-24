@@ -25,8 +25,8 @@ import {
 
 export default function Lecon16({ onResult }) {
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+    <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <Grid className="w-8 h-8 text-indigo-600" />
         MAÎTRISER LES RÉFÉRENCES EXCEL: RELATIVES VS ABSOLUES
       </h2>
@@ -39,7 +39,7 @@ export default function Lecon16({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -77,7 +77,7 @@ export default function Lecon16({ onResult }) {
         </ul>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <ArrowRight className="w-6 h-6 text-blue-600" />
         1. LES RÉFÉRENCES RELATIVES
       </h3>
@@ -90,7 +90,7 @@ export default function Lecon16({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <MoveDownRight className="w-5 h-5 text-blue-600" />
             Comment fonctionnent les références relatives?
@@ -163,7 +163,7 @@ export default function Lecon16({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Copy className="w-5 h-5 text-blue-600" />
             Recopie intelligente avec références relatives
@@ -224,7 +224,7 @@ export default function Lecon16({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Lock className="w-6 h-6 text-purple-600" />
         2. LES RÉFÉRENCES ABSOLUES
       </h3>
@@ -237,7 +237,7 @@ export default function Lecon16({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <DollarSign className="w-5 h-5 text-purple-600" />
             Quand utiliser les références absolues?
@@ -315,7 +315,7 @@ export default function Lecon16({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Lock className="w-5 h-5 text-purple-600" />
             Comment créer une référence absolue
@@ -351,7 +351,7 @@ export default function Lecon16({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Unlock className="w-6 h-6 text-teal-600" />
         3. RÉFÉRENCES MIXTES
       </h3>
@@ -364,7 +364,7 @@ export default function Lecon16({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Columns className="w-5 h-5 text-teal-600" />
             Colonne fixe, ligne relative ($A1)
@@ -425,7 +425,7 @@ export default function Lecon16({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Rows className="w-5 h-5 text-teal-600" />
             Ligne fixe, colonne relative (A$1)
@@ -486,7 +486,7 @@ export default function Lecon16({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <MoveDownRight className="w-5 h-5 text-teal-600" />
             Tableau de multiplication: cas classique
@@ -552,7 +552,7 @@ export default function Lecon16({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <X className="w-6 h-6 text-red-600" />
         4. ERREURS COURANTES ET SOLUTIONS
       </h3>
@@ -657,7 +657,7 @@ export default function Lecon16({ onResult }) {
       </div>
 
       {/* Exercice pratique */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <Target className="w-6 h-6 text-orange-600" />
         5. EXERCICE PRATIQUE
       </h3>
@@ -670,7 +670,7 @@ export default function Lecon16({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-orange-600" />
             Fichier d'exercice
@@ -685,7 +685,7 @@ export default function Lecon16({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-indigo-600" />
             Correction vidéo
@@ -726,7 +726,7 @@ export default function Lecon16({ onResult }) {
       </div>
 
       {/* Synthèse des compétences acquises */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-8">
+      <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-8">
         <h4 className="text-xl font-semibold text-gray-800 mb-3 flex items-center gap-2">
           <Lightbulb className="w-6 h-6 text-blue-600" />
           Synthèse des compétences acquises

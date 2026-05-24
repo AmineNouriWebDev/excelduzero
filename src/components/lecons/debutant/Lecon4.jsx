@@ -33,7 +33,7 @@ export default function Lecon4({ onResult }) {
 
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
+    <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-4 flex items-center gap-3">
@@ -48,7 +48,7 @@ export default function Lecon4({ onResult }) {
       {/* Table des matières */}
       <section className="mb-12">
         <div className="bg-gray-50 p-6 rounded-lg">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <h2 className="text-base md:text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
             <FileText className="text-gray-600" />
             Table des matières
           </h2>
@@ -111,7 +111,7 @@ export default function Lecon4({ onResult }) {
 
       {/* Section 1: Sélection de cellules */}
       <section id="selection" className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <MousePointer2 className="text-blue-600" />
           1. Sélection de cellules
         </h2>
@@ -126,7 +126,7 @@ export default function Lecon4({ onResult }) {
 
         {/* Avec le clavier et la souris */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
             <Keyboard className="text-green-600" />
             1.1 Avec le clavier et la souris
           </h3>
@@ -266,7 +266,7 @@ export default function Lecon4({ onResult }) {
 
       {/* Section 2: Saisie dans les cellules */}
       <section id="saisie" className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Type className="text-green-600" />
           2. Saisie dans les cellules
         </h2>
@@ -281,7 +281,7 @@ export default function Lecon4({ onResult }) {
 
         {/* Validation de la saisie */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
             <Save className="text-blue-600" />
             2.1 Validation de la saisie
           </h3>
@@ -321,7 +321,7 @@ export default function Lecon4({ onResult }) {
 
         {/* Saisie multiple */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
             <Copy className="text-purple-600" />
             2.2 Saisie multiple
           </h3>
@@ -342,7 +342,7 @@ export default function Lecon4({ onResult }) {
 
         {/* Formats spéciaux */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
             <Hash className="text-orange-600" />
             2.3 Formats spéciaux
           </h3>
@@ -402,14 +402,14 @@ export default function Lecon4({ onResult }) {
 
       {/* Section 3: Modification des données */}
       <section id="modification" className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Edit3 className="text-purple-600" />
           3. Modification des données
         </h2>
 
         {/* Méthodes de modification */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4">
             3.1 Méthodes de modification
           </h3>
 
@@ -454,7 +454,7 @@ export default function Lecon4({ onResult }) {
 
         {/* Suppression */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4 flex items-center gap-2">
             <Trash2 className="text-red-600" />
             3.2 Suppression
           </h3>
@@ -485,14 +485,14 @@ export default function Lecon4({ onResult }) {
 
       {/* Section 4: Rechercher et remplacer */}
       <section id="rechercher" className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Search className="text-orange-600" />
           4. Rechercher et remplacer
         </h2>
 
         {/* Raccourcis utiles */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4">
             4.1 Raccourcis utiles
           </h3>
 
@@ -532,7 +532,7 @@ export default function Lecon4({ onResult }) {
 
       {/* Section 5: Vérification orthographique */}
       <section id="orthographe" className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Check className="text-red-600" />
           5. Vérification orthographique
         </h2>
@@ -558,14 +558,14 @@ export default function Lecon4({ onResult }) {
 
       {/* Section 6: Insertion et suppression */}
       <section id="insertion" className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Plus className="text-indigo-600" />
           6. Insertion et suppression
         </h2>
 
         {/* Principes clés */}
         <div className="mb-8">
-          <h3 className="text-2xl font-medium text-gray-700 mb-4">
+          <h3 className="text-base md:text-2xl font-medium text-gray-700 mb-4">
             6.1 Principes clés
           </h3>
 
@@ -605,7 +605,7 @@ export default function Lecon4({ onResult }) {
 
       {/* Section 7: Exercices pratiques */}
       <section id="exercices" className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <h2 className="text-lg md:text-3xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
           <Target className="text-pink-600" />
           7. Exercice pratique
         </h2>

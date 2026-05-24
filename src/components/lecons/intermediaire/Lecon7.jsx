@@ -22,7 +22,7 @@ import {
 export default function Lecon7({ onResult }) {
   return (
     <div className="max-w-6xl mx-auto p-1 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <BarChart3 className="w-8 h-8 text-blue-600" />
         Leçon 7 - TABLEAUX CROISÉS DYNAMIQUES : L'outil ultime d'analyse de données Excel
       </h2>
@@ -33,7 +33,7 @@ export default function Lecon7({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -72,13 +72,13 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* SECTION QU'EST-CE QU'UN TCD */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Lightbulb className="w-6 h-6 text-blue-600" />
         Qu'est-ce qu'un Tableau Croisé Dynamique ?
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700 mb-4">
             Un tableau croisé dynamique est un outil de rapport interactif qui permet de <strong>calculer, synthétiser et analyser</strong> vos données afin de voir des comparaisons, des tendances et des modèles . Contrairement à un rapport statique, le TCD fournit une vue interactive de vos données .
           </p>
@@ -117,7 +117,7 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* SECTION PRÉPARATION DES DONNÉES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Settings className="w-6 h-6 text-orange-600" />
         1. Préparer vos données correctement
       </h3>
@@ -129,7 +129,7 @@ export default function Lecon7({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-orange-600" />
             Règles d'or pour la structure des données
@@ -190,7 +190,7 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* SECTION CRÉATION DU TCD */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Zap className="w-6 h-6 text-green-600" />
         2. Créer votre premier TCD en 4 étapes 
       </h3>
@@ -203,7 +203,7 @@ export default function Lecon7({ onResult }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 1
@@ -218,7 +218,7 @@ export default function Lecon7({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 2
@@ -233,7 +233,7 @@ export default function Lecon7({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 3
@@ -248,7 +248,7 @@ export default function Lecon7({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-5">
+          <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
               <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                 4
@@ -285,13 +285,13 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* SECTION ZONES DU TCD */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Table className="w-6 h-6 text-purple-600" />
         3. Comprendre les 4 zones du TCD
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700 mb-4">
             Le volet des champs TCD contient 4 zones principales qui déterminent la structure de votre rapport .
           </p>
@@ -340,13 +340,13 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* SECTION CALCULS AVANCÉS */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Calculator className="w-6 h-6 text-indigo-600" />
         4. Personnaliser les calculs et valeurs
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Settings className="w-5 h-5 text-indigo-600" />
             Types de calcul disponibles
@@ -416,13 +416,13 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* SECTION ASTUCES AVANCÉES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Zap className="w-6 h-6 text-yellow-600" />
         5. Astuces avancées des professionnels 
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="bg-yellow-50 p-4 rounded-lg">
@@ -472,13 +472,13 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* SECTION ERREURS COURANTES */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <AlertTriangle className="w-6 h-6 text-red-600" />
         6. Éviter les erreurs courantes
       </h3>
 
       <div className="mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h5 className="font-semibold text-gray-800 mb-3">Problèmes et solutions</h5>
@@ -518,7 +518,7 @@ export default function Lecon7({ onResult }) {
       </div>
 
       {/* EXERCICE PRATIQUE */}
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <BookOpen className="w-6 h-6 text-indigo-600" />
         EXERCICE PRATIQUE : TABLEAU DE BORD COMMERCIAL
       </h3>
@@ -530,7 +530,7 @@ export default function Lecon7({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-indigo-600" />
             Fichier d'exercice
@@ -545,7 +545,7 @@ export default function Lecon7({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-indigo-600" />
             Correction vidéo
@@ -560,14 +560,14 @@ export default function Lecon7({ onResult }) {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+      <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
+        <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
           <Calculator className="w-6 h-6 text-indigo-600" />
           Consignes de l'exercice
         </h3>
 
         <div className="space-y-6">
-          <div className="bg-green-50 border border-green-200 rounded-lg p-5">
+          <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <Table className="w-5 h-5 text-green-600" />
               TCD 1 : Analyse des ventes par produit
@@ -606,7 +606,7 @@ export default function Lecon7({ onResult }) {
             </div>
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-5">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
             <h4 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-blue-600" />
               TCD 2 : Analyse par région et trimestre

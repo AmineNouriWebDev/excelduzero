@@ -27,12 +27,12 @@ import {
   
   export default function Lecon7({ onResult }) {
     return (
-      <div className="max-w-6xl mx-auto p-6 bg-white">
+      <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
         {/* Header */}
-        <header className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-12 text-center rounded-xl shadow-lg mb-8">
+        <header className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-6 md:px-8 md:py-12 md:rounded-xl rounded-none text-center rounded-xl shadow-lg mb-8">
           <div className="flex items-center justify-center mb-4">
             <Palette className="w-10 h-10 mr-3" />
-            <h1 className="text-4xl md:text-5xl font-bold">MISE EN FORME ET DIMENSIONS</h1>
+            <h1 className="text-lg md:text-xl md:text-5xl font-bold">MISE EN FORME ET DIMENSIONS</h1>
           </div>
           <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
             Apprenez à personnaliser l'apparence de vos cellules Excel pour créer
@@ -41,7 +41,7 @@ import {
         </header>
   
         {/* Navigation */}
-        <nav className="bg-blue-50 px-6 py-8 border-b-2 border-blue-200 rounded-xl shadow-md mb-8">
+        <nav className="bg-blue-50 px-4 py-4 md:px-6 md:py-8 md:rounded-xl rounded-none w-full border-b-2 border-blue-200 rounded-xl shadow-md mb-8">
           <div className="flex items-center justify-center mb-6">
             <BookOpen className="w-6 h-6 mr-2 text-blue-600" />
             <h3 className="text-xl font-semibold text-blue-800">Plan de la leçon</h3>
@@ -70,12 +70,12 @@ import {
           </div>
         </nav>
   
-        <main className="px-6 py-8">
+        <main className="px-4 py-4 md:px-6 md:py-8 md:rounded-xl rounded-none w-full">
           {/* Section 1: Éléments de mise en forme */}
-          <section id="elements-mise-en-forme" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl border-l-4 border-blue-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="elements-mise-en-forme" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl border-l-4 border-blue-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Settings className="w-8 h-8 mr-3 text-blue-600" />
-              <h2 className="text-3xl font-bold text-blue-800">1. ÉLÉMENTS DE MISE EN FORME</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-blue-800">1. ÉLÉMENTS DE MISE EN FORME</h2>
             </div>
   
           
@@ -93,7 +93,7 @@ import {
                 { icon: <Palette className="w-5 h-5" />, title: "Son remplissage", desc: "(couleur de fond)" },
                 { icon: <Settings className="w-5 h-5" />, title: "Son format", desc: "(protection, etc.)" }
               ].map((item, index) => (
-                <div key={index} className="flex items-start p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                <div key={index} className="flex items-start px-4 py-3 md:p-4 bg-white rounded-lg shadow-sm border border-gray-200">
                   <div className="text-blue-600 mr-3 mt-1">{item.icon}</div>
                   <div>
                     <strong className="text-blue-800">{item.title}</strong>
@@ -106,7 +106,7 @@ import {
             <div className="mb-8">
               <div className="flex items-center mb-4">
                 <Settings className="w-6 h-6 mr-2 text-blue-600" />
-                <h3 className="text-2xl font-semibold text-blue-700">Outils de mise en forme</h3>
+                <h3 className="text-base md:text-2xl font-semibold text-blue-700">Outils de mise en forme</h3>
               </div>
   
               <div className="mb-6">
@@ -173,7 +173,7 @@ import {
             <div>
               <div className="flex items-center mb-4">
                 <MousePointer className="w-6 h-6 mr-2 text-blue-600" />
-                <h3 className="text-2xl font-semibold text-blue-700">Principe d'application d'une mise en forme</h3>
+                <h3 className="text-base md:text-2xl font-semibold text-blue-700">Principe d'application d'une mise en forme</h3>
               </div>
   
               <div className="mb-4">
@@ -202,10 +202,10 @@ import {
           </section>
   
           {/* Section 2: Formats d'affichage */}
-          <section id="formats-affichage" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-green-50 rounded-xl border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="formats-affichage" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-green-50 rounded-xl border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Type className="w-8 h-8 mr-3 text-green-600" />
-              <h2 className="text-3xl font-bold text-green-800">2. FORMATS D'AFFICHAGE</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-green-800">2. FORMATS D'AFFICHAGE</h2>
             </div>
   
             <div className="mb-6">
@@ -226,7 +226,7 @@ import {
             </div>
   
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold text-green-700 mb-4">Formats disponibles</h3>
+              <h3 className="text-base md:text-2xl font-semibold text-green-700 mb-4">Formats disponibles</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
                   { title: "Format Standard", desc: "Format par défaut" },
@@ -260,10 +260,10 @@ import {
           </section>
   
           {/* Section 3: Alignement et orientation */}
-          <section id="alignement-orientation" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-purple-50 rounded-xl border-l-4 border-purple-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="alignement-orientation" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-purple-50 rounded-xl border-l-4 border-purple-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <AlignLeft className="w-8 h-8 mr-3 text-purple-600" />
-              <h2 className="text-3xl font-bold text-purple-800">3. ALIGNEMENT ET ORIENTATION</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-purple-800">3. ALIGNEMENT ET ORIENTATION</h2>
             </div>
   
             <div className="mb-6">
@@ -275,7 +275,7 @@ import {
             </div>
   
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold text-purple-700 mb-4">Types d'alignement</h3>
+              <h3 className="text-base md:text-2xl font-semibold text-purple-700 mb-4">Types d'alignement</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
                   { icon: <AlignLeft className="w-5 h-5" />, title: "Alignement horizontal", desc: "Gauche, Centre, Droite, Justifié" },
@@ -285,7 +285,7 @@ import {
                   { icon: <Settings className="w-5 h-5" />, title: "Réduction pour ajuster", desc: "à la taille de la cellule" },
                   { icon: <Grid3X3 className="w-5 h-5" />, title: "Fusion de cellules", desc: "" }
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                  <div key={index} className="flex items-start px-4 py-3 md:p-4 bg-white rounded-lg shadow-sm border border-gray-200">
                     <div className="text-purple-600 mr-3 mt-1">{item.icon}</div>
                     <div>
                       <strong className="text-purple-800">{item.title}</strong>
@@ -306,15 +306,15 @@ import {
           </section>
   
           {/* Section 4: Police, bordure, remplissage */}
-          <section id="police-bordure-remplissage" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl border-l-4 border-orange-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="police-bordure-remplissage" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl border-l-4 border-orange-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Palette className="w-8 h-8 mr-3 text-orange-600" />
-              <h2 className="text-3xl font-bold text-orange-800">4. POLICE, BORDURE, REMPLISSAGE</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-orange-800">4. POLICE, BORDURE, REMPLISSAGE</h2>
             </div>
   
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold text-orange-700 mb-4 flex items-center">
+                <h3 className="text-base md:text-2xl font-semibold text-orange-700 mb-4 flex items-center">
                   <Type className="w-6 h-6 mr-2" />
                   Police
                 </h3>
@@ -343,7 +343,7 @@ import {
               </div>
   
               <div>
-                <h3 className="text-2xl font-semibold text-orange-700 mb-4 flex items-center">
+                <h3 className="text-base md:text-2xl font-semibold text-orange-700 mb-4 flex items-center">
                   <Grid3X3 className="w-6 h-6 mr-2" />
                   Bordures
                 </h3>
@@ -371,7 +371,7 @@ import {
               </div>
   
               <div>
-                <h3 className="text-2xl font-semibold text-orange-700 mb-4 flex items-center">
+                <h3 className="text-base md:text-2xl font-semibold text-orange-700 mb-4 flex items-center">
                   <Palette className="w-6 h-6 mr-2" />
                   Remplissage
                 </h3>
@@ -400,15 +400,15 @@ import {
           </section>
   
           {/* Section 5: Styles */}
-          <section id="styles" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-pink-50 rounded-xl border-l-4 border-pink-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="styles" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-pink-50 rounded-xl border-l-4 border-pink-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Sparkles className="w-8 h-8 mr-3 text-pink-600" />
-              <h2 className="text-3xl font-bold text-pink-800">5. CRÉATION ET APPLICATION D'UN STYLE</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-pink-800">5. CRÉATION ET APPLICATION D'UN STYLE</h2>
             </div>
   
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold text-pink-700 mb-4">Styles prédéfinis</h3>
+                <h3 className="text-base md:text-2xl font-semibold text-pink-700 mb-4">Styles prédéfinis</h3>
                 <div className="mb-4">
                   <ImageZoomable 
                     src="/cours/debutant/lecon7/styles-predefinis.png" 
@@ -423,7 +423,7 @@ import {
               </div>
   
               <div>
-                <h3 className="text-2xl font-semibold text-pink-700 mb-4">Création d'un style personnalisé</h3>
+                <h3 className="text-base md:text-2xl font-semibold text-pink-700 mb-4">Création d'un style personnalisé</h3>
                 <div className="mb-4">
                   <ImageZoomable 
                     src="/cours/debutant/lecon7/creation-style.gif" 
@@ -446,10 +446,10 @@ import {
           </section>
   
           {/* Section 6: Mise en forme conditionnelle */}
-          <section id="mise-en-forme-conditionnelle" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-yellow-50 rounded-xl border-l-4 border-yellow-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="mise-en-forme-conditionnelle" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-yellow-50 rounded-xl border-l-4 border-yellow-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Zap className="w-8 h-8 mr-3 text-yellow-600" />
-              <h2 className="text-3xl font-bold text-yellow-800">6. MISE EN FORME CONDITIONNELLE</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-yellow-800">6. MISE EN FORME CONDITIONNELLE</h2>
             </div>
   
             <div className="mb-8">
@@ -462,7 +462,7 @@ import {
   
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold text-yellow-700 mb-4">Mises en forme conditionnelles prédéfinies</h3>
+                <h3 className="text-base md:text-2xl font-semibold text-yellow-700 mb-4">Mises en forme conditionnelles prédéfinies</h3>
                 <div className="mb-4">
                   <ImageZoomable 
                     src="/cours/debutant/lecon7/regles-predefinies.png" 
@@ -488,7 +488,7 @@ import {
               </div>
   
               <div>
-                <h3 className="text-2xl font-semibold text-yellow-700 mb-4">Mises en forme conditionnelles personnalisées</h3>
+                <h3 className="text-base md:text-2xl font-semibold text-yellow-700 mb-4">Mises en forme conditionnelles personnalisées</h3>
                 <div className="mb-4">
                   <ImageZoomable 
                     src="/cours/debutant/lecon7/regles-personnalisees.gif" 
@@ -504,7 +504,7 @@ import {
               </div>
   
               <div>
-                <h3 className="text-2xl font-semibold text-yellow-700 mb-4">Gestion des règles</h3>
+                <h3 className="text-base md:text-2xl font-semibold text-yellow-700 mb-4">Gestion des règles</h3>
                 <div className="mb-4">
                   <ImageZoomable 
                     src="/cours/debutant/lecon7/gestion-regles.png" 
@@ -531,10 +531,10 @@ import {
           </section>
   
           {/* Section 7: Reproduction */}
-          <section id="reproduction-mise-en-forme" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-indigo-50 rounded-xl border-l-4 border-indigo-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="reproduction-mise-en-forme" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-indigo-50 rounded-xl border-l-4 border-indigo-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Copy className="w-8 h-8 mr-3 text-indigo-600" />
-              <h2 className="text-3xl font-bold text-indigo-800">7. REPRODUCTION D'UNE MISE EN FORME</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-indigo-800">7. REPRODUCTION D'UNE MISE EN FORME</h2>
             </div>
   
             <div className="mb-6">
@@ -545,7 +545,7 @@ import {
               />
             </div>
   
-            <h3 className="text-2xl font-semibold text-indigo-700 mb-4">Pinceau de reproduction de mise en forme</h3>
+            <h3 className="text-base md:text-2xl font-semibold text-indigo-700 mb-4">Pinceau de reproduction de mise en forme</h3>
             <div className="bg-white p-6 rounded-lg border border-gray-200 mb-6">
               <ol className="list-decimal list-inside space-y-3 text-gray-700">
                 <li>Sélectionnez la cellule source (avec la mise en forme à copier)</li>
@@ -560,7 +560,7 @@ import {
               </p>
             </div>
   
-            <h3 className="text-2xl font-semibold text-indigo-700 mb-4">Autres méthodes</h3>
+            <h3 className="text-base md:text-2xl font-semibold text-indigo-700 mb-4">Autres méthodes</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { title: "Copier-coller spécial", desc: "Formats uniquement" },
@@ -575,13 +575,13 @@ import {
           </section>
   
           {/* Section 8: Thèmes */}
-          <section id="modification-theme" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-red-50 rounded-xl border-l-4 border-red-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="modification-theme" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-red-50 rounded-xl border-l-4 border-red-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Layers className="w-8 h-8 mr-3 text-red-600" />
-              <h2 className="text-3xl font-bold text-red-800">8. MODIFICATION DU THÈME</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-red-800">8. MODIFICATION DU THÈME</h2>
             </div>
   
-            <h3 className="text-2xl font-semibold text-red-700 mb-4">Jeu de couleurs, jeu de polices et jeu d'effets</h3>
+            <h3 className="text-base md:text-2xl font-semibold text-red-700 mb-4">Jeu de couleurs, jeu de polices et jeu d'effets</h3>
             <div className="mb-6">
               <ImageZoomable 
                 src="/cours/debutant/lecon7/themes-predefinis.png" 
@@ -608,7 +608,7 @@ import {
               ))}
             </div>
   
-            <h3 className="text-2xl font-semibold text-red-700 mb-4">Création d'un thème personnalisé</h3>
+            <h3 className="text-base md:text-2xl font-semibold text-red-700 mb-4">Création d'un thème personnalisé</h3>
             <div className="mb-6">
               <ImageZoomable 
                 src="/cours/debutant/lecon7/creation-theme.gif" 
@@ -628,13 +628,13 @@ import {
           </section>
   
           {/* Section 9: Dimensions */}
-          <section id="dimensions" className="mb-12 p-8 bg-gradient-to-r from-gray-50 to-teal-50 rounded-xl border-l-4 border-teal-500 shadow-lg hover:shadow-xl transition-shadow">
+          <section id="dimensions" className="mb-12 px-4 py-6 md:p-8 md:rounded-xl rounded-none bg-gradient-to-r from-gray-50 to-teal-50 rounded-xl border-l-4 border-teal-500 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
               <Columns className="w-8 h-8 mr-3 text-teal-600" />
-              <h2 className="text-3xl font-bold text-teal-800">9. LARGEURS DES COLONNES ET HAUTEURS DES LIGNES</h2>
+              <h2 className="text-lg md:text-3xl font-bold text-teal-800">9. LARGEURS DES COLONNES ET HAUTEURS DES LIGNES</h2>
             </div>
   
-            <h3 className="text-2xl font-semibold text-teal-700 mb-4">Procédures de modification</h3>
+            <h3 className="text-base md:text-2xl font-semibold text-teal-700 mb-4">Procédures de modification</h3>
             <div className="mb-6">
               <ImageZoomable 
                 src="/cours/debutant/lecon7/ajustement-dimensions.gif" 
@@ -683,7 +683,7 @@ import {
             </div>
   
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-teal-700 mb-4">Reproduction des dimensions</h3>
+              <h3 className="text-base md:text-2xl font-semibold text-teal-700 mb-4">Reproduction des dimensions</h3>
               <div className="mb-4">
                 <ImageZoomable 
                   src="/cours/debutant/lecon7/copie-dimensions.gif" 
@@ -702,7 +702,7 @@ import {
             </div>
   
             <div>
-              <h3 className="text-2xl font-semibold text-teal-700 mb-4">Masquage et affichage</h3>
+              <h3 className="text-base md:text-2xl font-semibold text-teal-700 mb-4">Masquage et affichage</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
                   { title: "Masquer", desc: "Largeur 0 ou menu contextuel" },
@@ -719,22 +719,22 @@ import {
   
           {/* Section Exercices pratiques */}
           <section className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold text-indigo-800 mb-6 flex items-center gap-3">
+            <h2 className="text-base md:text-2xl font-bold text-indigo-800 mb-6 flex items-center gap-3">
               <svg className="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m7 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               Exercices pratiques
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-blue-50 p-5 rounded-xl border border-blue-200 shadow">
+              <div className="bg-blue-50 px-4 py-4 md:p-5 md:rounded-xl rounded-none rounded-xl border border-blue-200 shadow">
                 <h3 className="font-semibold text-blue-700 mb-2">Etape 1 : Mise en forme basique</h3>
                 <p className="text-gray-700">Créez un calendrier simple en utilisant les séries de données pour les mois et les jours de l'année'.</p>
               </div>
-              <div className="bg-green-50 p-5 rounded-xl border border-green-200 shadow">
+              <div className="bg-green-50 px-4 py-4 md:p-5 md:rounded-xl rounded-none rounded-xl border border-green-200 shadow">
                 <h3 className="font-semibold text-green-700 mb-2">Etape 2 : Mise en forme</h3>
                 <p className="text-gray-700">Modifiez la police,appliquez des bordure et stylisez selon votre goût le thème</p>
               </div>
-              <div className="bg-pink-50 p-5 rounded-xl border border-pink-200 shadow">
+              <div className="bg-pink-50 px-4 py-4 md:p-5 md:rounded-xl rounded-none rounded-xl border border-pink-200 shadow">
                 <h3 className="font-semibold text-pink-700 mb-2">Partie 3 :Mise en forme conditionnelle personnalisé</h3>
                 <p className="text-gray-700">Modifiez l'apparence des jours de weekend (Samedi & Dimanche)</p>
               </div>
@@ -743,7 +743,7 @@ import {
   
           {/* Section vidéo de correction */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-purple-800 mb-4 flex items-center gap-3">
+            <h2 className="text-base md:text-2xl font-bold text-purple-800 mb-4 flex items-center gap-3">
               <svg className="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A2 2 0 0020 6.382V5a2 2 0 00-2-2H6a2 2 0 00-2 2v1.382a2 2 0 00.447 1.342L9 10m6 0v10m0 0H9m6 0a2 2 0 002-2v-8m-8 10V10m0 0L4.447 7.724A2 2 0 014 6.382V5a2 2 0 012-2h12a2 2 0 012 2v1.382a2 2 0 01-.447 1.342L15 10z" />
               </svg>

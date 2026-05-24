@@ -31,8 +31,8 @@ import {
 
 export default function Lecon9({ onResult }) {
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+    <div className="max-w-6xl mx-auto px-0 py-2 md:p-6 bg-white w-full max-w-full overflow-hidden">
+      <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
         <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
         </svg>
@@ -48,7 +48,7 @@ export default function Lecon9({ onResult }) {
         </p>
       </div>
 
-      <div className="bg-gray-50 rounded-lg p-5 mb-6">
+      <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
         <p className="text-gray-700 mb-4">
           Dans cette leçon, vous apprendrez à :
         </p>
@@ -80,7 +80,7 @@ export default function Lecon9({ onResult }) {
         </ul>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Merge className="w-6 h-6 text-purple-600" />
         1. FUSION DE CELLULES
       </h3>
@@ -94,7 +94,7 @@ export default function Lecon9({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Grid className="w-5 h-5 text-purple-600" />
             Comment fusionner des cellules
@@ -128,7 +128,7 @@ export default function Lecon9({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Settings className="w-5 h-5 text-purple-600" />
             Types de fusion disponibles
@@ -207,7 +207,7 @@ export default function Lecon9({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <FileText className="w-6 h-6 text-teal-600" />
         2. EN-TÊTES ET PIEDS DE PAGE
       </h3>
@@ -221,7 +221,7 @@ export default function Lecon9({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Layout className="w-5 h-5 text-teal-600" />
             Accéder aux en-têtes et pieds de page
@@ -254,7 +254,7 @@ export default function Lecon9({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Copy className="w-5 h-5 text-teal-600" />
             Éléments automatiques disponibles
@@ -284,7 +284,7 @@ export default function Lecon9({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mb-6">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Settings className="w-5 h-5 text-blue-600" />
             Personnalisation avancée
@@ -311,7 +311,7 @@ export default function Lecon9({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <Monitor className="w-6 h-6 text-indigo-600" />
         3. GESTION DE L'AFFICHAGE ET DE LA MISE EN PAGE
       </h3>
@@ -325,7 +325,7 @@ export default function Lecon9({ onResult }) {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Eye className="w-5 h-5 text-indigo-600" />
             Modes d'affichage
@@ -364,7 +364,7 @@ export default function Lecon9({ onResult }) {
           />
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5 mb-4">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-4">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Printer className="w-5 h-5 text-indigo-600" />
             Configuration de l'impression
@@ -403,7 +403,7 @@ export default function Lecon9({ onResult }) {
           </div>
         </div>
 
-        <div className="bg-green-50 border border-green-200 rounded-lg p-5 mb-6">
+        <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <Columns className="w-5 h-5 text-green-600" />
             Gestion des sauts de page
@@ -432,7 +432,7 @@ export default function Lecon9({ onResult }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
+      <h3 className="text-base md:text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center gap-2">
         <Target className="w-6 h-6 text-orange-600" />
         4. EXERCICE PRATIQUE
       </h3>
@@ -446,7 +446,7 @@ export default function Lecon9({ onResult }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Download className="w-5 h-5 text-orange-600" />
             Fichier d'exercice
@@ -461,7 +461,7 @@ export default function Lecon9({ onResult }) {
           </a>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-5">
+        <div className="bg-white border border-gray-200 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
           <h4 className="text-xl font-medium text-gray-800 mb-4 flex items-center gap-2">
             <Video className="w-5 h-5 text-orange-600" />
             Correction vidéo

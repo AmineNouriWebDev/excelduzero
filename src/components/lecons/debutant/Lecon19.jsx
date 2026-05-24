@@ -49,11 +49,11 @@ export default function Lecon19({ onResult }) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4 bg-white">
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-6 mb-8 text-white">
+    <div className="max-w-6xl mx-auto px-4 py-3 md:p-4 bg-white">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8 text-white">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold flex items-center gap-3">
+            <h1 className="text-lg md:text-3xl font-bold flex items-center gap-3">
               <BarChart2 className="w-8 h-8" />
               Graphiques Simples dans Microsoft Excel
             </h1>
@@ -66,13 +66,13 @@ export default function Lecon19({ onResult }) {
       </div>
 
       <div className="mb-8">
-        <div className="bg-blue-50 rounded-lg p-5 mb-6">
+        <div className="bg-blue-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700">
             Dans cette leçon, vous apprendrez à créer et personnaliser différents types de graphiques dans Excel pour visualiser vos données de manière professionnelle.
           </p>
         </div>
         
-        <div className="bg-gray-50 rounded-lg p-5 mb-6">
+        <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700 mb-4">
             Les compétences que vous allez acquérir :
           </p>
@@ -118,7 +118,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">
@@ -187,7 +187,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.histogrammes && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">
@@ -281,7 +281,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.camemberts && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">
@@ -376,7 +376,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.courbes && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">
@@ -493,7 +493,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.autres && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">
@@ -586,7 +586,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.personnalisation && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -710,7 +710,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.sparklines && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -817,7 +817,7 @@ export default function Lecon19({ onResult }) {
         </button>
         
         {expandedSections.exercice && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                 <BarChart2 className="w-5 h-5 text-orange-600" />
@@ -883,7 +883,7 @@ export default function Lecon19({ onResult }) {
                 </table>
               </div>
               
-              <div className="border rounded-lg p-5 mb-8">
+              <div className="border rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-8">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Mission à compléter :</h3>
                 <ol className="list-decimal pl-6 space-y-4">
                   <li className="text-gray-700">
@@ -916,7 +916,7 @@ export default function Lecon19({ onResult }) {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="border rounded-lg p-5">
+                <div className="border rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                     <Download className="w-5 h-5 text-orange-600" />
                     Fichier d'exercice
@@ -927,7 +927,7 @@ export default function Lecon19({ onResult }) {
                   </a>
                 </div>
                 
-                <div className="border rounded-lg p-5">
+                <div className="border rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none">
                   <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                     <Video className="w-5 h-5 text-indigo-600" />
                     Correction vidéo

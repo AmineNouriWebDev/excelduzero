@@ -47,7 +47,7 @@ export default function Lecon20({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec nouveau dégradé */}
-    <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+    <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
   <div className="absolute inset-0 bg-black/10"></div>
   <div className="relative z-10">
     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -56,7 +56,7 @@ export default function Lecon20({ onResult }) {
           <Hash className="w-6 h-6 md:w-8 md:h-8" />
         </div>
         <div className="flex-1 min-w-0">
-          <h1 className="text-2xl md:text-4xl font-bold break-words">Formats de Nombres Personnalisés Excel</h1>
+          <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Formats de Nombres Personnalisés Excel</h1>
           <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Donnez un impact visuel à vos données numériques</p>
         </div>
       </div>
@@ -88,10 +88,10 @@ export default function Lecon20({ onResult }) {
       {/* Introduction */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-amber-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <Sparkles className="w-6 h-6 text-amber-600" />
             </div>
@@ -104,7 +104,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Au-delà de l'Apparence : La Puissance des Données</h3>
@@ -113,7 +113,7 @@ export default function Lecon20({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Cohérence visuelle</h4>
@@ -121,7 +121,7 @@ export default function Lecon20({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Données contextuelles</h4>
@@ -129,7 +129,7 @@ export default function Lecon20({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Calculs préservés</h4>
@@ -152,25 +152,25 @@ export default function Lecon20({ onResult }) {
             </div>
 
             {/* Section Accès rapide */}
-            <div className="mt-8 bg-white rounded-2xl border-2 border-amber-200 p-6">
+            <div className="mt-8 bg-white rounded-2xl border-2 border-amber-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
               <h4 className="font-semibold text-gray-800 mb-4 text-center">⚡ Comment Accéder aux Formats Personnalisés</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div className="p-4 border-2 border-blue-200 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">1</div>
+                  <div className="text-base md:text-2xl font-bold text-blue-600 mb-2">1</div>
                   <h5 className="font-semibold text-gray-800">Raccourci Clavier</h5>
                   <p className="text-gray-600 text-sm"><code>Ctrl + 1</code></p>
                   <p className="text-gray-500 text-xs mt-1">Ouvre la boîte de dialogue Format de cellule:cite[6]</p>
                 </div>
                 
                 <div className="p-4 border-2 border-green-200 rounded-lg">
-                  <div className="text-2xl font-bold text-green-600 mb-2">2</div>
+                  <div className="text-base md:text-2xl font-bold text-green-600 mb-2">2</div>
                   <h5 className="font-semibold text-gray-800">Menu Contextuel</h5>
                   <p className="text-gray-600 text-sm">Clic droit → Format de cellule</p>
                   <p className="text-gray-500 text-xs mt-1">Accès rapide depuis n'importe quelle cellule</p>
                 </div>
                 
                 <div className="p-4 border-2 border-purple-200 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">3</div>
+                  <div className="text-base md:text-2xl font-bold text-purple-600 mb-2">3</div>
                   <h5 className="font-semibold text-gray-800">Ruban Accueil</h5>
                   <p className="text-gray-600 text-sm">Accueil → Nombre → Autres formats numériques</p>
                   <p className="text-gray-500 text-xs mt-1">Accès visuel avec aperçu</p>
@@ -184,10 +184,10 @@ export default function Lecon20({ onResult }) {
       {/* Syntaxe et Structure */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-blue-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-blue-50 to-cyan-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('syntaxe')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Code className="w-6 h-6 text-blue-600" />
             </div>
@@ -200,14 +200,14 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.syntaxe && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">La Structure en 4 Sections : Clé de la Maîtrise:cite[3]:cite[8]</h3>
             
             <div className="bg-white rounded-2xl border-2 border-purple-200 overflow-hidden mb-8">
               <div className="bg-purple-500 p-4 text-white">
                 <h4 className="font-bold text-lg">POSITIF; NÉGATIF; ZÉRO; TEXTE</h4>
               </div>
-              <div className="p-6">
+              <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
                   <div className="p-4 border-2 border-green-200 rounded-lg">
                     <div className="text-green-600 font-bold mb-2">Positifs</div>
@@ -296,7 +296,7 @@ export default function Lecon20({ onResult }) {
             </div>
 
             {/* Guide visuel création */}
-            <div className="bg-white rounded-2xl border-2 border-gray-200 p-6">
+            <div className="bg-white rounded-2xl border-2 border-gray-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
               <h4 className="font-semibold text-gray-800 mb-4 text-center">🎯 Guide Visuel : Créer Votre Premier Format Personnalisé</h4>
               
               <div className="space-y-6">
@@ -387,10 +387,10 @@ export default function Lecon20({ onResult }) {
       {/* Exemples Pratiques */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-green-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('exemples_pratiques')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <Zap className="w-6 h-6 text-green-600" />
             </div>
@@ -403,7 +403,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.exemples_pratiques && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Formats Prêts à l'Emploi pour Votre Quotidien</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -615,10 +615,10 @@ export default function Lecon20({ onResult }) {
       {/* Cas Avancés */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-purple-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('cas_avances')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Settings className="w-6 h-6 text-purple-600" />
             </div>
@@ -631,7 +631,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.cas_avances && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Formats Conditionnels et Techniques Expertes</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -639,7 +639,7 @@ export default function Lecon20({ onResult }) {
                 <h4 className="font-semibold text-gray-800 mb-4">🎨 Formats Conditionnels avec Couleurs:cite[8]</h4>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Seuil de Performance</h5>
                     <p className="text-gray-600 text-sm mb-2">
                       Code : <code>[Green][&gt;1000]#,##0;"Standard"</code>
@@ -649,7 +649,7 @@ export default function Lecon20({ onResult }) {
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Alerte Stock</h5>
                     <p className="text-gray-600 text-sm mb-2">
                       Code : <code>[Red][&lt;10]"STOCK FAIBLE";#,##0</code>
@@ -659,7 +659,7 @@ export default function Lecon20({ onResult }) {
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Statut Projet</h5>
                     <p className="text-gray-600 text-sm mb-2">
                       Code : <code>[Blue]"EN COURS";[Green]"TERMINÉ";[Red]"RETARD"</code>
@@ -687,7 +687,7 @@ export default function Lecon20({ onResult }) {
             </div>
 
             {/* Techniques expertes */}
-            <div className="bg-white rounded-2xl border-2 border-gray-200 p-6">
+            <div className="bg-white rounded-2xl border-2 border-gray-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
               <h4 className="font-semibold text-gray-800 mb-4 text-center">⚡ Techniques Expertes pour Power Users</h4>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -743,10 +743,10 @@ export default function Lecon20({ onResult }) {
       {/* Bonnes Pratiques */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-slate-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-slate-50 to-gray-50 text-left hover:from-slate-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-slate-50 to-gray-50 text-left hover:from-slate-100 transition-all"
           onClick={() => toggleSection('bonnes_pratiques')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-slate-100 p-3 rounded-xl">
               <Lightbulb className="w-6 h-6 text-slate-600" />
             </div>
@@ -759,27 +759,27 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.bonnes_pratiques && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-6">✅ Best Practices</h3>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Tester avec différentes valeurs</h5>
                     <p className="text-gray-600 text-sm">
                       Vérifiez votre format avec des positifs, négatifs, zéros et texte:cite[6].
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Documenter les formats complexes</h5>
                     <p className="text-gray-600 text-sm">
                       Commentez vos codes dans une cellule adjacente ou un fichier documentation.
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Utiliser des modèles de base</h5>
                     <p className="text-gray-600 text-sm">
                       Partez des formats intégrés et modifiez-les plutôt que de tout créer:cite[3].
@@ -792,21 +792,21 @@ export default function Lecon20({ onResult }) {
                 <h3 className="text-xl font-semibold text-gray-800 mb-6">❌ Problèmes Courants et Solutions</h3>
                 
                 <div className="space-y-4">
-                  <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Format non appliqué</h5>
                     <p className="text-gray-600 text-sm">
                       Vérifiez les points-virgules et l'ordre des sections:cite[3].
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Texte non affiché</h5>
                     <p className="text-gray-600 text-sm">
                       Assurez-vous d'avoir la section texte et le placeholder @:cite[8].
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-white rounded-lg border-2 border-red-200">
+                  <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-red-200">
                     <h5 className="font-semibold text-gray-800 mb-2">Couleurs ignorées</h5>
                     <p className="text-gray-600 text-sm">
                       La couleur doit être le premier élément dans la section, entre crochets:cite[8].
@@ -817,7 +817,7 @@ export default function Lecon20({ onResult }) {
             </div>
 
             {/* Checklist */}
-            <div className="mt-8 bg-white rounded-2xl border-2 border-blue-200 p-6">
+            <div className="mt-8 bg-white rounded-2xl border-2 border-blue-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
               <h4 className="font-semibold text-gray-800 mb-4 text-center">📋 Checklist de Création de Format</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -863,10 +863,10 @@ export default function Lecon20({ onResult }) {
       {/* Exercice Pratique */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-indigo-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-indigo-50 to-purple-50 text-left hover:from-indigo-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-indigo-50 to-purple-50 text-left hover:from-indigo-100 transition-all"
           onClick={() => toggleSection('exercice')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-indigo-100 p-3 rounded-xl">
               <BarChart3 className="w-6 h-6 text-indigo-600" />
             </div>
@@ -879,7 +879,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.exercice && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6">🎯 Mission : Professionnaliser un Rapport Commercial</h3>
               
@@ -891,7 +891,7 @@ export default function Lecon20({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-blue-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-blue-200">
                       <AlertTriangle className="w-5 h-5 text-blue-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Problème actuel</p>
@@ -899,7 +899,7 @@ export default function Lecon20({ onResult }) {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-green-200">
+                    <div className="flex items-center gap-3 px-4 py-3 md:p-4 bg-white rounded-xl border-2 border-green-200">
                       <Target className="w-5 h-5 text-green-600" />
                       <div>
                         <p className="font-semibold text-gray-800">Objectif</p>
@@ -921,7 +921,7 @@ export default function Lecon20({ onResult }) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl border-2 border-purple-100">
+                <div className="bg-white px-4 py-4 md:p-6 md:rounded-lg rounded-none rounded-xl border-2 border-purple-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📝 Consignes de l'Exercice</h4>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2">
@@ -951,7 +951,7 @@ export default function Lecon20({ onResult }) {
                   </ul>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl border-2 border-green-100">
+                <div className="bg-white px-4 py-4 md:p-6 md:rounded-lg rounded-none rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources</h4>
                   <div className="space-y-4">
                     <a href="/cours/intermediaire/lecon20/exercice-formats.xlsx" 
@@ -968,7 +968,7 @@ export default function Lecon20({ onResult }) {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200 rounded-2xl p-6">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <h4 className="font-semibold text-gray-800 mb-4">🏆 Critères d'Évaluation</h4>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 p-3 bg-white rounded-lg">

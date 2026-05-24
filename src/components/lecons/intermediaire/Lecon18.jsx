@@ -78,7 +78,7 @@ export default function Lecon18({ onResult }) {
   return (
     <div className="max-w-7xl mx-auto p-0 bg-white">
       {/* En-tête avec nouveau dégradé bleu/vert */}
-    <div className="bg-gradient-to-r from-cyan-600 via-blue-500 to-teal-500 rounded-2xl p-6 md:p-8 mb-8 text-white relative overflow-hidden">
+    <div className="bg-gradient-to-r from-cyan-600 via-blue-500 to-teal-500 rounded-2xl px-4 py-4 md:p-6 md:rounded-lg rounded-none md:px-4 py-6 md:p-8 md:rounded-xl rounded-none mb-8 text-white relative overflow-hidden">
   <div className="absolute inset-0 bg-black/10"></div>
   <div className="relative z-10">
     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
@@ -87,7 +87,7 @@ export default function Lecon18({ onResult }) {
           <Search className="w-6 h-6 md:w-8 md:h-8" />
         </div>
         <div className="flex-1 min-w-0">
-          <h1 className="text-2xl md:text-4xl font-bold break-words">Audit de Formules Excel</h1>
+          <h1 className="text-base md:text-2xl md:text-4xl font-bold break-words">Audit de Formules Excel</h1>
           <p className="text-base md:text-xl opacity-90 mt-1 md:mt-2 break-words">Déboguez, Analysez, Maîtrisez - Devenez Expert de Vos Feuilles de Calcul</p>
         </div>
       </div>
@@ -119,10 +119,10 @@ export default function Lecon18({ onResult }) {
       {/* Introduction */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-cyan-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-cyan-50 to-blue-50 text-left hover:from-cyan-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-cyan-50 to-blue-50 text-left hover:from-cyan-100 transition-all"
           onClick={() => toggleSection('introduction')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-cyan-100 p-3 rounded-xl">
               <Sparkles className="w-6 h-6 text-cyan-600" />
             </div>
@@ -135,7 +135,7 @@ export default function Lecon18({ onResult }) {
         </button>
         
         {expandedSections.introduction && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-3">
@@ -148,7 +148,7 @@ export default function Lecon18({ onResult }) {
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Évitez les erreurs coûteuses</h4>
@@ -156,7 +156,7 @@ export default function Lecon18({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Gagnez un temps précieux</h4>
@@ -164,7 +164,7 @@ export default function Lecon18({ onResult }) {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-200">
+                  <div className="flex items-start gap-4 px-4 py-3 md:p-4 bg-white rounded-xl border border-gray-200">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-800">Maîtrisez les classeurs complexes</h4>
@@ -234,10 +234,10 @@ export default function Lecon18({ onResult }) {
       {/* Section 1 : Outils de Base */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-blue-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-left hover:from-blue-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-blue-50 to-indigo-50 text-left hover:from-blue-100 transition-all"
           onClick={() => toggleSection('outils_base')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-xl">
               <Settings className="w-6 h-6 text-blue-600" />
             </div>
@@ -250,7 +250,7 @@ export default function Lecon18({ onResult }) {
         </button>
         
         {expandedSections.outils_base && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Box className="w-6 h-6 text-blue-600" />
@@ -265,7 +265,7 @@ export default function Lecon18({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-2">📍 Où trouver les outils ?</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li>Ouvrez Excel et cliquez sur l'onglet <strong>Formules</strong></li>
@@ -304,7 +304,7 @@ export default function Lecon18({ onResult }) {
                     Panorama des Outils d'Audit
                   </h4>
                 </div>
-                <div className="p-6">
+                <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div className="text-center p-4">
                       <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -353,10 +353,10 @@ export default function Lecon18({ onResult }) {
       {/* Section 2 : Antécédents et Dépendants */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-green-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-green-50 to-emerald-50 text-left hover:from-green-100 transition-all"
           onClick={() => toggleSection('precedents_dependants')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-green-100 p-3 rounded-xl">
               <GitPullRequest className="w-6 h-6 text-green-600" />
             </div>
@@ -369,7 +369,7 @@ export default function Lecon18({ onResult }) {
         </button>
         
         {expandedSections.precedents_dependants && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <ArrowRightLeft className="w-6 h-6 text-green-600" />
@@ -381,7 +381,7 @@ export default function Lecon18({ onResult }) {
                   <h4 className="font-semibold text-gray-800 mb-4">🎯 Antécédents : "D'où viennent mes données ?"</h4>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                         <div className="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                           1
@@ -404,7 +404,7 @@ export default function Lecon18({ onResult }) {
                       </ul>
                     </div>
 
-                    <div className="p-4 bg-white rounded-lg border-2 border-green-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-green-200">
                       <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                         <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                           2
@@ -444,7 +444,7 @@ export default function Lecon18({ onResult }) {
                   <h4 className="font-semibold text-gray-800 mb-4">🎯 Dépendants : "Qui utilise mes données ?"</h4>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                       <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                         <div className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                           1
@@ -467,7 +467,7 @@ export default function Lecon18({ onResult }) {
                       </ul>
                     </div>
 
-                    <div className="p-4 bg-white rounded-lg border-2 border-amber-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-amber-200">
                       <h5 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                         <div className="bg-amber-100 text-amber-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                           2
@@ -502,7 +502,7 @@ export default function Lecon18({ onResult }) {
               </div>
 
               {/* Tableau comparatif */}
-              <div className="bg-white rounded-2xl border-2 border-teal-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-teal-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <h4 className="font-semibold text-gray-800 mb-4 text-center">📊 Antécédents vs Dépendants : Le Duel</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="text-center p-4">
@@ -543,10 +543,10 @@ export default function Lecon18({ onResult }) {
       {/* Section 3 : Évaluer une Formule */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-amber-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-amber-50 to-orange-50 text-left hover:from-amber-100 transition-all"
           onClick={() => toggleSection('evaluer_formule')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-amber-100 p-3 rounded-xl">
               <Search className="w-6 h-6 text-amber-600" />
             </div>
@@ -559,7 +559,7 @@ export default function Lecon18({ onResult }) {
         </button>
         
         {expandedSections.evaluer_formule && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Zap className="w-6 h-6 text-amber-600" />
@@ -575,7 +575,7 @@ export default function Lecon18({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-amber-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-amber-200">
                       <h5 className="font-semibold text-gray-800 mb-3">🎯 Quand l'utiliser ?</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -593,7 +593,7 @@ export default function Lecon18({ onResult }) {
                       </ul>
                     </div>
 
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-3">📝 Procédure Pas-à-Pas</h5>
                       <ol className="text-sm text-gray-600 space-y-2 list-decimal pl-4">
                         <li>Sélectionnez la cellule à analyser</li>
@@ -624,7 +624,7 @@ export default function Lecon18({ onResult }) {
               </div>
 
               {/* Démontration détaillée */}
-              <div className="bg-white rounded-2xl border-2 border-green-200 p-6 mb-8">
+              <div className="bg-white rounded-2xl border-2 border-green-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8">
                 <h4 className="font-semibold text-gray-800 mb-4 text-center">🔍 Démontration : Évaluation d'une Formule Complexe</h4>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
@@ -679,10 +679,10 @@ export default function Lecon18({ onResult }) {
       {/* Section 4 : Fenêtre Espion */}
       <div className="border-2 border-gray-100 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-white to-purple-50/30">
         <button 
-          className="w-full flex justify-between items-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
+          className="w-full flex justify-between items-center px-4 py-4 md:p-6 md:rounded-lg rounded-none bg-gradient-to-r from-purple-50 to-pink-50 text-left hover:from-purple-100 transition-all"
           onClick={() => toggleSection('fenetre_espion')}
         >
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-4">
+          <h2 className="text-base md:text-2xl font-bold text-gray-800 flex items-center gap-4">
             <div className="bg-purple-100 p-3 rounded-xl">
               <Eye className="w-6 h-6 text-purple-600" />
             </div>
@@ -695,7 +695,7 @@ export default function Lecon18({ onResult }) {
         </button>
         
         {expandedSections.fenetre_espion && (
-          <div className="p-8">
+          <div className="px-4 py-6 md:p-8 md:rounded-xl rounded-none">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
                 <Target className="w-6 h-6 text-purple-600" />
@@ -711,7 +711,7 @@ export default function Lecon18({ onResult }) {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="p-4 bg-white rounded-lg border-2 border-purple-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-purple-200">
                       <h5 className="font-semibold text-gray-800 mb-3">🎯 Configuration</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -733,7 +733,7 @@ export default function Lecon18({ onResult }) {
                       </ul>
                     </div>
 
-                    <div className="p-4 bg-white rounded-lg border-2 border-blue-200">
+                    <div className="px-4 py-3 md:p-4 bg-white rounded-lg border-2 border-blue-200">
                       <h5 className="font-semibold text-gray-800 mb-3">💾 Avantages Clés</h5>
                       <ul className="text-sm text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
@@ -771,7 +771,7 @@ export default function Lecon18({ onResult }) {
               </div>
 
               {/* Guide d'utilisation */}
-              <div className="bg-white rounded-2xl border-2 border-teal-200 p-6">
+              <div className="bg-white rounded-2xl border-2 border-teal-200 px-4 py-4 md:p-6 md:rounded-lg rounded-none">
                 <h4 className="font-semibold text-gray-800 mb-4 text-center">📋 Guide Complet : Maîtriser la Fenêtre Espion</h4>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -39,11 +39,11 @@ export default function Lecon20({ onResult }) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4 bg-white">
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-6 mb-8 text-white">
+    <div className="max-w-6xl mx-auto px-4 py-3 md:p-4 bg-white">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl px-4 py-4 md:p-6 md:rounded-lg rounded-none mb-8 text-white">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold flex items-center gap-3">
+            <h1 className="text-lg md:text-3xl font-bold flex items-center gap-3">
               <CalendarDays className="w-8 h-8" />
               Créer un Calendrier Mensuel Dynamique dans Excel
             </h1>
@@ -56,14 +56,14 @@ export default function Lecon20({ onResult }) {
       </div>
 
       <div className="mb-8">
-        <div className="bg-blue-50 rounded-lg p-5 mb-6">
+        <div className="bg-blue-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700">
             Dans cette leçon, vous apprendrez à créer un calendrier mensuel dynamique qui s'adapte automatiquement 
             au mois et à l'année sélectionnés, avec une mise en forme conditionnelle pour les week-ends.
           </p>
         </div>
         
-        <div className="bg-gray-50 rounded-lg p-5 mb-6">
+        <div className="bg-gray-50 rounded-lg px-4 py-4 md:p-5 md:rounded-xl rounded-none mb-6">
           <p className="text-gray-700 mb-4">
             Les compétences que vous allez acquérir :
           </p>
@@ -105,7 +105,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.preparation && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -195,7 +195,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.structure && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -303,7 +303,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.formules && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
@@ -417,7 +417,7 @@ export default function Lecon20({ onResult }) {
         </button>
         
         {expandedSections.miseEnForme && (
-          <div className="p-6">
+          <div className="px-4 py-4 md:p-6 md:rounded-lg rounded-none">
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
