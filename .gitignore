@@ -26,6 +26,9 @@
 local_roadmap.md
 secrets.txt
 structure.txt
+.env
+.env.local
+.env.*
 
 # debug
 npm-debug.log*
