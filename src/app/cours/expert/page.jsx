@@ -1,4 +1,5 @@
-import CourseClient, { LEÇONS } from "./CourseClient";
+import CourseClient from "./CourseClient";
+import { LEÇONS } from "./data";
 import { Suspense } from "react";
 
 export async function generateMetadata(props) {

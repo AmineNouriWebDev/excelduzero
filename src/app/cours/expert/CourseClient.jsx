@@ -1,4 +1,5 @@
 "use client";
+import { LEÇONS } from "./data";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import { useState, useRef, useEffect } from "react";
@@ -8,18 +9,6 @@ import { Menu } from "lucide-react";
 import { useSearchParams, useRouter } from "next/navigation";
 import PremiumComingSoonModal from "../../../components/ui/PremiumComingSoonModal";
 
-export const LEÇONS = [
-  "Power Query M & DAX avancé",
-  "Modélisation relationnelle & Data Warehouse",
-  "VBA professionnel : classes, objets et design patterns",
-  "Intégration API REST & Web Scraping via VBA",
-  "Automatisation multi‑applications Office",
-  "Solutions cloud hybrides et SharePoint",
-  "Déploiement, maintenance & gouvernance",
-  "Performance monitoring & alertes",
-  "Projets sur-mesure : systèmes de scoring, portefeuille, facturation",
-  "Certifications et bonnes pratiques de l'expert"
-];
 
 // Statut possible pour chaque leçon : 'not_started', 'success', 'failed'
 const defaultStatus = Array(LEÇONS.length).fill('not_started');
