@@ -9,17 +9,28 @@ import ProgressSidebar from "../../components/common/ProgressSidebar";
 
 export default function Page() {
   const [user, setUser] = useState(undefined); // undefined = loading, null = pas connecté
+  const [isPremium, setIsPremium] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => {
+    supabase.auth.getUser().then(async ({ data }) => {
       setUser(data.user);
-      if (!data.user) router.replace("/");
+      if (!data.user) {
+        router.replace("/");
+      } else {
+        const { data: prof } = await supabase
+          .from("profiles")
+          .select("premium")
+          .eq("id", data.user.id)
+          .single();
+        setIsPremium(prof?.premium || false);
+      }
     });
     // Écoute la déconnexion en live
     const { data: listener } = supabase.auth.onAuthStateChange((event) => {
       if (event === "SIGNED_OUT") {
         setUser(null);
+        setIsPremium(false);
         router.replace("/");
       }
     });
@@ -77,7 +88,7 @@ export default function Page() {
                 Approfondissez vos connaissances : fonctions conditionnelles,
                 graphiques, filtres, tris et gestion de données.
               </p>
-              <span className="text-xs text-gray-500 mb-4">35 leçons</span>
+              <span className="text-xs text-gray-500 mb-4">34 leçons</span>
               <a
                 href="/cours/intermediaire"
                 className="inline-block mt-auto px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-bold rounded-xl shadow hover:from-yellow-500 hover:to-yellow-700 transition"
@@ -92,28 +103,46 @@ export default function Page() {
                 Maîtrisez les outils avancés : tableaux croisés dynamiques,
                 formules complexes, gestion des erreurs et automatisation.
               </p>
-              <span className="text-xs text-gray-500 mb-4">40 leçons</span>
-              <a
-                href="/cours/avance"
-                className="inline-block mt-auto px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold rounded-xl shadow hover:from-blue-500 hover:to-blue-700 transition"
-              >
-                Commencer
-              </a>
+              <span className="text-xs text-gray-500 mb-4">22 leçons</span>
+              {isPremium ? (
+                <a
+                  href="/cours/avance"
+                  className="inline-block mt-auto px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white text-center font-bold rounded-xl shadow hover:from-blue-500 hover:to-blue-700 transition"
+                >
+                  Commencer
+                </a>
+              ) : (
+                <button
+                  disabled
+                  className="inline-block mt-auto px-6 py-3 bg-gray-300 text-gray-500 text-center font-bold rounded-xl cursor-not-allowed"
+                >
+                  🔒 Contenu Premium
+                </button>
+              )}
             </div>
             {/* Expert */}
-            <div className="gradient-card rounded-2xl shadow-xl p-7 card-hover flex flex-col justify-between">
+            <div className="gradient-card rounded-2xl shadow-xl p-7 card-hover flex flex-col justify-between opacity-90">
               <h2 className="text-2xl font-bold text-purple-700 mb-2">Expert</h2>
               <p className="text-gray-700 mb-2">
                 Devenez un expert : macros, VBA, automatisation avancée, optimisation
                 et astuces de productivité.
               </p>
-              <span className="text-xs text-gray-500 mb-4">30 leçons</span>
-              <a
-                href="/cours/expert"
-                className="inline-block mt-auto px-6 py-3 bg-gradient-to-r from-purple-400 to-purple-600 text-white font-bold rounded-xl shadow hover:from-purple-500 hover:to-purple-700 transition"
-              >
-                Commencer
-              </a>
+              <span className="text-xs text-gray-500 mb-4">10 leçons</span>
+              {isPremium ? (
+                <a
+                  href="/cours/expert"
+                  className="inline-block mt-auto px-6 py-3 bg-gradient-to-r from-purple-400 to-purple-600 text-white text-center font-bold rounded-xl shadow hover:from-purple-500 hover:to-purple-700 transition"
+                >
+                  Commencer
+                </a>
+              ) : (
+                <button
+                  disabled
+                  className="inline-block mt-auto px-6 py-3 bg-gray-300 text-gray-500 text-center font-bold rounded-xl cursor-not-allowed"
+                >
+                  🔒 Contenu Premium
+                </button>
+              )}
             </div>
           </div>
         </div>

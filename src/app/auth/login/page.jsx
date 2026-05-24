@@ -68,6 +68,11 @@ export default function LoginPage() {
                   {showPassword ? "Masquer" : "Afficher"}
                 </button>
               </div>
+              <div className="text-right mt-2">
+                <Link href="/auth/reset-password" className="text-sm text-green-600 hover:text-green-800 font-semibold hover:underline">
+                  Mot de passe oublié ?
+                </Link>
+              </div>
             </div>
             {error && <div className="text-red-600 text-center font-semibold">{error}</div>}
             <button

@@ -151,7 +151,7 @@ export default function Lecon14({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon14/plages-nommees-overview.png" 
+                  src="/cours/intermediaire/lecon14/plages-nommees-overview.png" 
                   alt="Comparaison entre formules avec références standards et formules avec plages nommées"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -278,7 +278,7 @@ export default function Lecon14({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/creation-zone-nom.gif" 
+                    src="/cours/intermediaire/lecon14/creation-zone-nom.gif" 
                     alt="Animation montrant la création d'une plage nommée via la zone nom"
                     className="rounded-xl shadow-lg"
                   />
@@ -288,7 +288,7 @@ export default function Lecon14({ onResult }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/creation-selection.gif" 
+                    src="/cours/intermediaire/lecon14/creation-selection.gif" 
                     alt="Interface de création de noms à partir d'une sélection"
                     className="rounded-xl shadow-lg"
                   />
@@ -353,7 +353,7 @@ export default function Lecon14({ onResult }) {
                   
                   <div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon14/gestionnaire-noms.png" 
+                      src="/cours/intermediaire/lecon14/gestionnaire-noms.png" 
                       alt="Interface du Gestionnaire de noms d'Excel"
                       className="rounded-xl shadow-lg"
                     />
@@ -433,7 +433,7 @@ export default function Lecon14({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/saisie-automatique-formules.gif" 
+                    src="/cours/intermediaire/lecon14/saisie-automatique-formules.gif" 
                     alt="Démonstration de la saisie semi-automatique des noms de plages dans les formules"
                     className="rounded-xl shadow-lg"
                   />
@@ -459,7 +459,7 @@ export default function Lecon14({ onResult }) {
                   </p>
                   
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/decaler-dynamique.gif" 
+                    src="/cours/intermediaire/lecon14/decaler-dynamique.gif" 
                     alt="Exemple visuel de la formule DECALER() dynamique"
                     className="rounded-xl shadow-lg mt-4"
                   />
@@ -482,7 +482,7 @@ export default function Lecon14({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon14/indirect-exemple.gif" 
+                  src="/cours/intermediaire/lecon14/indirect-exemple.gif" 
                   alt="Illustration de l'utilisation de la fonction INDIRECT()"
                   className="rounded-xl shadow-lg mb-4"
                 />
@@ -574,7 +574,7 @@ export default function Lecon14({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/portee-plages.png" 
+                    src="/cours/intermediaire/lecon14/portee-plages.png" 
                     alt="Diagramme illustrant la différence entre portée classeur et portée feuille"
                     className="rounded-xl shadow-lg"
                   />
@@ -748,7 +748,7 @@ export default function Lecon14({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/tcd-plages-dynamiques.gif" 
+                    src="/cours/intermediaire/lecon14/tcd-plages-dynamiques.gif" 
                     alt="Tableau croisé dynamique utilisant une plage nommée dynamique"
                     className="rounded-xl shadow-lg"
                   />
@@ -825,7 +825,7 @@ export default function Lecon14({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon14/exercice-tableau-bord.png" 
+                    src="/cours/intermediaire/lecon14/exercice-tableau-bord.png" 
                     alt="Aperçu du tableau de bord commercial à optimiser"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -964,7 +964,7 @@ export default function Lecon14({ onResult }) {
                 <p className="text-gray-700 mb-4">
                   Téléchargez le tableau de bord commercial à optimiser :
                 </p>
-                <a href="/cours/intermediaire/Lecon14/exercice-tableau-bord-commercial.xlsx" 
+                <a href="/cours/intermediaire/lecon14/exercice-tableau-bord-commercial.xlsx" 
                   className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 transition-colors font-semibold">
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger l'Exercice (.xlsx)
@@ -980,7 +980,7 @@ export default function Lecon14({ onResult }) {
                   Solution complète avec explications des techniques avancées :
                 </p>
                 <PremiumVideo
-                  url="/cours/intermediaire/Lecon14/correction-plages-nommees.mp4"
+                  url="/cours/intermediaire/lecon14/correction-plages-nommees.mp4"
                   title="Correction de l'optimisation avec plages nommées"
                 />
               </div>

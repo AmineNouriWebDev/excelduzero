@@ -173,7 +173,7 @@ export default function Lecon17({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon17/macro-process.png" 
+                  src="/cours/intermediaire/lecon17/macro-process.png" 
                   alt="Diagramme montrant le processus d'enregistrement et d'exécution d'une macro"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -299,7 +299,7 @@ export default function Lecon17({ onResult }) {
                 
                 <div className="space-y-6">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon17/concept-macro.png" 
+                    src="/cours/intermediaire/lecon17/concept-macro.png" 
                     alt="Schéma expliquant le fonctionnement d'une macro"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -426,7 +426,7 @@ export default function Lecon17({ onResult }) {
                 
                 <div className="space-y-4">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon17/onglet-developpeur.png" 
+                    src="/cours/intermediaire/lecon17/onglet-developpeur.png" 
                     alt="Capture d'écran montrant l'activation de l'onglet Développeur"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -605,7 +605,7 @@ export default function Lecon17({ onResult }) {
                 
                 <div className="space-y-6">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon17/enregistrement-macro.gif" 
+                    src="/cours/intermediaire/lecon17/enregistrement-macro.gif" 
                     alt="Capture des étapes d'enregistrement d'une macro"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -830,7 +830,7 @@ export default function Lecon17({ onResult }) {
                   </div>
                   <div className="flex justify-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon17/bouton-macro.gif" 
+                      src="/cours/intermediaire/lecon17/bouton-macro.gif" 
                       alt="Capture montrant la création d'un bouton pour macro"
                       className="rounded-xl shadow-md max-w-xs"
                     />
@@ -952,7 +952,7 @@ export default function Lecon17({ onResult }) {
                       <li><strong>OK</strong> pour valider</li>
                     </ol>
                        <ImageZoomable 
-                      src="/cours/intermediaire/Lecon17/parametres_securite_macro.png" 
+                      src="/cours/intermediaire/lecon17/parametres_securite_macro.png" 
                       alt="Capture montrant la création d'un bouton pour macro"
                       className="rounded-xl shadow-md max-w-xs"
                     />
@@ -1090,7 +1090,7 @@ export default function Lecon17({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon17/rapport-ventes.png" 
+                    src="/cours/intermediaire/lecon17/rapport-ventes.png" 
                     alt="Avant/Après l'automatisation du rapport de vente"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -1141,7 +1141,7 @@ export default function Lecon17({ onResult }) {
                     </div>
                     <div className="flex justify-center">
                       <ImageZoomable 
-                        src="/cours/intermediaire/Lecon17/macro-rapport.png" 
+                        src="/cours/intermediaire/lecon17/macro-rapport.png" 
                         alt="Capture de la macro d'automatisation de rapport"
                         className="rounded-lg shadow-md max-w-xs"
                       />
@@ -1177,7 +1177,7 @@ export default function Lecon17({ onResult }) {
                     </div>
                     <div className="flex justify-center lg:order-1">
                       <ImageZoomable 
-                        src="/cours/intermediaire/Lecon17/bouton-rapport.png" 
+                        src="/cours/intermediaire/lecon17/bouton-rapport.png" 
                         alt="Bouton d'exécution de la macro de rapport"
                         className="rounded-lg shadow-md max-w-xs"
                       />
@@ -1318,7 +1318,7 @@ export default function Lecon17({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon17/exercice-donnees-brutes.png" 
+                    src="/cours/intermediaire/lecon17/exercice-donnees-brutes.png" 
                     alt="Aperçu des données brutes à nettoyer"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -1484,7 +1484,7 @@ export default function Lecon17({ onResult }) {
                 <p className="text-gray-700 mb-4">
                   Téléchargez le jeu de données brutes à nettoyer :
                 </p>
-                <a href="/cours/intermediaire/Lecon17/exercice-donnees-brutes.xlsx" 
+                <a href="/cours/intermediaire/lecon17/exercice-donnees-brutes.xlsx" 
                   className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-semibold">
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger l'Exercice (.xlsx)
@@ -1500,7 +1500,7 @@ export default function Lecon17({ onResult }) {
                   Correction complète avec explications détaillées :
                 </p>
                 <PremiumVideo
-                  url="/cours/intermediaire/Lecon17/correction-macro-nettoyage.mp4"
+                  url="/cours/intermediaire/lecon17/correction-macro-nettoyage.mp4"
                   title="Correction de la macro de nettoyage de données"
                 />
               </div>

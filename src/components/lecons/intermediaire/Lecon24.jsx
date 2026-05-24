@@ -145,7 +145,7 @@ export default function Lecon24({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon24/data-quality-impact.png" 
+                  src="/cours/intermediaire/lecon24/data-quality-impact.png" 
                   alt="Diagramme montrant l'impact de la qualité des données sur l'analyse"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -264,7 +264,7 @@ export default function Lecon24({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon24/remove-duplicates-demo.gif" 
+                  src="/cours/intermediaire/lecon24/remove-duplicates-demo.gif" 
                   alt="Animation montrant la suppression des doublons dans Power Query"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -394,7 +394,7 @@ export default function Lecon24({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon24/text-transformation-demo.gif" 
+                  src="/cours/intermediaire/lecon24/text-transformation-demo.gif" 
                   alt="Animation montrant les transformations de texte dans Power Query"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -525,7 +525,7 @@ export default function Lecon24({ onResult }) {
               
               <div className="space-y-4">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon24/fill-down-demo.gif" 
+                  src="/cours/intermediaire/lecon24/fill-down-demo.gif" 
                   alt="Animation montrant le remplissage vers le bas dans Power Query"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -633,7 +633,7 @@ export default function Lecon24({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon24/optimization-workflow.png" 
+                  src="/cours/intermediaire/lecon24/optimization-workflow.png" 
                   alt="Diagramme montrant l'optimisation du workflow Power Query"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -746,7 +746,7 @@ export default function Lecon24({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon24/client-database-before.png" 
+                    src="/cours/intermediaire/lecon24/client-database-before.png" 
                     alt="Capture de la base clients avant nettoyage"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -801,14 +801,14 @@ export default function Lecon24({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon24/cas-pratique-clients.zip" 
+                    <a href="/cours/intermediaire/lecon24/cas-pratique-clients.zip" 
                       className="inline-flex items-center px-6 py-3 bg-rose-600 text-white rounded-xl hover:bg-rose-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger les Fichiers du Cas Pratique
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon24/correction-cas-pratique.mp4"
+                      url="/cours/intermediaire/lecon24/correction-cas-pratique.mp4"
                       title="Correction détaillée pas à pas"
                       duration="15:23"
                     />
@@ -861,7 +861,7 @@ export default function Lecon24({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🔴 Avant Nettoyage</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon24/client-database-before.png" 
+                    src="/cours/intermediaire/lecon24/client-database-before.png" 
                     alt="Base clients avant nettoyage - désorganisée"
                     className="rounded-lg border-2 border-red-200"
                   />
@@ -869,7 +869,7 @@ export default function Lecon24({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🟢 Après Nettoyage</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon24/client-database-after.png" 
+                    src="/cours/intermediaire/lecon24/client-database-after.png" 
                     alt="Base clients après nettoyage - structurée"
                     className="rounded-lg border-2 border-green-200"
                   />

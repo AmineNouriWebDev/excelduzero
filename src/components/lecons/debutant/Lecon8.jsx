@@ -155,7 +155,7 @@ export default function Lecon8({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon8/bordures_excel.gif" 
+            src="/cours/debutant/lecon8/bordures_excel.gif" 
             alt="Application de bordures dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -230,7 +230,7 @@ export default function Lecon8({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon8/couleurs_excel.png" 
+            src="/cours/debutant/lecon8/couleurs_excel.png" 
             alt="Application de couleurs dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -341,7 +341,7 @@ export default function Lecon8({ onResult }) {
           </p>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon8/alignement_excel.gif" 
+            src="/cours/debutant/lecon8/alignement_excel.gif" 
             alt="Alignement du texte dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -397,7 +397,7 @@ export default function Lecon8({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données à mettre en forme :
           </p>
-          <a href="/cours/debutant/Lecon8/exercice_mise_en_forme.xlsx" 
+          <a href="/cours/debutant/lecon8/exercice_mise_en_forme.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -417,7 +417,7 @@ export default function Lecon8({ onResult }) {
             Solution complète de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/debutant/Lecon8/correction_exercice.mp4"
+            url="/cours/debutant/lecon8/correction_exercice.mp4"
             title="Correction vidéo de l'exercice"
           />
         </div>

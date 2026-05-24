@@ -23,13 +23,17 @@ export default function Header() {
       const { data } = await supabase.auth.getUser();
       setUser(data.user);
       if (data.user) {
-        // Récupère le profil depuis la table 'profiles'
+        // Récupère le profil depuis la table 'profiles' (seulement le nom, avatar_url n'est pas dans la table)
         const { data: prof } = await supabase
           .from("profiles")
-          .select("name, avatar_url")
+          .select("name")
           .eq("id", data.user.id)
           .single();
-        setProfile(prof);
+        
+        setProfile({
+          name: prof?.name || data.user.user_metadata?.name || "",
+          avatar_url: data.user.user_metadata?.avatar_url || ""
+        });
       } else {
         setProfile(null);
       }
@@ -281,27 +285,31 @@ export default function Header() {
           )}
           {user && (
             <>
-              {/* Bouton Quitter le cours si sur une page de cours */}
+              {/* Bouton Catalogue si sur une page de cours */}
               {pathname.startsWith("/cours/") && pathname !== "/cours" && (
                 <button
-                  onClick={() => {
-                    if (confirm("Voulez-vous vraiment quitter le cours ? Vous serez redirigé vers l'accueil.")) {
-                      router.push("/");
-                    }
-                  }}
-                  className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-gradient-to-r from-red-400 to-red-600 text-white rounded-xl font-bold shadow hover:from-red-500 hover:to-red-700 transition"
+                  onClick={() => router.push("/cours")}
+                  className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-gray-100 text-gray-800 rounded-xl font-bold shadow hover:bg-gray-200 transition mr-2"
                 >
-                  Quitter le cours
+                  Catalogue des cours
                 </button>
               )}
-              {/* Le bouton "Rejoindre les cours" n'est pas affiché sur les pages de cours */}
+              {/* Les boutons "Tous les cours" et "Reprendre" ne sont pas affichés sur les pages de cours */}
               {!(pathname.startsWith("/cours")) && (
-                <button
-                  onClick={handleJoinCourses}
-                  className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-gradient-to-r from-green-400 to-green-600 text-white rounded-xl font-bold shadow hover:from-green-500 hover:to-green-700 transition"
-                >
-                  Rejoindre les cours
-                </button>
+                <div className="flex gap-2 mr-2">
+                  <button
+                    onClick={() => router.push("/cours")}
+                    className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-white text-green-700 border-2 border-green-500 rounded-xl font-bold shadow hover:bg-green-50 transition hidden sm:block"
+                  >
+                    Tous les cours
+                  </button>
+                  <button
+                    onClick={handleJoinCourses}
+                    className="px-4 py-1.5 text-sm lg:px-5 lg:py-2 lg:text-base bg-gradient-to-r from-green-400 to-green-600 text-white rounded-xl font-bold shadow hover:from-green-500 hover:to-green-700 transition"
+                  >
+                    Reprendre
+                  </button>
+                </div>
               )}
               {/* Avatar + menu déroulant */}
               <div className="relative user-menu">
@@ -313,7 +321,8 @@ export default function Header() {
                   aria-label="Menu utilisateur"
                 >
                   {profile?.avatar_url ? (
-                    <Image src={profile.avatar_url} alt="avatar" width={40} height={40} className="rounded-full object-cover w-10 h-10" />
+                    /* Utilisation de balise img standard pour éviter l'erreur next/image des domaines non configurés */
+                    <img src={profile.avatar_url} alt="avatar" className="rounded-full object-cover w-10 h-10" />
                   ) : profile?.name ? (
                     <span className="text-green-700 font-bold text-lg uppercase">
                       {profile.name[0]}
@@ -332,14 +341,6 @@ export default function Header() {
                       <UserCircleIcon className="w-5 h-5 text-green-500" />
                       Mon profil
                     </Link>
-                    <label className="flex items-center gap-2 px-4 py-3 hover:bg-green-50 text-gray-800 font-medium cursor-pointer">
-                      <input type="file" accept="image/*" className="hidden" onChange={async (e) => {
-                        await handleAvatarChange(e);
-                        setMenuOpen(false);
-                      }} disabled={uploading} />
-                      <span className="w-5 h-5 inline-block"><svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-5 h-5 text-green-500"><path strokeLinecap="round" strokeLinejoin="round" d="M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 10l-4 4-2-2"/></svg></span>
-                      {uploading ? "Chargement..." : "Changer l'avatar"}
-                    </label>
                     <div className="border-t border-gray-100" />
                     <button
                       onClick={handleSignOut}

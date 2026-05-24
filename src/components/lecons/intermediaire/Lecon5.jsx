@@ -181,7 +181,7 @@ export default function Lecon5({ onResult }) {
              
           </div>
            <ImageZoomable 
-                      src="/cours/intermediaire/Lecon5/index_2D_vs_1D.gif" 
+                      src="/cours/intermediaire/lecon5/index_2D_vs_1D.gif" 
                       alt="Différence entre INDEX 2D et 1D : 2D utilise ligne et colonne, 1D utilise seulement ligne"
                       className="mb-6"
                       style={{ maxHeight: 300 }}
@@ -268,7 +268,7 @@ export default function Lecon5({ onResult }) {
            
           </div>
             <ImageZoomable 
-                      src="/cours/intermediaire/Lecon5/equiv.gif" 
+                      src="/cours/intermediaire/lecon5/equiv.gif" 
                       alt="Exemples visuels de la fonction EQUIV : recherche de position dans une liste"
                       className="mb-6"
                       style={{ maxHeight: 300 }}
@@ -301,7 +301,7 @@ export default function Lecon5({ onResult }) {
 
           {/* Image suggestion: Schéma montrant le fonctionnement INDEX-EQUIV */}
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon5/schema-index-equiv.gif" 
+            src="/cours/intermediaire/lecon5/schema-index-equiv.gif" 
             alt="Schéma expliquant le fonctionnement de INDEX-EQUIV : EQUIV trouve la ligne, INDEX retourne la valeur"
             className="mb-6"
             style={{ maxHeight: 250 }}
@@ -329,7 +329,7 @@ export default function Lecon5({ onResult }) {
             </div>
           </div>
 <ImageZoomable 
-            src="/cours/intermediaire/Lecon5/RECHERCHEV_VS_INDEX_EQUIV.gif" 
+            src="/cours/intermediaire/lecon5/RECHERCHEV_VS_INDEX_EQUIV.gif" 
             alt="Comparaison visuelle entre RECHERCHEV et INDEX-EQUIV : INDEX-EQUIV peut rechercher à gauche"
             className="mb-6"
             style={{ maxHeight: 250 }}
@@ -627,7 +627,7 @@ export default function Lecon5({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier d'exercice sur la gestion commerciale avancée :
           </p>
-          <a href="/cours/intermediaire/Lecon5/exercice_index_equiv.xlsx" 
+          <a href="/cours/intermediaire/lecon5/exercice_index_equiv.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -643,7 +643,7 @@ export default function Lecon5({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon5/correction_index_equiv.mp4"
+            url="/cours/intermediaire/lecon5/correction_index_equiv.mp4"
             title="Correction de l'exercice sur INDEX et EQUIV"
           />
         </div>

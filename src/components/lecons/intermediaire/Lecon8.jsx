@@ -97,7 +97,7 @@ export default function Lecon8({ onResult }) {
             </div>
             
             <ImageZoomable 
-              src="/cours/intermediaire/Lecon8/consolidation-concept.png" 
+              src="/cours/intermediaire/lecon8/consolidation-concept.png" 
               alt="Schéma expliquant le concept de consolidation : plusieurs tables fusionnées en une seule somme"
               className="rounded-lg"
               style={{ maxHeight: 250 }}
@@ -337,7 +337,7 @@ export default function Lecon8({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les budgets à consolider :
           </p>
-          <a href="/cours/intermediaire/Lecon8/exercice_consolidation_budgets.xlsx" 
+          <a href="/cours/intermediaire/lecon8/exercice_consolidation_budgets.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -353,7 +353,7 @@ export default function Lecon8({ onResult }) {
             Solution détaillée et bonnes pratiques :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon8/correction-consolidation.mp4"
+            url="/cours/intermediaire/lecon8/correction-consolidation.mp4"
             title="Correction de l'exercice sur la Consolidation de Données"
           />
         </div>

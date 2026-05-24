@@ -107,7 +107,7 @@ export default function Lecon7({ onResult }) {
             </div>
             
             <ImageZoomable 
-              src="/cours/intermediaire/Lecon7/tcd-visualisation-concept.png" 
+              src="/cours/intermediaire/lecon7/tcd-visualisation-concept.png" 
               alt="Schéma expliquant le concept de tableau croisé dynamique : données brutes transformées en rapport synthétique"
               className="rounded-lg"
               style={{ maxHeight: 250 }}
@@ -181,7 +181,7 @@ export default function Lecon7({ onResult }) {
           </div>
 
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon7/structure-donnees-correcte.png" 
+            src="/cours/intermediaire/lecon7/structure-donnees-correcte.png" 
             alt="Exemple visuel montrant la structure correcte de données pour un TCD avec en-têtes clairs et données cohérentes"
             className="mt-4 rounded-lg"
             style={{ maxHeight: 300 }}
@@ -265,7 +265,7 @@ export default function Lecon7({ onResult }) {
         </div>
 
         <ImageZoomable 
-          src="/cours/intermediaire/Lecon7/creation-tcd-animation.gif" 
+          src="/cours/intermediaire/lecon7/creation-tcd-animation.gif" 
           alt="Animation montrant la création d'un TCD étape par étape dans Excel"
           className="rounded-lg mb-4"
           style={{ maxHeight: 400 }}
@@ -297,7 +297,7 @@ export default function Lecon7({ onResult }) {
           </p>
           
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon7/zones-tcd.png" 
+            src="/cours/intermediaire/lecon7/zones-tcd.png" 
             alt="Schéma des 4 zones du TCD : Filtres, Colonnes, Lignes et Valeurs avec explication de chaque zone"
             className="mb-6 rounded-lg"
             style={{ maxHeight: 400 }}
@@ -508,7 +508,7 @@ export default function Lecon7({ onResult }) {
             </div>
             
             <ImageZoomable 
-              src="/cours/intermediaire/Lecon7/erreurs-tcd-correction.png" 
+              src="/cours/intermediaire/lecon7/erreurs-tcd-correction.png" 
               alt="Capture d'écran montrant comment corriger les erreurs courantes dans les TCD"
               className="rounded-lg"
               style={{ maxHeight: 300 }}
@@ -538,7 +538,7 @@ export default function Lecon7({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier avec les données commerciales à analyser :
           </p>
-          <a href="/cours/intermediaire/Lecon7/exercice_tableau_croise_dynamique.xlsx" 
+          <a href="/cours/intermediaire/lecon7/exercice_tableau_croise_dynamique.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -554,7 +554,7 @@ export default function Lecon7({ onResult }) {
             Solution détaillée et bonnes pratiques :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon7/correction-tcd.mp4"
+            url="/cours/intermediaire/lecon7/correction-tcd.mp4"
             title="Correction de l'exercice sur les Tableaux Croisés Dynamiques"
           />
         </div>

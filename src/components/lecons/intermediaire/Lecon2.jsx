@@ -110,7 +110,7 @@ export default function Lecon2({ onResult }) {
             </div>
           </div>
            <ImageZoomable 
-            src="/cours/intermediaire/Lecon2/test_ET.gif" 
+            src="/cours/intermediaire/lecon2/test_ET.gif" 
             alt="Exemples pratiques de fonction ET " 
             className="mt-4"
             style={{ maxHeight: 300 }} 
@@ -184,7 +184,7 @@ export default function Lecon2({ onResult }) {
             </div>
           </div>
             <ImageZoomable 
-            src="/cours/intermediaire/Lecon2/test_OU.gif" 
+            src="/cours/intermediaire/lecon2/test_OU.gif" 
             alt="Exemples pratiques de fonction OU" 
             className="mt-4"
             style={{ maxHeight: 300 }} 
@@ -321,7 +321,7 @@ export default function Lecon2({ onResult }) {
 
 
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon2/et_ou_exemples.gif" 
+            src="/cours/intermediaire/lecon2/et_ou_exemples.gif" 
             alt="Exemples pratiques des fonctions ET et OU" 
             className="mt-4"
             style={{ maxHeight: 300 }} 
@@ -487,7 +487,7 @@ export default function Lecon2({ onResult }) {
             </div>
           </div>
             <ImageZoomable 
-            src="/cours/intermediaire/Lecon2/test_ET_OU_mise_en_forme.gif" 
+            src="/cours/intermediaire/lecon2/test_ET_OU_mise_en_forme.gif" 
             alt="Exemples pratiques de fonction ET OU avec mise en forme conditionnelle " 
             className="mt-4"
             style={{ maxHeight: 300 }} 
@@ -534,7 +534,7 @@ export default function Lecon2({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier d'exercice sur les performances commerciales :
           </p>
-          <a href="/cours/intermediaire/Lecon2/exercice_et_ou.xlsx" 
+          <a href="/cours/intermediaire/lecon2/exercice_et_ou.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -550,7 +550,7 @@ export default function Lecon2({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon2/correction_et_ou.mp4"
+            url="/cours/intermediaire/lecon2/correction_et_ou.mp4"
             title="Correction de l'exercice sur les fonctions ET et OU"
           />
         </div>

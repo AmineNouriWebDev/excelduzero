@@ -109,7 +109,7 @@ export default function Lecon1({ onResult }) {
           </div>
 
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon1/fonction_si_base.png" 
+            src="/cours/intermediaire/lecon1/fonction_si_base.png" 
             alt="Exemple de fonction SI de base dans Excel" 
             className="mt-4"
             style={{ maxHeight: 300 }} 
@@ -205,7 +205,7 @@ export default function Lecon1({ onResult }) {
         </div>
 
         <ImageZoomable 
-          src="/cours/intermediaire/Lecon1/si_imbrique_exemple.gif" 
+          src="/cours/intermediaire/lecon1/si_imbrique_exemple.gif" 
           alt="Démonstration de fonction SI imbriqué dans Excel" 
           className="mb-6"
           style={{ maxHeight: 350 }} 
@@ -399,7 +399,7 @@ export default function Lecon1({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon1/recherchev_alternative.gif" 
+            src="/cours/intermediaire/lecon1/recherchev_alternative.gif" 
             alt="Alternative RECHERCHEV aux SI imbriqués" 
             className="mt-4"
             style={{ maxHeight: 250 }} 
@@ -466,7 +466,7 @@ export default function Lecon1({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier des performances commerciales :
           </p>
-          <a href="/cours/intermediaire/Lecon1/exercice_performances.xlsx" 
+          <a href="/cours/intermediaire/lecon1/exercice_performances.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -482,7 +482,7 @@ export default function Lecon1({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon1/correction_performances.mp4"
+            url="/cours/intermediaire/lecon1/correction_performances.mp4"
             title="Correction de l'exercice sur les SI imbriqués"
           />
         </div>

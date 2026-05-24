@@ -482,7 +482,7 @@ export default function Lecon6({ onResult }) {
                   
                   <div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon6/tcd-tableau-structure.png" 
+                      src="/cours/intermediaire/lecon6/tcd-tableau-structure.png" 
                       alt="Tableau croisé dynamique utilisant un tableau structuré comme source" 
                       className="rounded-lg border shadow-sm"
                       style={{ maxHeight: 250 }}
@@ -513,7 +513,7 @@ export default function Lecon6({ onResult }) {
                   
                   <div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon6/slices-tableaux.png" 
+                      src="/cours/intermediaire/lecon6/slices-tableaux.png" 
                       alt="Slices (segmentations) pour filtrer les tableaux structurés" 
                       className="rounded-lg border shadow-sm"
                       style={{ maxHeight: 250 }}
@@ -572,7 +572,7 @@ export default function Lecon6({ onResult }) {
               
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon6/exercice-tableau-avance-preview.png" 
+                  src="/cours/intermediaire/lecon6/exercice-tableau-avance-preview.png" 
                   alt="Aperçu du résultat final de l'exercice avancé" 
                   className="rounded-lg border shadow-sm"
                   style={{ maxHeight: 300 }}
@@ -589,7 +589,7 @@ export default function Lecon6({ onResult }) {
                 <p className="text-gray-700 mb-4">
                   Téléchargez le fichier avec les données de départ pour l'exercice :
                 </p>
-                <a href="/cours/intermediaire/Lecon6/exercice_tableaux_avances.xlsx" 
+                <a href="/cours/intermediaire/lecon6/exercice_tableaux_avances.xlsx" 
                   className="inline-flex items-center px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors">
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger l'exercice (.xlsx)
@@ -605,7 +605,7 @@ export default function Lecon6({ onResult }) {
                   Solution complète avec explications des techniques avancées :
                 </p>
                 <PremiumVideo
-                  url="/cours/intermediaire/Lecon6/correction_tableaux_avances.mp4"
+                  url="/cours/intermediaire/lecon6/correction_tableaux_avances.mp4"
                   title="Correction de l'exercice sur les tableaux structurés avancés"
                 />
               </div>

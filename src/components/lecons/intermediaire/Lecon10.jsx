@@ -162,7 +162,7 @@ export default function Lecon10({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon10/graphique-combine-avance.png" 
+                  src="/cours/intermediaire/lecon10/graphique-combine-avance.png" 
                   alt="Exemple avancé de graphique combiné avec axes secondaires"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -224,7 +224,7 @@ export default function Lecon10({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon10/multi-series-courbes.gif" 
+                    src="/cours/intermediaire/lecon10/multi-series-courbes.gif" 
                     alt="Animation montrant l'ajout de séries multiples dans un graphique en courbes"
                     className="rounded-xl shadow-lg"
                   />
@@ -251,7 +251,7 @@ export default function Lecon10({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon10/marqueurs-personnalises.png" 
+                  src="/cours/intermediaire/lecon10/marqueurs-personnalises.png" 
                   alt="Exemples de marqueurs personnalisés pour graphiques en courbes"
                   className="rounded-xl shadow-lg"
                 />
@@ -264,7 +264,7 @@ export default function Lecon10({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon10/comparaison-lissage.gif" 
+                  src="/cours/intermediaire/lecon10/comparaison-lissage.gif" 
                   alt="Comparaison entre courbe standard et courbe lissée professionnellement"
                   className="rounded-xl shadow-lg"
                 />
@@ -327,7 +327,7 @@ export default function Lecon10({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon10/histogramme-courbe-combine.gif" 
+                    src="/cours/intermediaire/lecon10/histogramme-courbe-combine.gif" 
                     alt="Animation création graphique combiné histogramme-courbe"
                     className="rounded-xl shadow-lg"
                   />
@@ -338,7 +338,7 @@ export default function Lecon10({ onResult }) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon10/aire-histogramme-combine.png" 
+                  src="/cours/intermediaire/lecon10/aire-histogramme-combine.png" 
                   alt="Graphique combiné aires et histogrammes"
                   className="rounded-xl shadow-lg"
                 />
@@ -462,7 +462,7 @@ export default function Lecon10({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon10/axe-secondaire-demonstration.gif" 
+                    src="/cours/intermediaire/lecon10/axe-secondaire-demonstration.gif" 
                     alt="Démonstration de l'ajout et configuration d'un axe secondaire"
                     className="rounded-xl shadow-lg"
                   />
@@ -599,7 +599,7 @@ export default function Lecon10({ onResult }) {
               </div>
               
               <ImageZoomable 
-                src="/cours/intermediaire/Lecon10/comparaison-tendances.gif" 
+                src="/cours/intermediaire/lecon10/comparaison-tendances.gif" 
                 alt="Animation comparant les différents types de courbes de tendance"
                 className="rounded-xl shadow-lg mb-6"
               />
@@ -711,7 +711,7 @@ export default function Lecon10({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon10/plages-dynamiques.gif" 
+                    src="/cours/intermediaire/lecon10/plages-dynamiques.gif" 
                     alt="Démonstration des plages dynamiques pour graphiques auto-actualisants"
                     className="rounded-xl shadow-lg"
                   />
@@ -727,7 +727,7 @@ export default function Lecon10({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon10/controles-filtrage.png" 
+                  src="/cours/intermediaire/lecon10/controles-filtrage.png" 
                   alt="Exemple de contrôles de filtrage pour graphiques interactifs"
                   className="rounded-xl shadow-lg"
                 />
@@ -740,7 +740,7 @@ export default function Lecon10({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon10/formatage-conditionnel.gif" 
+                  src="/cours/intermediaire/lecon10/formatage-conditionnel.gif" 
                   alt="Animation montrant la mise en forme conditionnelle des graphiques"
                   className="rounded-xl shadow-lg"
                 />
@@ -805,7 +805,7 @@ export default function Lecon10({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon10/tableau-bord-final.png" 
+                    src="/cours/intermediaire/lecon10/tableau-bord-final.png" 
                     alt="Aperçu du tableau de bord final à créer"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -920,7 +920,7 @@ export default function Lecon10({ onResult }) {
                 <p className="text-gray-700 mb-4">
                   Téléchargez le fichier avec les données commerciales structurées :
                 </p>
-                <a href="/cours/intermediaire/Lecon10/exercice-tableau-bord.xlsx" 
+                <a href="/cours/intermediaire/lecon10/exercice-tableau-bord.xlsx" 
                   className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 transition-colors font-semibold">
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger l'Exercice (.xlsx)
@@ -936,7 +936,7 @@ export default function Lecon10({ onResult }) {
                   Solution complète avec explications des techniques avancées :
                 </p>
                 <PremiumVideo
-                  url="/cours/intermediaire/Lecon10/correction-tableau-bord.mp4"
+                  url="/cours/intermediaire/lecon10/correction-tableau-bord.mp4"
                   title="Correction de l'exercice Tableau de Bord Avancé"
                 />
               </div>

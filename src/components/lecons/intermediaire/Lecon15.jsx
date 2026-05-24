@@ -152,7 +152,7 @@ export default function Lecon15({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon15/analyse-scenarios-overview.png" 
+                  src="/cours/intermediaire/lecon15/analyse-scenarios-overview.png" 
                   alt="Diagramme montrant les trois types d'analyse de scénarios dans Excel"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -263,7 +263,7 @@ export default function Lecon15({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/modele-preparation-scenarios.png" 
+                    src="/cours/intermediaire/lecon15/modele-preparation-scenarios.png" 
                     alt="Modèle Excel préparé pour l'analyse de scénarios"
                     className="rounded-xl shadow-lg"
                   />
@@ -273,7 +273,7 @@ export default function Lecon15({ onResult }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/creation-scenario.gif" 
+                    src="/cours/intermediaire/lecon15/creation-scenario.gif" 
                     alt="Animation montrant la création d'un scénario dans Excel"
                     className="rounded-xl shadow-lg"
                   />
@@ -352,7 +352,7 @@ export default function Lecon15({ onResult }) {
                   
                   <div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon15/rapport-synthese-scenarios.gif" 
+                      src="/cours/intermediaire/lecon15/rapport-synthese-scenarios.gif" 
                       alt="Exemple de rapport de synthèse de scénarios"
                       className="rounded-xl shadow-lg"
                     />
@@ -434,7 +434,7 @@ export default function Lecon15({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/valeur-cible-principe.png" 
+                    src="/cours/intermediaire/lecon15/valeur-cible-principe.png" 
                     alt="Schéma expliquant le principe de la valeur cible"
                     className="rounded-xl shadow-lg"
                   />
@@ -471,7 +471,7 @@ export default function Lecon15({ onResult }) {
               
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon15/valeur-cible-dialog.gif" 
+                  src="/cours/intermediaire/lecon15/valeur-cible-dialog.gif" 
                   alt="Boîte de dialogue Valeur Cible d'Excel"
                   className="rounded-xl shadow-lg mb-4"
                 />
@@ -577,7 +577,7 @@ export default function Lecon15({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/table-une-variable.gif" 
+                    src="/cours/intermediaire/lecon15/table-une-variable.gif" 
                     alt="Exemple de table de données à une variable"
                     className="rounded-xl shadow-lg"
                   />
@@ -587,7 +587,7 @@ export default function Lecon15({ onResult }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/table-deux-variables.gif" 
+                    src="/cours/intermediaire/lecon15/table-deux-variables.gif" 
                     alt="Exemple de table de données à deux variables"
                     className="rounded-xl shadow-lg"
                   />
@@ -737,7 +737,7 @@ export default function Lecon15({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon15/workflow-analyse.png" 
+                    src="/cours/intermediaire/lecon15/workflow-analyse.png" 
                     alt="Diagramme du workflow d'analyse de scénarios"
                     className="rounded-xl shadow-lg"
                   />
@@ -903,7 +903,7 @@ export default function Lecon15({ onResult }) {
           
           <div>
             <ImageZoomable 
-              src="/cours/intermediaire/Lecon15/exercice-plan-affaires.png" 
+              src="/cours/intermediaire/lecon15/exercice-plan-affaires.png" 
               alt="Aperçu du modèle de plan d'affaires pour l'exercice"
               className="rounded-xl shadow-lg border-2 border-white"
             />
@@ -1068,7 +1068,7 @@ export default function Lecon15({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le modèle de plan d'affaires à analyser :
           </p>
-          <a href="/cours/intermediaire/Lecon15/exercice-plan-affaires.xlsx" 
+          <a href="/cours/intermediaire/lecon15/exercice-plan-affaires.xlsx" 
             className="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors font-semibold">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'Exercice (.xlsx)
@@ -1084,7 +1084,7 @@ export default function Lecon15({ onResult }) {
             Solution complète avec explications détaillées :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon15/correction-analyse-scenarios.mp4"
+            url="/cours/intermediaire/lecon15/correction-analyse-scenarios.mp4"
             title="Correction de l'analyse de scénarios pour un plan d'affaires"
           />
         </div>

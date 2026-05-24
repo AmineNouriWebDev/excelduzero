@@ -157,7 +157,7 @@ export default function Lecon9({ onResult }) {
                 </p>
               </div>
               <ImageZoomable 
-                src="/cours/intermediaire/Lecon9/sans-tri-erreur.png" 
+                src="/cours/intermediaire/lecon9/sans-tri-erreur.png" 
                 alt="Exemple montrant des sous-totaux incorrects sans tri préalable"
                 className="rounded-lg"
                 style={{ maxHeight: 200 }}
@@ -172,7 +172,7 @@ export default function Lecon9({ onResult }) {
                 </p>
               </div>
               <ImageZoomable 
-                src="/cours/intermediaire/Lecon9/avec-tri-correct.png" 
+                src="/cours/intermediaire/lecon9/avec-tri-correct.png" 
                 alt="Exemple montrant des sous-totaux corrects après tri"
                 className="rounded-lg"
                 style={{ maxHeight: 200 }}
@@ -279,7 +279,7 @@ export default function Lecon9({ onResult }) {
         </div>
 
         <ImageZoomable 
-          src="/cours/intermediaire/Lecon9/boite-dialogue-sous-total.png" 
+          src="/cours/intermediaire/lecon9/boite-dialogue-sous-total.png" 
           alt="Capture d'écran de la boîte de dialogue Sous-total avec explication des paramètres"
           className="rounded-lg mb-4"
           style={{ maxHeight: 400 }}
@@ -299,7 +299,7 @@ export default function Lecon9({ onResult }) {
           </p>
           
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon9/plan-hierarchique.png" 
+            src="/cours/intermediaire/lecon9/plan-hierarchique.png" 
             alt="Schéma montrant les différents niveaux du plan hiérarchique avec les symboles 1, 2, 3 et + -"
             className="mb-6 rounded-lg"
             style={{ maxHeight: 300 }}
@@ -580,7 +580,7 @@ export default function Lecon9({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier avec les données commerciales à structurer :
           </p>
-          <a href="/cours/intermediaire/Lecon9/exercice_sous_totaux.xlsx" 
+          <a href="/cours/intermediaire/lecon9/exercice_sous_totaux.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -596,7 +596,7 @@ export default function Lecon9({ onResult }) {
             Solution détaillée et bonnes pratiques :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon9/correction-sous-totaux.mp4"
+            url="/cours/intermediaire/lecon9/correction-sous-totaux.mp4"
             title="Correction de l'exercice sur les Sous-totaux Automatiques"
           />
         </div>

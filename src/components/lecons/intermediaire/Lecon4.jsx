@@ -74,7 +74,7 @@ export default function Lecon4({ onResult }) {
         
         {/* Image suggestion: Un schéma comparatif montrant les directions de recherche */}
         <ImageZoomable 
-          src="/cours/intermediaire/Lecon4/comparaison-recherchev-rechercheh.png" 
+          src="/cours/intermediaire/lecon4/comparaison-recherchev-rechercheh.png" 
           alt="Schéma comparatif montrant RECHERCHEV recherche verticalement dans une colonne, RECHERCHEH recherche horizontalement dans une ligne"
           className="mb-6"
           style={{ maxHeight: 400 }}
@@ -145,7 +145,7 @@ export default function Lecon4({ onResult }) {
 
           {/* GIF suggestion: Animation montrant comment RECHERCHEV parcourt un tableau */}
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon4/recherchev-animation.gif" 
+            src="/cours/intermediaire/lecon4/recherchev-animation.gif" 
             alt="Animation montrant le fonctionnement de RECHERCHEV avec des flèches qui se déplacent"
             className="mb-6"
             style={{ maxHeight: 400 }}
@@ -212,7 +212,7 @@ export default function Lecon4({ onResult }) {
           
           {/* Image suggestion: Tableau montrant la différence entre recherche exacte et approximative */}
           <ImageZoomable 
-            src="/cours/intermediaire/Lecon4/correspondance-exacte-approximative.png" 
+            src="/cours/intermediaire/lecon4/correspondance-exacte-approximative.png" 
             alt="Tableau comparatif montrant les résultats de recherche exacte vs approximative"
             className="mb-6"
             style={{ maxHeight: 400 }}
@@ -296,7 +296,7 @@ export default function Lecon4({ onResult }) {
          
           </div>
                 <ImageZoomable 
-            src="/cours/intermediaire/Lecon4/syntaxe_rechercheh.gif" 
+            src="/cours/intermediaire/lecon4/syntaxe_rechercheh.gif" 
             alt="Animation montrant le fonctionnement de RECHERCHEH avec des flèches qui se déplacent horizontalement"
             className="mb-6"
             style={{ maxHeight: 400 }}
@@ -319,7 +319,7 @@ export default function Lecon4({ onResult }) {
 
         {/* Image suggestion: Capture d'écran montrant les différentes erreurs Excel */}
         <ImageZoomable 
-          src="/cours/intermediaire/Lecon4/erreurs-excel.png" 
+          src="/cours/intermediaire/lecon4/erreurs-excel.png" 
           alt="Capture d'écran Excel montrant les erreurs #N/A, #REF! et #VALUE!"
           className="mb-6"
           style={{ maxHeight: 400 }}
@@ -387,7 +387,7 @@ export default function Lecon4({ onResult }) {
 
         {/* Image suggestion: Schéma montrant l'utilisation des références absolues */}
         <ImageZoomable 
-          src="/cours/intermediaire/Lecon4/references-absolues.png" 
+          src="/cours/intermediaire/lecon4/references-absolues.png" 
           alt="Schéma expliquant la différence entre références relatives et absolues avec le signe $"
           className="mb-6"
           style={{ maxHeight: 400 }}
@@ -449,7 +449,7 @@ export default function Lecon4({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier d'exercice sur la gestion commerciale :
           </p>
-          <a href="/cours/intermediaire/Lecon4/exercice_recherchev_rechercheh.xlsx" 
+          <a href="/cours/intermediaire/lecon4/exercice_recherchev_rechercheh.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -465,7 +465,7 @@ export default function Lecon4({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/intermediaire/Lecon4/correction_recherchev_rechercheh.mp4"
+            url="/cours/intermediaire/lecon4/correction_recherchev_rechercheh.mp4"
             title="Correction de l'exercice sur RECHERCHEV et RECHERCHEH"
           />
         </div>

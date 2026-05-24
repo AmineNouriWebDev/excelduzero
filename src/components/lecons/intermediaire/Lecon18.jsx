@@ -176,7 +176,7 @@ export default function Lecon18({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon18/audit-overview.png" 
+                  src="/cours/intermediaire/lecon18/audit-overview.png" 
                   alt="Diagramme montrant l'importance de l'audit de formules"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -289,7 +289,7 @@ export default function Lecon18({ onResult }) {
                 
                 <div className="space-y-4">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon18/ruban-audit.png" 
+                    src="/cours/intermediaire/lecon18/ruban-audit.png" 
                     alt="Capture d'écran du ruban d'audit de formules Excel"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -423,7 +423,7 @@ export default function Lecon18({ onResult }) {
                 
                 <div className="space-y-4">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon18/trace-precedents.gif" 
+                    src="/cours/intermediaire/lecon18/trace-precedents.gif" 
                     alt="Animation montrant l'utilisation de Repérer les antécédents"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -486,7 +486,7 @@ export default function Lecon18({ onResult }) {
                 
                 <div className="space-y-4 lg:order-1">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon18/trace-dependants.gif" 
+                    src="/cours/intermediaire/lecon18/trace-dependants.gif" 
                     alt="Animation montrant l'utilisation de Repérer les dépendants"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -608,7 +608,7 @@ export default function Lecon18({ onResult }) {
                 
                 <div className="space-y-4">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon18/evaluer-formule.gif" 
+                    src="/cours/intermediaire/lecon18/evaluer-formule.gif" 
                     alt="Animation montrant l'évaluation pas-à-pas d'une formule"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -644,7 +644,7 @@ export default function Lecon18({ onResult }) {
                   </div>
                   <div className="flex justify-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon18/demo-evaluation.png" 
+                      src="/cours/intermediaire/lecon18/demo-evaluation.png" 
                       alt="Capture de la fenêtre d'évaluation de formule"
                       className="rounded-xl shadow-md"
                     />
@@ -755,7 +755,7 @@ export default function Lecon18({ onResult }) {
                 
                 <div className="space-y-4">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon18/fenetre-espion.png" 
+                    src="/cours/intermediaire/lecon18/fenetre-espion.png" 
                     alt="Capture de la Fenêtre Espion Excel"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />

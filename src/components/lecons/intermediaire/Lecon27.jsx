@@ -140,7 +140,7 @@ export default function Lecon27({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon27/finance-overview.png" 
+                  src="/cours/intermediaire/lecon27/finance-overview.png" 
                   alt="Diagramme montrant l'interaction entre VC, VA et VPM"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -262,7 +262,7 @@ export default function Lecon27({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon27/valeur-temporelle-argent.gif" 
+                  src="/cours/intermediaire/lecon27/valeur-temporelle-argent.gif" 
                   alt="Animation illustrant la valeur temporelle de l'argent"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -413,7 +413,7 @@ export default function Lecon27({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon27/fonction-vc-demo.gif" 
+                  src="/cours/intermediaire/lecon27/fonction-vc-demo.gif" 
                   alt="Animation montrant le calcul VC dans Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -558,7 +558,7 @@ export default function Lecon27({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon27/fonction-va-demo.gif" 
+                  src="/cours/intermediaire/lecon27/fonction-va-demo.gif" 
                   alt="Animation montrant le calcul VA dans Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -704,7 +704,7 @@ export default function Lecon27({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon27/fonction-vpm-demo.gif" 
+                  src="/cours/intermediaire/lecon27/fonction-vpm-demo.gif" 
                   alt="Animation montrant le calcul VPM dans Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -834,7 +834,7 @@ export default function Lecon27({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon27/cas-pratique-immobilier.png" 
+                    src="/cours/intermediaire/lecon27/cas-pratique-immobilier.png" 
                     alt="Tableau de calcul immobilier avant formules"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -877,14 +877,14 @@ export default function Lecon27({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon27/cas-pratique-immobilier.zip" 
+                    <a href="/cours/intermediaire/lecon27/cas-pratique-immobilier.zip" 
                       className="inline-flex items-center px-6 py-3 bg-rose-600 text-white rounded-xl hover:bg-rose-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger les Fichiers d'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon27/correction-cas-pratique.mp4"
+                      url="/cours/intermediaire/lecon27/correction-cas-pratique.mp4"
                       title="Correction détaillée pas à pas"
                       duration="25:15"
                     />
@@ -936,7 +936,7 @@ export default function Lecon27({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🔴 Avant Excel</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon27/avant-calculs.png" 
+                    src="/cours/intermediaire/lecon27/avant-calculs.png" 
                     alt="Calculs manuels complexes avant Excel"
                     className="rounded-lg border-2 border-red-200"
                   />
@@ -944,7 +944,7 @@ export default function Lecon27({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🟢 Avec les Fonctions</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon27/apres-calculs.png" 
+                    src="/cours/intermediaire/lecon27/apres-calculs.png" 
                     alt="Tableau Excel automatisé avec formules"
                     className="rounded-lg border-2 border-green-200"
                   />

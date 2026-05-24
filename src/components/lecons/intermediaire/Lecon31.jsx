@@ -131,7 +131,7 @@ export default function Lecon31({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon31/interface-controles.png" 
+                  src="/cours/intermediaire/lecon31/interface-controles.png" 
                   alt="Tableau de bord Excel avec différents contrôles de formulaire"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -386,7 +386,7 @@ export default function Lecon31({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon31/insertion-controle.gif" 
+                  src="/cours/intermediaire/lecon31/insertion-controle.gif" 
                   alt="Animation montrant l'insertion et configuration d'un contrôle"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -437,7 +437,7 @@ export default function Lecon31({ onResult }) {
                   </div>
                   <div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon31/exemple-liste.png" 
+                      src="/cours/intermediaire/lecon31/exemple-liste.png" 
                       alt="Exemple complet de liste déroulante fonctionnelle"
                       className="rounded-xl shadow-lg border-2 border-white"
                     />
@@ -539,7 +539,7 @@ export default function Lecon31({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon31/formulaire-client.png" 
+                  src="/cours/intermediaire/lecon31/formulaire-client.png" 
                   alt="Capture d'écran d'un formulaire client complet avec contrôles"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -547,14 +547,14 @@ export default function Lecon31({ onResult }) {
                 <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon31/formulaire-client-exercice.xlsx" 
+                    <a href="/cours/intermediaire/lecon31/formulaire-client-exercice.xlsx" 
                       className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger l&apos;Exercice Pratique
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon31/creation-formulaire-complet.mp4"
+                      url="/cours/intermediaire/lecon31/creation-formulaire-complet.mp4"
                       title="Création d'un formulaire client de A à Z"
                       duration="22:15"
                     />
@@ -665,7 +665,7 @@ export default function Lecon31({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon31/dashboard-avance.png" 
+                  src="/cours/intermediaire/lecon31/dashboard-avance.png" 
                   alt="Tableau de bord avancé avec multiples contrôles interactifs"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />

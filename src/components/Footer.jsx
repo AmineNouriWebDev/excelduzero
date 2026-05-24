@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faFacebookF, 
@@ -8,6 +11,40 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) {
+      toast.error("Veuillez entrer une adresse email valide.");
+      return;
+    }
+    
+    setLoading(true);
+    try {
+      const response = await fetch("https://n8n.deposark.com/webhook/excel-du-zero-signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+      
+      if (response.ok) {
+        toast.success("Merci pour votre inscription à la newsletter !");
+        setEmail("");
+      } else {
+        toast.error("Une erreur est survenue lors de l'inscription.");
+      }
+    } catch (error) {
+      console.error("Newsletter error:", error);
+      toast.error("Erreur de connexion. Veuillez réessayer plus tard.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6">
@@ -109,23 +146,31 @@ export default function Footer() {
               <h5 className="text-lg font-bold mb-2 text-green-400">Restez informé</h5>
               <p className="text-gray-400">Inscrivez-vous à notre newsletter pour recevoir des conseils Excel.</p>
             </div>
-            <div className="flex w-full md:w-auto">
+            <form onSubmit={handleNewsletterSubmit} className="flex w-full md:w-auto">
               <input 
                 type="email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={loading}
                 placeholder="Votre email" 
-                className="px-4 py-3 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500 w-full md:w-64"
+                className="px-4 py-3 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500 w-full md:w-64 disabled:opacity-50"
               />
-              <button className="bg-gradient-to-r from-green-500 to-green-700 px-6 py-3 rounded-r-lg font-medium hover:from-green-600 hover:to-green-800 transition-all">
-                S'inscrire
+              <button 
+                type="submit"
+                disabled={loading}
+                className="bg-gradient-to-r from-green-500 to-green-700 px-6 py-3 rounded-r-lg font-medium hover:from-green-600 hover:to-green-800 transition-all disabled:opacity-50"
+              >
+                {loading ? "..." : "S'inscrire"}
               </button>
-            </div>
+            </form>
           </div>
         </div>
 
         {/* Copyright Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} ExcelDuZero. Tous droits réservés.
+            © {new Date().getFullYear()} ExcelDuZero. Tous droits réservés. <span className="ml-1">by <a href="https://maxsolving.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">Maxsolving</a></span>
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-green-400 text-sm transition-colors">

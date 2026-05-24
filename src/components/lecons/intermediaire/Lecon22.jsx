@@ -145,7 +145,7 @@ export default function Lecon22({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon22/architecture-liens.png" 
+                  src="/cours/intermediaire/lecon22/architecture-liens.png" 
                   alt="Schéma montrant les connexions entre classeurs Excel"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -269,7 +269,7 @@ export default function Lecon22({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon22/anatomie-reference.png" 
+                  src="/cours/intermediaire/lecon22/anatomie-reference.png" 
                   alt="Schéma annoté montrant les différentes parties d'une référence externe"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -412,7 +412,7 @@ export default function Lecon22({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon22/creation-lien-pointage.gif" 
+                  src="/cours/intermediaire/lecon22/creation-lien-pointage.gif" 
                   alt="Animation montrant la création d'un lien par pointage souris"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -531,7 +531,7 @@ export default function Lecon22({ onResult }) {
               
               <div className="space-y-4">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon22/editeur-liens.png" 
+                  src="/cours/intermediaire/lecon22/editeur-liens.png" 
                   alt="Capture d'écran de l'éditeur de liens d'Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -635,7 +635,7 @@ export default function Lecon22({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon22/architecture-exercice.png" 
+                    src="/cours/intermediaire/lecon22/architecture-exercice.png" 
                     alt="Architecture de l'exercice avec classeur maître et sources régionales"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -678,14 +678,14 @@ export default function Lecon22({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon22/exercice-tableau-bord.zip" 
+                    <a href="/cours/intermediaire/lecon22/exercice-tableau-bord.zip" 
                       className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger les Fichiers d'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon22/correction-tableau-bord.mp4"
+                      url="/cours/intermediaire/lecon22/correction-tableau-bord.mp4"
                       title="Correction détaillée de l'exercice tableau de bord"
                     />
                   </div>

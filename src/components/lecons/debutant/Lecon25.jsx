@@ -106,7 +106,7 @@ export default function Lecon25({ onResult }) {
           </ol>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon25/identifier-doublons.gif" 
+            src="/cours/debutant/lecon25/identifier-doublons.gif" 
             alt="Identifier les doublons avec mise en forme conditionnelle" 
             style={{ maxHeight: 250 }} 
           />
@@ -146,7 +146,7 @@ export default function Lecon25({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon25/supprimer-doublons.gif" 
+            src="/cours/debutant/lecon25/supprimer-doublons.gif" 
             alt="Boîte de dialogue Supprimer les doublons" 
             style={{ maxHeight: 200 }} 
           />
@@ -178,7 +178,7 @@ export default function Lecon25({ onResult }) {
               <li>• Dates antérieures/postérieures</li>
             </ul>
             <ImageZoomable 
-              src="/cours/debutant/Lecon25/regles-base.png" 
+              src="/cours/debutant/lecon25/regles-base.png" 
               alt="Règles de mise en forme conditionnelle basiques" 
               className="mt-4"
               style={{ maxHeight: 150 }} 
@@ -197,7 +197,7 @@ export default function Lecon25({ onResult }) {
               <li>• Personnalisation des couleurs</li>
             </ul>
             <ImageZoomable 
-              src="/cours/debutant/Lecon25/barres-donnees.png" 
+              src="/cours/debutant/lecon25/barres-donnees.png" 
               alt="Barres de données dans Excel" 
               className="mt-4"
               style={{ maxHeight: 150 }} 
@@ -216,7 +216,7 @@ export default function Lecon25({ onResult }) {
               <li>• Personnalisation des seuils</li>
             </ul>
             <ImageZoomable 
-              src="/cours/debutant/Lecon25/nuances-couleurs.png" 
+              src="/cours/debutant/lecon25/nuances-couleurs.png" 
               alt="Nuances de couleurs dans Excel" 
               className="mt-4"
               style={{ maxHeight: 150 }} 
@@ -258,7 +258,7 @@ export default function Lecon25({ onResult }) {
           </ol>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon25/gerer-regles.gif" 
+            src="/cours/debutant/lecon25/gerer-regles.gif" 
             alt="Gestion des règles de mise en forme" 
             style={{ maxHeight: 250 }} 
           />
@@ -285,7 +285,7 @@ export default function Lecon25({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez la base de données clients à nettoyer :
           </p>
-          <a href="/cours/debutant/Lecon25/exercice-clients.xlsx" 
+          <a href="/cours/debutant/lecon25/exercice-clients.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -301,7 +301,7 @@ export default function Lecon25({ onResult }) {
             Solution détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/debutant/Lecon25/correction-clients.mp4"
+            url="/cours/debutant/lecon25/correction-clients.mp4"
             title="Correction de l'exercice sur les clients"
           />
         </div>

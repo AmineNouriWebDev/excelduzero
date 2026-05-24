@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "../../lib/supabaseClient";
 
-const PUBLIC_ROUTES = ["/", "/auth/login", "/auth/register", "/pages/test-niveau-excel"];
+const PUBLIC_ROUTES = ["/", "/auth/login", "/auth/register", "/auth/reset-password", "/auth/update-password", "/pages/test-niveau-excel"];
 
 export default function ProtectedRoute({ children }) {
   const router = useRouter();

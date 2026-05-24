@@ -102,7 +102,7 @@ export default function Lecon23({ onResult }) {
               </li>
             </ul>
             <ImageZoomable 
-              src="/cours/debutant/Lecon23/note_rapide.png" 
+              src="/cours/debutant/lecon23/note_rapide.png" 
               alt="Exemple de note rapide" 
               className="mt-4"
               style={{ maxHeight: 200 }} 
@@ -129,7 +129,7 @@ export default function Lecon23({ onResult }) {
               </li>
             </ul>
             <ImageZoomable 
-              src="/cours/debutant/Lecon23/discussion.png" 
+              src="/cours/debutant/lecon23/discussion.png" 
               alt="Exemple de discussion" 
               className="mt-4"
               style={{ maxHeight: 200 }} 
@@ -221,7 +221,7 @@ export default function Lecon23({ onResult }) {
             </ol>
             
             <ImageZoomable 
-              src="/cours/debutant/Lecon23/ajout_note.gif" 
+              src="/cours/debutant/lecon23/ajout_note.gif" 
               alt="Ajout d'une note rapide" 
               style={{ maxHeight: 250 }} 
             />
@@ -261,7 +261,7 @@ export default function Lecon23({ onResult }) {
             </ol>
             
             <ImageZoomable 
-              src="/cours/debutant/Lecon23/ajout_discussion.gif" 
+              src="/cours/debutant/lecon23/ajout_discussion.gif" 
               alt="Démarrage d'une discussion" 
               style={{ maxHeight: 250 }} 
             />
@@ -409,7 +409,7 @@ export default function Lecon23({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon23/resoudre_discussion.gif" 
+            src="/cours/debutant/lecon23/resoudre_discussion.gif" 
             alt="Résolution d'une discussion" 
             className="mt-4"
             style={{ maxHeight: 200 }} 
@@ -534,7 +534,7 @@ export default function Lecon23({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le budget d'équipe à commenter :
           </p>
-          <a href="/cours/debutant/Lecon23/exercice_budget.xlsx" 
+          <a href="/cours/debutant/lecon23/exercice_budget.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -550,7 +550,7 @@ export default function Lecon23({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/debutant/Lecon23/correction_budget.mp4"
+            url="/cours/debutant/lecon23/correction_budget.mp4"
             title="Correction de l'exercice sur les commentaires"
           />
         </div>

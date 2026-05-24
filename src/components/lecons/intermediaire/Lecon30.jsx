@@ -133,7 +133,7 @@ export default function Lecon30({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon30/avantages-modeles.png" 
+                  src="/cours/intermediaire/lecon30/avantages-modeles.png" 
                   alt="Diagramme montrant les avantages des modèles Excel"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -262,7 +262,7 @@ export default function Lecon30({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon30/structure-modele.gif" 
+                  src="/cours/intermediaire/lecon30/structure-modele.gif" 
                   alt="Animation montrant la structure type d'un modèle Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -422,7 +422,7 @@ export default function Lecon30({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon30/controles-formulaire.gif" 
+                  src="/cours/intermediaire/lecon30/controles-formulaire.gif" 
                   alt="Animation montrant l'ajout de contrôles de formulaire"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -626,7 +626,7 @@ export default function Lecon30({ onResult }) {
                   </div>
                   <div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon30/modele-budget.png" 
+                      src="/cours/intermediaire/lecon30/modele-budget.png" 
                       alt="Capture d'écran d'un modèle de budget professionnel"
                       className="rounded-xl shadow-lg border-2 border-white"
                     />
@@ -720,7 +720,7 @@ export default function Lecon30({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon30/deploiement-organisation.gif" 
+                  src="/cours/intermediaire/lecon30/deploiement-organisation.gif" 
                   alt="Animation montrant le processus de déploiement d'un modèle dans une organisation"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -728,14 +728,14 @@ export default function Lecon30({ onResult }) {
                 <div className="bg-white rounded-2xl border-2 border-amber-200 p-6">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon30/kit-modeles-professionnels.zip" 
+                    <a href="/cours/intermediaire/lecon30/kit-modeles-professionnels.zip" 
                       className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger le Kit de Modèles Professionnels
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon30/creation-modele-complet.mp4"
+                      url="/cours/intermediaire/lecon30/creation-modele-complet.mp4"
                       title="Création d'un modèle professionnel de A à Z"
                       duration="28:40"
                     />

@@ -241,19 +241,19 @@ export default function HomePage() {
                 level: "Intermédiaire",
                 icon: faLeaf,
                 color: "from-green-400 to-green-500",
-                lessons: "35 leçons",
+                lessons: "34 leçons",
               },
               {
                 level: "Avancé",
                 icon: faTree,
                 color: "from-green-500 to-green-600",
-                lessons: "40 leçons",
+                lessons: "22 leçons",
               },
               {
                 level: "Expert",
                 icon: faCrown,
                 color: "from-green-600 to-green-700",
-                lessons: "30 leçons",
+                lessons: "10 leçons",
               },
             ].map((item, index) => (
               <div
@@ -286,9 +286,9 @@ export default function HomePage() {
               <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 text-green-100">
                 Débloquez tout le potentiel d&apos;ExcelDuZero : accès illimité, assistant AI pour vous aider, support prioritaire et bien plus !
               </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-green-400 to-green-600 text-white px-10 py-4 rounded-2xl text-xl font-bold hover:from-green-500 hover:to-green-700 transition shadow-2xl card-hover">
+              <button className="inline-flex items-center gap-3 bg-white/20 border-2 border-white/50 backdrop-blur-md text-white px-10 py-4 rounded-2xl text-xl font-bold hover:bg-white/30 transition shadow-2xl">
                 <FontAwesomeIcon icon={faStar} className="mr-2" />
-                Accès Premium - 30 DT à vie
+                Pré-inscription Premium (Bientôt)
               </button>
             </div>
             {/* Bloc droit : avantages */}

@@ -139,7 +139,7 @@ export default function Lecon26({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon26/date-time-overview.png" 
+                  src="/cours/intermediaire/lecon26/date-time-overview.png" 
                   alt="Diagramme montrant l'utilisation des fonctions date et heure dans Excel"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -266,7 +266,7 @@ export default function Lecon26({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon26/serie-date-demo.gif" 
+                  src="/cours/intermediaire/lecon26/serie-date-demo.gif" 
                   alt="Animation montrant le système de série de dates Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -407,7 +407,7 @@ export default function Lecon26({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon26/aujourdhui-maintenant-demo.gif" 
+                  src="/cours/intermediaire/lecon26/aujourdhui-maintenant-demo.gif" 
                   alt="Animation montrant AUJOURD'HUI et MAINTENANT en action"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -578,7 +578,7 @@ export default function Lecon26({ onResult }) {
                 </div>
 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon26/calculs-avances-demo.gif" 
+                  src="/cours/intermediaire/lecon26/calculs-avances-demo.gif" 
                   alt="Animation montrant DATEDIF, YEARFRAC et EDATE"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -728,7 +728,7 @@ export default function Lecon26({ onResult }) {
                 </div>
 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon26/workday-networkdays-demo.gif" 
+                  src="/cours/intermediaire/lecon26/workday-networkdays-demo.gif" 
                   alt="Animation montrant WORKDAY et NETWORKDAYS"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -831,7 +831,7 @@ export default function Lecon26({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon26/cas-pratique-projet.png" 
+                    src="/cours/intermediaire/lecon26/cas-pratique-projet.png" 
                     alt="Planning projet avant calcul"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -874,14 +874,14 @@ export default function Lecon26({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon26/cas-pratique-projet.zip" 
+                    <a href="/cours/intermediaire/lecon26/cas-pratique-projet.zip" 
                       className="inline-flex items-center px-6 py-3 bg-rose-600 text-white rounded-xl hover:bg-rose-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger les Fichiers d'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon26/correction-cas-pratique.mp4"
+                      url="/cours/intermediaire/lecon26/correction-cas-pratique.mp4"
                       title="Correction détaillée pas à pas"
                       duration="22:30"
                     />
@@ -930,7 +930,7 @@ export default function Lecon26({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🔴 Avant Automatisation</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon26/avant-planning.png" 
+                    src="/cours/intermediaire/lecon26/avant-planning.png" 
                     alt="Planning manuel avant calcul automatique"
                     className="rounded-lg border-2 border-red-200"
                   />
@@ -938,7 +938,7 @@ export default function Lecon26({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🟢 Après Automatisation</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon26/apres-planning.png" 
+                    src="/cours/intermediaire/lecon26/apres-planning.png" 
                     alt="Planning automatique avec fonctions dates"
                     className="rounded-lg border-2 border-green-200"
                   />

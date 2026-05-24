@@ -122,7 +122,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon12/selection_feuilles.gif" 
+            src="/cours/debutant/lecon12/selection_feuilles.gif" 
             alt="Sélection de feuilles multiples" 
             style={{ maxHeight: 350 }} 
           />
@@ -156,7 +156,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon12/impression_groupee.gif" 
+            src="/cours/debutant/lecon12/impression_groupee.gif" 
             alt="Impression de feuilles multiples" 
             style={{ maxHeight: 350 }} 
           />
@@ -218,7 +218,7 @@ export default function Lecon12({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon12/numerotation_pages.gif" 
+            src="/cours/debutant/lecon12/numerotation_pages.gif" 
             alt="Configuration de la numérotation" 
             style={{ maxHeight: 350 }} 
           />
@@ -252,7 +252,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon12/numerotation_avancee.png" 
+            src="/cours/debutant/lecon12/numerotation_avancee.png" 
             alt="Options de numérotation avancée" 
             style={{ maxHeight: 350 }} 
           />
@@ -324,7 +324,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon12/entetes_uniformes.gif" 
+            src="/cours/debutant/lecon12/entetes_uniformes.gif" 
             alt="Création d'en-têtes uniformes" 
             style={{ maxHeight: 350 }} 
           />
@@ -465,7 +465,7 @@ export default function Lecon12({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon12/sauts_page.gif" 
+            src="/cours/debutant/lecon12/sauts_page.gif" 
             alt="Gestion des sauts de page" 
             style={{ maxHeight: 350 }} 
           />
@@ -500,7 +500,7 @@ export default function Lecon12({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon12/impression_selective.gif" 
+            src="/cours/debutant/lecon12/impression_selective.gif" 
             alt="Options d'impression sélective" 
             style={{ maxHeight: 350 }} 
           />
@@ -555,7 +555,7 @@ export default function Lecon12({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données à mettre en forme :
           </p>
-          <a href="/cours/debutant/Lecon12/exercice_rapports_multi_feuilles.xlsx" 
+          <a href="/cours/debutant/lecon12/exercice_rapports_multi_feuilles.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)

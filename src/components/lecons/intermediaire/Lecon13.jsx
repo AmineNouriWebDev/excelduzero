@@ -148,7 +148,7 @@ export default function Lecon13({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon13/validation-avancee-overview.png" 
+                  src="/cours/intermediaire/lecon13/validation-avancee-overview.png" 
                   alt="Vue d'ensemble des fonctionnalités de validation avancée"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -217,7 +217,7 @@ export default function Lecon13({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon13/formules-complexes.gif" 
+                    src="/cours/intermediaire/lecon13/formules-complexes.gif" 
                     alt="Animation montrant la création de formules de validation complexes"
                     className="rounded-xl shadow-lg"
                   />
@@ -256,7 +256,7 @@ export default function Lecon13({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon13/recherchev-validation.gif" 
+                  src="/cours/intermediaire/lecon13/recherchev-validation.gif" 
                   alt="Exemple de validation avec RECHERCHEV"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -351,7 +351,7 @@ export default function Lecon13({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon13/listes-dependantes.gif" 
+                    src="/cours/intermediaire/lecon13/listes-dependantes.gif" 
                     alt="Animation montrant le fonctionnement des listes dépendantes"
                     className="rounded-xl shadow-lg"
                   />
@@ -378,7 +378,7 @@ export default function Lecon13({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon13/liste-dynamique-offset.png" 
+                  src="/cours/intermediaire/lecon13/liste-dynamique-offset.png" 
                   alt="Configuration d'une liste dynamique avec DECALER"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -477,7 +477,7 @@ export default function Lecon13({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon13/messages-contextuels.gif" 
+                    src="/cours/intermediaire/lecon13/messages-contextuels.gif" 
                     alt="Démonstration des messages d'aide contextuels"
                     className="rounded-xl shadow-lg"
                   />
@@ -547,7 +547,7 @@ export default function Lecon13({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon13/audit-validation.png" 
+                  src="/cours/intermediaire/lecon13/audit-validation.png" 
                   alt="Tableau de bord d'audit des validations"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -618,7 +618,7 @@ export default function Lecon13({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon13/integration-tcd.gif" 
+                    src="/cours/intermediaire/lecon13/integration-tcd.gif" 
                     alt="Intégration entre validation et tableaux croisés dynamiques"
                     className="rounded-xl shadow-lg"
                   />
@@ -653,7 +653,7 @@ export default function Lecon13({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon13/table-structuree.png" 
+                  src="/cours/intermediaire/lecon13/table-structuree.png" 
                   alt="Exemple de table Excel structurée pour validation"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -752,7 +752,7 @@ export default function Lecon13({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon13/systeme-complet.png" 
+                    src="/cours/intermediaire/lecon13/systeme-complet.png" 
                     alt="Aperçu du système de validation complet à créer"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -867,7 +867,7 @@ export default function Lecon13({ onResult }) {
                 <p className="text-gray-700 mb-4">
                   Téléchargez le fichier avec la structure de base et les données :
                 </p>
-                <a href="/cours/intermediaire/Lecon13/exercice-systeme-complet.xlsx" 
+                <a href="/cours/intermediaire/lecon13/exercice-systeme-complet.xlsx" 
                   className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 transition-colors font-semibold">
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger l'Exercice (.xlsx)
@@ -883,7 +883,7 @@ export default function Lecon13({ onResult }) {
                   Solution complète avec explications des techniques avancées :
                 </p>
                 <PremiumVideo
-                  url="/cours/intermediaire/Lecon13/correction-systeme-complet.mp4"
+                  url="/cours/intermediaire/lecon13/correction-systeme-complet.mp4"
                   title="Correction du système de validation avancée"
                 />
               </div>

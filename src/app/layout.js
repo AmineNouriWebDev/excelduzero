@@ -3,8 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "../styles/components.css";
 import "../styles/themes.css";
+import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "../components/common/ProtectedRoute";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +36,7 @@ export default function RootLayout({ children }) {
       >
         <ProtectedRoute>{children}</ProtectedRoute>
         <ScrollToTopButton />
+        <ToastContainer position="bottom-right" autoClose={5000} />
       </body>
     </html>
   );

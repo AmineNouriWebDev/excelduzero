@@ -71,7 +71,7 @@ export default function Lecon3({ onResult }) {
 
         {/* Ici, vous pouvez ajouter une image ou GIF */}
         <ImageZoomable
-          src="/cours/intermediaire/Lecon3/erreur-na-exemple.png"
+          src="/cours/intermediaire/lecon3/erreur-na-exemple.png"
           alt="Démonstration de l'erreur #N/A avec RECHERCHEV"
           className="mb-6"
           style={{ maxHeight: 300 }}
@@ -163,7 +163,7 @@ export default function Lecon3({ onResult }) {
 
           {/* Image démontrant une erreur #VALUE! */}
           <ImageZoomable
-            src="/cours/intermediaire/Lecon3/erreur-valeur-exemple.gif"
+            src="/cours/intermediaire/lecon3/erreur-valeur-exemple.gif"
             alt="Exemple d'erreur #VALUE! avec des types de données incompatibles"
             className="mt-6"
             style={{ maxHeight: 250 }}
@@ -379,7 +379,7 @@ export default function Lecon3({ onResult }) {
               <p className="text-gray-700 mb-4">
                 Téléchargez le fichier d'exercice sur la gestion des stocks :
               </p>
-              <a href="/cours/intermediaire/Lecon3/exercice_erreurs.xlsx"
+              <a href="/cours/intermediaire/lecon3/exercice_erreurs.xlsx"
                 className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
                 <Download className="w-5 h-5 mr-2" />
                 Télécharger l'exercice (.xlsx)
@@ -395,7 +395,7 @@ export default function Lecon3({ onResult }) {
                 Solution complète et détaillée de l'exercice :
               </p>
               <PremiumVideo
-                url="/cours/intermediaire/Lecon3/correction_erreurs.mp4"
+                url="/cours/intermediaire/lecon3/correction_erreurs.mp4"
                 title="Correction de l'exercice sur la gestion des erreurs"
               />
             </div>

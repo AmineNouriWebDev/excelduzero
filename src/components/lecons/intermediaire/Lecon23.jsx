@@ -144,7 +144,7 @@ export default function Lecon23({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon23/power-query-overview.png" 
+                  src="/cours/intermediaire/lecon23/power-query-overview.png" 
                   alt="Diagramme Power Query connectant multiples sources de données"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -239,7 +239,7 @@ export default function Lecon23({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon23/avant-apres-powerquery.gif" 
+                  src="/cours/intermediaire/lecon23/avant-apres-powerquery.gif" 
                   alt="Animation montrant la différence avant/après Power Query"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -323,7 +323,7 @@ export default function Lecon23({ onResult }) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon23/interface-power-query.png" 
+                  src="/cours/intermediaire/lecon23/interface-power-query.png" 
                   alt="Annotation de l'interface Power Query avec ses composants principaux"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -391,7 +391,7 @@ export default function Lecon23({ onResult }) {
                   <h5 className="font-semibold mb-2">Vue Schéma</h5>
                   <p className="text-sm opacity-90 mb-3">Interagissez uniquement avec la structure de vos données (noms de colonnes, types)</p>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon23/vue-schema.png" 
+                    src="/cours/intermediaire/lecon23/vue-schema.png" 
                     alt="Capture de la vue schéma Power Query"
                     className="rounded-lg border border-white/30"
                   />
@@ -400,7 +400,7 @@ export default function Lecon23({ onResult }) {
                   <h5 className="font-semibold mb-2">Vue Diagramme</h5>
                   <p className="text-sm opacity-90 mb-3">Visualisez le flux complet de vos transformations et leurs dépendances:cite[7]</p>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon23/vue-diagramme.png" 
+                    src="/cours/intermediaire/lecon23/vue-diagramme.png" 
                     alt="Capture de la vue diagramme Power Query"
                     className="rounded-lg border border-white/30"
                   />
@@ -492,7 +492,7 @@ export default function Lecon23({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon23/premiere-transformation.gif" 
+                  src="/cours/intermediaire/lecon23/premiere-transformation.gif" 
                   alt="Animation montrant la première transformation Power Query"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -603,7 +603,7 @@ export default function Lecon23({ onResult }) {
               
               <div className="space-y-4">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon23/etapes-appliquees-detail.png" 
+                  src="/cours/intermediaire/lecon23/etapes-appliquees-detail.png" 
                   alt="Détail du volet étapes appliquées avec annotations"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -718,7 +718,7 @@ in
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon23/advanced-editor.png" 
+                  src="/cours/intermediaire/lecon23/advanced-editor.png" 
                   alt="Capture de l'éditeur avancé Power Query montrant le code M"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -818,7 +818,7 @@ in
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon23/fichier-avant-nettoyage.png" 
+                    src="/cours/intermediaire/lecon23/fichier-avant-nettoyage.png" 
                     alt="Capture du fichier ventes avant nettoyage montrant les problèmes"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -867,14 +867,14 @@ in
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon23/exercice-nettoyage-ventes.zip" 
+                    <a href="/cours/intermediaire/lecon23/exercice-nettoyage-ventes.zip" 
                       className="inline-flex items-center px-6 py-3 bg-teal-600 text-white rounded-xl hover:bg-teal-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger les Fichiers d'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon23/correction-nettoyage-ventes.mp4"
+                      url="/cours/intermediaire/lecon23/correction-nettoyage-ventes.mp4"
                       title="Correction détaillée de l'exercice de nettoyage"
                     />
                   </div>

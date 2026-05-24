@@ -135,7 +135,7 @@ export default function Lecon29({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon29/somme-conditionnelle-overview.png" 
+                  src="/cours/intermediaire/lecon29/somme-conditionnelle-overview.png" 
                   alt="Diagramme montrant l'évolution des fonctions de somme"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -262,7 +262,7 @@ export default function Lecon29({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon29/somme-si-demo.gif" 
+                  src="/cours/intermediaire/lecon29/somme-si-demo.gif" 
                   alt="Animation montrant le fonctionnement de SOMME.SI"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -436,7 +436,7 @@ export default function Lecon29({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon29/somme-si-ens-demo.gif" 
+                  src="/cours/intermediaire/lecon29/somme-si-ens-demo.gif" 
                   alt="Animation montrant le fonctionnement de SOMME.SI.ENS avec multiples critères"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -602,7 +602,7 @@ export default function Lecon29({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon29/sommeprod-demo.gif" 
+                  src="/cours/intermediaire/lecon29/sommeprod-demo.gif" 
                   alt="Animation détaillant le calcul SOMMEPROD ligne par ligne"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -729,7 +729,7 @@ export default function Lecon29({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon29/cas-pratique-donnees.png" 
+                    src="/cours/intermediaire/lecon29/cas-pratique-donnees.png" 
                     alt="Extrait des données de vente avec multiples colonnes"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -772,14 +772,14 @@ export default function Lecon29({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon29/cas-pratique-ventes.zip" 
+                    <a href="/cours/intermediaire/lecon29/cas-pratique-ventes.zip" 
                       className="inline-flex items-center px-6 py-3 bg-rose-600 text-white rounded-xl hover:bg-rose-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger le Fichier d&apos;Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon29/fonctions-somme-demo.mp4"
+                      url="/cours/intermediaire/lecon29/fonctions-somme-demo.mp4"
                       title="Démonstration complète des trois fonctions"
                       duration="22:15"
                     />

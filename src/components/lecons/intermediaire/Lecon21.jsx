@@ -141,7 +141,7 @@ export default function Lecon21({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon21/impact-doublons.png" 
+                  src="/cours/intermediaire/lecon21/impact-doublons.png" 
                   alt="Comparaison avant/après la gestion des doublons"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -255,7 +255,7 @@ export default function Lecon21({ onResult }) {
               
               <div className="space-y-4">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon21/mise-forme-conditionnelle.gif" 
+                  src="/cours/intermediaire/lecon21/mise-forme-conditionnelle.gif" 
                   alt="Animation démontrant l'application de mise en forme conditionnelle"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -384,7 +384,7 @@ export default function Lecon21({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon21/filtre-avance.gif" 
+                  src="/cours/intermediaire/lecon21/filtre-avance.gif" 
                   alt="Démonstration du filtre avancé pour valeurs uniques"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -499,7 +499,7 @@ export default function Lecon21({ onResult }) {
               
               <div className="space-y-4">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon21/suppression-doublons-interface.png" 
+                  src="/cours/intermediaire/lecon21/suppression-doublons-interface.png" 
                   alt="Interface de suppression des doublons dans Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -881,7 +881,7 @@ export default function Lecon21({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon21/exercice-base-clients.png" 
+                    src="/cours/intermediaire/lecon21/exercice-base-clients.png" 
                     alt="Base de données clients avec doublons à nettoyer"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -924,14 +924,14 @@ export default function Lecon21({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon21/exercice-base-clients.xlsx" 
+                    <a href="/cours/intermediaire/lecon21/exercice-base-clients.xlsx" 
                       className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger l'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon21/correction-nettoyage.mp4"
+                      url="/cours/intermediaire/lecon21/correction-nettoyage.mp4"
                       title="Correction détaillée de l'exercice de nettoyage"
                     />
                   </div>

@@ -129,7 +129,7 @@ export default function Lecon32({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon32/dashboard-interactif.png" 
+                  src="/cours/intermediaire/lecon32/dashboard-interactif.png" 
                   alt="Tableau de bord Excel avec graphiques dynamiques et contrôles"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -220,7 +220,7 @@ export default function Lecon32({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon32/principe-fonctionnement.png" 
+                  src="/cours/intermediaire/lecon32/principe-fonctionnement.png" 
                   alt="Schéma expliquant le lien entre contrôles, formules et graphiques"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -426,7 +426,7 @@ export default function Lecon32({ onResult }) {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                   <div className="text-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon32/demo-liste.gif" 
+                      src="/cours/intermediaire/lecon32/demo-liste.gif" 
                       alt="Animation montrant l'utilisation d'une liste déroulante"
                       className="rounded-xl shadow-lg border-2 border-white"
                     />
@@ -434,7 +434,7 @@ export default function Lecon32({ onResult }) {
                   </div>
                   <div className="text-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon32/demo-radio.gif" 
+                      src="/cours/intermediaire/lecon32/demo-radio.gif" 
                       alt="Animation montrant l'utilisation de boutons radio"
                       className="rounded-xl shadow-lg border-2 border-white"
                     />
@@ -442,7 +442,7 @@ export default function Lecon32({ onResult }) {
                   </div>
                   <div className="text-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon32/demo-checkbox.gif" 
+                      src="/cours/intermediaire/lecon32/demo-checkbox.gif" 
                       alt="Animation montrant l'utilisation de cases à cocher"
                       className="rounded-xl shadow-lg border-2 border-white"
                     />
@@ -545,7 +545,7 @@ export default function Lecon32({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon32/tableau-bord-complet.png" 
+                  src="/cours/intermediaire/lecon32/tableau-bord-complet.png" 
                   alt="Capture d'écran d'un tableau de bord ventes complet avec multiples contrôles"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -553,14 +553,14 @@ export default function Lecon32({ onResult }) {
                 <div className="bg-white rounded-2xl border-2 border-green-200 p-6">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon32/tableau-bord-ventes.xlsx" 
+                    <a href="/cours/intermediaire/lecon32/tableau-bord-ventes.xlsx" 
                       className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger l&apos;Exercice Complet
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon32/creation-tableau-bord.mp4"
+                      url="/cours/intermediaire/lecon32/creation-tableau-bord.mp4"
                       title="Création d'un tableau de bord dynamique de A à Z"
                       duration="28:45"
                     />
@@ -670,7 +670,7 @@ export default function Lecon32({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon32/techniques-avancees.png" 
+                  src="/cours/intermediaire/lecon32/techniques-avancees.png" 
                   alt="Exemple de graphique avec titres dynamiques et multiples contrôles"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />

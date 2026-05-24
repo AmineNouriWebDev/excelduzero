@@ -141,7 +141,7 @@ export default function Lecon28({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon28/statistiques-overview.png" 
+                  src="/cours/intermediaire/lecon28/statistiques-overview.png" 
                   alt="Diagramme montrant le processus des statistiques descriptives"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -266,7 +266,7 @@ export default function Lecon28({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon28/concepts-statistiques.gif" 
+                  src="/cours/intermediaire/lecon28/concepts-statistiques.gif" 
                   alt="Animation illustrant les concepts de statistiques descriptives"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -461,7 +461,7 @@ export default function Lecon28({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon28/tendance-centrale-demo.gif" 
+                  src="/cours/intermediaire/lecon28/tendance-centrale-demo.gif" 
                   alt="Animation comparant moyenne, médiane et mode"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -675,7 +675,7 @@ export default function Lecon28({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon28/dispersion-demo.gif" 
+                  src="/cours/intermediaire/lecon28/dispersion-demo.gif" 
                   alt="Animation montrant l'impact de l'écart-type sur la distribution"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -856,7 +856,7 @@ export default function Lecon28({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon28/toolpak-activation.gif" 
+                  src="/cours/intermediaire/lecon28/toolpak-activation.gif" 
                   alt="Animation montrant l'activation et l'utilisation de l'Analysis ToolPak"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -990,7 +990,7 @@ export default function Lecon28({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon28/cas-pratique-donnees.png" 
+                    src="/cours/intermediaire/lecon28/cas-pratique-donnees.png" 
                     alt="Extrait des données de vente avant analyse"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -1033,14 +1033,14 @@ export default function Lecon28({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon28/cas-pratique-ventes.zip" 
+                    <a href="/cours/intermediaire/lecon28/cas-pratique-ventes.zip" 
                       className="inline-flex items-center px-6 py-3 bg-rose-600 text-white rounded-xl hover:bg-rose-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger les Données d'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon28/analysis-toolpak-demo.mp4"
+                      url="/cours/intermediaire/lecon28/analysis-toolpak-demo.mp4"
                       title="Démonstration complète Analysis ToolPak"
                       duration="18:30"
                     />

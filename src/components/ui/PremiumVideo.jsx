@@ -1,6 +1,7 @@
 // components/PremiumVideo.jsx
 import PremiumGate from "../common/PremiumGate";
 import { useState, useEffect } from 'react';
+import PremiumComingSoonModal from "./PremiumComingSoonModal";
 
 /**
  * Composant vidéo premium universel
@@ -10,6 +11,7 @@ import { useState, useEffect } from 'react';
  */
 export default function PremiumVideo({ url, title = "Vidéo de correction", className = "" }) {
   const [videoId, setVideoId] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const isYoutube = url?.includes("youtube.com") || url?.includes("youtu.be");
 
   // Extraire l'ID de la vidéo YouTube
@@ -34,48 +36,58 @@ export default function PremiumVideo({ url, title = "Vidéo de correction", clas
   }, [url, isYoutube]);
 
   return (
-    <PremiumGate
-      fallback={
-        <div className="text-center text-pink-700 font-semibold py-8">
-          Cette vidéo de correction est réservée aux membres <span className="font-bold">Premium</span>.<br />
-          <button className="mt-4 px-6 py-2 bg-pink-600 text-white rounded hover:bg-pink-700 transition">
-            Devenir Premium
-          </button>
-        </div>
-      }
-    >
-      <div className={`bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col items-center ${className}`}>
-        {title && <div className="mb-4 text-lg font-semibold text-gray-700">{title}</div>}
-
-        {isYoutube ? (
-          <div className="w-full max-w-2xl aspect-video">
-            {videoId ? (
-              <iframe
-                src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0&fs=1`}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full rounded-lg"
-                frameBorder="0"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center bg-gray-200 rounded-lg">
-                <p>Chargement de la vidéo...</p>
-              </div>
-            )}
+    <>
+      <PremiumGate
+        fallback={
+          <div className="text-center text-pink-700 font-semibold py-8">
+            Cette vidéo de correction est réservée aux membres <span className="font-bold">Premium</span>.<br />
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="mt-4 px-6 py-2 bg-pink-600 text-white rounded hover:bg-pink-700 transition"
+            >
+              Devenir Premium
+            </button>
           </div>
-        ) : (
-          <video
-            controls
-            className="w-full max-w-2xl rounded-lg shadow aspect-video"
-            muted={true}
-            playsInline
-          >
-            <source src={url} type="video/mp4" />
-            Votre navigateur ne supporte pas la balise vidéo.
-          </video>
-        )}
-      </div>
-    </PremiumGate>
+        }
+      >
+        <div className={`bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col items-center ${className}`}>
+          {title && <div className="mb-4 text-lg font-semibold text-gray-700">{title}</div>}
+
+          {isYoutube ? (
+            <div className="w-full max-w-2xl aspect-video">
+              {videoId ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0&fs=1`}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg"
+                  frameBorder="0"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gray-200 rounded-lg">
+                  <p>Chargement de la vidéo...</p>
+                </div>
+              )}
+            </div>
+          ) : (
+            <video
+              controls
+              className="w-full max-w-2xl rounded-lg shadow aspect-video"
+              muted={true}
+              playsInline
+            >
+              <source src={url} type="video/mp4" />
+              Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+          )}
+        </div>
+      </PremiumGate>
+      
+      <PremiumComingSoonModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
+    </>
   );
 }

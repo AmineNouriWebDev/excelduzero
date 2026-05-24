@@ -203,7 +203,7 @@ export default function Lecon34({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon34/final-result-preview.png"
+                  src="/cours/intermediaire/lecon34/final-result-preview.png"
                   alt="Aperçu du tableau de bord final à créer"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -214,7 +214,7 @@ export default function Lecon34({ onResult }) {
                     Ressources du TP
                   </h4>
                   <div className="space-y-3">
-                    <a href="/cours/intermediaire/Lecon34/donnees-depart.xlsx" 
+                    <a href="/cours/intermediaire/lecon34/donnees-depart.xlsx" 
                       className="flex items-center justify-between p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                       <div className="flex items-center gap-3">
                         <FileText className="w-5 h-5 text-blue-600" />
@@ -223,7 +223,7 @@ export default function Lecon34({ onResult }) {
                       <ArrowRight className="w-4 h-4 text-blue-600" />
                     </a>
                     
-                    <a href="/cours/intermediaire/Lecon34/modele-tableau-bord.xlsx" 
+                    <a href="/cours/intermediaire/lecon34/modele-tableau-bord.xlsx" 
                       className="flex items-center justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
                       <div className="flex items-center gap-3">
                         <Settings className="w-5 h-5 text-green-600" />
@@ -233,7 +233,7 @@ export default function Lecon34({ onResult }) {
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon34/demonstration-tp.mp4"
+                      url="/cours/intermediaire/lecon34/demonstration-tp.mp4"
                       title="Démonstration complète du tableau de bord"
                       duration="15:30"
                     />
@@ -489,7 +489,7 @@ export default function Lecon34({ onResult }) {
 
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon34/etape1-tableau-donnees.png"
+                  src="/cours/intermediaire/lecon34/etape1-tableau-donnees.png"
                   alt="Structure du tableau de données préparé"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -581,7 +581,7 @@ export default function Lecon34({ onResult }) {
 
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon34/etape2-structure-kpi.png"
+                  src="/cours/intermediaire/lecon34/etape2-structure-kpi.png"
                   alt="Mise en page des KPI dans le tableau de bord"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -666,7 +666,7 @@ export default function Lecon34({ onResult }) {
 
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon34/etape3-graphiques.png"
+                  src="/cours/intermediaire/lecon34/etape3-graphiques.png"
                   alt="Exemple des graphiques à créer"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -744,7 +744,7 @@ export default function Lecon34({ onResult }) {
 
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon34/etape4-controles.png"
+                  src="/cours/intermediaire/lecon34/etape4-controles.png"
                   alt="Configuration des contrôles de formulaire"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -862,7 +862,7 @@ export default function Lecon34({ onResult }) {
                 <div className="bg-white rounded-2xl border-2 border-orange-200 p-6">
                   <h4 className="font-semibold text-gray-800 mb-4">💾 Sauvegardez Votre Projet</h4>
                   <div className="space-y-3">
-                    <a href="/cours/intermediaire/Lecon34/modele-final.xlsx" 
+                    <a href="/cours/intermediaire/lecon34/modele-final.xlsx" 
                       className="flex items-center justify-between p-3 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors">
                       <div className="flex items-center gap-3">
                         <Download className="w-5 h-5 text-orange-600" />

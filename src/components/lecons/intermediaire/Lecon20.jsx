@@ -141,7 +141,7 @@ export default function Lecon20({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon20/avant-apres-formats.png" 
+                  src="/cours/intermediaire/lecon20/avant-apres-formats.png" 
                   alt="Comparaison avant/après l'application de formats personnalisés"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -319,7 +319,7 @@ export default function Lecon20({ onResult }) {
                   </div>
                   <div className="flex justify-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon20/boite-dialogue-format.png" 
+                      src="/cours/intermediaire/lecon20/boite-dialogue-format.png" 
                       alt="Boîte de dialogue Format de cellule avec catégorie Personnalisée"
                       className="rounded-lg shadow-md"
                     />
@@ -346,7 +346,7 @@ export default function Lecon20({ onResult }) {
                   </div>
                   <div className="flex justify-center lg:order-1">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon20/saisie-code-format.png" 
+                      src="/cours/intermediaire/lecon20/saisie-code-format.png" 
                       alt="Saisie d'un code de format personnalisé"
                       className="rounded-lg shadow-md"
                     />
@@ -372,7 +372,7 @@ export default function Lecon20({ onResult }) {
                   </div>
                   <div className="flex justify-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon20/apercu-format.gif" 
+                      src="/cours/intermediaire/lecon20/apercu-format.gif" 
                       alt="Animation montrant l'aperçu du format personnalisé"
                       className="rounded-lg shadow-md"
                     />
@@ -673,7 +673,7 @@ export default function Lecon20({ onResult }) {
               
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon20/formats-conditionnels.gif" 
+                  src="/cours/intermediaire/lecon20/formats-conditionnels.gif" 
                   alt="Démonstration des formats conditionnels en action"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -911,7 +911,7 @@ export default function Lecon20({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon20/exercice-tableau-brut.png" 
+                    src="/cours/intermediaire/lecon20/exercice-tableau-brut.png" 
                     alt="Tableau de données brutes à optimiser"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -954,14 +954,14 @@ export default function Lecon20({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon20/exercice-formats.xlsx" 
+                    <a href="/cours/intermediaire/lecon20/exercice-formats.xlsx" 
                       className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger l'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon20/correction-formats.mp4"
+                      url="/cours/intermediaire/lecon20/correction-formats.mp4"
                       title="Correction détaillée de l'exercice sur les formats"
                     />
                   </div>

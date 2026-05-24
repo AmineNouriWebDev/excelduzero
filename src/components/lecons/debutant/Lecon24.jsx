@@ -113,7 +113,7 @@ export default function Lecon24({ onResult }) {
           </ol>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon24/poignee_recopie.gif" 
+            src="/cours/debutant/lecon24/poignee_recopie.gif" 
             alt="Utilisation de la poignée de recopie" 
             style={{ maxHeight: 250 }} 
           />
@@ -159,7 +159,7 @@ export default function Lecon24({ onResult }) {
               <li>3. Glissez la poignée pour continuer la séquence</li>
             </ol>
             <ImageZoomable 
-              src="/cours/debutant/Lecon24/serie_personnalisee.gif" 
+              src="/cours/debutant/lecon24/serie_personnalisee.gif" 
               alt="Création de série personnalisée" 
               className="mt-2"
               style={{ maxHeight: 200 }} 
@@ -258,7 +258,7 @@ export default function Lecon24({ onResult }) {
           </ol>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon24/listes_perso_config.png" 
+            src="/cours/debutant/lecon24/listes_perso_config.png" 
             alt="Configuration des listes personnalisées" 
             style={{ maxHeight: 250 }} 
           />
@@ -290,7 +290,7 @@ export default function Lecon24({ onResult }) {
                 Applique la formule automatiquement jusqu'à la dernière ligne de données adjacente.
               </p>
               <ImageZoomable 
-                src="/cours/debutant/Lecon24/formule_double_clic.gif" 
+                src="/cours/debutant/lecon24/formule_double_clic.gif" 
                 alt="Double-clic pour appliquer une formule" 
                 className="mt-2"
                 style={{ maxHeight: 200 }} 
@@ -303,7 +303,7 @@ export default function Lecon24({ onResult }) {
                 Convertissez votre plage en tableau (Ctrl + L) pour que les formules s'étendent automatiquement.
               </p>
               <ImageZoomable 
-                src="/cours/debutant/Lecon24/formule_tableau.gif" 
+                src="/cours/debutant/lecon24/formule_tableau.gif" 
                 alt="Formules automatiques dans les tableaux" 
                 className="mt-2"
                 style={{ maxHeight: 200 }} 
@@ -334,7 +334,7 @@ export default function Lecon24({ onResult }) {
                 <strong>Remarque :</strong> Les raccourcis Ctrl + Shift + C/V ne fonctionnent pas dans Excel 2016
               </p>
               <ImageZoomable 
-                src="/cours/debutant/Lecon24/pinceau_format.gif" 
+                src="/cours/debutant/lecon24/pinceau_format.gif" 
                 alt="Pinceau de format" 
                 className="mt-2"
                 style={{ maxHeight: 150 }} 
@@ -403,7 +403,7 @@ export default function Lecon24({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez les données brutes à organiser :
           </p>
-          <a href="/cours/debutant/Lecon24/exercice_ventes.xlsx" 
+          <a href="/cours/debutant/lecon24/exercice_ventes.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -419,7 +419,7 @@ export default function Lecon24({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/debutant/Lecon24/correction_ventes.mp4"
+            url="/cours/debutant/lecon24/correction_ventes.mp4"
             title="Correction de l'exercice sur les ventes"
           />
         </div>

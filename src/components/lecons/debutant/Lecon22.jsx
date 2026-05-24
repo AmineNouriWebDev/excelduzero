@@ -115,7 +115,7 @@ export default function Lecon22({ onResult }) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <ImageZoomable 
-              src="/cours/debutant/Lecon22/protection_classeur.png" 
+              src="/cours/debutant/lecon22/protection_classeur.png" 
               alt="Menu de protection du classeur" 
               style={{ maxHeight: 250 }} 
             />
@@ -224,12 +224,12 @@ export default function Lecon22({ onResult }) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <ImageZoomable 
-              src="/cours/debutant/Lecon22/protection_feuille_fenetre.png" 
+              src="/cours/debutant/lecon22/protection_feuille_fenetre.png" 
               alt="Menu de protection de feuille" 
               style={{ maxHeight: 250 }} 
             />
             <ImageZoomable 
-              src="/cours/debutant/Lecon22/protection_feuille.png" 
+              src="/cours/debutant/lecon22/protection_feuille.png" 
               alt="Options de protection de feuille" 
               style={{ maxHeight: 250 }} 
             />
@@ -367,7 +367,7 @@ export default function Lecon22({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le classeur financier à protéger :
           </p>
-          <a href="/cours/debutant/Lecon22/exercice_protection.xlsx" 
+          <a href="/cours/debutant/lecon22/exercice_protection.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -383,7 +383,7 @@ export default function Lecon22({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/debutant/Lecon22/correction_protection.mp4"
+            url="/cours/debutant/lecon22/correction_protection.mp4"
             title="Correction de l'exercice de protection"
           />
         </div>

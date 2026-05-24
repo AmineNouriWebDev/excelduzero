@@ -124,7 +124,7 @@ export default function Lecon10({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon10/inserer_image_en_ligne.png" 
+            src="/cours/debutant/lecon10/inserer_image_en_ligne.png" 
             alt="Insertion d'images en ligne" 
             style={{ maxHeight: 350 }} 
           />
@@ -146,7 +146,7 @@ export default function Lecon10({ onResult }) {
                 Utilisez le moteur de recherche pour trouver parmi +150 000 illustrations
               </p>
               <ImageZoomable 
-                src="/cours/debutant/Lecon10/images_clipart.png" 
+                src="/cours/debutant/lecon10/images_clipart.png" 
                 alt="Bibliothèque clipart" 
                 className="mt-2"
               />
@@ -193,7 +193,7 @@ export default function Lecon10({ onResult }) {
                 </li>
               </ul>
               <ImageZoomable 
-                src="/cours/debutant/Lecon10/modifier_clipart.png" 
+                src="/cours/debutant/lecon10/modifier_clipart.png" 
                 alt="Modification d'image" 
                 className="mt-3"
               />
@@ -298,7 +298,7 @@ export default function Lecon10({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon10/insertion_illustration_forme.png" 
+            src="/cours/debutant/lecon10/insertion_illustration_forme.png" 
             alt="Bibliothèque de formes" 
             style={{ maxHeight: 350 }} 
           />
@@ -383,11 +383,11 @@ export default function Lecon10({ onResult }) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ImageZoomable 
-              src="/cours/debutant/Lecon10/graphique_smartart.png" 
+              src="/cours/debutant/lecon10/graphique_smartart.png" 
               alt="Choix d'un graphique SmartArt" 
             />
             <ImageZoomable 
-              src="/cours/debutant/Lecon10/diagramme_smart_art.png" 
+              src="/cours/debutant/lecon10/diagramme_smart_art.png" 
               alt="Exemple de diagramme SmartArt" 
             />
           </div>
@@ -501,7 +501,7 @@ export default function Lecon10({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données du rapport à mettre en forme :
           </p>
-          <a href="/cours/debutant/Lecon10/exercice_visuel.xlsx" 
+          <a href="/cours/debutant/lecon10/exercice_visuel.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)

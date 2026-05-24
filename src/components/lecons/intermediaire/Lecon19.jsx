@@ -141,7 +141,7 @@ export default function Lecon19({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon19/navigation-optimisee.png" 
+                  src="/cours/intermediaire/lecon19/navigation-optimisee.png" 
                   alt="Comparaison avant/après le figement des volets"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -397,7 +397,7 @@ export default function Lecon19({ onResult }) {
                   </div>
                   <div className="flex justify-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon19/selection-cellule.png" 
+                      src="/cours/intermediaire/lecon19/selection-cellule.png" 
                       alt="Sélection de la cellule B3 pour figer ligne 1-2 et colonne A"
                       className="rounded-lg shadow-md"
                     />
@@ -424,7 +424,7 @@ export default function Lecon19({ onResult }) {
                   </div>
                   <div className="flex justify-center lg:order-1">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon19/menu-figer-volets.png" 
+                      src="/cours/intermediaire/lecon19/menu-figer-volets.png" 
                       alt="Menu pour figer les volets dans Excel"
                       className="rounded-lg shadow-md"
                     />
@@ -450,7 +450,7 @@ export default function Lecon19({ onResult }) {
                   </div>
                   <div className="flex justify-center">
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon19/resultat-fige.gif" 
+                      src="/cours/intermediaire/lecon19/resultat-fige.gif" 
                       alt="Animation montrant le défilement avec volets figés"
                       className="rounded-lg shadow-md"
                     />
@@ -514,7 +514,7 @@ export default function Lecon19({ onResult }) {
               
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon19/fractionnement-demo.gif" 
+                  src="/cours/intermediaire/lecon19/fractionnement-demo.gif" 
                   alt="Démonstration du fractionnement de volets en action"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -616,7 +616,7 @@ export default function Lecon19({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon19/cas-pratique-optimisation.png" 
+                    src="/cours/intermediaire/lecon19/cas-pratique-optimisation.png" 
                     alt="Comparaison avant/après optimisation navigation"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -833,7 +833,7 @@ export default function Lecon19({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon19/exercice-tableau-ventes.png" 
+                    src="/cours/intermediaire/lecon19/exercice-tableau-ventes.png" 
                     alt="Tableau de ventes à optimiser"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -876,14 +876,14 @@ export default function Lecon19({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon19/exercice-ventes.xlsx" 
+                    <a href="/cours/intermediaire/lecon19/exercice-ventes.xlsx" 
                       className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger l'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon19/correction-exercice.mp4"
+                      url="/cours/intermediaire/lecon19/correction-exercice.mp4"
                       title="Correction détaillée de l'exercice"
                     />
                   </div>

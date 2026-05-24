@@ -123,7 +123,7 @@ export default function Lecon11({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/mise_en_page.gif" 
+            src="/cours/debutant/lecon11/mise_en_page.gif" 
             alt="Mode mise en page dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -157,7 +157,7 @@ export default function Lecon11({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/apercu_impression.png" 
+            src="/cours/debutant/lecon11/apercu_impression.png" 
             alt="Aperçu avant impression dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -173,7 +173,7 @@ export default function Lecon11({ onResult }) {
             cliquez sur le menu déroulant de la barre et sélectionnez "Aperçu avant impression".
           </p>
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/raccourci_apercu.gif" 
+            src="/cours/debutant/lecon11/raccourci_apercu.gif" 
             alt="Ajout raccourci aperçu impression" 
             style={{ maxHeight: 150 }} 
           />
@@ -221,7 +221,7 @@ export default function Lecon11({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/zone_impression.gif" 
+            src="/cours/debutant/lecon11/zone_impression.gif" 
             alt="Configuration zone d'impression" 
             style={{ maxHeight: 350 }} 
           />
@@ -255,7 +255,7 @@ export default function Lecon11({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/options_impression.png" 
+            src="/cours/debutant/lecon11/options_impression.png" 
             alt="Options d'impression Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -317,7 +317,7 @@ export default function Lecon11({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/marges.png" 
+            src="/cours/debutant/lecon11/marges.png" 
             alt="Configuration des marges et orientation" 
             style={{ maxHeight: 350 }} 
           />
@@ -351,7 +351,7 @@ export default function Lecon11({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon11/titres_impression.gif" 
+            src="/cours/debutant/lecon11/titres_impression.gif" 
             alt="Configuration des titres à imprimer" 
             style={{ maxHeight: 350 }} 
           />
@@ -430,7 +430,7 @@ export default function Lecon11({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données à mettre en forme :
           </p>
-          <a href="/cours/debutant/Lecon11/exercice_mise_en_page.xlsx" 
+          <a href="/cours/debutant/lecon11/exercice_mise_en_page.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)

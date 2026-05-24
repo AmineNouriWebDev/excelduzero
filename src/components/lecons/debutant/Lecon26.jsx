@@ -408,7 +408,7 @@ export default function Lecon26({ onResult }) {
             </p>
           </div>
           <a
-            href="/cours/debutant/Lecon26/raccourcis_excel.pdf"
+            href="/cours/debutant/lecon26/raccourcis_excel.pdf"
             target='_blank'
             className="flex items-center gap-2 bg-white text-purple-700 font-semibold px-5 py-3 rounded-lg hover:bg-gray-100 transition-colors"
           >

@@ -6,6 +6,7 @@ import { useAuth } from '../../../hooks/useAuth';
 import { supabase } from '../../../lib/supabaseClient';
 import { Menu } from "lucide-react";
 import { useSearchParams, useRouter } from "next/navigation";
+import PremiumComingSoonModal from "../../../components/ui/PremiumComingSoonModal";
 
 const LEÇONS = [
   // Formules & fonctions puissantes
@@ -64,35 +65,53 @@ const statusIcons = {
 export default function CoursAvance() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const leconParam = parseInt(searchParams.get("lecon"), 10);
-  const [active, setActive] = useState(
-    !isNaN(leconParam) && leconParam > 0 && leconParam <= LEÇONS.length ? leconParam - 1 : 0
-  );
+  const [active, setActive] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarWidth, setSidebarWidth] = useState(256);
   const sidebarRef = useRef(null);
   const [isResizing, setIsResizing] = useState(false);
   const user = useAuth();
+  const [isPremium, setIsPremium] = useState(null); // null = loading
   const [lessonStatus, setLessonStatus] = useState(defaultStatus);
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Gérer le paramètre de l'URL pour la leçon active
+  useEffect(() => {
+    const leconParam = parseInt(searchParams.get("lecon"), 10);
+    if (!isNaN(leconParam) && leconParam > 0 && leconParam <= LEÇONS.length) {
+      setActive(leconParam - 1);
+    } else {
+      setActive(0);
+    }
+  }, [searchParams]);
 
   // Synchronisation avec Supabase
   useEffect(() => {
     if (!user) return;
     let ignore = false;
     (async () => {
-      const { data, error } = await supabase
-        .from("progress")
-        .select("*")
-        .eq("user_id", user.id)
-        .eq("level", "avance")
-        .maybeSingle();
-      if (error && error.message) {
-        console.error('Erreur Supabase select:', error);
+      // Vérifier le statut premium
+      const { data: prof } = await supabase.from("profiles").select("premium").eq("id", user.id).single();
+      if (!ignore) {
+        setIsPremium(prof?.premium || false);
       }
-      if (data && data.status && !ignore) {
-        setLessonStatus(data.status);
+
+      // Si premium, on charge la progression
+      if (prof?.premium) {
+        const { data, error } = await supabase
+          .from("progress")
+          .select("*")
+          .eq("user_id", user.id)
+          .eq("level", "avance")
+          .maybeSingle();
+        if (error && error.message) {
+          console.error('Erreur Supabase select:', error);
+        }
+        if (data && data.status && !ignore) {
+          setLessonStatus(data.status);
+        }
       }
     })();
     return () => { ignore = true; };
@@ -100,7 +119,7 @@ export default function CoursAvance() {
 
   // Sauvegarder la progression dans Supabase
   useEffect(() => {
-    if (!user) return;
+    if (!user || !isPremium) return;
     if (lessonStatus.every(status => status === 'not_started')) return;
     (async () => {
       const { error } = await supabase.from("progress").upsert([
@@ -115,7 +134,7 @@ export default function CoursAvance() {
         console.error('Erreur Supabase upsert:', error);
       }
     })();
-  }, [JSON.stringify(lessonStatus), user]);
+  }, [JSON.stringify(lessonStatus), user, isPremium]);
 
   function getQuizComponent(level, lessonIdx) {
     try {
@@ -137,6 +156,48 @@ export default function CoursAvance() {
   }
 
   const level = "avance";
+
+  if (isPremium === null) {
+    return (
+      <div className="bg-gray-50 min-h-screen flex flex-col text-gray-800">
+        <Header />
+        <div className="flex-1 flex items-center justify-center">
+          <span className="text-blue-700 text-xl font-bold animate-pulse">Vérification de l'accès...</span>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (isPremium === false) {
+    return (
+      <div className="bg-gray-50 min-h-screen flex flex-col text-gray-800">
+        <Header />
+        <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
+          <div className="bg-white rounded-2xl shadow-xl p-10 max-w-lg border border-gray-100">
+            <span className="text-6xl block mb-4">🔒</span>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Contenu Premium</h2>
+            <p className="text-gray-600 mb-8 text-lg">
+              Le niveau Avancé est réservé aux membres Premium. Vous devez souscrire à notre offre pour débloquer ces leçons exclusives.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="inline-block px-6 py-3 bg-pink-600 text-white font-bold rounded-xl shadow hover:bg-pink-700 transition"
+              >
+                Devenir Premium
+              </button>
+              <a href="/cours" className="inline-block px-6 py-3 bg-gray-800 text-white font-bold rounded-xl shadow hover:bg-gray-900 transition">
+                Retour au catalogue
+              </a>
+            </div>
+          </div>
+        </div>
+        <Footer />
+        <PremiumComingSoonModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col text-gray-800">

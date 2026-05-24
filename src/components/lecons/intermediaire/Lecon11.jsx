@@ -149,7 +149,7 @@ export default function Lecon11({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/sparklines-tableau-dashboard.png" 
+                  src="/cours/intermediaire/lecon11/sparklines-tableau-dashboard.png" 
                   alt="Tableau de bord professionnel avec Sparklines intégrés"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -213,7 +213,7 @@ export default function Lecon11({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon11/plages-dynamiques-sparklines.gif" 
+                    src="/cours/intermediaire/lecon11/plages-dynamiques-sparklines.gif" 
                     alt="Animation montrant les Sparklines s'adaptant aux nouvelles données"
                     className="rounded-xl shadow-lg"
                   />
@@ -241,7 +241,7 @@ export default function Lecon11({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/references-absolues-relatives.png" 
+                  src="/cours/intermediaire/lecon11/references-absolues-relatives.png" 
                   alt="Comparaison entre références absolues et relatives pour Sparklines"
                   className="rounded-xl shadow-lg"
                 />
@@ -255,7 +255,7 @@ export default function Lecon11({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/gestion-groupes-sparklines.gif" 
+                  src="/cours/intermediaire/lecon11/gestion-groupes-sparklines.gif" 
                   alt="Démonstration de la gestion des groupes de Sparklines"
                   className="rounded-xl shadow-lg"
                 />
@@ -396,7 +396,7 @@ export default function Lecon11({ onResult }) {
               
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/cas-usage-sparklines.png" 
+                  src="/cours/intermediaire/lecon11/cas-usage-sparklines.png" 
                   alt="Exemples concrets d'utilisation des Sparklines dans différents secteurs"
                   className="rounded-xl shadow-lg"
                 />
@@ -481,7 +481,7 @@ export default function Lecon11({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon11/points-marqueurs-avances.gif" 
+                    src="/cours/intermediaire/lecon11/points-marqueurs-avances.gif" 
                     alt="Animation montrant la configuration des points marqueurs"
                     className="rounded-xl shadow-lg"
                   />
@@ -497,7 +497,7 @@ export default function Lecon11({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/couleurs-conditionnelles.png" 
+                  src="/cours/intermediaire/lecon11/couleurs-conditionnelles.png" 
                   alt="Exemple de Sparklines avec couleurs conditionnelles"
                   className="rounded-xl shadow-lg"
                 />
@@ -510,7 +510,7 @@ export default function Lecon11({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/axes-personnalises.gif" 
+                  src="/cours/intermediaire/lecon11/axes-personnalises.gif" 
                   alt="Configuration des axes personnalisés pour Sparklines"
                   className="rounded-xl shadow-lg"
                 />
@@ -611,7 +611,7 @@ export default function Lecon11({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon11/filtres-interactifs.gif" 
+                    src="/cours/intermediaire/lecon11/filtres-interactifs.gif" 
                     alt="Démonstration des Sparklines réagissant aux filtres"
                     className="rounded-xl shadow-lg"
                   />
@@ -634,7 +634,7 @@ export default function Lecon11({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/formules-conditionnelles.png" 
+                  src="/cours/intermediaire/lecon11/formules-conditionnelles.png" 
                   alt="Exemple de formules conditionnelles pour Sparklines"
                   className="rounded-xl shadow-lg"
                 />
@@ -648,7 +648,7 @@ export default function Lecon11({ onResult }) {
                 </p>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon11/mfc-sparklines-combines.gif" 
+                  src="/cours/intermediaire/lecon11/mfc-sparklines-combines.gif" 
                   alt="Combinaison Sparklines et mise en forme conditionnelle"
                   className="rounded-xl shadow-lg"
                 />
@@ -708,7 +708,7 @@ export default function Lecon11({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon11/architecture-tableau-dashboard.png" 
+                    src="/cours/intermediaire/lecon11/architecture-tableau-dashboard.png" 
                     alt="Architecture d'un tableau de bord professionnel avec Sparklines"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -868,7 +868,7 @@ export default function Lecon11({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon11/tableau-dashboard-final.png" 
+                    src="/cours/intermediaire/lecon11/tableau-dashboard-final.png" 
                     alt="Aperçu du tableau de bord final à créer"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -983,7 +983,7 @@ export default function Lecon11({ onResult }) {
                 <p className="text-gray-700 mb-4">
                   Téléchargez le fichier avec les données commerciales structurées :
                 </p>
-                <a href="/cours/intermediaire/Lecon11/exercice-sparklines-avances.xlsx" 
+                <a href="/cours/intermediaire/lecon11/exercice-sparklines-avances.xlsx" 
                   className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 transition-colors font-semibold">
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger l'Exercice (.xlsx)
@@ -999,7 +999,7 @@ export default function Lecon11({ onResult }) {
                   Solution complète avec explications des techniques avancées :
                 </p>
                 <PremiumVideo
-                  url="/cours/intermediaire/Lecon11/correction-sparklines-avances.mp4"
+                  url="/cours/intermediaire/lecon11/correction-sparklines-avances.mp4"
                   title="Correction de l'exercice Sparklines Avancés"
                 />
               </div>

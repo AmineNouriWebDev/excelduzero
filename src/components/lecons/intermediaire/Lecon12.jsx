@@ -132,12 +132,12 @@ export default function Lecon12({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/tableau-dashboard-exemple.png" 
+                  src="/cours/intermediaire/lecon12/tableau-dashboard-exemple.png" 
                   alt="Exemple d'un tableau de bord Excel simple et professionnel"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
                 <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-4 py-2 rounded-xl font-semibold shadow-lg">
-                  <a href="/cours/intermediaire/Lecon12/modele-donnees-initiales.xlsx" 
+                  <a href="/cours/intermediaire/lecon12/modele-donnees-initiales.xlsx" 
                     className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold text-sm">
                     <Download className="w-4 h-4 mr-2" />
                     Télécharger les Données Initiales
@@ -221,7 +221,7 @@ export default function Lecon12({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon12/structure-classeur.png" 
+                    src="/cours/intermediaire/lecon12/structure-classeur.png" 
                     alt="Capture d'écran montrant les trois onglets du classeur"
                     className="rounded-xl shadow-lg"
                   />
@@ -304,7 +304,7 @@ export default function Lecon12({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon12/creation-tableau-structure.gif" 
+                    src="/cours/intermediaire/lecon12/creation-tableau-structure.gif" 
                     alt="Animation montrant la création d'un tableau Excel structuré"
                     className="rounded-xl shadow-lg"
                   />
@@ -387,7 +387,7 @@ export default function Lecon12({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon12/creation-premier-tcd.gif" 
+                    src="/cours/intermediaire/lecon12/creation-premier-tcd.gif" 
                     alt="Animation de la création du premier TCD"
                     className="rounded-xl shadow-lg"
                   />
@@ -408,7 +408,7 @@ export default function Lecon12({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/tcd-evolution-temporelle.gif" 
+                  src="/cours/intermediaire/lecon12/tcd-evolution-temporelle.gif" 
                   alt="Capture du TCD d'évolution temporelle"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -427,7 +427,7 @@ export default function Lecon12({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/nommage-tcd.gif" 
+                  src="/cours/intermediaire/lecon12/nommage-tcd.gif" 
                   alt="Capture montrant où renommer un TCD"
                   className="rounded-xl shadow-lg"
                 />
@@ -535,7 +535,7 @@ export default function Lecon12({ onResult }) {
               
               <div>
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/creation-graphique-tcd.gif" 
+                  src="/cours/intermediaire/lecon12/creation-graphique-tcd.gif" 
                   alt="Animation de la création d'un graphique croisé dynamique"
                   className="rounded-xl shadow-lg"
                 />
@@ -617,7 +617,7 @@ export default function Lecon12({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon12/insertion-segments.gif" 
+                    src="/cours/intermediaire/lecon12/insertion-segments.gif" 
                     alt="Animation montrant l'insertion et la connexion des segments"
                     className="rounded-xl shadow-lg"
                   />
@@ -639,7 +639,7 @@ export default function Lecon12({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/personnalisation-segments.gif" 
+                  src="/cours/intermediaire/lecon12/personnalisation-segments.gif" 
                   alt="Capture des options de personnalisation des segments"
                   className="rounded-xl shadow-lg mt-4"
                 />
@@ -661,7 +661,7 @@ export default function Lecon12({ onResult }) {
                 </div>
                 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon12/test-interactivite.gif" 
+                  src="/cours/intermediaire/lecon12/test-interactivite.gif" 
                   alt="Animation montrant le test des segments sur les graphiques"
                   className="rounded-xl shadow-lg"
                 />
@@ -733,7 +733,7 @@ export default function Lecon12({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon12/assemblage-final.gif" 
+                    src="/cours/intermediaire/lecon12/assemblage-final.gif" 
                     alt="Animation montrant l'assemblage final du tableau de bord"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -805,7 +805,7 @@ export default function Lecon12({ onResult }) {
                   <Download className="w-8 h-8 text-indigo-600 mx-auto mb-2" />
                   <p className="text-sm font-medium text-gray-800">Fichier d'exemple</p>
                   <p className="text-xs text-gray-600">Téléchargez le tableau de bord final pour référence</p>
-                  <a href="/cours/intermediaire/Lecon12/modele-tableau-dashboard-simple.xlsx" 
+                  <a href="/cours/intermediaire/lecon12/modele-tableau-dashboard-simple.xlsx" 
                     className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-semibold text-sm mt-2">
                     <Download className="w-4 h-4 mr-2" />
                     Télécharger le Modèle

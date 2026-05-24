@@ -122,7 +122,7 @@ export default function Lecon9({ onResult }) {
           </ul>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon9/fusion_cellules.gif" 
+            src="/cours/debutant/lecon9/fusion_cellules.gif" 
             alt="Fusion de cellules dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -248,7 +248,7 @@ export default function Lecon9({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon9/entetes_pieds_page.gif" 
+            src="/cours/debutant/lecon9/entetes_pieds_page.gif" 
             alt="Configuration des en-têtes et pieds de page" 
             style={{ maxHeight: 350 }} 
           />
@@ -358,7 +358,7 @@ export default function Lecon9({ onResult }) {
           </div>
           
           <ImageZoomable 
-            src="/cours/debutant/Lecon9/modes_affichage.png" 
+            src="/cours/debutant/lecon9/modes_affichage.png" 
             alt="Modes d'affichage dans Excel" 
             style={{ maxHeight: 350 }} 
           />
@@ -454,7 +454,7 @@ export default function Lecon9({ onResult }) {
           <p className="text-gray-700 mb-4">
             Téléchargez le fichier contenant les données du rapport à mettre en forme :
           </p>
-          <a href="/cours/debutant/Lecon9/exercice_rapport_professionnel.xlsx" 
+          <a href="/cours/debutant/lecon9/exercice_rapport_professionnel.xlsx" 
             className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Télécharger l'exercice (.xlsx)
@@ -470,7 +470,7 @@ export default function Lecon9({ onResult }) {
             Solution complète et détaillée de l'exercice :
           </p>
           <PremiumVideo
-            url="/cours/debutant/Lecon9/correction_rapport_professionnel.mp4"
+            url="/cours/debutant/lecon9/correction_rapport_professionnel.mp4"
             title="Correction vidéo de l'exercice"
           />
         </div>

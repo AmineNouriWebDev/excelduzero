@@ -72,10 +72,7 @@ const statusIcons = {
 export default function CoursDebutant() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const leconParam = parseInt(searchParams.get("lecon"), 10);
-  const [active, setActive] = useState(
-    !isNaN(leconParam) && leconParam > 0 && leconParam <= LEÇONS.length ? leconParam - 1 : 0
-  );
+  const [active, setActive] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarWidth, setSidebarWidth] = useState(256);
@@ -84,6 +81,16 @@ export default function CoursDebutant() {
   const user = useAuth();
   const [lessonStatus, setLessonStatus] = useState(defaultStatus);
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
+
+  // Gérer le paramètre de l'URL pour la leçon active
+  useEffect(() => {
+    const leconParam = parseInt(searchParams.get("lecon"), 10);
+    if (!isNaN(leconParam) && leconParam > 0 && leconParam <= LEÇONS.length) {
+      setActive(leconParam - 1);
+    } else {
+      setActive(0);
+    }
+  }, [searchParams]);
 
   // Synchronisation avec Supabase uniquement (plus de localStorage)
   useEffect(() => {

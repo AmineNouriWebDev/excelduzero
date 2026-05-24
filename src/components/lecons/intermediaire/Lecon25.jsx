@@ -139,7 +139,7 @@ export default function Lecon25({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon25/text-functions-overview.png" 
+                  src="/cours/intermediaire/lecon25/text-functions-overview.png" 
                   alt="Diagramme montrant l'action des fonctions GAUCHE, DROITE et STXT"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -235,7 +235,7 @@ export default function Lecon25({ onResult }) {
                       </div>
                     </div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon25/gauche-exemple.png" 
+                      src="/cours/intermediaire/lecon25/gauche-exemple.png" 
                       alt="Exemple d'utilisation de la fonction GAUCHE"
                       className="rounded-lg border-2 border-white"
                     />
@@ -245,7 +245,7 @@ export default function Lecon25({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon25/gauche-demonstration.gif" 
+                  src="/cours/intermediaire/lecon25/gauche-demonstration.gif" 
                   alt="Animation montrant la fonction GAUCHE dans Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -378,7 +378,7 @@ export default function Lecon25({ onResult }) {
                       </div>
                     </div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon25/droite-exemple.png" 
+                      src="/cours/intermediaire/lecon25/droite-exemple.png" 
                       alt="Exemple d'utilisation de la fonction DROITE"
                       className="rounded-lg border-2 border-white"
                     />
@@ -388,7 +388,7 @@ export default function Lecon25({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon25/droite-demonstration.gif" 
+                  src="/cours/intermediaire/lecon25/droite-demonstration.gif" 
                   alt="Animation montrant la fonction DROITE dans Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -527,7 +527,7 @@ export default function Lecon25({ onResult }) {
                       </div>
                     </div>
                     <ImageZoomable 
-                      src="/cours/intermediaire/Lecon25/stxt-exemple.png" 
+                      src="/cours/intermediaire/lecon25/stxt-exemple.png" 
                       alt="Exemple d'utilisation de la fonction STXT"
                       className="rounded-lg border-2 border-white"
                     />
@@ -537,7 +537,7 @@ export default function Lecon25({ onResult }) {
               
               <div className="space-y-6">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon25/stxt-demonstration.gif" 
+                  src="/cours/intermediaire/lecon25/stxt-demonstration.gif" 
                   alt="Animation montrant la fonction STXT dans Excel"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -681,7 +681,7 @@ export default function Lecon25({ onResult }) {
                 </div>
 
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon25/combinaisons-demo.gif" 
+                  src="/cours/intermediaire/lecon25/combinaisons-demo.gif" 
                   alt="Animation montrant des combinaisons de fonctions"
                   className="rounded-xl shadow-lg border-2 border-white"
                 />
@@ -783,7 +783,7 @@ export default function Lecon25({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon25/cas-pratique-avant.png" 
+                    src="/cours/intermediaire/lecon25/cas-pratique-avant.png" 
                     alt="Base clients avant traitement"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -823,14 +823,14 @@ export default function Lecon25({ onResult }) {
                 <div className="bg-white p-6 rounded-xl border-2 border-green-100">
                   <h4 className="font-semibold text-gray-800 mb-4">📥 Ressources Pédagogiques</h4>
                   <div className="space-y-4">
-                    <a href="/cours/intermediaire/Lecon25/cas-pratique-clients.zip" 
+                    <a href="/cours/intermediaire/lecon25/cas-pratique-clients.zip" 
                       className="inline-flex items-center px-6 py-3 bg-rose-600 text-white rounded-xl hover:bg-rose-700 transition-colors font-semibold w-full justify-center">
                       <Download className="w-5 h-5 mr-2" />
                       Télécharger les Fichiers d'Exercice
                     </a>
                     
                     <PremiumVideo
-                      url="/cours/intermediaire/Lecon25/correction-cas-pratique.mp4"
+                      url="/cours/intermediaire/lecon25/correction-cas-pratique.mp4"
                       title="Correction détaillée pas à pas"
                       duration="18:45"
                     />
@@ -879,7 +879,7 @@ export default function Lecon25({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🔴 Avant Traitement</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon25/avant-transformation.png" 
+                    src="/cours/intermediaire/lecon25/avant-transformation.png" 
                     alt="Données avant transformation - chaînes combinées"
                     className="rounded-lg border-2 border-red-200"
                   />
@@ -887,7 +887,7 @@ export default function Lecon25({ onResult }) {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2 text-center">🟢 Après Traitement</h5>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon25/apres-transformation.png" 
+                    src="/cours/intermediaire/lecon25/apres-transformation.png" 
                     alt="Données après transformation - colonnes séparées"
                     className="rounded-lg border-2 border-green-200"
                   />

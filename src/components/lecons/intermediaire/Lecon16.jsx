@@ -162,7 +162,7 @@ export default function Lecon16({ onResult }) {
               
               <div className="relative">
                 <ImageZoomable 
-                  src="/cours/intermediaire/Lecon16/solveur-overview.png" 
+                  src="/cours/intermediaire/lecon16/solveur-overview.png" 
                   alt="Diagramme montrant le processus d'optimisation du Solveur Excel"
                   className="rounded-xl shadow-2xl border-2 border-white"
                 />
@@ -283,7 +283,7 @@ export default function Lecon16({ onResult }) {
                 
                 <div className="space-y-4">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon16/activation-solveur.png" 
+                    src="/cours/intermediaire/lecon16/activation-solveur.png" 
                     alt="Capture d'écran montrant l'activation du Solveur dans les options Excel"
                     className="rounded-xl shadow-lg"
                   />
@@ -469,7 +469,7 @@ export default function Lecon16({ onResult }) {
                 <h4 className="font-semibold text-gray-800 mb-4 text-center">Relation entre les Composants du Solveur</h4>
                 <div className="flex flex-col items-center">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon16/relation-composants.png" 
+                    src="/cours/intermediaire/lecon16/relation-composants.png" 
                     alt="Schéma montrant les relations entre cellule objectif, variables et contraintes"
                     className="rounded-xl max-w-2xl"
                   />
@@ -621,7 +621,7 @@ export default function Lecon16({ onResult }) {
                 <h4 className="font-semibold text-gray-800 mb-4 text-center">Comment Choisir la Bonne Méthode ?</h4>
                 <div className="flex justify-center">
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon16/arbre-decision-methodes.png" 
+                    src="/cours/intermediaire/lecon16/arbre-decision-methodes.png" 
                     alt="Arbre de décision pour choisir la méthode Solveur appropriée"
                     className="rounded-xl max-w-2xl"
                   />
@@ -728,7 +728,7 @@ export default function Lecon16({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon16/modele-boulangerie.png" 
+                    src="/cours/intermediaire/lecon16/modele-boulangerie.png" 
                     alt="Modèle Excel pour l'optimisation de la boulangerie"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -766,7 +766,7 @@ export default function Lecon16({ onResult }) {
                     </div>
                     <div className="flex justify-center">
                       <ImageZoomable 
-                        src="/cours/intermediaire/Lecon16/etape-objectif.png" 
+                        src="/cours/intermediaire/lecon16/etape-objectif.png" 
                         alt="Capture de la définition de la cellule objectif"
                         className="rounded-lg shadow-md max-w-xs"
                       />
@@ -793,7 +793,7 @@ export default function Lecon16({ onResult }) {
                     </div>
                     <div className="flex justify-center lg:order-1">
                       <ImageZoomable 
-                        src="/cours/intermediaire/Lecon16/etape-variables.png" 
+                        src="/cours/intermediaire/lecon16/etape-variables.png" 
                         alt="Capture de la définition des cellules variables"
                         className="rounded-lg shadow-md max-w-xs"
                       />
@@ -823,7 +823,7 @@ export default function Lecon16({ onResult }) {
                     </div>
                     <div className="flex justify-center">
                       <ImageZoomable 
-                        src="/cours/intermediaire/Lecon16/etape-contraintes.png" 
+                        src="/cours/intermediaire/lecon16/etape-contraintes.png" 
                         alt="Capture de l'ajout des contraintes"
                         className="rounded-lg shadow-md max-w-xs"
                       />
@@ -850,7 +850,7 @@ export default function Lecon16({ onResult }) {
                     </div>
                     <div className="flex justify-center lg:order-1">
                       <ImageZoomable 
-                        src="/cours/intermediaire/Lecon16/etape-resolution.png" 
+                        src="/cours/intermediaire/lecon16/etape-resolution.png" 
                         alt="Capture de la méthode de résolution"
                         className="rounded-lg shadow-md max-w-xs"
                       />
@@ -1172,7 +1172,7 @@ export default function Lecon16({ onResult }) {
                 
                 <div>
                   <ImageZoomable 
-                    src="/cours/intermediaire/Lecon16/exercice-portefeuille.png" 
+                    src="/cours/intermediaire/lecon16/exercice-portefeuille.png" 
                     alt="Aperçu du modèle de portefeuille pour l'exercice"
                     className="rounded-xl shadow-lg border-2 border-white"
                   />
@@ -1334,7 +1334,7 @@ export default function Lecon16({ onResult }) {
                 <p className="text-gray-700 mb-4">
                   Téléchargez le modèle de portefeuille à optimiser :
                 </p>
-                <a href="/cours/intermediaire/Lecon16/exercice-portefeuille.xlsx" 
+                <a href="/cours/intermediaire/lecon16/exercice-portefeuille.xlsx" 
                   className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-colors font-semibold">
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger l'Exercice (.xlsx)
@@ -1350,7 +1350,7 @@ export default function Lecon16({ onResult }) {
                   Solution complète avec explications détaillées :
                 </p>
                 <PremiumVideo
-                  url="/cours/intermediaire/Lecon16/correction-portefeuille.mp4"
+                  url="/cours/intermediaire/lecon16/correction-portefeuille.mp4"
                   title="Correction de l'optimisation de portefeuille avec Solveur"
                 />
               </div>

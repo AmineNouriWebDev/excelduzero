@@ -246,7 +246,7 @@ export default function ProfilePage() {
           // Aucun profil, on le crée
           const { error: insertError } = await supabase
             .from("profiles")
-            .insert({ id: user.id, email: user.email, name: user.user_metadata?.name || "" });
+            .insert({ id: user.id, email: user.email, name: user.user_metadata?.name || "", premium: false });
           if (insertError) {
             setMessage("Erreur lors de la création du profil: " + insertError.message);
             setLoading(false);
@@ -278,7 +278,7 @@ export default function ProfilePage() {
         website: data.website || "",
         cv: data.cv || "",
       });
-      setAvatarUrl(data.avatar_url || "");
+      setAvatarUrl(user.user_metadata?.avatar_url || "");
       setLoading(false);
     }
     fetchProfile();
@@ -432,24 +432,29 @@ export default function ProfilePage() {
     setLoading(false);
   }
 
-  // Fonction d'upload avatar
-  async function handleAvatarChange(e) {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const PREDEFINED_AVATARS = [
+    "https://api.dicebear.com/9.x/adventurer/svg?seed=Amine",
+    "https://api.dicebear.com/9.x/adventurer/svg?seed=Felix",
+    "https://api.dicebear.com/9.x/adventurer/svg?seed=Aneka",
+    "https://api.dicebear.com/9.x/adventurer/svg?seed=Jack",
+    "https://api.dicebear.com/9.x/adventurer/svg?seed=Jude"
+  ];
+
+  // Fonction de sélection d'avatar standard
+  async function handleAvatarSelection(url) {
     setUploading(true);
-    const fileExt = file.name.split('.').pop();
-    const filePath = `avatars/${form.email.replace(/[^a-zA-Z0-9]/g, '')}.${fileExt}`;
-    let { error: uploadError } = await supabase.storage.from('avatars').upload(filePath, file, { upsert: true });
-    if (uploadError) {
-      setMessage("Erreur lors de l'upload de l'avatar");
+    
+    const { data: { user }, error: userError } = await supabase.auth.getUser();
+    if (userError || !user) {
+      setMessage("Utilisateur non authentifié.");
       setUploading(false);
       return;
     }
-    const { data } = supabase.storage.from('avatars').getPublicUrl(filePath);
-    const avatar_url = data.publicUrl;
-    // Met à jour le profil utilisateur (table 'profiles')
-    await supabase.from('profiles').update({ avatar_url }).eq('email', form.email);
-    setAvatarUrl(avatar_url);
+
+    // Met seulement à jour l'auth user (puisque avatar_url n'est pas dans la table profiles)
+    await supabase.auth.updateUser({ data: { avatar_url: url } });
+    
+    setAvatarUrl(url);
     setMessage("Avatar mis à jour !");
     setUploading(false);
   }
@@ -466,9 +471,10 @@ export default function ProfilePage() {
           <form className="space-y-8" onSubmit={handleSubmit}>
             {/* Avatar */}
             <div className="flex flex-col items-center mb-6">
-              <div className="relative w-24 h-24 mb-2">
+              <div className="relative w-24 h-24 mb-4">
                 {avatarUrl ? (
-                  <Image src={avatarUrl} alt="avatar" width={96} height={96} className="rounded-full object-cover w-24 h-24 border-4 border-green-300 shadow" />
+                  /* Utilisation de balise img standard pour éviter l'erreur next/image */
+                  <img src={avatarUrl} alt="avatar" className="rounded-full object-cover w-24 h-24 border-4 border-green-300 shadow" />
                 ) : (
                   <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center text-4xl text-green-700 font-bold border-4 border-green-200">
                     {form.name ? form.name[0].toUpperCase() : <span>?</span>}
@@ -476,10 +482,21 @@ export default function ProfilePage() {
                 )}
                 {uploading && <div className="absolute inset-0 bg-white/70 flex items-center justify-center rounded-full"><span className="text-green-700 font-bold">...</span></div>}
               </div>
-              <label className="px-4 py-2 bg-green-100 text-green-700 rounded-xl font-semibold hover:bg-green-200 transition cursor-pointer">
-                <input type="file" accept="image/*" className="hidden" onChange={handleAvatarChange} disabled={uploading} />
-                {uploading ? "Chargement..." : "Changer l'avatar"}
-              </label>
+              
+              <div className="text-sm font-semibold text-gray-600 mb-3">Choisissez un avatar :</div>
+              <div className="flex gap-3 justify-center flex-wrap">
+                {PREDEFINED_AVATARS.map((url, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => handleAvatarSelection(url)}
+                    disabled={uploading}
+                    className={`w-12 h-12 rounded-full border-2 transition ${avatarUrl === url ? 'border-green-500 scale-110 shadow-md' : 'border-gray-200 hover:border-green-400 hover:scale-105'}`}
+                  >
+                    <img src={url} alt={`avatar ${idx}`} className="w-full h-full rounded-full" />
+                  </button>
+                ))}
+              </div>
             </div>
             {/* Informations personnelles */}
             <div>
