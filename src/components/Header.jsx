@@ -186,17 +186,17 @@ export default function Header() {
     <header className="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
       <nav className="container mx-auto px-3 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          {/* Logo + nom */}
-          <div className="flex items-center space-x-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg sm:text-xl">
-                <Link href="/">E</Link>
-              </span>
-            </div>
-            <p className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent ml-1 sm:ml-2">
-              xcelDuZero
-            </p>
-          </div>
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/logo.png" 
+              alt="ExcelDuZero" 
+              width={200} 
+              height={50} 
+              className="h-8 w-auto sm:h-10"
+              priority
+            />
+          </Link>
           {/* Liens d'ancre visibles seulement sur la page d'accueil ET si non connecté */}
           {isHome && !user && (
             <div className="hidden md:flex space-x-6 sm:space-x-8">

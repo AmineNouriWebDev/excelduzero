@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -51,13 +52,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">E</span>
-              </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                xcelDuZero
-              </h1>
+            <div className="flex items-center mb-6">
+              <a href="/">
+                <Image 
+                  src="/logo.png" 
+                  alt="ExcelDuZero" 
+                  width={200} 
+                  height={50} 
+                  className="h-10 w-auto"
+                />
+              </a>
             </div>
             <p className="text-gray-400 mb-4">
               La plateforme n°1 pour maîtriser Excel rapidement et efficacement.
