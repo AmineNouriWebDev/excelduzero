@@ -17,16 +17,28 @@ export default function ProtectedRoute({ children }) {
 
   useEffect(() => {
     let redirectTimeout;
+    
+    // Réinitialiser le compteur à chaque changement de route
+    setCountdown(8);
+
     async function checkAuth() {
+      // Si la route est publique, on cache le message immédiatement pour une navigation fluide
+      if (PUBLIC_ROUTES.includes(pathname)) {
+        setShowMessage(false);
+      }
+
       const {
         data: { user },
       } = await supabase.auth.getUser();
+      
       if (!user && !PUBLIC_ROUTES.includes(pathname)) {
         setShowMessage(true);
         // Redirection immédiate (sans attendre le rendu du composant)
         redirectTimeout = setTimeout(() => {
           window.location.href = "/auth/login";
         }, 8000);
+      } else {
+        setShowMessage(false);
       }
       setChecking(false);
     }
