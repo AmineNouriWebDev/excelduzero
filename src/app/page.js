@@ -63,12 +63,12 @@ export default function HomePage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              
-                <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-10 py-5 rounded-2xl text-xl font-bold hover:from-yellow-300 hover:to-yellow-400 transition card-hover pulse-green excel-glow">
-                  <FontAwesomeIcon icon={faClipboardCheck} className="mr-3" />
-                  <Link href="/pages/test-niveau-excel">Évaluez votre niveau GRATUITEMENT</Link>
-                </button>
-             
+
+              <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-10 py-5 rounded-2xl text-xl font-bold hover:from-yellow-300 hover:to-yellow-400 transition card-hover pulse-green excel-glow">
+                <FontAwesomeIcon icon={faClipboardCheck} className="mr-3" />
+                <Link href="/pages/test-niveau-excel">Évaluez votre niveau GRATUITEMENT</Link>
+              </button>
+
               <button className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-10 py-5 rounded-2xl text-xl font-bold hover:bg-white/30 transition card-hover">
                 <FontAwesomeIcon icon={faPlay} className="mr-3" />
                 Voir la démo
@@ -79,7 +79,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl">
                 <div className="text-5xl font-bold text-yellow-300 mb-2">
-                  15,000+
+                  1,500+
                 </div>
                 <div className="text-green-100 text-lg">Étudiants formés</div>
               </div>
