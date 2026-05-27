@@ -6,12 +6,28 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "../../lib/supabaseClient";
 
-const PUBLIC_ROUTES = ["/", "/auth/login", "/auth/register", "/auth/reset-password", "/auth/update-password", "/pages/test-niveau-excel"];
+const PUBLIC_ROUTES = [
+  "/", 
+  "/auth/login", 
+  "/auth/register", 
+  "/auth/reset-password", 
+  "/auth/update-password", 
+  "/pages/test-niveau-excel",
+  "/pages/centre-aide",
+  "/pages/contact",
+  "/pages/faq",
+  "/pages/a-propos",
+  "/pages/politique-de-confidentialite",
+  "/pages/conditions-utilisation",
+  "/pages/mentions-legales",
+  "/pages/cookies"
+];
 
 export default function ProtectedRoute({ children }) {
   const router = useRouter();
   const pathname = usePathname();
-  const [checking, setChecking] = useState(true);
+  // On initialise 'checking' à false si la route est publique pour éviter le moindre flash ou blocage
+  const [checking, setChecking] = useState(() => !PUBLIC_ROUTES.includes(pathname));
   const [showMessage, setShowMessage] = useState(false);
   const [countdown, setCountdown] = useState(8);
 
@@ -22,25 +38,36 @@ export default function ProtectedRoute({ children }) {
     setCountdown(8);
 
     async function checkAuth() {
-      // Si la route est publique, on cache le message immédiatement pour une navigation fluide
+      // Si la route est publique, on affiche la page immédiatement sans vérifier l'auth
       if (PUBLIC_ROUTES.includes(pathname)) {
         setShowMessage(false);
+        setChecking(false);
+        return;
       }
 
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      
-      if (!user && !PUBLIC_ROUTES.includes(pathname)) {
+      // Pour une route protégée, on affiche le chargement pendant la vérification
+      setChecking(true);
+
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        
+        if (!user) {
+          setShowMessage(true);
+          // Redirection immédiate (sans attendre le rendu du composant)
+          redirectTimeout = setTimeout(() => {
+            window.location.href = "/auth/login";
+          }, 8000);
+        } else {
+          setShowMessage(false);
+        }
+      } catch (error) {
+        console.error("Erreur d'authentification :", error);
         setShowMessage(true);
-        // Redirection immédiate (sans attendre le rendu du composant)
-        redirectTimeout = setTimeout(() => {
-          window.location.href = "/auth/login";
-        }, 8000);
-      } else {
-        setShowMessage(false);
+      } finally {
+        setChecking(false);
       }
-      setChecking(false);
     }
     checkAuth();
     return () => {

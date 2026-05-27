@@ -9,6 +9,11 @@ import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import { ToastContainer } from "react-toastify";
 import Script from "next/script";
 
+// Configuration FontAwesome pour Next.js (évite les bugs d'affichage lors de la navigation)
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

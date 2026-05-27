@@ -109,16 +109,16 @@ export default function Footer() {
             <h5 className="text-lg font-bold mb-4 text-green-400">Support</h5>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Centre d&apos;aide</a>
+                <a href="/pages/centre-aide" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Centre d&apos;aide</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Contact</a>
+                <a href="/pages/contact" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Contact</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">FAQ</a>
+                <a href="/pages/faq" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">FAQ</a>
               </li>
               <li>
-                <a href="/a-propos" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">À propos de nous</a>
+                <a href="/pages/a-propos" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">À propos de nous</a>
               </li>
             </ul>
           </div>
@@ -128,16 +128,16 @@ export default function Footer() {
             <h5 className="text-lg font-bold mb-4 text-green-400">Légal</h5>
             <ul className="space-y-3">
               <li>
-                <a href="/politique-de-confidentialite" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Politique de confidentialité</a>
+                <a href="/pages/politique-de-confidentialite" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Politique de confidentialité</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Conditions d&apos;utilisation</a>
+                <a href="/pages/conditions-utilisation" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Conditions d&apos;utilisation</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Mentions légales</a>
+                <a href="/pages/mentions-legales" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Mentions légales</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Cookies</a>
+                <a href="/pages/cookies" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:pl-2 block">Cookies</a>
               </li>
             </ul>
           </div>
